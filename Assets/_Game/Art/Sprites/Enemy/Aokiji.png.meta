@@ -1,0 +1,3501 @@
+fileFormatVersion: 2
+guid: d1657409acf52e144a5afb17b6e15dad
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Aokiji_0
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1828
+        width: 37
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fb64a6851d80f3418e1fac08fa3eeb9
+      internalID: 1302364265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_1
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 1828
+        width: 33
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7743b455d5b58714b8b3b60e9b1b3337
+      internalID: 1080282472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_2
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 1828
+        width: 33
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0045ecd1f3f2ce469a89a767376f594
+      internalID: -1529068124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_3
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 1828
+        width: 39
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6facf2ef11c3794986cf6ac610f839f
+      internalID: -248336553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_4
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 1828
+        width: 43
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1b8435e50cfc3e42a6945dd47a5701d
+      internalID: -2144764673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_5
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 1828
+        width: 43
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8e358b65774f554385c3623050802f0
+      internalID: -77053901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_6
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 1828
+        width: 43
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b250f5f214d5d4647b4c91c69ac57428
+      internalID: 1850117124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_7
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 1829
+        width: 36
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 188e86fa5c97df4458c999c36e922f15
+      internalID: 1175756463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_8
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 1829
+        width: 43
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9909ad01d1e98f345b1a1684c6cbe6a9
+      internalID: -90771579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_9
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 1828
+        width: 58
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9671fc260a0167d41a1d1c19b6e88c60
+      internalID: -241796101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_10
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 1828
+        width: 50
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee2e1736208e92247a3426288fdd473d
+      internalID: -1907433409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_11
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 1828
+        width: 43
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45d30c7dd1103d24a86c7df814b57f6f
+      internalID: 2115466370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_12
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 1828
+        width: 36
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91616810fb38fa74db86f78195f9bbf7
+      internalID: 300798618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_13
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 1828
+        width: 36
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01a208049cbe2c54d99142f586d47748
+      internalID: 1559779088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_14
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 1828
+        width: 44
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be1166227306d0942ad30ea9405b4043
+      internalID: 483378966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_15
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 1828
+        width: 32
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75efac6294551484386ab90f9f70669b
+      internalID: -2078332132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_16
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1737
+        width: 48
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 688deae6f27c1e7429837b12014e7941
+      internalID: 1516387555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_17
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 1737
+        width: 54
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 358302ce5197ea64da68328493d75b6a
+      internalID: -2133476078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_18
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 1737
+        width: 83
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 110c38005e70fd54d8e59cfd3906c1d7
+      internalID: -1441312062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_19
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 1737
+        width: 83
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ff17da17653e174cbde41790cafd14b
+      internalID: 1636453498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_20
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 1737
+        width: 87
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bc852a5a635a9a469b9146146a01fd2
+      internalID: -1569582083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_21
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 1737
+        width: 82
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cdd8439bba69c84d90bf8985097e9a5
+      internalID: -2041555798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_22
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 1737
+        width: 38
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85c4f8a3fa919ff41916c60ce2f5e3ce
+      internalID: -1607679588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_23
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 1600
+        width: 42
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47c039e001b1fac42921dc91fb99b585
+      internalID: -92626751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_24
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 1600
+        width: 45
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9efdf966311b9ae419bb76053f276c96
+      internalID: 1663923424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_25
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 1600
+        width: 51
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57db3266dd7b5af4bb65e291d4ed9e66
+      internalID: 490533270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_26
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 1600
+        width: 94
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebed2328c3c5abd4884fc11a297a09f6
+      internalID: -680228352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_27
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 1600
+        width: 100
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d462272512ff164f8c8e44a7c6c84a4
+      internalID: -1691949431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_28
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 1600
+        width: 87
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9adc89a4b68e39f4ab0ecf49634560a1
+      internalID: 1876094746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_29
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 1600
+        width: 79
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d20051639e8fac84b8e92f72be4745f3
+      internalID: 366178884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_30
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 1600
+        width: 48
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 681b465f97691e341a8a16fdd7ff9c9e
+      internalID: -1744365025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_31
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 1600
+        width: 39
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89313fb26f6c165469cec6b1823c965e
+      internalID: 1428289480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_32
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 1454
+        width: 43
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7375b848b622f324f8700bfa672ccea4
+      internalID: -229554539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_33
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 1454
+        width: 43
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce6b46c353f425e43a6aa56016d92581
+      internalID: 977581695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_34
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 1454
+        width: 43
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e1ca6eedffc2c347a60c8ff14710001
+      internalID: -875401327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_35
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 1454
+        width: 54
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ab6e659c6edad24480d6cdc5123d2c9
+      internalID: 934803653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_36
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 1454
+        width: 79
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f25321480c347ce40abeebbc2efe7685
+      internalID: 634200793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_37
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 1454
+        width: 74
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ac23ecac6a91194792242cd58c1b811
+      internalID: 743911216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_38
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 1454
+        width: 57
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a06764dbfc8abc40b5ab4c67b5668a2
+      internalID: 1835876935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_39
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 1454
+        width: 62
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6829f6d54effc7b47a1bb6171bb0d856
+      internalID: 1892532208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_40
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 1454
+        width: 59
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e4100ad6c8d71840a3814d9777f99d8
+      internalID: 892462334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_41
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 1454
+        width: 45
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1992a6ab38ce6ba49a7c0130f23b273c
+      internalID: 1182448140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_42
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 1372
+        width: 99
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4def38bdf44fff54ab385c618376de19
+      internalID: 770167561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_43
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 1372
+        width: 97
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e20b3cb24ed3e44c98cc5ed3ab090c0
+      internalID: -1289417001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_44
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 1372
+        width: 99
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9823f149bfc4284cafaa77bd3869c25
+      internalID: -1477853212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_45
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 1372
+        width: 99
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1f7aa955020de14d9761fa8118502f3
+      internalID: 223747257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_46
+      rect:
+        serializedVersion: 2
+        x: 685
+        y: 1375
+        width: 71
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa3e7d233fb0a1a4bab31a27add91549
+      internalID: 1766986213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_47
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1375
+        width: 71
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 894285ad5df53864f9b43bb852970172
+      internalID: 305609659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_48
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 1378
+        width: 69
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30104afb2ec384a4cb2953d9eca3071a
+      internalID: 1541155287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_49
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 1377
+        width: 75
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 668ad4a2173624944917bba19d805f1f
+      internalID: 1747279170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_50
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 1378
+        width: 90
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74d097307b2fb2941a0ef096419ac563
+      internalID: 2105594605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_51
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 1373
+        width: 94
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1bdd6bbc1bcdf940a1ad83b2ba1be4b
+      internalID: -143042379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_87
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 1275
+        width: 62
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47536526267f0c34fa820bf98d00fd2a
+      internalID: 281947317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_88
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 1275
+        width: 58
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a92bf05d271685240921b38f5f47a176
+      internalID: -1512995067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_89
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 1275
+        width: 69
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83b8b48e36098ac4990ff993662beaea
+      internalID: -62838200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_90
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 1275
+        width: 74
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dab8555cb4b1bc43bf82081ecaadfa1
+      internalID: -1980452101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_91
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 1275
+        width: 69
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2143674c4a32ce44c983a615c5351ac9
+      internalID: 2143028030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_92
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 1275
+        width: 66
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f75eee580c2c5d4a9c54720c31bda24
+      internalID: -640199278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_93
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 1275
+        width: 49
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e26e4b12ea1d755439728bfa345e4438
+      internalID: -1953329844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_94
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 1275
+        width: 39
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cb698673b4a55b4481ca14629aa92d2
+      internalID: -491719411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_95
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1216
+        width: 23
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 144aed5cfb2baaf42a9fe368a91bdd03
+      internalID: 1789837778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_96
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 1217
+        width: 30
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8690332c607e9d5478882e0246220699
+      internalID: -1379636647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_104
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 1202
+        width: 48
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42a534124311e5945b03a5d1af34a277
+      internalID: -1085107541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_105
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 1200
+        width: 52
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e406e66de56d034daf5bbbd4aab7957
+      internalID: -1930303659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_106
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 1198
+        width: 61
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9a6c16ef1adac8489378ea42b2f7de1
+      internalID: 1490480779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_109
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 1208
+        width: 34
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 543e473dca23ccd44807f8b97db5cc03
+      internalID: 1024004670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_110
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1208
+        width: 33
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24982359aac0a3943a2b4be9abbb4ca0
+      internalID: 709056333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_111
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 1203
+        width: 40
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fea6b8add5964e4c85d54e2526e5064
+      internalID: -38952598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_114
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 1196
+        width: 52
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80918a540a0639647be023788bbbef81
+      internalID: 1540535339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_115
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 1198
+        width: 53
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 292169d81370ab747a2b5c77955c6121
+      internalID: 21952001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_116
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 1199
+        width: 53
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 906cb8e683445674f908e09e5ae9ef99
+      internalID: -1663559589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_117
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 1199
+        width: 53
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d1977dcdbe8c2749a93a64b47f10068
+      internalID: 175127039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_125
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 1199
+        width: 47
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36ebc4b699407fd4eb6f3e6397bdb638
+      internalID: 559066785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_127
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 1196
+        width: 49
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93001f06c39dced48bbd6bd5fc148adb
+      internalID: 184959190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_133
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 1193
+        width: 50
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a20b88e8c27bb3541b840bc38e95e9e4
+      internalID: 374366259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_142
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 1196
+        width: 41
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2d6a9b977c8ad34183090f2b3d77599
+      internalID: -1119093254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_143
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 1196
+        width: 44
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9cdea44de657234f85cc1f24d2d57d7
+      internalID: 1025094017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_149
+      rect:
+        serializedVersion: 2
+        x: 955
+        y: 1196
+        width: 66
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfd07079d0ea8dc4e80a0ef342b72351
+      internalID: -2147093488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_152
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 1085
+        width: 60
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3647c5b71ea49c341ad4a9708d015ef9
+      internalID: -490069733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_153
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 1085
+        width: 47
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ec0664aef0bd824897ade3c54e4aaa5
+      internalID: -1497076745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_154
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 1085
+        width: 48
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26145b557773fa449a063320f1629b20
+      internalID: -1828742369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_155
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 1085
+        width: 61
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7ab06942b4ce06479deb642551d4b0b
+      internalID: -718167097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_156
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 1085
+        width: 45
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b41c33db2ea00264abe045347db8d11a
+      internalID: -341491200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_157
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 1085
+        width: 40
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b28722ea4c888b42bf9fcdfe2a5aba9
+      internalID: -417566431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_158
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 1085
+        width: 45
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e046ef1232047d47ba49ffbe5e7de64
+      internalID: 632273090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_159
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 723
+        width: 63
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 782914d8c83d2744c884999293439235
+      internalID: -2071287038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_160
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 725
+        width: 61
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56f42a194271016498a006e82e502df2
+      internalID: 1145456586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_161
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 729
+        width: 60
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85894f220304beb4fb0626231928e3e0
+      internalID: -1431378886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_162
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 729
+        width: 60
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 178aa2e98377e9348a6c025bb248c592
+      internalID: 676080638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_163
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 729
+        width: 60
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e405ee4c29b7cc140b17b3e17b0e122c
+      internalID: 1763198435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_164
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 729
+        width: 60
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89f7f5db9109fb84797a1a5b7c9a5ec5
+      internalID: 2065999925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_165
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 727
+        width: 61
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4b144b234a38234096670fb1d1db61a
+      internalID: -1909997144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_166
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 727
+        width: 67
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ccf2358df9b4ca4b90be1eb7852f0bb
+      internalID: 13814160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_167
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 725
+        width: 58
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 719d2a4a3dd6f4d408a11efbe3a93eab
+      internalID: -1178762618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_168
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 780
+        width: 50
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2506f70a2afa9e748a3ae5acc6474d08
+      internalID: -2091752404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_169
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 723
+        width: 63
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 190b9b1ed5007e44f88441f5de4db416
+      internalID: 1645824430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_225
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 623
+        width: 45
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdce6e904619bc34988de0f4ef805c33
+      internalID: 2131244755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_226
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 623
+        width: 43
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f35f8e74e830db4aa8486a9c724c746
+      internalID: 500195103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_227
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 623
+        width: 55
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a11182a09c5bc544780dec1aff1a1aeb
+      internalID: 446996231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_228
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 623
+        width: 48
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8623b50d3d72ee6428bf4cf7958f5959
+      internalID: 235543008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_229
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 623
+        width: 45
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1f9fc9e772d07341893212487b8eeb8
+      internalID: 263791988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_230
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 623
+        width: 73
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b649d4a9cb2701f4a9e9e294d9e63785
+      internalID: 1610923092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_231
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 623
+        width: 125
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a14db3eeecb867f44a3a1abf828f60b0
+      internalID: 94718592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_232
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 623
+        width: 115
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: feaecb3f51f500f42b8f6f55c95be382
+      internalID: 1691239296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_233
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 623
+        width: 98
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1548e312c196c1f40b39f1d8b2339ba6
+      internalID: 2061922098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_234
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 623
+        width: 58
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45d649f727b3f0643a6651778c01c8ba
+      internalID: 552836401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_235
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 623
+        width: 38
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c334093abcde4941b7aa7aa61a9fc0c
+      internalID: -1731330212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_236
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 532
+        width: 38
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ea5901bc7ff2cd41a6cb8dd6b514578
+      internalID: -1189322475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_237
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 532
+        width: 122
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 570b0d67245f429428f8346f84b4fe3a
+      internalID: -389661607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_238
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 532
+        width: 118
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eb2366b5bf2c1d4eaf7e773d15fa531
+      internalID: 837518368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_239
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 532
+        width: 90
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e95dbe28789d1664c9eff82c617f0190
+      internalID: 668284619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_240
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 532
+        width: 90
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b292622fb5ef21b48b2e403d27cea72b
+      internalID: 467284574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_241
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 532
+        width: 46
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77d256d0abca36044a86e2c967ccc86b
+      internalID: -1878517133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_242
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 429
+        width: 42
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 612ce4a1888747c408fd6d7015edf367
+      internalID: 1677642711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_243
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 429
+        width: 56
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dc15d1e7e8f8ca4c9444171d85b401d
+      internalID: -373648221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_244
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 429
+        width: 55
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 108702521f70eb746b95c9d5d929196a
+      internalID: 219481135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_245
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 429
+        width: 78
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23cb83aae37d4f94486529a79537cb7b
+      internalID: -1552145287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_246
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 429
+        width: 73
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64dde6b0a8f47734ab206f90e0dd558f
+      internalID: 946922296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_247
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 429
+        width: 80
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b58fea2de4f02824d8a6e55ba46d8482
+      internalID: 1636884378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_248
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 429
+        width: 72
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba0acdc940d187142b6ed95210c463bd
+      internalID: -768450312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_249
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 429
+        width: 46
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b14c5145bea10f4ea6017f2132d85c4
+      internalID: -450129153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_306
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 248
+        width: 50
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21798c6240fa42a4587cbe3ba8281160
+      internalID: -75959683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_308
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 245
+        width: 55
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5acc1c910cd493446a97362f90660c49
+      internalID: 1653651846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_309
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 239
+        width: 55
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99c282f0f08728e4784dd8c759a1dee9
+      internalID: 1964839060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_310
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 238
+        width: 77
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb675b669d4573b4abb2edbf7c1aa8fd
+      internalID: -1928054081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_312
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 238
+        width: 77
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a7651b583bd6de4190e084b12e4e67c
+      internalID: -831294808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_314
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 238
+        width: 80
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c9cd361cb7175d43a1961498e49dec1
+      internalID: -1048570047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_317
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 233
+        width: 86
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c0b1d20598a96f4094736ae1b43a184
+      internalID: 636711221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_370
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 122
+        width: 126
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 062e38346f52ee94cb65b6990d398e30
+      internalID: -1671969302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_371
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 136
+        width: 76
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e177fd69942a884429ad7986b41fd179
+      internalID: -1818729578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_372
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 136
+        width: 76
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf10f9c05d52a4342902a57adfb39c36
+      internalID: -396869354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_373
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 136
+        width: 76
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dc414044a95d0147a9e5e0a329752e2
+      internalID: -905325524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_374
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 136
+        width: 76
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b987d277005840145939c4baaab2185d
+      internalID: 1698348452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_375
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 136
+        width: 76
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfd8d84524124df47aee87e4abdba156
+      internalID: -947220121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_376
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 136
+        width: 76
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0ea11af740d9fb4291b0a84214ec53b
+      internalID: -1654279300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_377
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 136
+        width: 76
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d7ca5c3b5479d7429707952ed691c7b
+      internalID: 1351668250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_378
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 127
+        width: 107
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 188020bfb2658ba4583465b41c40b399
+      internalID: 986009646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aokiji_380
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 125
+        width: 117
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5e1cf37237950f4bbaa14d236f85257
+      internalID: 1905713980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Aokiji_0: 1302364265
+      Aokiji_1: 1080282472
+      Aokiji_10: -1907433409
+      Aokiji_100: -313397031
+      Aokiji_101: 2001685838
+      Aokiji_102: 1731701168
+      Aokiji_103: 1588387484
+      Aokiji_104: -1085107541
+      Aokiji_105: -1930303659
+      Aokiji_106: 1490480779
+      Aokiji_107: 1033010206
+      Aokiji_108: 1058205134
+      Aokiji_109: 1024004670
+      Aokiji_11: 2115466370
+      Aokiji_110: 709056333
+      Aokiji_111: -38952598
+      Aokiji_112: -304783019
+      Aokiji_113: -905048491
+      Aokiji_114: 1540535339
+      Aokiji_115: 21952001
+      Aokiji_116: -1663559589
+      Aokiji_117: 175127039
+      Aokiji_118: -1168058155
+      Aokiji_119: 1833387275
+      Aokiji_12: 300798618
+      Aokiji_120: -1761321501
+      Aokiji_121: -528745096
+      Aokiji_122: -192139620
+      Aokiji_123: 84160953
+      Aokiji_124: 1879342186
+      Aokiji_125: 559066785
+      Aokiji_126: 711658366
+      Aokiji_127: 184959190
+      Aokiji_128: -1452463621
+      Aokiji_129: 1744463552
+      Aokiji_13: 1559779088
+      Aokiji_130: -383999607
+      Aokiji_131: -605707621
+      Aokiji_132: 1811830441
+      Aokiji_133: 374366259
+      Aokiji_134: 1466135993
+      Aokiji_135: -1068787607
+      Aokiji_136: -1724771963
+      Aokiji_137: 799562451
+      Aokiji_138: 1111798883
+      Aokiji_139: -2087458739
+      Aokiji_14: 483378966
+      Aokiji_140: 1770996635
+      Aokiji_141: 319500628
+      Aokiji_142: -1119093254
+      Aokiji_143: 1025094017
+      Aokiji_144: 849016025
+      Aokiji_145: -58893322
+      Aokiji_146: -458139
+      Aokiji_147: -1359478957
+      Aokiji_148: -391701936
+      Aokiji_149: -2147093488
+      Aokiji_15: -2078332132
+      Aokiji_150: 823206547
+      Aokiji_151: 904109763
+      Aokiji_152: -490069733
+      Aokiji_153: -1497076745
+      Aokiji_154: -1828742369
+      Aokiji_155: -718167097
+      Aokiji_156: -341491200
+      Aokiji_157: -417566431
+      Aokiji_158: 632273090
+      Aokiji_159: -2071287038
+      Aokiji_16: 1516387555
+      Aokiji_160: 1145456586
+      Aokiji_161: -1431378886
+      Aokiji_162: 676080638
+      Aokiji_163: 1763198435
+      Aokiji_164: 2065999925
+      Aokiji_165: -1909997144
+      Aokiji_166: 13814160
+      Aokiji_167: -1178762618
+      Aokiji_168: -2091752404
+      Aokiji_169: 1645824430
+      Aokiji_17: -2133476078
+      Aokiji_170: 1742943466
+      Aokiji_171: 1178499544
+      Aokiji_172: -266517578
+      Aokiji_173: 870216121
+      Aokiji_174: 1343153605
+      Aokiji_175: -777432289
+      Aokiji_176: 107314576
+      Aokiji_177: -949823775
+      Aokiji_178: 557787054
+      Aokiji_179: -428598358
+      Aokiji_18: -1441312062
+      Aokiji_180: -754362274
+      Aokiji_181: -1122212460
+      Aokiji_182: 983351574
+      Aokiji_183: -354147447
+      Aokiji_184: -1856729434
+      Aokiji_185: 1697573779
+      Aokiji_186: -1959096397
+      Aokiji_187: -213304980
+      Aokiji_188: -118067840
+      Aokiji_189: -1073275070
+      Aokiji_19: 1636453498
+      Aokiji_190: 443723740
+      Aokiji_191: 329496442
+      Aokiji_192: -1404164756
+      Aokiji_193: -1409784666
+      Aokiji_194: 984525171
+      Aokiji_195: 1851762697
+      Aokiji_196: 2110858109
+      Aokiji_197: 1292905929
+      Aokiji_198: 636377093
+      Aokiji_199: 806944633
+      Aokiji_2: -1529068124
+      Aokiji_20: -1569582083
+      Aokiji_200: -520207033
+      Aokiji_201: -1268165870
+      Aokiji_202: 1250499510
+      Aokiji_203: 736213024
+      Aokiji_204: 1609628746
+      Aokiji_205: 725084970
+      Aokiji_206: -385532627
+      Aokiji_207: -1043954417
+      Aokiji_208: 219519124
+      Aokiji_209: 442331890
+      Aokiji_21: -2041555798
+      Aokiji_210: 1243467623
+      Aokiji_211: -1750513206
+      Aokiji_212: 1805005854
+      Aokiji_213: -1727632514
+      Aokiji_214: 1881595355
+      Aokiji_215: -490869866
+      Aokiji_216: 39329625
+      Aokiji_217: -1608666751
+      Aokiji_218: -138686212
+      Aokiji_219: -1148832736
+      Aokiji_22: -1607679588
+      Aokiji_220: -452429584
+      Aokiji_221: 1572861696
+      Aokiji_222: -1999777452
+      Aokiji_223: 1210434924
+      Aokiji_224: -920818583
+      Aokiji_225: 2131244755
+      Aokiji_226: 500195103
+      Aokiji_227: 446996231
+      Aokiji_228: 235543008
+      Aokiji_229: 263791988
+      Aokiji_23: -92626751
+      Aokiji_230: 1610923092
+      Aokiji_231: 94718592
+      Aokiji_232: 1691239296
+      Aokiji_233: 2061922098
+      Aokiji_234: 552836401
+      Aokiji_235: -1731330212
+      Aokiji_236: -1189322475
+      Aokiji_237: -389661607
+      Aokiji_238: 837518368
+      Aokiji_239: 668284619
+      Aokiji_24: 1663923424
+      Aokiji_240: 467284574
+      Aokiji_241: -1878517133
+      Aokiji_242: 1677642711
+      Aokiji_243: -373648221
+      Aokiji_244: 219481135
+      Aokiji_245: -1552145287
+      Aokiji_246: 946922296
+      Aokiji_247: 1636884378
+      Aokiji_248: -768450312
+      Aokiji_249: -450129153
+      Aokiji_25: 490533270
+      Aokiji_250: 1762541539
+      Aokiji_251: 1238782009
+      Aokiji_252: -1464537298
+      Aokiji_253: -480872345
+      Aokiji_254: 1177068211
+      Aokiji_255: 574666621
+      Aokiji_256: -150713349
+      Aokiji_257: 307293263
+      Aokiji_258: 1489295733
+      Aokiji_259: 823464803
+      Aokiji_26: -680228352
+      Aokiji_260: -355929473
+      Aokiji_261: -968985661
+      Aokiji_262: -785619542
+      Aokiji_263: 575057820
+      Aokiji_264: -1895011590
+      Aokiji_265: -1768788780
+      Aokiji_266: -902629859
+      Aokiji_267: 1287495439
+      Aokiji_268: 141334456
+      Aokiji_269: -894221014
+      Aokiji_27: -1691949431
+      Aokiji_270: -151157680
+      Aokiji_271: 70761022
+      Aokiji_272: 1423919648
+      Aokiji_273: 877366318
+      Aokiji_274: 1894343886
+      Aokiji_275: -1246062065
+      Aokiji_276: 871757819
+      Aokiji_277: -1795301767
+      Aokiji_278: 1465326160
+      Aokiji_279: 418270502
+      Aokiji_28: 1876094746
+      Aokiji_280: -1957374411
+      Aokiji_281: -1346783921
+      Aokiji_282: -2056478414
+      Aokiji_283: -1189120418
+      Aokiji_284: -877714791
+      Aokiji_285: -1988688484
+      Aokiji_286: -1652129653
+      Aokiji_287: -108747479
+      Aokiji_288: 1881728660
+      Aokiji_289: -966561180
+      Aokiji_29: 366178884
+      Aokiji_290: 1505274587
+      Aokiji_291: 413676015
+      Aokiji_292: -53603198
+      Aokiji_293: 26500581
+      Aokiji_294: 2053408457
+      Aokiji_295: 1990160267
+      Aokiji_296: 2038296644
+      Aokiji_297: 1253487174
+      Aokiji_298: 971363906
+      Aokiji_299: 795974434
+      Aokiji_3: -248336553
+      Aokiji_30: -1744365025
+      Aokiji_300: -1030383382
+      Aokiji_301: -1261280261
+      Aokiji_302: 1422399775
+      Aokiji_303: 1048544352
+      Aokiji_304: -1011120311
+      Aokiji_305: 219118954
+      Aokiji_306: -75959683
+      Aokiji_307: -1658564413
+      Aokiji_308: 1653651846
+      Aokiji_309: 1964839060
+      Aokiji_31: 1428289480
+      Aokiji_310: -1928054081
+      Aokiji_311: 987737253
+      Aokiji_312: -831294808
+      Aokiji_313: -455222962
+      Aokiji_314: -1048570047
+      Aokiji_315: -252555939
+      Aokiji_316: -1664658291
+      Aokiji_317: 636711221
+      Aokiji_318: 135535518
+      Aokiji_319: 1195286232
+      Aokiji_32: -229554539
+      Aokiji_320: -685428232
+      Aokiji_321: 117233407
+      Aokiji_322: -1861831206
+      Aokiji_323: -1051842360
+      Aokiji_324: 1003812090
+      Aokiji_325: 1618116661
+      Aokiji_326: 722375256
+      Aokiji_327: 166180261
+      Aokiji_328: 1533616282
+      Aokiji_329: 1651717046
+      Aokiji_33: 977581695
+      Aokiji_330: 646946357
+      Aokiji_331: -1791056829
+      Aokiji_332: -721748785
+      Aokiji_333: 649327529
+      Aokiji_334: -1904407012
+      Aokiji_335: -1551640345
+      Aokiji_336: 1960968
+      Aokiji_337: -756318944
+      Aokiji_338: 1068525586
+      Aokiji_339: -1855820832
+      Aokiji_34: -875401327
+      Aokiji_340: 1111792013
+      Aokiji_341: -1531157123
+      Aokiji_342: -297877109
+      Aokiji_343: -970288149
+      Aokiji_344: 1508017061
+      Aokiji_345: 1876710594
+      Aokiji_346: 1227472430
+      Aokiji_347: -632192411
+      Aokiji_348: -1855135124
+      Aokiji_349: 1623132860
+      Aokiji_35: 934803653
+      Aokiji_350: -677510193
+      Aokiji_351: -1959500796
+      Aokiji_352: -734176401
+      Aokiji_353: -2078991322
+      Aokiji_354: 1169508045
+      Aokiji_355: -1504699901
+      Aokiji_356: 1665790048
+      Aokiji_357: 1842138972
+      Aokiji_358: 242397643
+      Aokiji_359: 392142902
+      Aokiji_36: 634200793
+      Aokiji_360: -1588712565
+      Aokiji_361: -156198338
+      Aokiji_362: 705563231
+      Aokiji_363: 1908224626
+      Aokiji_364: -2053535266
+      Aokiji_365: 932464916
+      Aokiji_366: 660762534
+      Aokiji_367: 1743876126
+      Aokiji_368: -1137365480
+      Aokiji_369: -193585286
+      Aokiji_37: 743911216
+      Aokiji_370: -1671969302
+      Aokiji_371: -1818729578
+      Aokiji_372: -396869354
+      Aokiji_373: -905325524
+      Aokiji_374: 1698348452
+      Aokiji_375: -947220121
+      Aokiji_376: -1654279300
+      Aokiji_377: 1351668250
+      Aokiji_378: 986009646
+      Aokiji_379: 1704247303
+      Aokiji_38: 1835876935
+      Aokiji_380: 1905713980
+      Aokiji_381: 2058315373
+      Aokiji_382: -1935694035
+      Aokiji_383: -1932125053
+      Aokiji_384: 1410187944
+      Aokiji_385: -1289241223
+      Aokiji_386: 562293179
+      Aokiji_387: 1704523494
+      Aokiji_388: 522969172
+      Aokiji_389: -642227601
+      Aokiji_39: 1892532208
+      Aokiji_390: 1656374274
+      Aokiji_391: 1998669880
+      Aokiji_392: -1109718881
+      Aokiji_393: -338215917
+      Aokiji_394: -1542475776
+      Aokiji_395: 848554556
+      Aokiji_396: 469195249
+      Aokiji_397: -439958831
+      Aokiji_398: -1132658611
+      Aokiji_399: -541646781
+      Aokiji_4: -2144764673
+      Aokiji_40: 892462334
+      Aokiji_400: -307557712
+      Aokiji_401: 1819438449
+      Aokiji_402: -1267792524
+      Aokiji_403: 900962293
+      Aokiji_404: -783261603
+      Aokiji_405: 826441434
+      Aokiji_406: -599935548
+      Aokiji_407: 1188402503
+      Aokiji_408: -2085626134
+      Aokiji_409: 1330071628
+      Aokiji_41: 1182448140
+      Aokiji_410: 1868183778
+      Aokiji_411: -1194377346
+      Aokiji_412: 337652695
+      Aokiji_413: -1711475922
+      Aokiji_414: -1766487820
+      Aokiji_415: -175260620
+      Aokiji_416: 1960360212
+      Aokiji_417: 329475075
+      Aokiji_418: -1642210932
+      Aokiji_419: -1616145982
+      Aokiji_42: 770167561
+      Aokiji_420: 605942892
+      Aokiji_421: -349517720
+      Aokiji_422: -520509990
+      Aokiji_423: -1088716065
+      Aokiji_424: 1173543978
+      Aokiji_425: 594559683
+      Aokiji_426: -143914991
+      Aokiji_427: 1137078193
+      Aokiji_428: -1971674151
+      Aokiji_429: -460401795
+      Aokiji_43: -1289417001
+      Aokiji_430: -1167868398
+      Aokiji_431: 943688540
+      Aokiji_432: 1731138936
+      Aokiji_433: -1620732194
+      Aokiji_434: 468996889
+      Aokiji_435: -1849608484
+      Aokiji_436: -1076118271
+      Aokiji_437: 1212264245
+      Aokiji_438: 375180302
+      Aokiji_439: -323860262
+      Aokiji_44: -1477853212
+      Aokiji_440: -1262433262
+      Aokiji_441: -1063379179
+      Aokiji_442: 226490625
+      Aokiji_443: 31769443
+      Aokiji_444: -1851669627
+      Aokiji_445: -28127866
+      Aokiji_446: 573479975
+      Aokiji_447: -339406207
+      Aokiji_448: -1401480028
+      Aokiji_449: 1601822939
+      Aokiji_45: 223747257
+      Aokiji_46: 1766986213
+      Aokiji_47: 305609659
+      Aokiji_48: 1541155287
+      Aokiji_49: 1747279170
+      Aokiji_5: -77053901
+      Aokiji_50: 2105594605
+      Aokiji_51: -143042379
+      Aokiji_52: 1904345336
+      Aokiji_53: -1333215234
+      Aokiji_54: 556355083
+      Aokiji_55: 624404522
+      Aokiji_56: -1788594263
+      Aokiji_57: 964493157
+      Aokiji_58: 85519730
+      Aokiji_59: -1022603125
+      Aokiji_6: 1850117124
+      Aokiji_60: -2125293109
+      Aokiji_61: -1933794895
+      Aokiji_62: 1781209887
+      Aokiji_63: 816073208
+      Aokiji_64: 1903533975
+      Aokiji_65: -1772176028
+      Aokiji_66: -411749478
+      Aokiji_67: -170342208
+      Aokiji_68: -1129564362
+      Aokiji_69: 539190804
+      Aokiji_7: 1175756463
+      Aokiji_70: 1129578145
+      Aokiji_71: 1619114030
+      Aokiji_72: 1543635506
+      Aokiji_73: 1540008124
+      Aokiji_74: -1267914005
+      Aokiji_75: -677091829
+      Aokiji_76: 1808806948
+      Aokiji_77: 377694643
+      Aokiji_78: 1161294972
+      Aokiji_79: 1521303356
+      Aokiji_8: -90771579
+      Aokiji_80: 262564823
+      Aokiji_81: -818304810
+      Aokiji_82: -107010712
+      Aokiji_83: -840889399
+      Aokiji_84: -1004778351
+      Aokiji_85: 1424534108
+      Aokiji_86: 1672218157
+      Aokiji_87: 281947317
+      Aokiji_88: -1512995067
+      Aokiji_89: -62838200
+      Aokiji_9: -241796101
+      Aokiji_90: -1980452101
+      Aokiji_91: 2143028030
+      Aokiji_92: -640199278
+      Aokiji_93: -1953329844
+      Aokiji_94: -491719411
+      Aokiji_95: 1789837778
+      Aokiji_96: -1379636647
+      Aokiji_97: -1324075534
+      Aokiji_98: 188830037
+      Aokiji_99: 1668479460
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

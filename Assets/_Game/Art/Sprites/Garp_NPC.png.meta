@@ -1,0 +1,1125 @@
+fileFormatVersion: 2
+guid: 78ba100dc3ffff941a9f3a5f10d60555
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Garp_NPC_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 598
+        width: 48
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d162339f487d6a4ba9d087194e7c0a9
+      internalID: -1076064740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garp_NPC_1
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 598
+        width: 50
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7cb8745ac6066344884260721ee1b6f
+      internalID: 453373667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garp_NPC_2
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 598
+        width: 51
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d71f0b6873d713a4085728cddf83df5f
+      internalID: -486684317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garp_NPC_3
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 598
+        width: 92
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c54ebda8545d3c240a4dce35025743cc
+      internalID: -620499247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garp_NPC_10
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 638
+        width: 187
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da82babba67b36044a39f60f99651b3e
+      internalID: 1071423646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garp_NPC_17
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 611
+        width: 32
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36367b6b321e68d489b94369013fe6fc
+      internalID: 292568908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garp_NPC_18
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 545
+        width: 66
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1bf6d482f27d524085bd8a25fd084cb
+      internalID: -425130756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garp_NPC_22
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 476
+        width: 74
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8ed0361421b60f49ac66f323efea557
+      internalID: -1062305399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garp_NPC_23
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 476
+        width: 82
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 836c54a4a42cf514c87f7926060c6b2c
+      internalID: 210018254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garp_NPC_24
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 477
+        width: 94
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04943291cf9c5a34eaa80ade6680635e
+      internalID: 1894514396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garp_NPC_25
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 476
+        width: 94
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ee7248c427514349abd9c0a74173466
+      internalID: -2128124266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garp_NPC_26
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 476
+        width: 94
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4becc28ca133f2e42925783730935280
+      internalID: -2119343577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garp_NPC_27
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 476
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72f00554bf703064ab967c3b9d3085ba
+      internalID: 218703659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garp_NPC_28
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 483
+        width: 55
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4ea37b211e09b94d90fdc3949b66685
+      internalID: -394837392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garp_NPC_29
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 476
+        width: 127
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e832ae37ea3b60a4eb44a1ba8636fdbc
+      internalID: -892952794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garp_NPC_30
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 363
+        width: 82
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 805aaf0e48fa22948bb2057e1dd542df
+      internalID: -1543489371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garp_NPC_31
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 363
+        width: 75
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3965bb766d793d14e8f39639f03a9f8f
+      internalID: -480841272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garp_NPC_32
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 363
+        width: 126
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c661f504b9a180445b245eb1e89688fb
+      internalID: -1974144328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garp_NPC_33
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 363
+        width: 133
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15ac6943536b2ea4995fd0aa689bf911
+      internalID: 2030243803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garp_NPC_34
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 363
+        width: 84
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcb2bc87b659f58438c374bf839bcf9d
+      internalID: -1136790957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garp_NPC_35
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 363
+        width: 76
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4fd20d780649e245acc6d8d388ab0a2
+      internalID: -523892040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garp_NPC_36
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 239
+        width: 48
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa89277383d68a94ebec5a8522458d2a
+      internalID: 1054126735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garp_NPC_37
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 239
+        width: 50
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb8108ccabf1bd941af36c602677a1ea
+      internalID: 925810545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garp_NPC_38
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 239
+        width: 51
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9294a62c7e3a774b989541d8cacde0f
+      internalID: -973195804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garp_NPC_39
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 239
+        width: 92
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c28511e74c030014d8ce72369bcf8ff4
+      internalID: -1021236184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garp_NPC_40
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 244
+        width: 56
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9aceeb6455f2fc4486614c5282387b5
+      internalID: -940647023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garp_NPC_41
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 240
+        width: 47
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca9ff5fa3b3f33040aa0578f1e981820
+      internalID: 1922571494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garp_NPC_46
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 274
+        width: 35
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 329ec039b792cd340b18547e3d6ebf52
+      internalID: -1839224993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garp_NPC_49
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 263
+        width: 19
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1a2d1ea5191b8048aa5999c9be7def7
+      internalID: 1856045079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garp_NPC_55
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 117
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03ff368646d9c61419e9751dfcea6fe9
+      internalID: -83707170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garp_NPC_56
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 117
+        width: 82
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8765c3e40a5444248b2603544e40e679
+      internalID: 415955844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garp_NPC_57
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 118
+        width: 94
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29344d88e9568e54180a4af9b0692b40
+      internalID: 93099818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garp_NPC_58
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 117
+        width: 94
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45e762b7c7d701d408f4969a69de5dbb
+      internalID: -1086161426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garp_NPC_59
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 117
+        width: 94
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: feb8ff5573d557a4da5bdea6e5af3f90
+      internalID: -233903669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garp_NPC_60
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 117
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2060e9baf6f8d74478b6f2c791c614e9
+      internalID: -1253531289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garp_NPC_61
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 124
+        width: 55
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb36111ecc7f0d747b8c019cbb5e02af
+      internalID: -1075045553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garp_NPC_62
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 117
+        width: 127
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cca3f3c0f08a97d45b52a97abc71d80c
+      internalID: -159390255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garp_NPC_63
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 4
+        width: 82
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ef3841722916a64593b049d5b127f67
+      internalID: -164472138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garp_NPC_64
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 4
+        width: 75
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e9c8bf5e2f2e9544b8378f23e1e510b
+      internalID: 79032552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garp_NPC_65
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 4
+        width: 126
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 716001b8c6483f04ca28744d84cf59ad
+      internalID: -1100043261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garp_NPC_66
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 4
+        width: 133
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70814c06dd61aef48a876049b70f2e18
+      internalID: -1975228971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garp_NPC_67
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 4
+        width: 87
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e869e8e495556a46b8825aab2a3b18f
+      internalID: -2056947876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garp_NPC_68
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 4
+        width: 76
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3962a5093ad701845a8f62aba946d7ac
+      internalID: 164826743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Garp_NPC_0: -1076064740
+      Garp_NPC_1: 453373667
+      Garp_NPC_10: 1071423646
+      Garp_NPC_11: 340398557
+      Garp_NPC_12: -1925379099
+      Garp_NPC_13: 1040928815
+      Garp_NPC_14: 2128976836
+      Garp_NPC_15: -513887814
+      Garp_NPC_16: 409872977
+      Garp_NPC_17: 292568908
+      Garp_NPC_18: -425130756
+      Garp_NPC_19: 2011025753
+      Garp_NPC_2: -486684317
+      Garp_NPC_20: 1457311367
+      Garp_NPC_21: 563855479
+      Garp_NPC_22: -1062305399
+      Garp_NPC_23: 210018254
+      Garp_NPC_24: 1894514396
+      Garp_NPC_25: -2128124266
+      Garp_NPC_26: -2119343577
+      Garp_NPC_27: 218703659
+      Garp_NPC_28: -394837392
+      Garp_NPC_29: -892952794
+      Garp_NPC_3: -620499247
+      Garp_NPC_30: -1543489371
+      Garp_NPC_31: -480841272
+      Garp_NPC_32: -1974144328
+      Garp_NPC_33: 2030243803
+      Garp_NPC_34: -1136790957
+      Garp_NPC_35: -523892040
+      Garp_NPC_36: 1054126735
+      Garp_NPC_37: 925810545
+      Garp_NPC_38: -973195804
+      Garp_NPC_39: -1021236184
+      Garp_NPC_4: 1560778384
+      Garp_NPC_40: -940647023
+      Garp_NPC_41: 1922571494
+      Garp_NPC_42: 1096647252
+      Garp_NPC_43: 756081087
+      Garp_NPC_44: -1137185634
+      Garp_NPC_45: -333156904
+      Garp_NPC_46: -1839224993
+      Garp_NPC_47: 318263684
+      Garp_NPC_48: 1296480996
+      Garp_NPC_49: 1856045079
+      Garp_NPC_5: -1623804613
+      Garp_NPC_50: -466515792
+      Garp_NPC_51: 475308483
+      Garp_NPC_52: -771371584
+      Garp_NPC_53: 1034813747
+      Garp_NPC_54: 287872942
+      Garp_NPC_55: -83707170
+      Garp_NPC_56: 415955844
+      Garp_NPC_57: 93099818
+      Garp_NPC_58: -1086161426
+      Garp_NPC_59: -233903669
+      Garp_NPC_6: -2103269919
+      Garp_NPC_60: -1253531289
+      Garp_NPC_61: -1075045553
+      Garp_NPC_62: -159390255
+      Garp_NPC_63: -164472138
+      Garp_NPC_64: 79032552
+      Garp_NPC_65: -1100043261
+      Garp_NPC_66: -1975228971
+      Garp_NPC_67: -2056947876
+      Garp_NPC_68: 164826743
+      Garp_NPC_7: 1447749876
+      Garp_NPC_8: 1533200717
+      Garp_NPC_9: 1652458417
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

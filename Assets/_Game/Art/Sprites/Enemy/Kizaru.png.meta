@@ -1,0 +1,4105 @@
+fileFormatVersion: 2
+guid: 1459c497050bfca4e927ef49ef8ce49b
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Kizaru_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1720
+        width: 37
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 264d68a88221b8041b8e5795d52a6d18
+      internalID: -1303957118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_1
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 1720
+        width: 36
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b7a7970b9dd60645b4054b8eb93e40b
+      internalID: -1495734391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_2
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 1720
+        width: 36
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7095324882a4ec84fb7e6285ba030cb2
+      internalID: 1060804579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_3
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 1720
+        width: 37
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec3d66b2b3a6bf94582b3274168df507
+      internalID: -1177169251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_4
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 1720
+        width: 41
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c17064d539a4d1045bf307faa715cef9
+      internalID: -985335180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_5
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 1720
+        width: 56
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29b824f5294fac44d98602c4ad9d7a6c
+      internalID: -662256357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_6
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 1720
+        width: 48
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53cfcb1f82590e74db1333ca872b4479
+      internalID: -452797344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_7
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 1720
+        width: 45
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 293b5e2d4293b5c47a56abd558f3dfb3
+      internalID: 1912932632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_8
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1720
+        width: 42
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f619bda12d78eaa4ba2aad228d0d0189
+      internalID: 294602694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_9
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 1720
+        width: 50
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29be6517e2255a04e89d6c4f6cfdd798
+      internalID: 2064639860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_10
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1720
+        width: 43
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c2db975b2d9f70418ca77e151cef0b8
+      internalID: -1385166077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_11
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 1720
+        width: 37
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab901eabbf246354d9036f215528c275
+      internalID: 599697565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_12
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 1622
+        width: 40
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dcfbb4491d3efa419b517d041d2e07d
+      internalID: 1095479029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_13
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 1622
+        width: 55
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a6ef741a863aaf4cb820b7e8d07f465
+      internalID: -908138103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_14
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 1622
+        width: 58
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc023ada3d2ed124aa1ce30a3179c657
+      internalID: 1385229254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_15
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 1622
+        width: 50
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbf426d07ea71e14e9ae47fb2e8eedbc
+      internalID: 1518061279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_16
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 1622
+        width: 40
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c28edfc825712614cb56921a984dc2ff
+      internalID: -1303713365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_17
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1535
+        width: 40
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1795b5ba01bab774aa3116522b8db91c
+      internalID: 250097717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_18
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 1536
+        width: 79
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a564ad144a6118843ab4046de73e576a
+      internalID: -971372921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_19
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 1536
+        width: 92
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b7dddc5107027344be03c6ffef5440f
+      internalID: -221941314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_20
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 1536
+        width: 65
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95a8713f91a7d4941993e54269f4614e
+      internalID: -1121085489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_21
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 1536
+        width: 50
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a1878e457fa33d498fd09b2531a41c3
+      internalID: 1929041761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_22
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1447
+        width: 37
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc02a9ab0c87569428fc48f3e4322b0a
+      internalID: 775950851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_23
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 1447
+        width: 44
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f7e38f60c7c8e846af190d36dfe0bb7
+      internalID: -1060648816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_24
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 1447
+        width: 42
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ee55816efc05c14985cae6929e0acb1
+      internalID: -1740729775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_25
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 1447
+        width: 47
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: debc7d272004fed4aa16ff4555aad8a1
+      internalID: 1862815540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_26
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 1447
+        width: 57
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5200fa2e6993dd4488495f287b3c9de8
+      internalID: -1487996528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_27
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 1446
+        width: 42
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cee6b54e24ef16d41a9de714c28a6a27
+      internalID: 175427831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_28
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 1447
+        width: 44
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57b5e04ef58f4d149b742da912103e3d
+      internalID: 1588160386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_29
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 1362
+        width: 88
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0db0540c7a5d2fb42b6151eb59a0b373
+      internalID: 28286896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_30
+      rect:
+        serializedVersion: 2
+        x: 759
+        y: 1360
+        width: 91
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd79ac084afdea849b39fdb9a0200f5a
+      internalID: 2011085207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_31
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 1446
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5415a9a19c14e44e9fb6c1bb8ff0a73
+      internalID: 656426576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_33
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1385
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 109ca98b0d09c2546ae8b4ad901e81cb
+      internalID: 452511642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_34
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 1383
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5e729bc0e1ae4b4dbb62735d569bb72
+      internalID: -1293584001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_35
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 1383
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8f237f3a3a018744955b0938a5f869d
+      internalID: 1035362240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_36
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 1383
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b391ac735b195d74495d7b83fb9d012d
+      internalID: 129108833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_37
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 1383
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32ff8c512a7c49c4c8cbe806966e5edf
+      internalID: 470936352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_38
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 1378
+        width: 58
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a68cd118087da0148a5252ceddb2bd5d
+      internalID: -1260366217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_39
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 1383
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37e090c243a54514890db1bb9095ca8d
+      internalID: 1044864538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_40
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 1378
+        width: 58
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79134dcd9f105984384786640087e36e
+      internalID: 1887036053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_41
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 1367
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e210ce3de4a98e49a4636ed0d15fb2c
+      internalID: 1673780677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_42
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 1367
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c32376a68a4e704995712e00fd443df
+      internalID: 1715838811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_43
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 1367
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4eb49956ebc59b4eb19ce72df1be5ea
+      internalID: -1714968929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_49
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 1359
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6970858d5f6225e4a9311e58792c9502
+      internalID: -1646148378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_51
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1261
+        width: 42
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2de437f56aefc1b489fd9e28d2411ad4
+      internalID: 166589977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_52
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 1261
+        width: 48
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9818a40034f419f4ea04097bfc4d3638
+      internalID: 1276655903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_53
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 1261
+        width: 48
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67f75642ad7264f46833262b5a1a80df
+      internalID: -334437233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_54
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 1261
+        width: 95
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5ccc94ec3bfdc946bd0044d9abd0e9b
+      internalID: -1984155614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_55
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 1261
+        width: 96
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e0d831a5d824e74abac8ae40de00f35
+      internalID: -882193185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_56
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 1261
+        width: 92
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b850a4dee1715e24ab3dbd6c364e9414
+      internalID: -1337349160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_57
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 1261
+        width: 84
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be98f4e98b67fea4f8d38352580c271f
+      internalID: -1546608111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_58
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 1261
+        width: 81
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ce16a3c8762b69468f9f91f4bfe0614
+      internalID: 1196801175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_59
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 1261
+        width: 72
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b6653d0f02d08a468ed1b5dd538529a
+      internalID: -582401129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_60
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 1261
+        width: 48
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cd639c066a5c1d44a6be5ec114b34c4
+      internalID: -512763367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_61
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 1152
+        width: 41
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 541daba63c755ba4daf1ee1f2d01fd5d
+      internalID: -534771623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_62
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 1177
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 680f516879499ac4d811f6cd42c88ff8
+      internalID: -332163380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_63
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 1158
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08b30ff586fdca34aa295075b637ca77
+      internalID: 313963921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_64
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 1177
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37162de98165a5c429e74516f8a9f886
+      internalID: 1056419282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_65
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 1152
+        width: 62
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5526029a8bacf14ea5ae836d6029b90
+      internalID: 1513968136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_66
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 1153
+        width: 66
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dfe35c76cd74c14da5015c4abfdaa08
+      internalID: -1555529049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_67
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 1153
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c4c126959a07b047adf9e3007a10459
+      internalID: -1305883733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_68
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 1153
+        width: 67
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bf19ec3ff56e2c44823775672fcc55b
+      internalID: 1010974550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_69
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 1180
+        width: 26
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fba9b9dd879f1d4b9d4cce9abba40b1
+      internalID: 1208220369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_70
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 1153
+        width: 88
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fff8aff2c8892ea419d7b148c3a32a31
+      internalID: -739157946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_71
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 1153
+        width: 64
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d31a7e3f2e3f9224fa4454c319363bbf
+      internalID: -2095619775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_72
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1061
+        width: 37
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0774941f8d9ea9f41acdd6a597fcedc2
+      internalID: 600874028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_73
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 1061
+        width: 44
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bdc68aa38bbf4748962aef84de1d317
+      internalID: -391468822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_74
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 1061
+        width: 45
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b74b84b4fa4a854ca07f419a75c9a0d
+      internalID: -1852734251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_75
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 1061
+        width: 47
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 070cb997ad9ba424e810cdbaab1b9b6b
+      internalID: -1768295610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_76
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 1061
+        width: 57
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 023c772f8e6a0d94f9cdc6123bd91b2f
+      internalID: 214374392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_77
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 1061
+        width: 45
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ea34d0f0bf076f4c914a28c5e69a048
+      internalID: 1200776375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_78
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 1061
+        width: 50
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e35947399d96b784db5e501e2ef887a5
+      internalID: 415998612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_79
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 1061
+        width: 60
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b665ca77bfa52114eb6957091f4c0c29
+      internalID: 1819864707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_80
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 1061
+        width: 45
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f09e201dc1b18e44878194d47e45d5f
+      internalID: 151483548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_81
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 1061
+        width: 44
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d1e114805e02de43a378828c8120f04
+      internalID: 313973515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_82
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 1101
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bec1d4bf113598b4aa4f70ded3df80e7
+      internalID: -824092831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_83
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 1101
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25a50c8746167de43bca5d1199cdc1fd
+      internalID: -455490664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_84
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 1101
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89c5838d6211a8e4c977fe5a539867d8
+      internalID: 505453543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_85
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 1099
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb8172da4688a9a48b576383034853c1
+      internalID: 773822592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_86
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 1111
+        width: 59
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e5f424527e64cb44bfdf3f4395025c5
+      internalID: 78313746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_87
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 1111
+        width: 55
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75f73ef30fceae0488617e1065fbc921
+      internalID: 911375805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_88
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 963
+        width: 43
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ba48d9d07d8bf34a9cc87814a944609
+      internalID: -1805796347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_89
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 963
+        width: 46
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 971064469b85a9b4e8704ae5d340a66d
+      internalID: 935603783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_90
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 963
+        width: 62
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e869c8183a0f17f4cad6fe0b0b681979
+      internalID: 923754409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_91
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 963
+        width: 62
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32a5cc1f4dc3ce34c9566e4d3052297d
+      internalID: 1612937964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_92
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 963
+        width: 81
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a68fc39f99087ba4785bde765b079029
+      internalID: -1648885267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_93
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 963
+        width: 99
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03f457c913910524fac91c314be8d161
+      internalID: 747713870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_94
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 963
+        width: 80
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23fdf7a8067d773408f9a5175ad9556a
+      internalID: 942072927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_95
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 963
+        width: 68
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc034c99c823f6848bfc29aaef69899b
+      internalID: -839643077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_96
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 963
+        width: 69
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12f0f5e5cda859a408376e7d66d811ac
+      internalID: 995583487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_98
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 963
+        width: 62
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17567152b1eb260479131a0d4dea56d3
+      internalID: -129726863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_100
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 963
+        width: 69
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a8c775daba45b94796bdb8003449a9f
+      internalID: -1682705092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_101
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 963
+        width: 68
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 724e640e11bf1bb4abb8456ccadcc4a1
+      internalID: -440038572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_106
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 874
+        width: 69
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0206903ebb7d1e3438dc5a26f60f9d9d
+      internalID: 1409724611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_107
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 874
+        width: 68
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0f654a309eb90840a6587f9327d82a4
+      internalID: -1947845854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_109
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 874
+        width: 69
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d162cd8972e78548b6094ec81c7ad87
+      internalID: 24931253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_110
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 872
+        width: 63
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05de9d4b1f5fc3041b178e8a8bc6d4bf
+      internalID: -214988012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_111
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 873
+        width: 62
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12405b094cca2e541aac0cce468aba44
+      internalID: 1036676096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_112
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 874
+        width: 45
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2c360f3f2b9c4a45b7f2e93e65a53a9
+      internalID: -1939624268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_113
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 874
+        width: 91
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a32e187fdf2cd67479af22912ac5791a
+      internalID: -1727520154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_114
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 874
+        width: 99
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0636f00e2ff57f141ad1212238d09176
+      internalID: -1069624372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_115
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 874
+        width: 86
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f746eaa8531b0947b4c4889ebc29b09
+      internalID: -1460656843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_116
+      rect:
+        serializedVersion: 2
+        x: 733
+        y: 874
+        width: 92
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ce80c450d3a9e449aefcc6a26a8648f
+      internalID: 1955633606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_117
+      rect:
+        serializedVersion: 2
+        x: 829
+        y: 874
+        width: 85
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15bb85ff1ea67e34cbea22289da669f9
+      internalID: -794669335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_118
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 874
+        width: 46
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb7502fe60fdfc440a26a40955c968dd
+      internalID: -896252817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_119
+      rect:
+        serializedVersion: 2
+        x: 965
+        y: 874
+        width: 43
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f85eb8abcedc69049ba87b5edb9c8e9a
+      internalID: 1273369903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_120
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 779
+        width: 37
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bc3279b341fd834b873ca797479761a
+      internalID: -130734281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_121
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 779
+        width: 41
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bba3f6673b6b29a4f991bd3f30eb7a3a
+      internalID: 1985107172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_122
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 779
+        width: 42
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2c794d0a24a9434a9f0673533adbf5f
+      internalID: -781146643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_123
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 779
+        width: 43
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d54243de635871b4a8677fbdf38dbcc0
+      internalID: 563796362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_124
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 779
+        width: 56
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f5c25273a126794fb988cb77e8802bb
+      internalID: -600945329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_125
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 779
+        width: 73
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46c0a77bfac553042941f99f61ebc406
+      internalID: 2036491039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_126
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 779
+        width: 90
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e085331238b5f614d8f3b3b5ccf92fd7
+      internalID: 1120008512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_127
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 779
+        width: 91
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f850f92e362b8642813aa482e10e28a
+      internalID: -356292066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_128
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 779
+        width: 137
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0d231a26b92f1e4db67b27228b94e6a
+      internalID: 167286878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_129
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 779
+        width: 137
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd146150f9b07db48996b6d90021b229
+      internalID: 1723263928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_130
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 779
+        width: 133
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f164d05fce926674a8e64d66a6647a08
+      internalID: 1422474319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_131
+      rect:
+        serializedVersion: 2
+        x: 946
+        y: 777
+        width: 121
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12bfb92afef43774fbcd2c27771b7bc7
+      internalID: 259576022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_132
+      rect:
+        serializedVersion: 2
+        x: 1074
+        y: 777
+        width: 34
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a997ad75a9fd9bb4a86fbe8bfb2b52df
+      internalID: 1378025221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_133
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 667
+        width: 122
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b296521fb8c57746b51bff2cebb8b63
+      internalID: -1011342061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_134
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 666
+        width: 74
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3938bfd79fbf79a4dad61583cb31d7f4
+      internalID: -1729802397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_135
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 665
+        width: 60
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d309c90c99371f04d96699a18c82e0bf
+      internalID: -2089161039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_136
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 665
+        width: 120
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c7720da7b434c8498aa80e8fe6c0f64
+      internalID: -636267496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_137
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 665
+        width: 123
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e54775c6a43bc934f93fd1857dfa3dbe
+      internalID: -966172432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_138
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 665
+        width: 112
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6403ba44c1e92be4cb49f7dec2ac3402
+      internalID: -2055661070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_139
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 665
+        width: 105
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edc507408fb802e4d9a65aa55775f4e3
+      internalID: 132502794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_140
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 550
+        width: 53
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85a7dd4cbc701754cbab985ee45b612f
+      internalID: -1126468639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_141
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 550
+        width: 68
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7974fac4c6cf9f479a94c481c6c4b56
+      internalID: -274318903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_142
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 550
+        width: 151
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 489920340ea60f741a221bfd2c576d91
+      internalID: -962682909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_143
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 550
+        width: 150
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e22ab71c03544d042ada31b34be5e488
+      internalID: 1593692840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_144
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 550
+        width: 109
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c08114203ca64d44c8d8153633823479
+      internalID: 824694752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_145
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 550
+        width: 88
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b71816148fe366e49b98cab2247c15fa
+      internalID: 361635448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_146
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 550
+        width: 44
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1055566d1bb13934c9a57b739bb956b0
+      internalID: -84861719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_147
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 550
+        width: 39
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d70d3e841050f38408360b007710f0e2
+      internalID: 719681135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_148
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 550
+        width: 37
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 805433b3c2f31e8408cb3641441fab67
+      internalID: 100404256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_149
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 550
+        width: 118
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d67ae3159afe424d943993fa799b881
+      internalID: 1508410878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_150
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 550
+        width: 109
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81f38e6e35e26b848b3a3480d1311d30
+      internalID: -1105193482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_151
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 550
+        width: 95
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e45d400b1fe522344b25fc49c376c7d4
+      internalID: 1222180895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_152
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 448
+        width: 37
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44e3243d53eaa414d9981133613f3100
+      internalID: -1476638970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_153
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 459
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e266946eb8068df468dfb7f9ed487817
+      internalID: 1810904941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_154
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 448
+        width: 63
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4326641610bd59b43a8dad96f2325da9
+      internalID: 1469430133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_155
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 448
+        width: 48
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f991afba60feea47a8754992e8ad658
+      internalID: -464057276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_156
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 354
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f91bc89d2d4364a43985f2e6fc7ed121
+      internalID: 732228361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_157
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 353
+        width: 60
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c67165d88939f48438f6fde000d8ff57
+      internalID: -1265435221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_158
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 353
+        width: 92
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85a1eaec4b5f86f4481a5c68ba0aadb8
+      internalID: -1423289261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_159
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 353
+        width: 113
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4aa6064fcf9ccc4fa2e0275ab468de7
+      internalID: 635935992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_160
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 353
+        width: 115
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1836ba04247eaf4478e2a7eecbe5d7b2
+      internalID: -502326136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_161
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 353
+        width: 115
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dee751409c93be458a9352d1420cd20
+      internalID: 1651361093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_162
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 353
+        width: 115
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78de207ebfe286b40b6a6ec8a747b48f
+      internalID: -1045600982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_163
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 353
+        width: 100
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c87c2235b86dd34e861166671349ac7
+      internalID: 1422700894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_164
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 353
+        width: 57
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f5af9c2902b61c48a281b4a60cf25d5
+      internalID: 711635574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_165
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 353
+        width: 39
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4246fc46939d50147873cf3632d0eba8
+      internalID: 1286153877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_166
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 257
+        width: 58
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f22af77dd3b31ba49992149771452aaa
+      internalID: 705169860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_167
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 257
+        width: 41
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52c9c137198564d499a109a3f0560544
+      internalID: 388404250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_168
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 276
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a450167ec89a6044483b4a28789c7dfb
+      internalID: 1378557005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_169
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 256
+        width: 61
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d1b7137cc1f8f34dafdf8d36d8b6118
+      internalID: -994558429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_170
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 256
+        width: 60
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 432fdaf5d7462de4c870346a2ba4900e
+      internalID: 1157840967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_171
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 247
+        width: 64
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3716bda58508fee49940f131b2a1766f
+      internalID: 675557945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_172
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 247
+        width: 58
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b5eea404e4daba44aa7f4eae663590e
+      internalID: 261992579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_173
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 247
+        width: 51
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45a5b8a7edfc88549b2e248de5260e67
+      internalID: -2008962383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_174
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 247
+        width: 55
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6faa6b7b66890c44ab4bfbaa649929b
+      internalID: -2048684297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_175
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 250
+        width: 42
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 007c9ecfe7bd90347af109332ce0fe68
+      internalID: 1862244751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_176
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 133
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05de5e3bf4aa30a4095e1ac9ce2089a6
+      internalID: 1905174411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_177
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 133
+        width: 70
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0000eaf282dbec94cbc93c07311674c4
+      internalID: -117012681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_178
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 133
+        width: 81
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf5d56ec3915ce1498947f9b03a03aa9
+      internalID: -1457958878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_179
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 133
+        width: 82
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c66cf33e777b64b41992c59bd5805fe8
+      internalID: 1560414043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_180
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 133
+        width: 80
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f7cd7bfa6594914b810c8103c90edad
+      internalID: 1756814086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_181
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 133
+        width: 57
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ef03aa96b54032489dc35fd3be84fca
+      internalID: -1122404888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_182
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 19
+        width: 60
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44e06c43462208c4bba07e52190631bb
+      internalID: 669041790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_183
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 20
+        width: 65
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a411e6d304359554498b5cef19c7be7c
+      internalID: -1874509273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_184
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 21
+        width: 67
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 229079a1c5f40ed43ac778444446c979
+      internalID: -677097875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_185
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 21
+        width: 63
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a8aef1107769c74f95788ec19f5292c
+      internalID: 1875560651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_186
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 20
+        width: 95
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b100c07c602b7c342bbd294ed70742bc
+      internalID: -1049999050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_187
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 26
+        width: 66
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51785979eed0c8a409970dcda4a1b73f
+      internalID: -1797225779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_188
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 46
+        width: 61
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c8761673c232d649b704cec43059021
+      internalID: -617168707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_189
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 29
+        width: 73
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb18f7ccee59b724a8292559aff93203
+      internalID: -455923648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_190
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 29
+        width: 70
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38638c0538ff8b74d88a72ea4c8fd632
+      internalID: 1945267265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_191
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 29
+        width: 74
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f1ed2a73b0ac5c4082647e6ae2ab9b9
+      internalID: 1727422036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_192
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 19
+        width: 76
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5885e8594f2139943a813a8f6f904764
+      internalID: 1302431260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Kizaru_0: -1303957118
+      Kizaru_1: -1495734391
+      Kizaru_10: -1385166077
+      Kizaru_100: -1682705092
+      Kizaru_101: -440038572
+      Kizaru_102: 452372508
+      Kizaru_103: -49718528
+      Kizaru_104: 1633202941
+      Kizaru_105: -1729110739
+      Kizaru_106: 1409724611
+      Kizaru_107: -1947845854
+      Kizaru_108: 472448558
+      Kizaru_109: 24931253
+      Kizaru_11: 599697565
+      Kizaru_110: -214988012
+      Kizaru_111: 1036676096
+      Kizaru_112: -1939624268
+      Kizaru_113: -1727520154
+      Kizaru_114: -1069624372
+      Kizaru_115: -1460656843
+      Kizaru_116: 1955633606
+      Kizaru_117: -794669335
+      Kizaru_118: -896252817
+      Kizaru_119: 1273369903
+      Kizaru_12: 1095479029
+      Kizaru_120: -130734281
+      Kizaru_121: 1985107172
+      Kizaru_122: -781146643
+      Kizaru_123: 563796362
+      Kizaru_124: -600945329
+      Kizaru_125: 2036491039
+      Kizaru_126: 1120008512
+      Kizaru_127: -356292066
+      Kizaru_128: 167286878
+      Kizaru_129: 1723263928
+      Kizaru_13: -908138103
+      Kizaru_130: 1422474319
+      Kizaru_131: 259576022
+      Kizaru_132: 1378025221
+      Kizaru_133: -1011342061
+      Kizaru_134: -1729802397
+      Kizaru_135: -2089161039
+      Kizaru_136: -636267496
+      Kizaru_137: -966172432
+      Kizaru_138: -2055661070
+      Kizaru_139: 132502794
+      Kizaru_14: 1385229254
+      Kizaru_140: -1126468639
+      Kizaru_141: -274318903
+      Kizaru_142: -962682909
+      Kizaru_143: 1593692840
+      Kizaru_144: 824694752
+      Kizaru_145: 361635448
+      Kizaru_146: -84861719
+      Kizaru_147: 719681135
+      Kizaru_148: 100404256
+      Kizaru_149: 1508410878
+      Kizaru_15: 1518061279
+      Kizaru_150: -1105193482
+      Kizaru_151: 1222180895
+      Kizaru_152: -1476638970
+      Kizaru_153: 1810904941
+      Kizaru_154: 1469430133
+      Kizaru_155: -464057276
+      Kizaru_156: 732228361
+      Kizaru_157: -1265435221
+      Kizaru_158: -1423289261
+      Kizaru_159: 635935992
+      Kizaru_16: -1303713365
+      Kizaru_160: -502326136
+      Kizaru_161: 1651361093
+      Kizaru_162: -1045600982
+      Kizaru_163: 1422700894
+      Kizaru_164: 711635574
+      Kizaru_165: 1286153877
+      Kizaru_166: 705169860
+      Kizaru_167: 388404250
+      Kizaru_168: 1378557005
+      Kizaru_169: -994558429
+      Kizaru_17: 250097717
+      Kizaru_170: 1157840967
+      Kizaru_171: 675557945
+      Kizaru_172: 261992579
+      Kizaru_173: -2008962383
+      Kizaru_174: -2048684297
+      Kizaru_175: 1862244751
+      Kizaru_176: 1905174411
+      Kizaru_177: -117012681
+      Kizaru_178: -1457958878
+      Kizaru_179: 1560414043
+      Kizaru_18: -971372921
+      Kizaru_180: 1756814086
+      Kizaru_181: -1122404888
+      Kizaru_182: 669041790
+      Kizaru_183: -1874509273
+      Kizaru_184: -677097875
+      Kizaru_185: 1875560651
+      Kizaru_186: -1049999050
+      Kizaru_187: -1797225779
+      Kizaru_188: -617168707
+      Kizaru_189: -455923648
+      Kizaru_19: -221941314
+      Kizaru_190: 1945267265
+      Kizaru_191: 1727422036
+      Kizaru_192: 1302431260
+      Kizaru_2: 1060804579
+      Kizaru_20: -1121085489
+      Kizaru_21: 1929041761
+      Kizaru_22: 775950851
+      Kizaru_23: -1060648816
+      Kizaru_24: -1740729775
+      Kizaru_25: 1862815540
+      Kizaru_26: -1487996528
+      Kizaru_27: 175427831
+      Kizaru_28: 1588160386
+      Kizaru_29: 28286896
+      Kizaru_3: -1177169251
+      Kizaru_30: 2011085207
+      Kizaru_31: 656426576
+      Kizaru_32: 1295869506
+      Kizaru_33: 452511642
+      Kizaru_34: -1293584001
+      Kizaru_35: 1035362240
+      Kizaru_36: 129108833
+      Kizaru_37: 470936352
+      Kizaru_38: -1260366217
+      Kizaru_39: 1044864538
+      Kizaru_4: -985335180
+      Kizaru_40: 1887036053
+      Kizaru_41: 1673780677
+      Kizaru_42: 1715838811
+      Kizaru_43: -1714968929
+      Kizaru_44: -761874281
+      Kizaru_45: 1243213397
+      Kizaru_46: -34681660
+      Kizaru_47: -1962706628
+      Kizaru_48: -896766068
+      Kizaru_49: -1646148378
+      Kizaru_5: -662256357
+      Kizaru_50: 1870452846
+      Kizaru_51: 166589977
+      Kizaru_52: 1276655903
+      Kizaru_53: -334437233
+      Kizaru_54: -1984155614
+      Kizaru_55: -882193185
+      Kizaru_56: -1337349160
+      Kizaru_57: -1546608111
+      Kizaru_58: 1196801175
+      Kizaru_59: -582401129
+      Kizaru_6: -452797344
+      Kizaru_60: -512763367
+      Kizaru_61: -534771623
+      Kizaru_62: -332163380
+      Kizaru_63: 313963921
+      Kizaru_64: 1056419282
+      Kizaru_65: 1513968136
+      Kizaru_66: -1555529049
+      Kizaru_67: -1305883733
+      Kizaru_68: 1010974550
+      Kizaru_69: 1208220369
+      Kizaru_7: 1912932632
+      Kizaru_70: -739157946
+      Kizaru_71: -2095619775
+      Kizaru_72: 600874028
+      Kizaru_73: -391468822
+      Kizaru_74: -1852734251
+      Kizaru_75: -1768295610
+      Kizaru_76: 214374392
+      Kizaru_77: 1200776375
+      Kizaru_78: 415998612
+      Kizaru_79: 1819864707
+      Kizaru_8: 294602694
+      Kizaru_80: 151483548
+      Kizaru_81: 313973515
+      Kizaru_82: -824092831
+      Kizaru_83: -455490664
+      Kizaru_84: 505453543
+      Kizaru_85: 773822592
+      Kizaru_86: 78313746
+      Kizaru_87: 911375805
+      Kizaru_88: -1805796347
+      Kizaru_89: 935603783
+      Kizaru_9: 2064639860
+      Kizaru_90: 923754409
+      Kizaru_91: 1612937964
+      Kizaru_92: -1648885267
+      Kizaru_93: 747713870
+      Kizaru_94: 942072927
+      Kizaru_95: -839643077
+      Kizaru_96: 995583487
+      Kizaru_97: -318379811
+      Kizaru_98: -129726863
+      Kizaru_99: -1386209753
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
