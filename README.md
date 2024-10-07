@@ -1,4 +1,4 @@
-# Hero-Tycoon-Mystic-Lands
+# TurnBase
 
 ---
 # Working rules:
