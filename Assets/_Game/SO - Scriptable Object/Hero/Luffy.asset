@@ -12,14 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c63ed956015d7604284b2f0fd11a0f46, type: 3}
   m_Name: Luffy
   m_EditorClassIdentifier: 
-  HeroID: 0
+  HeroID: 1
   HeroName: Luffy
-  HeroAvatar: {fileID: -1169848054, guid: 45809a89e105d9b4f8303c1d12590348, type: 3}
-  AvatarPath: Luffy_Avatar
+  HeroAvatar: {fileID: 0}
+  HeroAvatarPath: Luffy
+  IconPath: Luffy_Avatar
   CharacterStat:
     HeroLevel: 0
-    Hp: 100
+    Hp: 20
     Def: 0
     AttackDamage: 10
     CritDamage: 0
   Rarity: 5
+  CharacterName: 1

@@ -8,13 +8,18 @@ using System.Linq;
 using UnityEngine;
 using _Game.Scripts.Characters;
 using _Game.Scripts.UI;
+using _Game.Scripts.Non_Mono;
 
 namespace _Game.Scripts.Manager
 {
     public class HeroManager : MonoBehaviour
     {
-        public List<HeroDataList> HeroesReady = new List<HeroDataList>();
+        [SerializeField]
+        public HeroDictionary _heroDictionary;
 
+        public CharOutLook CharOutLook;
+
+        public List<HeroDataList> HeroesReady = new List<HeroDataList>();
 
         public List<HeroDataList> HeroesAvailable = new List<HeroDataList>();
 
@@ -48,7 +53,7 @@ namespace _Game.Scripts.Manager
             PlayFabClientAPI.GetUserData(new GetUserDataRequest
             {
                 PlayFabId = PlayFabManager.Instance.PlayFabId,
-                Keys = null // Null nghĩa là lấy tất cả dữ liệu
+                Keys = null
             },
             result =>
             {
@@ -57,10 +62,20 @@ namespace _Game.Scripts.Manager
                     string heroDataJson = result.Data["HeroData"].Value;
                     HeroDataList heroDataList = JsonUtility.FromJson<HeroDataList>(heroDataJson);
 
+                    foreach (var hero in heroDataList.heroes)
+                    {
+                        Sprite heroSprite = Resources.Load<Sprite>(hero.HeroAvatarPath);
+
+                        if (heroSprite != null)
+                        {
+                            hero.HeroAvatar = heroSprite;
+                        }
+                    }
+
                     HeroesAvailable.Clear();
                     HeroesAvailable.Add(heroDataList);
 
-                    if(_heroesUI !=null)
+                    if (_heroesUI != null)
                     {
                         _heroesUI.DisplayHeroes(heroDataList.heroes);
                     }
@@ -78,18 +93,32 @@ namespace _Game.Scripts.Manager
             });
         }
 
+
         [Button("Add Hero")]
-        public void AddHero(HeroDataSO test)
+        public void AddHero()
         {
+            if (_heroDictionary == null || _heroDictionary.Count == 0)
+            {
+                Debug.LogError("HeroDictionary is empty or not set.");
+                return;
+            }
             if (HeroesAvailable.Count == 0)
             {
                 HeroesAvailable.Add(new HeroDataList { heroes = new List<HeroData>() });
             }
+            var randomIndex = Random.Range(0, _heroDictionary.Count);
+            var randomHeroDataSO = _heroDictionary.Values.ElementAt(randomIndex);
 
-            HeroData heroData = HeroDataConverter.ConvertHeroDataSOToHeroData(test);
+            HeroData heroData = HeroDataConverter.ConvertHeroDataSOToHeroData(randomHeroDataSO);
+
             HeroesAvailable[0].heroes.Add(heroData);
 
-            SaveHeroData(test);
+            SaveHeroData(randomHeroDataSO);
+
+            if (_heroesUI != null)
+            {
+                _heroesUI.DisplayHeroes(HeroesAvailable[0].heroes);
+            }
         }
 
         public void SaveHeroData(HeroDataSO heroDataSO)
@@ -107,10 +136,6 @@ namespace _Game.Scripts.Manager
                 var heroDataList = HeroesAvailable[0];
                 var heroDataListJson = JsonUtility.ToJson(heroDataList);
 
-                foreach (var hero in heroDataList.heroes)
-                {
-                    heroDataList.heroes[0].HeroAvatar = hero.HeroAvatar;
-                }
                 PlayFabClientAPI.UpdateUserData(new UpdateUserDataRequest
                 {
                     Data = new Dictionary<string, string> { { "HeroData", heroDataListJson } }

@@ -12,14 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c63ed956015d7604284b2f0fd11a0f46, type: 3}
   m_Name: Zoro
   m_EditorClassIdentifier: 
-  HeroID: 0
+  HeroID: 2
   HeroName: Zoro
-  HeroAvatar: {fileID: -756901426, guid: 8677d573f64f51347831d6c1c6ea87a2, type: 3}
-  AvatarPath: Zoro_Avatar
+  HeroAvatar: {fileID: 0}
+  HeroAvatarPath: Zoro
+  IconPath: Zoro_Avatar
   CharacterStat:
     HeroLevel: 0
-    Hp: 100
+    Hp: 20
     Def: 0
-    AttackDamage: 100
+    AttackDamage: 10
     CritDamage: 0
-  Rarity: 4
+  Rarity: 5
+  CharacterName: 2

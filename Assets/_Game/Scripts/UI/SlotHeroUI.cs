@@ -13,9 +13,6 @@ namespace _Game.Scripts.UI
         private Image _avatarImage;
 
         [SerializeField]
-        private TextMeshProUGUI _heroNameText;
-
-        [SerializeField]
         private Button _selectedBtn;
 
         private HeroData _heroData;
@@ -38,8 +35,6 @@ namespace _Game.Scripts.UI
                     _avatarImage.sprite = avatarSprite;
                 }
             }
-            _heroNameText.text = heroName;
-
             _heroData = heroData;
         }
 

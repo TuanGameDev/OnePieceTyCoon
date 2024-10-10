@@ -9,9 +9,9 @@ namespace _Game.Scripts.Character
 {
     public class CharacterController : MonoBehaviour, IDamagable
     {
-        [Header("Stats")]
-        [SerializeField]
-        private SpriteRenderer _sr;
+        public Animator Animator;
+
+        public Transform ReverObject;
 
         [Header("Stats")]
         public HeroDataSO HeroDataSO;
@@ -28,11 +28,13 @@ namespace _Game.Scripts.Character
 
         public bool IsAttack = false;
         public bool IsDead = false;
+        public bool FaceRight = false;
 
         #endregion
 
         public void Start()
         {
+            Animator = GetComponentInChildren<Animator>();
             CurrentStat = HeroDataSO.CharacterStat;
         }
 
@@ -66,6 +68,7 @@ namespace _Game.Scripts.Character
                 if (AttackTarget is IDamagable damagable)
                 {
                     damagable.TakeDamage(CurrentStat.AttackDamage);
+                    Animator.SetTrigger("Attack");
                 }
             }
         }
@@ -95,6 +98,7 @@ namespace _Game.Scripts.Character
         public virtual void Die()
         {
             IsDead = true;
+            Destroy(gameObject);
         }
     }
 }

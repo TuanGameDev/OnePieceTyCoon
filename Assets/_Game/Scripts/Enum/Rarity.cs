@@ -2,11 +2,11 @@ namespace _Game.Scripts.Enums
 {
     public enum Rarity
     {
-        None = 0,
-        Common = 1,
-        UnCommon = 2,
+        None,
+        Legend = 1,
+        Epic = 2,
         Rare = 3,
-        Epic = 4,
-        Legend = 5,
+        Uncommon = 4,
+        Common = 5
     }
 }

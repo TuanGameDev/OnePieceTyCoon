@@ -89,7 +89,7 @@ namespace _Game.Scripts.Manager
         private void OnRegisterSuccess(RegisterPlayFabUserResult result)
         {
             _messageText.text = "Đăng ký thành công!";
-            SaveAccountInfo();  // Save the account after registration
+            SaveAccountInfo();
             StartCoroutine(HideTxt(new WaitForSeconds(3)));
         }
 

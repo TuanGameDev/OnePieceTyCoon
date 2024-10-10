@@ -14,12 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HeroID: 0
   HeroName: Enemy
-  HeroAvatar: {fileID: 0}
-  AvatarPath: 
+  HeroAvatar: {fileID: 1711093913, guid: a2fc87d30e2777146b135cc025375147, type: 3}
+  HeroAvatarPath: 
+  IconPath: 
   CharacterStat:
     HeroLevel: 0
-    Hp: 1000
+    Hp: 100
     Def: 0
     AttackDamage: 10
     CritDamage: 0
   Rarity: 1
+  CharacterName: 0
