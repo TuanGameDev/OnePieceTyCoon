@@ -13,6 +13,9 @@ namespace _Game.Scripts.UI
         private Image _avatarImage;
 
         [SerializeField]
+        private Image _selectionImage;
+
+        [SerializeField]
         private Button _selectedBtn;
 
         private HeroData _heroData;
@@ -35,7 +38,27 @@ namespace _Game.Scripts.UI
                     _avatarImage.sprite = avatarSprite;
                 }
             }
+
             _heroData = heroData;
+
+            if (HeroManager.Instance.HeroesReady.Count > 0)
+            {
+                var heroesReadyList = HeroManager.Instance.HeroesReady[0].heroes;
+                if (heroesReadyList.Contains(_heroData))
+                {
+                    Selected = true;
+                }
+                else
+                {
+                    Selected = false;
+                }
+            }
+            else
+            {
+                Selected = false;
+            }
+
+            UpdateSelectedButtonUI();
         }
 
         private void OnHeroSelected()
@@ -49,6 +72,7 @@ namespace _Game.Scripts.UI
                 AddHero();
             }
             Selected = !Selected;
+            UpdateSelectedButtonUI();
         }
 
         private void AddHero()
@@ -74,10 +98,14 @@ namespace _Game.Scripts.UI
             heroList.Remove(_heroData);
             if (!heroList.Contains(_heroData))
             {
-                heroList.Remove(_heroData);
                 HeroesUI heroesUI = FindObjectOfType<HeroesUI>();
                 heroesUI.DisplayReadyHeroes(heroList);
             }
+        }
+
+        private void UpdateSelectedButtonUI()
+        {
+            _selectionImage.GetComponent<Image>().enabled = Selected ? true : false;
         }
     }
 }

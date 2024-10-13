@@ -15,7 +15,7 @@ namespace _Game.Scripts.Manager
         private HeroController _heroPrefab;
 
         [SerializeField]
-        public Transform[] SpawnPoints;
+        private Transform[] _spawnPoints;
 
         public TurnBasedManager TurnBasedManager;
         private void Start()
@@ -39,7 +39,7 @@ namespace _Game.Scripts.Manager
 
                 foreach (HeroData heroData in heroDataList.heroes)
                 {
-                    if (spawnCount >= SpawnPoints.Length)
+                    if (spawnCount >= _spawnPoints.Length)
                     {
                         return; 
                     }
@@ -50,11 +50,11 @@ namespace _Game.Scripts.Manager
                     tempHeroDataSO.HeroAvatar = heroData.HeroAvatar;
                     tempHeroDataSO.IconPath = heroData.IconPath;
                     tempHeroDataSO.CharacterStat = heroData.CharacterStat;
-                    tempHeroDataSO.Rarity = heroData.Rarity;
+                    tempHeroDataSO.Rank = heroData.Rank;
                     tempHeroDataSO.CharacterName = heroData.CharacterName;
 
-                    HeroController heroInstance = Instantiate(_heroPrefab, SpawnPoints[spawnCount].position, Quaternion.identity);
-                    CharacterNameAndRarity key = new CharacterNameAndRarity(tempHeroDataSO.CharacterName, tempHeroDataSO.Rarity);
+                    HeroController heroInstance = Instantiate(_heroPrefab, _spawnPoints[spawnCount].position, Quaternion.identity);
+                    CharacterNameAndRank key = new CharacterNameAndRank(tempHeroDataSO.CharacterName, tempHeroDataSO.Rank);
 
                     if (HeroManager.Instance.CharOutLook.CharOut.TryGetValue(key, out OutLook outLook))
                     {

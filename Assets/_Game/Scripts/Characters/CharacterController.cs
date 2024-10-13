@@ -13,16 +13,20 @@ namespace _Game.Scripts.Character
 
         public Transform ReverObject;
 
-        [Header("Stats")]
-        public HeroDataSO HeroDataSO;
-
-        public CharacterStat CurrentStat;
+        public GameObject BaseRoot;
 
         [Header("Attack")]
         public CharacterController AttackTarget;
 
         [SerializeField]
         public LayerMask layerMask;
+
+        [Header("Stats")]
+        public HeroDataSO HeroDataSO;
+
+        public CharacterStat CurrentStat;
+
+        public int CurrentHP;
 
         #region Bool
 
@@ -36,6 +40,7 @@ namespace _Game.Scripts.Character
         {
             Animator = GetComponentInChildren<Animator>();
             CurrentStat = HeroDataSO.CharacterStat;
+            CurrentHP = CurrentStat.Hp;
         }
 
         #region AttackFusion
@@ -85,9 +90,9 @@ namespace _Game.Scripts.Character
             {
                 finalDamage = damage - CurrentStat.Def;
             }
-            CurrentStat.Hp -= finalDamage;
+            CurrentHP -= finalDamage;
 
-            if (CurrentStat.Hp <= 0)
+            if (CurrentHP <= 0)
             {
                 Die();
             }

@@ -7,7 +7,7 @@ using UnityEngine;
 namespace _Game.Scripts.Non_Mono
 {
     [System.Serializable]
-    public class HeroDictionary: UnitySerializedDictionary<CharacterNameAndRarity, HeroDataSO>
+    public class HeroDictionary: UnitySerializedDictionary<CharacterNameAndRank, HeroDataSO>
     {
        
     }

@@ -9,6 +9,7 @@ using UnityEngine;
 using _Game.Scripts.Characters;
 using _Game.Scripts.UI;
 using _Game.Scripts.Non_Mono;
+using UnityEngine.SceneManagement;
 
 namespace _Game.Scripts.Manager
 {
@@ -22,9 +23,6 @@ namespace _Game.Scripts.Manager
         public List<HeroDataList> HeroesReady = new List<HeroDataList>();
 
         public List<HeroDataList> HeroesAvailable = new List<HeroDataList>();
-
-        [SerializeField]
-        private HeroesUI _heroesUI;
 
         public static HeroManager Instance;
 
@@ -41,7 +39,10 @@ namespace _Game.Scripts.Manager
             }
             DontDestroyOnLoad(gameObject);
         }
-
+        private void Start()
+        {
+            LoadDataHero();
+        }
         public void LoadDataHero()
         {
             if (string.IsNullOrEmpty(PlayFabManager.Instance.PlayFabId))
@@ -74,12 +75,6 @@ namespace _Game.Scripts.Manager
 
                     HeroesAvailable.Clear();
                     HeroesAvailable.Add(heroDataList);
-
-                    if (_heroesUI != null)
-                    {
-                        _heroesUI.DisplayHeroes(heroDataList.heroes);
-                    }
-
                     Debug.Log("Dữ liệu hero đã được tải thành công!");
                 }
                 else
@@ -114,11 +109,6 @@ namespace _Game.Scripts.Manager
             HeroesAvailable[0].heroes.Add(heroData);
 
             SaveHeroData(randomHeroDataSO);
-
-            if (_heroesUI != null)
-            {
-                _heroesUI.DisplayHeroes(HeroesAvailable[0].heroes);
-            }
         }
 
         public void SaveHeroData(HeroDataSO heroDataSO)
@@ -154,7 +144,25 @@ namespace _Game.Scripts.Manager
                 Debug.LogWarning("Chưa có hero nào trong danh sách HeroesAvailable.");
             }
         }
+
+        public List<HeroData> GetAvailableHeroesReady()
+        {
+            if (HeroesReady.Count > 0)
+            {
+                return HeroesReady[0].heroes;
+            }
+            return new List<HeroData>();
+        }
+        public List<HeroData> GetAvailableHeroes()
+        {
+            if (HeroesAvailable.Count > 0)
+            {
+                return HeroesAvailable[0].heroes;
+            }
+            return new List<HeroData>();
+        }
     }
+
     [System.Serializable]
     public class HeroDataList
     {

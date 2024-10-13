@@ -1,5 +1,6 @@
 ﻿using _Game.Scripts.Manager;
 using _Game.Scripts.Scriptable_Object;
+using Sirenix.OdinInspector;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -20,19 +21,46 @@ namespace _Game.Scripts.UI
         [SerializeField]
         private Transform _heroesReadyContainer;
 
-        public GameUI GameUI;
+        [SerializeField]
+        private Button CountinueBtn;
 
         private const int MaxHeroesReady = 1;
+        #region LoadDataHero
+        public void LoadListHero()
+        {
+            LoadAndDisplayHeroes();
+            LoadAndDisplayReadyHeroes();
+        }
+        private void LoadAndDisplayHeroes()
+        {
+            List<HeroData> availableHeroes = HeroManager.Instance.GetAvailableHeroes();
 
+            if (availableHeroes.Count > 0)
+            {
+                DisplayHeroes(availableHeroes);
+            }
+        }
+
+        private void LoadAndDisplayReadyHeroes()
+        {
+            List<HeroData> availableHeroes = HeroManager.Instance.GetAvailableHeroesReady();
+
+            if (availableHeroes.Count > 0)
+            {
+                DisplayReadyHeroes(availableHeroes);
+            }
+        }
+
+        #endregion
         public void UpdateStartGameButtonState()
         {
             if (HeroManager.Instance.HeroesReady[0].heroes.Count >= MaxHeroesReady)
             {
-                GameUI.StartGameBtn.interactable = true;
+                CountinueBtn.interactable = true;
             }
             else
             {
-                GameUI.StartGameBtn.interactable = false;
+                CountinueBtn.interactable = false;
             }
         }
 
@@ -63,20 +91,6 @@ namespace _Game.Scripts.UI
                 var slotHero = Instantiate(_slotHeroPrefab, _heroesContainer);
                 slotHero.SetHeroUI(hero.IconPath, hero.HeroName, hero);
             }
-        }
-
-        public void AddOrRemoveHeroFromReady(HeroData hero)
-        {
-            var heroesReadyList = HeroManager.Instance.HeroesReady[0].heroes;
-            if (heroesReadyList.Contains(hero))
-            {
-                heroesReadyList.Remove(hero);
-            }
-            else if (heroesReadyList.Count < MaxHeroesReady)
-            {
-                heroesReadyList.Add(hero);
-            }
-            DisplayReadyHeroes(heroesReadyList);
         }
     }
 }

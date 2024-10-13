@@ -1,5 +1,6 @@
 ﻿using _Game.Scripts.Character.Eenmy;
 using _Game.Scripts.Character.Hero;
+using _Game.Scripts.UI;
 using Sirenix.OdinInspector;
 using System.Collections;
 using System.Collections.Generic;
@@ -24,12 +25,13 @@ namespace _Game.Scripts.Manager
 
         [ReadOnly]
         public GameStat CurrentGameStat = GameStat.Figth;
-
-        public TextMeshProUGUI TimerText;
         public float matchDuration;
 
         private Vector3[] _heroStartPositions;
         private Vector3[] _enemyStartPositions;
+
+        [SerializeField]
+        private GameManagerUI _gameManagerUI;
 
         void Start()
         {
@@ -140,13 +142,15 @@ namespace _Game.Scripts.Manager
             {
                 CurrentGameStat = GameStat.Lose;
                 Time.timeScale = 0;
-                Debug.Log("You Lose! All heroes are dead.");
+                _gameManagerUI.GameStatTxt.text = CurrentGameStat.ToString();
+                _gameManagerUI.PanelPopup.SetActive(true);
             }
             else if (EnemyControllers.Count == 0)
             {
                 CurrentGameStat = GameStat.Win;
                 Time.timeScale = 0;
-                Debug.Log("You Win! All enemies are defeated.");
+                _gameManagerUI.GameStatTxt.text = CurrentGameStat.ToString();
+                _gameManagerUI.PanelPopup.SetActive(true);
             }
         }
 
@@ -164,6 +168,7 @@ namespace _Game.Scripts.Manager
             if (EnemyControllers.Count > 0)
             {
                 CurrentGameStat = GameStat.Lose;
+                _gameManagerUI.GameStatTxt.text = CurrentGameStat.ToString();
                 Time.timeScale = 0;
             }
         }
@@ -172,7 +177,7 @@ namespace _Game.Scripts.Manager
         {
             int minutes = Mathf.FloorToInt(timeRemaining / 60);
             int seconds = Mathf.FloorToInt(timeRemaining % 60);
-            TimerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+            _gameManagerUI.TimerTxt.text = string.Format("{0:00}:{1:00}", minutes, seconds);
         }
 
         IEnumerator MoveToTarget(MonoBehaviour controller, Vector3 target, bool movingTowardTarget)

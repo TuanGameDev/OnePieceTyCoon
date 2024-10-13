@@ -19,9 +19,10 @@ MonoBehaviour:
   IconPath: 
   CharacterStat:
     HeroLevel: 0
-    Hp: 100
+    Hp: 1
     Def: 0
-    AttackDamage: 10
+    AttackDamage: 1
     CritDamage: 0
-  Rarity: 1
   CharacterName: 0
+  EnemysName: 1
+  Rank: 4

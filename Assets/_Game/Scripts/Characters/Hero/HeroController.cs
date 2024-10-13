@@ -7,8 +7,6 @@ namespace _Game.Scripts.Character.Hero
 {
     public class HeroController : CharacterController
     {
-        public GameObject BaseRoot;
-
         public override void Attack()
         {
             base.Attack();
@@ -21,7 +19,7 @@ namespace _Game.Scripts.Character.Hero
             HeroDataSO.HeroID = heroData.HeroID;
             HeroDataSO.CharacterStat = heroData.CharacterStat;
             HeroDataSO.CharacterName = heroData.CharacterName;
-            HeroDataSO.Rarity = heroData.Rarity;
+            HeroDataSO.Rank = heroData.Rank;
         }
     }
 }

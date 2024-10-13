@@ -12,7 +12,7 @@ namespace _Game.Scripts.Scriptable_Object
     }
 
     [System.Serializable]
-    public class CharOut : UnitySerializedDictionary<CharacterNameAndRarity, OutLook>
+    public class CharOut : UnitySerializedDictionary<CharacterNameAndRank, OutLook>
     {
     }
 

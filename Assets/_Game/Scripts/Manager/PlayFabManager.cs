@@ -4,6 +4,7 @@ using PlayFab.ClientModels;
 using Sirenix.OdinInspector;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace _Game.Scripts.Manager
@@ -31,12 +32,6 @@ namespace _Game.Scripts.Manager
         [SerializeField]
         private Button _forgotPasswordBtn;
 
-        [SerializeField]
-        private Canvas _playfabPopup;
-
-        [SerializeField]
-        private Canvas _gameUIPopup;
-
         [ReadOnly]
         public string PlayFabId;
 
@@ -53,7 +48,6 @@ namespace _Game.Scripts.Manager
             _registerBtn.onClick.AddListener(Register);
             _forgotPasswordBtn.onClick.AddListener(ForgotPassword);
 
-            // Load saved email and password
             LoadAccountInfo();
         }
 
@@ -118,9 +112,7 @@ namespace _Game.Scripts.Manager
                 string playerId = result.PlayFabId;
                 SetPlayFabId(playerId);
                 _messageText.text = "Đăng nhập thành công!";
-                HeroManager.Instance.LoadDataHero();
-                _playfabPopup.enabled = false;
-                _gameUIPopup.enabled = true;
+                SceneManager.LoadScene(1);
                 if (string.IsNullOrEmpty(accountInfo.PrivateInfo.Email))
                 {
                     _messageText.text = "Email chưa được xác minh. Hãy kiểm tra email của bạn.";

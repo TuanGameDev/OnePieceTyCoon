@@ -14,8 +14,9 @@ namespace _Game.Scripts.Scriptable_Object
 
         [Header("Stat Hero")]
         public CharacterStat CharacterStat;
-        public Rarity Rarity;
         public CharacterName CharacterName;
+        public EnemysName EnemysName;
+        public Rank Rank;
     }
     [System.Serializable]
     public class HeroData
@@ -26,8 +27,8 @@ namespace _Game.Scripts.Scriptable_Object
         public string HeroAvatarPath;
         public string IconPath;
         public CharacterStat CharacterStat;
-        public Rarity Rarity;
         public CharacterName CharacterName;
+        public Rank Rank;
     }
 
     public class HeroDataConverter
@@ -42,8 +43,8 @@ namespace _Game.Scripts.Scriptable_Object
               IconPath = heroDataSO.IconPath,
               HeroAvatarPath = heroDataSO.HeroAvatarPath,
               CharacterStat = heroDataSO.CharacterStat,
-              Rarity = heroDataSO.Rarity,
               CharacterName = heroDataSO.CharacterName,
+              Rank = heroDataSO.Rank,
             };
             return heroData;
         }
