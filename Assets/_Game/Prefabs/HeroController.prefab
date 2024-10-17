@@ -150,8 +150,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fa99cca3162fff448071394a6b7aa38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sr: {fileID: 0}
+  Animator: {fileID: 0}
   ReverObject: {fileID: 8379181056662908847}
+  BaseRoot: {fileID: 0}
+  AttackTarget: {fileID: 0}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 128
   HeroDataSO: {fileID: 0}
   CurrentStat:
     HeroLevel: 0
@@ -159,9 +164,7 @@ MonoBehaviour:
     Def: 0
     AttackDamage: 0
     CritDamage: 0
-  AttackTarget: {fileID: 0}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 128
+  CurrentHP: 0
   IsAttack: 0
   IsDead: 0
+  FaceRight: 0

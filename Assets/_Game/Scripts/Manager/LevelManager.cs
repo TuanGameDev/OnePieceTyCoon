@@ -28,6 +28,7 @@ namespace _Game.Scripts.Manager
         public static LevelManager Instance;
 
         public List<VillageLevels> Villages;
+        [Space(20)]
         public List<SceneMap> SceneMaps;
 
         public int CurrentVillageIndex = 0;
@@ -80,7 +81,7 @@ namespace _Game.Scripts.Manager
 
         private IEnumerator LoadMapWithDelay(int villageIndex, int levelIndex)
         {
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.1f);
 
             LoadMap(villageIndex, levelIndex);
         }

@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class Test : MonoBehaviour
 {
-    public HeroesUI HeroesUI;
+    public SelectionHeroUI HeroesUI;
     private void Start()
     {
-        HeroesUI = FindObjectOfType<HeroesUI>();
+        HeroesUI = FindObjectOfType<SelectionHeroUI>();
     }
 }

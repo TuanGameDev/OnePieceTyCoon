@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 using _Game.Scripts.Scriptable_Object;
 using _Game.Scripts.Manager;
 using System.Collections.Generic;
+using _Game.Scripts.Character.Hero;
 
 namespace _Game.Scripts.UI
 {
@@ -44,14 +44,7 @@ namespace _Game.Scripts.UI
             if (HeroManager.Instance.HeroesReady.Count > 0)
             {
                 var heroesReadyList = HeroManager.Instance.HeroesReady[0].heroes;
-                if (heroesReadyList.Contains(_heroData))
-                {
-                    Selected = true;
-                }
-                else
-                {
-                    Selected = false;
-                }
+                Selected = heroesReadyList.Contains(_heroData);
             }
             else
             {
@@ -71,6 +64,7 @@ namespace _Game.Scripts.UI
             {
                 AddHero();
             }
+
             Selected = !Selected;
             UpdateSelectedButtonUI();
         }
@@ -87,7 +81,10 @@ namespace _Game.Scripts.UI
             if (!heroList.Contains(_heroData))
             {
                 heroList.Add(_heroData);
-                HeroesUI heroesUI = FindObjectOfType<HeroesUI>();
+
+                HeroManager.Instance.SpawnHeroes();
+
+                SelectionHeroUI heroesUI = FindObjectOfType<SelectionHeroUI>();
                 heroesUI.DisplayReadyHeroes(heroList);
             }
         }
@@ -96,16 +93,19 @@ namespace _Game.Scripts.UI
         {
             var heroList = HeroManager.Instance.HeroesReady[0].heroes;
             heroList.Remove(_heroData);
+
             if (!heroList.Contains(_heroData))
             {
-                HeroesUI heroesUI = FindObjectOfType<HeroesUI>();
+                // Sử dụng hàm RemoveSpawnedHero đã sửa
+                HeroManager.Instance.RemoveSpawnedHero(_heroData);
+
+                SelectionHeroUI heroesUI = FindObjectOfType<SelectionHeroUI>();
                 heroesUI.DisplayReadyHeroes(heroList);
             }
         }
-
         private void UpdateSelectedButtonUI()
         {
-            _selectionImage.GetComponent<Image>().enabled = Selected ? true : false;
+            _selectionImage.GetComponent<Image>().enabled = Selected;
         }
     }
 }

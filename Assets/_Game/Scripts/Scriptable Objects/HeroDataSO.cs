@@ -10,7 +10,6 @@ namespace _Game.Scripts.Scriptable_Object
         public string HeroName;
         public Sprite HeroAvatar;
         public string HeroAvatarPath;
-        public string IconPath;
 
         [Header("Stat Hero")]
         public CharacterStat CharacterStat;
@@ -25,7 +24,6 @@ namespace _Game.Scripts.Scriptable_Object
         public string HeroName;
         public Sprite HeroAvatar;
         public string HeroAvatarPath;
-        public string IconPath;
         public CharacterStat CharacterStat;
         public CharacterName CharacterName;
         public Rank Rank;
@@ -40,7 +38,6 @@ namespace _Game.Scripts.Scriptable_Object
               HeroID = heroDataSO.HeroID,
               HeroName=heroDataSO.HeroName,
               HeroAvatar = heroDataSO.HeroAvatar,
-              IconPath = heroDataSO.IconPath,
               HeroAvatarPath = heroDataSO.HeroAvatarPath,
               CharacterStat = heroDataSO.CharacterStat,
               CharacterName = heroDataSO.CharacterName,

@@ -74,7 +74,7 @@ namespace _Game.Scripts.Manager
                 if (HeroControllers[i] != null)
                 {
                     yield return StartCoroutine(HeroAttack(HeroControllers[i]));
-                    yield return new WaitForSeconds(1f);
+                    yield return new WaitForSeconds(0.5f);
                 }
             }
         }
@@ -86,7 +86,7 @@ namespace _Game.Scripts.Manager
                 if (EnemyControllers[i] != null)
                 {
                     yield return StartCoroutine(EnemyAttack(EnemyControllers[i]));
-                    yield return new WaitForSeconds(1f);
+                    yield return new WaitForSeconds(0.5f);
                 }
             }
         }
@@ -108,7 +108,7 @@ namespace _Game.Scripts.Manager
                     EnemyControllers.Remove(targetEnemy);
                 }
 
-                yield return new WaitForSeconds(0.3f);
+                yield return new WaitForSeconds(1f);
 
                 yield return StartCoroutine(MoveToTarget(hero, _heroStartPositions[HeroControllers.IndexOf(hero)], false));
             }
@@ -130,7 +130,7 @@ namespace _Game.Scripts.Manager
                     HeroControllers.Remove(targetHero);
                 }
 
-                yield return new WaitForSeconds(0.3f);
+                yield return new WaitForSeconds(1f);
 
                 yield return StartCoroutine(MoveToTarget(enemy, _enemyStartPositions[EnemyControllers.IndexOf(enemy)], false));
             }
@@ -214,7 +214,7 @@ namespace _Game.Scripts.Manager
                 animator.SetBool("Move", true);
             }
 
-            while (Vector3.Distance(unit.position, target) > 0.1f)
+            while (Vector3.Distance(unit.position, target) > 1f)
             {
                 unit.position = Vector3.MoveTowards(unit.position, target, MoveSpeed * Time.deltaTime);
                 yield return null;

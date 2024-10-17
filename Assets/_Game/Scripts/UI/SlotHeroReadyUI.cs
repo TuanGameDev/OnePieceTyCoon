@@ -9,9 +9,16 @@ namespace _Game.Scripts.UI
         [SerializeField]
         private Image _avatarImage;
 
-        public void SetHeroUI(Sprite avatar)
+        public void SetHeroUI(string avatarPath)
         {
-            _avatarImage.sprite = avatar;
+            if (!string.IsNullOrEmpty(avatarPath))
+            {
+                Sprite avatarSprite = Resources.Load<Sprite>(avatarPath);
+                if (avatarSprite != null)
+                {
+                    _avatarImage.sprite = avatarSprite;
+                }
+            }
         }
     }
 }

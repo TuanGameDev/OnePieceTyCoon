@@ -15,8 +15,7 @@ MonoBehaviour:
   HeroID: 2
   HeroName: Zoro
   HeroAvatar: {fileID: 0}
-  HeroAvatarPath: Zoro
-  IconPath: Zoro_Avatar
+  HeroAvatarPath: Zoro_Avatar
   CharacterStat:
     HeroLevel: 1
     Hp: 10
@@ -24,4 +23,5 @@ MonoBehaviour:
     AttackDamage: 1
     CritDamage: 0
   CharacterName: 2
+  EnemysName: 0
   Rank: 4

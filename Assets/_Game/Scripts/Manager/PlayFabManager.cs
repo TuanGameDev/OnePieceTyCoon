@@ -113,6 +113,7 @@ namespace _Game.Scripts.Manager
                 SetPlayFabId(playerId);
                 _messageText.text = "Đăng nhập thành công!";
                 SceneManager.LoadScene(1);
+                AudioManager.Instance.PlaySFX(0);
                 if (string.IsNullOrEmpty(accountInfo.PrivateInfo.Email))
                 {
                     _messageText.text = "Email chưa được xác minh. Hãy kiểm tra email của bạn.";

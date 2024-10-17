@@ -14,13 +14,10 @@ namespace _Game.Scripts.UI
         private SlotLevelUI _slotLevelUIPrefab;
 
         [SerializeField]
-        private Button _startGameBtn;
-
-        [SerializeField]
         private Button[] _villageButtons;
 
         [SerializeField]
-        private TextMeshProUGUI _villageNameText;
+        private TextMeshProUGUI _landNameText;
 
         void Start()
         {
@@ -29,8 +26,6 @@ namespace _Game.Scripts.UI
                 int index = i;
                 _villageButtons[i].onClick.AddListener(() => LoadVillage(index));
             }
-            _startGameBtn.onClick.AddListener(() => LevelManager.Instance.StartGame(LevelManager.Instance.CurrentLevelInVillage));
-
             LevelManager.Instance.LoadPlayerProgress();
             UpdateVillageButtons();
             DisplayLevelSlots();
@@ -39,7 +34,7 @@ namespace _Game.Scripts.UI
         private void LoadVillage(int villageIndex)
         {
             LevelManager.Instance.LoadVillage(villageIndex);
-            _villageNameText.text = LevelManager.Instance.Villages[villageIndex].VillageName;
+            _landNameText.text = LevelManager.Instance.Villages[villageIndex].VillageName;
 
             UpdateVillageButtons();
             DisplayLevelSlots();

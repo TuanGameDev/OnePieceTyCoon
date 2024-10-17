@@ -2,11 +2,10 @@ namespace _Game.Scripts.Enums
 {
     public enum Rank
     {
-        SPlusPlus,
+        SS,
         S,        
         A,        
         B,     
         C        
     }
-
 }

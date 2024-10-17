@@ -48,7 +48,6 @@ namespace _Game.Scripts.Manager
                     tempHeroDataSO.HeroID = heroData.HeroID;
                     tempHeroDataSO.HeroName = heroData.HeroName;
                     tempHeroDataSO.HeroAvatar = heroData.HeroAvatar;
-                    tempHeroDataSO.IconPath = heroData.IconPath;
                     tempHeroDataSO.CharacterStat = heroData.CharacterStat;
                     tempHeroDataSO.Rank = heroData.Rank;
                     tempHeroDataSO.CharacterName = heroData.CharacterName;

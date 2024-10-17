@@ -8,5 +8,6 @@ namespace _Game.Scripts.Enums
         Sanji,
         Nami,
         Chopper,
+        Shank,
     }
 }

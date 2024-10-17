@@ -15,8 +15,7 @@ MonoBehaviour:
   HeroID: 2
   HeroName: Sanji
   HeroAvatar: {fileID: 0}
-  HeroAvatarPath: Sanji
-  IconPath: Sanji_Avatar
+  HeroAvatarPath: Sanji_Avatar
   CharacterStat:
     HeroLevel: 1
     Hp: 10

@@ -2,19 +2,24 @@
 using PlayFab.ClientModels;
 using PlayFab;
 using Sirenix.OdinInspector;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using _Game.Scripts.Characters;
 using _Game.Scripts.UI;
 using _Game.Scripts.Non_Mono;
-using UnityEngine.SceneManagement;
+using _Game.Scripts.Character.Hero;
 
 namespace _Game.Scripts.Manager
 {
     public class HeroManager : MonoBehaviour
     {
+        [SerializeField]
+        private HeroController _heroPrefab;
+
+        [SerializeField]
+        private Transform[] _spawnPoints;
+
         [SerializeField]
         public HeroDictionary _heroDictionary;
 
@@ -25,6 +30,8 @@ namespace _Game.Scripts.Manager
         public List<HeroDataList> HeroesAvailable = new List<HeroDataList>();
 
         public static HeroManager Instance;
+
+        private Dictionary<HeroData, GameObject> spawnedHeroes = new Dictionary<HeroData, GameObject>();
 
         private void Awake()
         {
@@ -39,10 +46,85 @@ namespace _Game.Scripts.Manager
             }
             DontDestroyOnLoad(gameObject);
         }
+
         private void Start()
         {
             LoadDataHero();
         }
+
+        public void SpawnHeroes()
+        {
+            if (HeroesReady.Count == 0)
+            {
+                Debug.Log("No heroes in the HeroesReady list to spawn.");
+                return;
+            }
+
+            int spawnCount = 0;
+
+            for (int i = 0; i < HeroesReady.Count; i++)
+            {
+                HeroDataList heroDataList = HeroesReady[i];
+
+                foreach (HeroData heroData in heroDataList.heroes)
+                {
+                    if (spawnCount >= _spawnPoints.Length)
+                    {
+                        return;
+                    }
+
+                    if (spawnedHeroes.ContainsKey(heroData))
+                    {
+                        Debug.Log("Hero already spawned.");
+                        continue;
+                    }
+
+                    HeroDataSO tempHeroDataSO = ScriptableObject.CreateInstance<HeroDataSO>();
+                    tempHeroDataSO.HeroID = heroData.HeroID;
+                    tempHeroDataSO.HeroName = heroData.HeroName;
+                    tempHeroDataSO.HeroAvatar = heroData.HeroAvatar;
+                    tempHeroDataSO.CharacterStat = heroData.CharacterStat;
+                    tempHeroDataSO.Rank = heroData.Rank;
+                    tempHeroDataSO.CharacterName = heroData.CharacterName;
+
+                    HeroController heroInstance = Instantiate(_heroPrefab, _spawnPoints[spawnCount].position, Quaternion.identity);
+                    CharacterNameAndRank key = new CharacterNameAndRank(tempHeroDataSO.CharacterName, tempHeroDataSO.Rank);
+
+                    if (CharOutLook.CharOut.TryGetValue(key, out OutLook outLook))
+                    {
+                        if (outLook.Root != null)
+                        {
+                            heroInstance.BaseRoot = Instantiate(outLook.Root, heroInstance.ReverObject);
+                            heroInstance.BaseRoot.name = outLook.Root.name;
+                        }
+                    }
+
+                    heroInstance.SetHeroData(tempHeroDataSO);
+                    spawnedHeroes[heroData] = heroInstance.gameObject;
+
+                    spawnCount++;
+                }
+            }
+        }
+
+        public GameObject GetSpawnedHero(HeroData heroData)
+        {
+            if (spawnedHeroes.ContainsKey(heroData))
+            {
+                return spawnedHeroes[heroData];
+            }
+            return null;
+        }
+
+        public void RemoveSpawnedHero(HeroData heroData)
+        {
+            if (spawnedHeroes.ContainsKey(heroData))
+            {
+                Destroy(spawnedHeroes[heroData]);
+                spawnedHeroes.Remove(heroData);
+            }
+        }
+
         public void LoadDataHero()
         {
             if (string.IsNullOrEmpty(PlayFabManager.Instance.PlayFabId))
@@ -88,63 +170,6 @@ namespace _Game.Scripts.Manager
             });
         }
 
-
-        [Button("Add Hero")]
-        public void AddHero()
-        {
-            if (_heroDictionary == null || _heroDictionary.Count == 0)
-            {
-                Debug.LogError("HeroDictionary is empty or not set.");
-                return;
-            }
-            if (HeroesAvailable.Count == 0)
-            {
-                HeroesAvailable.Add(new HeroDataList { heroes = new List<HeroData>() });
-            }
-            var randomIndex = Random.Range(0, _heroDictionary.Count);
-            var randomHeroDataSO = _heroDictionary.Values.ElementAt(randomIndex);
-
-            HeroData heroData = HeroDataConverter.ConvertHeroDataSOToHeroData(randomHeroDataSO);
-
-            HeroesAvailable[0].heroes.Add(heroData);
-
-            SaveHeroData(randomHeroDataSO);
-        }
-
-        public void SaveHeroData(HeroDataSO heroDataSO)
-        {
-            if (string.IsNullOrEmpty(PlayFabManager.Instance.PlayFabId))
-            {
-                Debug.LogError("PlayFab ID chưa được thiết lập.");
-                return;
-            }
-
-            HeroData heroData = HeroDataConverter.ConvertHeroDataSOToHeroData(heroDataSO);
-
-            if (HeroesAvailable != null && HeroesAvailable.Count > 0)
-            {
-                var heroDataList = HeroesAvailable[0];
-                var heroDataListJson = JsonUtility.ToJson(heroDataList);
-
-                PlayFabClientAPI.UpdateUserData(new UpdateUserDataRequest
-                {
-                    Data = new Dictionary<string, string> { { "HeroData", heroDataListJson } }
-                },
-                result =>
-                {
-                    Debug.Log("Dữ liệu hero đã được lưu thành công!");
-                },
-                error =>
-                {
-                    Debug.LogError("Lỗi khi lưu dữ liệu hero: " + error.ErrorMessage);
-                });
-            }
-            else
-            {
-                Debug.LogWarning("Chưa có hero nào trong danh sách HeroesAvailable.");
-            }
-        }
-
         public List<HeroData> GetAvailableHeroesReady()
         {
             if (HeroesReady.Count > 0)
@@ -153,6 +178,7 @@ namespace _Game.Scripts.Manager
             }
             return new List<HeroData>();
         }
+
         public List<HeroData> GetAvailableHeroes()
         {
             if (HeroesAvailable.Count > 0)
