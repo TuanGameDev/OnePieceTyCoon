@@ -15,16 +15,10 @@ namespace _Game.Scripts.UI
         public CharOutLook _charOutLook;
 
         [SerializeField]
-        private HeroController _heroPrefab;
-
-        [SerializeField]
         private SlotHeroUI _slotHeroPrefab;
 
         [SerializeField]
         private Transform _heroesContainer;
-
-        [SerializeField]
-        private Transform _heroesReadyContainer;
 
         [SerializeField]
         private Button CountinueBtn;
@@ -40,6 +34,16 @@ namespace _Game.Scripts.UI
             if (availableHeroes.Count > 0)
             {
                 DisplayHeroes(availableHeroes);
+            }
+        }
+
+        public void LoadAndDisplayHeroesReady()
+        {
+            List<HeroData> availableHeroes = HeroManager.Instance.GetAvailableHeroesReady();
+
+            if (availableHeroes.Count > 0)
+            {
+                DisplayReadyHeroes(availableHeroes);
             }
         }
 

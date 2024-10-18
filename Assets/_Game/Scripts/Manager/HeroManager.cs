@@ -29,9 +29,16 @@ namespace _Game.Scripts.Manager
 
         public List<HeroDataList> HeroesAvailable = new List<HeroDataList>();
 
+        [SerializeField]
+        private Dictionary<HeroData, GameObject> spawnedHeroes = new Dictionary<HeroData, GameObject>();
+
+        [SerializeField]
+        private Dictionary<HeroData, int> heroSpawnPoints = new Dictionary<HeroData, int>();
+
+        public List<int> UsedSpawnPoints = new List<int>();
+
         public static HeroManager Instance;
 
-        private Dictionary<HeroData, GameObject> spawnedHeroes = new Dictionary<HeroData, GameObject>();
 
         private void Awake()
         {
@@ -51,8 +58,47 @@ namespace _Game.Scripts.Manager
         {
             LoadDataHero();
         }
+        [Button]
+        public void AddHero()
+        {
+            // Ensure HeroesAvailable has at least one entry
+            if (HeroesAvailable.Count == 0)
+            {
+                HeroesAvailable.Add(new HeroDataList { heroes = new List<HeroData>() });
+            }
 
-        public void SpawnHeroes()
+            var availableHeroList = HeroesAvailable[0].heroes;
+
+            // Iterate over the hero dictionary and add heroes to HeroesAvailable
+            foreach (var heroEntry in _heroDictionary)
+            {
+                var heroDataSO = heroEntry.Value;
+
+                // Check if the hero is already available
+                bool heroExists = availableHeroList.Any(hero => hero.HeroID == heroDataSO.HeroID);
+                if (!heroExists)
+                {
+                    // Create a new HeroData object from HeroDataSO
+                    HeroData newHeroData = new HeroData
+                    {
+                        HeroID = heroDataSO.HeroID,
+                        HeroName = heroDataSO.HeroName,
+                        HeroAvatar = heroDataSO.HeroAvatar,
+                        CharacterStat = heroDataSO.CharacterStat,
+                        Rank = heroDataSO.Rank,
+                        CharacterName = heroDataSO.CharacterName,
+                        HeroAvatarPath = heroDataSO.HeroAvatar != null ? heroDataSO.HeroAvatar.name : string.Empty // Store avatar path if available
+                    };
+
+                    // Add the new hero to the available heroes list
+                    availableHeroList.Add(newHeroData);
+                }
+            }
+
+            Debug.Log("Heroes added to HeroesAvailable from _heroDictionary.");
+        }
+
+        public void GetHeroes()
         {
             if (HeroesReady.Count == 0)
             {
@@ -60,16 +106,16 @@ namespace _Game.Scripts.Manager
                 return;
             }
 
-            int spawnCount = 0;
-
             for (int i = 0; i < HeroesReady.Count; i++)
             {
                 HeroDataList heroDataList = HeroesReady[i];
 
                 foreach (HeroData heroData in heroDataList.heroes)
                 {
-                    if (spawnCount >= _spawnPoints.Length)
+                    int spawnIndex = GetAvailableSpawnIndex();
+                    if (spawnIndex == -1)
                     {
+                        Debug.Log("No available spawn points.");
                         return;
                     }
 
@@ -87,9 +133,9 @@ namespace _Game.Scripts.Manager
                     tempHeroDataSO.Rank = heroData.Rank;
                     tempHeroDataSO.CharacterName = heroData.CharacterName;
 
-                    HeroController heroInstance = Instantiate(_heroPrefab, _spawnPoints[spawnCount].position, Quaternion.identity);
-                    CharacterNameAndRank key = new CharacterNameAndRank(tempHeroDataSO.CharacterName, tempHeroDataSO.Rank);
+                    HeroController heroInstance = Instantiate(_heroPrefab, _spawnPoints[spawnIndex].position, Quaternion.identity);
 
+                    CharacterNameAndRank key = new CharacterNameAndRank(tempHeroDataSO.CharacterName, tempHeroDataSO.Rank);
                     if (CharOutLook.CharOut.TryGetValue(key, out OutLook outLook))
                     {
                         if (outLook.Root != null)
@@ -100,29 +146,38 @@ namespace _Game.Scripts.Manager
                     }
 
                     heroInstance.SetHeroData(tempHeroDataSO);
+
                     spawnedHeroes[heroData] = heroInstance.gameObject;
 
-                    spawnCount++;
+                    heroSpawnPoints[heroData] = spawnIndex;
+                    UsedSpawnPoints.Add(spawnIndex);
                 }
             }
-        }
-
-        public GameObject GetSpawnedHero(HeroData heroData)
-        {
-            if (spawnedHeroes.ContainsKey(heroData))
-            {
-                return spawnedHeroes[heroData];
-            }
-            return null;
         }
 
         public void RemoveSpawnedHero(HeroData heroData)
         {
             if (spawnedHeroes.ContainsKey(heroData))
             {
+                int usedIndex = heroSpawnPoints[heroData];
+                UsedSpawnPoints.Remove(usedIndex);
+
                 Destroy(spawnedHeroes[heroData]);
                 spawnedHeroes.Remove(heroData);
+                heroSpawnPoints.Remove(heroData);
             }
+        }
+
+        public int GetAvailableSpawnIndex()
+        {
+            for (int i = 0; i < _spawnPoints.Length; i++)
+            {
+                if (!UsedSpawnPoints.Contains(i))
+                {
+                    return i;
+                }
+            }
+            return -1;
         }
 
         public void LoadDataHero()

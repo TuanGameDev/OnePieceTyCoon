@@ -24,7 +24,6 @@ namespace _Game.Scripts.UI
 
         private void Start()
         {
-            _selectedBtn.onClick.RemoveAllListeners();
             _selectedBtn.onClick.AddListener(OnHeroSelected);
         }
 
@@ -54,9 +53,14 @@ namespace _Game.Scripts.UI
             UpdateSelectedButtonUI();
         }
 
+
         private void OnHeroSelected()
         {
-            if (Selected)
+            if (Selected && !HeroManager.Instance.HeroesReady[0].heroes.Contains(_heroData))
+            {
+                AddHero();
+            }
+            else if (Selected)
             {
                 RemoveHero();
             }
@@ -68,6 +72,7 @@ namespace _Game.Scripts.UI
             Selected = !Selected;
             UpdateSelectedButtonUI();
         }
+
 
         private void AddHero()
         {
@@ -82,7 +87,16 @@ namespace _Game.Scripts.UI
             {
                 heroList.Add(_heroData);
 
-                HeroManager.Instance.SpawnHeroes();
+                // Check if we have a valid spawn index before calling GetHeroes
+                int spawnIndex = HeroManager.Instance.GetAvailableSpawnIndex();
+                if (spawnIndex != -1)
+                {
+                    HeroManager.Instance.GetHeroes(); // Spawn hero immediately
+                }
+                else
+                {
+                    Debug.Log("No available spawn points when trying to add a hero.");
+                }
 
                 SelectionHeroUI heroesUI = FindObjectOfType<SelectionHeroUI>();
                 heroesUI.DisplayReadyHeroes(heroList);
@@ -96,7 +110,6 @@ namespace _Game.Scripts.UI
 
             if (!heroList.Contains(_heroData))
             {
-                // Sử dụng hàm RemoveSpawnedHero đã sửa
                 HeroManager.Instance.RemoveSpawnedHero(_heroData);
 
                 SelectionHeroUI heroesUI = FindObjectOfType<SelectionHeroUI>();

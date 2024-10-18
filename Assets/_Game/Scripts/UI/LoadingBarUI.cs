@@ -35,11 +35,11 @@ namespace _Game.Scripts.UI
 
                 yield return null;
             }
+            AudioManager.Instance.PlaySFX(1);
+            AudioManager.Instance.StopSFX(0);
             _currentProgress = 100f;
             UpdateUI(_currentProgress);
             LevelManager.Instance.StartGame(LevelManager.Instance.CurrentLevelInVillage);
-            AudioManager.Instance.PlaySFX(1);
-            AudioManager.Instance.StopSFX(0);
         }
 
         private void UpdateUI(float progress)
