@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HeroID: 2
   HeroName: Zoro
-  HeroAvatar: {fileID: 0}
-  HeroAvatarPath: Zoro_Avatar
+  HeroAvatar: {fileID: 21300000, guid: e9df162fdf1abb6438b78ddc86c710ca, type: 3}
+  HeroAvatarPath: 
   CharacterStat:
     HeroLevel: 1
     Hp: 10

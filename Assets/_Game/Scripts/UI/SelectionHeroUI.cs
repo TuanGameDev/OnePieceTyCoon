@@ -3,7 +3,9 @@ using _Game.Scripts.Manager;
 using _Game.Scripts.Non_Mono;
 using _Game.Scripts.Scriptable_Object;
 using Sirenix.OdinInspector;
+using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,13 +17,15 @@ namespace _Game.Scripts.UI
         public CharOutLook _charOutLook;
 
         [SerializeField]
-        private SlotHeroUI _slotHeroPrefab;
+        public SlotHeroUI _slotHeroPrefab;
 
         [SerializeField]
         private Transform _heroesContainer;
 
         [SerializeField]
         private Button CountinueBtn;
+
+        public TextMeshProUGUI MessageTxt;
 
         private const int MaxHeroesReady = 1;
 
@@ -76,6 +80,12 @@ namespace _Game.Scripts.UI
                 var slotHero = Instantiate(_slotHeroPrefab, _heroesContainer);
                 slotHero.SetHeroUI(hero.HeroAvatarPath, hero.HeroName, hero);
             }
+        }
+        public IEnumerator HideTxt(float waitTime)
+        {
+            yield return new WaitForSeconds(waitTime);
+
+            MessageTxt.text = "";
         }
     }
 }

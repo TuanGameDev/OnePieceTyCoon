@@ -35,6 +35,10 @@ namespace _Game.Scripts.Manager
 
         void Start()
         {
+            Invoke(nameof(Initialization), 1f);
+        }
+        void Initialization()
+        {
             _heroStartPositions = new Vector3[HeroControllers.Count];
             _enemyStartPositions = new Vector3[EnemyControllers.Count];
             for (int i = 0; i < HeroControllers.Count; i++)
@@ -183,68 +187,12 @@ namespace _Game.Scripts.Manager
         IEnumerator MoveToTarget(MonoBehaviour controller, Vector3 target, bool movingTowardTarget)
         {
             Transform unit = controller.transform;
-            Animator animator = null;
-            Transform reverObject = null;
-
-            if (controller is HeroController hero)
-            {
-                animator = hero.Animator;
-                reverObject = hero.ReverObject;
-            }
-            else if (controller is EnemyController enemy)
-            {
-                animator = enemy.Animator;
-                reverObject = enemy.ReverObject;
-            }
-
-            if (reverObject != null)
-            {
-                if (movingTowardTarget)
-                {
-                    FlipRight(reverObject);
-                }
-                else
-                {
-                    FlipLeft(reverObject);
-                }
-            }
-
-            if (animator != null)
-            {
-                animator.SetBool("Move", true);
-            }
-
+            
             while (Vector3.Distance(unit.position, target) > 1f)
             {
                 unit.position = Vector3.MoveTowards(unit.position, target, MoveSpeed * Time.deltaTime);
                 yield return null;
             }
-
-            if (animator != null)
-            {
-                animator.SetBool("Move", false);
-                FlipRight(reverObject);
-            }
-        }
-
-        void FlipRight(Transform reverObject)
-        {
-            Vector3 scale = reverObject.localScale;
-            if (scale.x < 0)
-            {
-                scale.x *= -1;
-            }
-            reverObject.localScale = scale;
-        }
-
-        void FlipLeft(Transform reverObject)
-        {
-            Vector3 scale = reverObject.localScale;
-            if (scale.x > 0)
-            {
-                scale.x *= -1;
-            }
-            reverObject.localScale = scale;
         }
 
         EnemyController GetRandomEnemy()

@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HeroID: 0
   HeroName: Shank
-  HeroAvatar: {fileID: 0}
-  HeroAvatarPath: Shank_Avatar
+  HeroAvatar: {fileID: 21300000, guid: 1ad89024aa959854fb105a00b6f35c4d, type: 3}
+  HeroAvatarPath: 
   CharacterStat:
     HeroLevel: 0
     Hp: 1000

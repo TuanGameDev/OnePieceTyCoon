@@ -56,6 +56,18 @@ namespace _Game.Scripts.UI
 
         private void OnHeroSelected()
         {
+            if (HeroManager.Instance.HeroesReady.Count > 0 && HeroManager.Instance.HeroesReady[0].heroes.Count >= 5)
+            {
+                if (!Selected)
+                {
+                    Debug.Log("Đã đủ hero, không thể chọn thêm.");
+                    SelectionHeroUI heroesUI = FindObjectOfType<SelectionHeroUI>();
+                    heroesUI.MessageTxt.text = " Đã đủ hero, không thể chọn thêm !";
+                    heroesUI.StartCoroutine(heroesUI.HideTxt(3f));
+                    return;
+                }
+            }
+
             if (Selected && !HeroManager.Instance.HeroesReady[0].heroes.Contains(_heroData))
             {
                 AddHero();
@@ -73,7 +85,6 @@ namespace _Game.Scripts.UI
             UpdateSelectedButtonUI();
         }
 
-
         private void AddHero()
         {
             if (HeroManager.Instance.HeroesReady.Count == 0)
@@ -87,15 +98,10 @@ namespace _Game.Scripts.UI
             {
                 heroList.Add(_heroData);
 
-                // Check if we have a valid spawn index before calling GetHeroes
                 int spawnIndex = HeroManager.Instance.GetAvailableSpawnIndex();
                 if (spawnIndex != -1)
                 {
-                    HeroManager.Instance.GetHeroes(); // Spawn hero immediately
-                }
-                else
-                {
-                    Debug.Log("No available spawn points when trying to add a hero.");
+                    HeroManager.Instance.GetHeroes();
                 }
 
                 SelectionHeroUI heroesUI = FindObjectOfType<SelectionHeroUI>();

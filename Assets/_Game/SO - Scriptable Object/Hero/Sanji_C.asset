@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HeroID: 2
   HeroName: Sanji
-  HeroAvatar: {fileID: 0}
-  HeroAvatarPath: Sanji_Avatar
+  HeroAvatar: {fileID: 21300000, guid: baa7cf3d839ae9343b64780b1a80bede, type: 3}
+  HeroAvatarPath: 
   CharacterStat:
     HeroLevel: 1
     Hp: 10

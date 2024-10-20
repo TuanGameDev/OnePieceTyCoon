@@ -26,6 +26,8 @@ namespace _Game.Scripts.UI
             SceneManager.LoadScene(1);
             Time.timeScale = 1;
             LevelManager.Instance.CompleteLevel();
+            HeroManager.Instance.UsedSpawnPoints.Clear();
+            HeroManager.Instance.HeroesReady.Clear();
             AudioManager.Instance.PlaySFX(0);
             AudioManager.Instance.StopSFX(1);
         }

@@ -16,9 +16,6 @@ namespace _Game.Scripts.UI
         [SerializeField]
         private Button[] _villageButtons;
 
-        [SerializeField]
-        private TextMeshProUGUI _landNameText;
-
         void Start()
         {
             for (int i = 0; i < _villageButtons.Length; i++)
@@ -34,7 +31,6 @@ namespace _Game.Scripts.UI
         private void LoadVillage(int villageIndex)
         {
             LevelManager.Instance.LoadVillage(villageIndex);
-            _landNameText.text = LevelManager.Instance.Villages[villageIndex].VillageName;
 
             UpdateVillageButtons();
             DisplayLevelSlots();
@@ -71,22 +67,16 @@ namespace _Game.Scripts.UI
 
         private void UpdateVillageButtons()
         {
-            // Nếu không có làng nào, thoát khỏi hàm
             if (_villageButtons.Length == 0) return;
 
-            // Nút làng đầu tiên luôn có thể tương tác
             _villageButtons[0].interactable = LevelManager.Instance.Villages[0].LockState;
 
-            // Kiểm tra và cập nhật trạng thái các nút làng
             for (int i = 1; i < _villageButtons.Length; i++)
             {
                 if (LevelManager.Instance.Villages[i].LockState)
                 {
-                    // Nếu LockState của làng hiện tại là true
-                    // Khóa nút của làng trước
                     _villageButtons[i - 1].interactable = false;
 
-                    // Mở nút của làng hiện tại
                     _villageButtons[i].interactable = true;
                 }
                 else

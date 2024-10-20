@@ -5,8 +5,6 @@ using Sirenix.OdinInspector;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using _Game.Scripts.Characters;
-using _Game.Scripts.UI;
 using _Game.Scripts.Non_Mono;
 using _Game.Scripts.Character.Hero;
 
@@ -61,48 +59,38 @@ namespace _Game.Scripts.Manager
         [Button]
         public void AddHero()
         {
-            // Ensure HeroesAvailable has at least one entry
             if (HeroesAvailable.Count == 0)
             {
                 HeroesAvailable.Add(new HeroDataList { heroes = new List<HeroData>() });
             }
-
             var availableHeroList = HeroesAvailable[0].heroes;
 
-            // Iterate over the hero dictionary and add heroes to HeroesAvailable
             foreach (var heroEntry in _heroDictionary)
             {
                 var heroDataSO = heroEntry.Value;
 
-                // Check if the hero is already available
-                bool heroExists = availableHeroList.Any(hero => hero.HeroID == heroDataSO.HeroID);
-                if (!heroExists)
+                HeroData newHeroData = new HeroData
                 {
-                    // Create a new HeroData object from HeroDataSO
-                    HeroData newHeroData = new HeroData
-                    {
-                        HeroID = heroDataSO.HeroID,
-                        HeroName = heroDataSO.HeroName,
-                        HeroAvatar = heroDataSO.HeroAvatar,
-                        CharacterStat = heroDataSO.CharacterStat,
-                        Rank = heroDataSO.Rank,
-                        CharacterName = heroDataSO.CharacterName,
-                        HeroAvatarPath = heroDataSO.HeroAvatar != null ? heroDataSO.HeroAvatar.name : string.Empty // Store avatar path if available
-                    };
+                    HeroID = heroDataSO.HeroID,
+                    HeroName = heroDataSO.HeroName,
+                    HeroAvatar = heroDataSO.HeroAvatar,
+                    CharacterStat = heroDataSO.CharacterStat,
+                    Rank = heroDataSO.Rank,
+                    CharacterName = heroDataSO.CharacterName,
+                    HeroAvatarPath = "Portrait/" + heroDataSO.HeroAvatar.name
+                };
 
-                    // Add the new hero to the available heroes list
-                    availableHeroList.Add(newHeroData);
-                }
+                availableHeroList.Add(newHeroData);
             }
 
-            Debug.Log("Heroes added to HeroesAvailable from _heroDictionary.");
+            SaveDataHero();
         }
+
 
         public void GetHeroes()
         {
             if (HeroesReady.Count == 0)
             {
-                Debug.Log("No heroes in the HeroesReady list to spawn.");
                 return;
             }
 
@@ -115,13 +103,11 @@ namespace _Game.Scripts.Manager
                     int spawnIndex = GetAvailableSpawnIndex();
                     if (spawnIndex == -1)
                     {
-                        Debug.Log("No available spawn points.");
                         return;
                     }
 
                     if (spawnedHeroes.ContainsKey(heroData))
                     {
-                        Debug.Log("Hero already spawned.");
                         continue;
                     }
 
@@ -129,6 +115,7 @@ namespace _Game.Scripts.Manager
                     tempHeroDataSO.HeroID = heroData.HeroID;
                     tempHeroDataSO.HeroName = heroData.HeroName;
                     tempHeroDataSO.HeroAvatar = heroData.HeroAvatar;
+                    tempHeroDataSO.HeroAvatarPath = heroData.HeroAvatarPath;
                     tempHeroDataSO.CharacterStat = heroData.CharacterStat;
                     tempHeroDataSO.Rank = heroData.Rank;
                     tempHeroDataSO.CharacterName = heroData.CharacterName;
@@ -214,16 +201,43 @@ namespace _Game.Scripts.Manager
                     HeroesAvailable.Add(heroDataList);
                     Debug.Log("Dữ liệu hero đã được tải thành công!");
                 }
-                else
-                {
-                    Debug.Log("Không tìm thấy dữ liệu hero.");
-                }
             },
             error =>
             {
                 Debug.LogError("Lỗi khi tải dữ liệu hero: " + error.ErrorMessage);
             });
         }
+
+        public void SaveDataHero()
+        {
+            if (string.IsNullOrEmpty(PlayFabManager.Instance.PlayFabId))
+            {
+                Debug.LogError("PlayFab ID chưa được thiết lập.");
+                return;
+            }
+
+            if (HeroesAvailable.Count == 0)
+            {
+                return;
+            }
+
+            HeroDataList heroDataList = HeroesAvailable[0];
+            string heroDataJson = JsonUtility.ToJson(heroDataList);
+
+            PlayFabClientAPI.UpdateUserData(new UpdateUserDataRequest
+            {
+                Data = new Dictionary<string, string> { { "HeroData", heroDataJson } } 
+            },
+            result =>
+            {
+                Debug.Log("Dữ liệu hero đã được lưu thành công lên PlayFab!");
+            },
+            error =>
+            {
+                Debug.LogError("Lỗi khi lưu dữ liệu hero: " + error.ErrorMessage);
+            });
+        }
+
 
         public List<HeroData> GetAvailableHeroesReady()
         {
