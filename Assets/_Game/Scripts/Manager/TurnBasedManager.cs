@@ -21,7 +21,7 @@ namespace _Game.Scripts.Manager
         public List<HeroController> HeroControllers = new List<HeroController>();
         public List<EnemyController> EnemyControllers = new List<EnemyController>();
 
-        public float MoveSpeed;
+        private float _moveSpeed = 20f;
 
         [ReadOnly]
         public GameStat CurrentGameStat = GameStat.Figth;
@@ -67,7 +67,7 @@ namespace _Game.Scripts.Manager
                 }
                 CheckGameStatus();
 
-                yield return new WaitForSeconds(0.5f);
+                yield return new WaitForSeconds(1f);
             }
         }
 
@@ -187,13 +187,28 @@ namespace _Game.Scripts.Manager
         IEnumerator MoveToTarget(MonoBehaviour controller, Vector3 target, bool movingTowardTarget)
         {
             Transform unit = controller.transform;
-            
-            while (Vector3.Distance(unit.position, target) > 1f)
+
+            float stoppingDistance = 1f;
+
+            if (movingTowardTarget)
             {
-                unit.position = Vector3.MoveTowards(unit.position, target, MoveSpeed * Time.deltaTime);
-                yield return null;
+                while (Vector3.Distance(unit.position, target) > stoppingDistance)
+                {
+                    unit.position = Vector3.MoveTowards(unit.position, target, _moveSpeed * Time.deltaTime);
+                    yield return null;
+                }
+            }
+            else
+            {
+                while (Vector3.Distance(unit.position, target) > 0.01f)
+                {
+                    unit.position = Vector3.MoveTowards(unit.position, target, _moveSpeed * Time.deltaTime);
+                    yield return null;
+                }
             }
         }
+
+
 
         EnemyController GetRandomEnemy()
         {

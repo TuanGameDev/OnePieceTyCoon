@@ -314,7 +314,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Register
+  m_text: "\u0110\u0103ng K\xED"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 079f350782f09c2498a4f5f412ddf9ad, type: 2}
   m_sharedMaterial: {fileID: -2973348540883244466, guid: 079f350782f09c2498a4f5f412ddf9ad, type: 2}
@@ -341,8 +341,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 35
+  m_fontSizeBase: 35
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1661,8 +1661,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 142.49, y: -154.99995}
-  m_SizeDelta: {x: 284.98, y: 34.52}
+  m_AnchoredPosition: {x: 94.7, y: -154.99995}
+  m_SizeDelta: {x: 328.709, y: 34.52}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &879647456
 MonoBehaviour:
@@ -1684,7 +1684,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Forgot Password
+  m_text: "Qu\xEAn M\u1EADt Kh\u1EA9u"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 079f350782f09c2498a4f5f412ddf9ad, type: 2}
   m_sharedMaterial: {fileID: -2973348540883244466, guid: 079f350782f09c2498a4f5f412ddf9ad, type: 2}
@@ -1711,8 +1711,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2241,7 +2241,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Forgot
+  m_text: "Qu\xEAn"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 079f350782f09c2498a4f5f412ddf9ad, type: 2}
   m_sharedMaterial: {fileID: -2973348540883244466, guid: 079f350782f09c2498a4f5f412ddf9ad, type: 2}
@@ -2623,7 +2623,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Login
+  m_text: "\u0110\u0103ng Nh\u1EADp"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 079f350782f09c2498a4f5f412ddf9ad, type: 2}
   m_sharedMaterial: {fileID: -2973348540883244466, guid: 079f350782f09c2498a4f5f412ddf9ad, type: 2}
@@ -2650,8 +2650,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 35
+  m_fontSizeBase: 35
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3077,7 +3077,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: PassWord...
+  m_text: "M\u1EADt kh\u1EA9u..."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 079f350782f09c2498a4f5f412ddf9ad, type: 2}
   m_sharedMaterial: {fileID: -2973348540883244466, guid: 079f350782f09c2498a4f5f412ddf9ad, type: 2}
@@ -3386,7 +3386,7 @@ MonoBehaviour:
   m_StartCorner: 0
   m_StartAxis: 0
   m_CellSize: {x: 220, y: 100}
-  m_Spacing: {x: 151.91, y: 0}
+  m_Spacing: {x: 150, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2
 --- !u!1 &449899612110161135
