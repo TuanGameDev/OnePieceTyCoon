@@ -78,7 +78,7 @@ namespace _Game.Scripts.UI
             foreach (var hero in heroes)
             {
                 var slotHero = Instantiate(_slotHeroPrefab, _heroesContainer);
-                slotHero.SetHeroUI(hero.HeroAvatarPath, hero.HeroName, hero);
+              //  slotHero.SetHeroUI(hero.HeroAvatarPath, hero.HeroName, hero);
             }
         }
         public IEnumerator HideTxt(float waitTime)

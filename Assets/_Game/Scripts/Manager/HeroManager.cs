@@ -33,10 +33,7 @@ namespace _Game.Scripts.Manager
         [SerializeField]
         private Dictionary<HeroData, int> heroSpawnPoints = new Dictionary<HeroData, int>();
 
-        public List<int> UsedSpawnPoints = new List<int>();
-
         public static HeroManager Instance;
-
 
         private void Awake()
         {
@@ -86,86 +83,6 @@ namespace _Game.Scripts.Manager
             SaveDataHero();
         }
 
-
-        public void GetHeroes()
-        {
-            if (HeroesReady.Count == 0)
-            {
-                return;
-            }
-
-            for (int i = 0; i < HeroesReady.Count; i++)
-            {
-                HeroDataList heroDataList = HeroesReady[i];
-
-                foreach (HeroData heroData in heroDataList.heroes)
-                {
-                    int spawnIndex = GetAvailableSpawnIndex();
-                    if (spawnIndex == -1)
-                    {
-                        return;
-                    }
-
-                    if (spawnedHeroes.ContainsKey(heroData))
-                    {
-                        continue;
-                    }
-
-                    HeroDataSO tempHeroDataSO = ScriptableObject.CreateInstance<HeroDataSO>();
-                    tempHeroDataSO.HeroID = heroData.HeroID;
-                    tempHeroDataSO.HeroName = heroData.HeroName;
-                    tempHeroDataSO.HeroAvatar = heroData.HeroAvatar;
-                    tempHeroDataSO.HeroAvatarPath = heroData.HeroAvatarPath;
-                    tempHeroDataSO.CharacterStat = heroData.CharacterStat;
-                    tempHeroDataSO.Rank = heroData.Rank;
-                    tempHeroDataSO.CharacterName = heroData.CharacterName;
-
-                    HeroController heroInstance = Instantiate(_heroPrefab, _spawnPoints[spawnIndex].position, Quaternion.identity);
-
-                    CharacterNameAndRank key = new CharacterNameAndRank(tempHeroDataSO.CharacterName, tempHeroDataSO.Rank);
-                    if (CharOutLook.CharOut.TryGetValue(key, out OutLook outLook))
-                    {
-                        if (outLook.Root != null)
-                        {
-                            heroInstance.BaseRoot = Instantiate(outLook.Root, heroInstance.ReverObject);
-                            heroInstance.BaseRoot.name = outLook.Root.name;
-                        }
-                    }
-
-                    heroInstance.SetHeroData(tempHeroDataSO);
-
-                    spawnedHeroes[heroData] = heroInstance.gameObject;
-
-                    heroSpawnPoints[heroData] = spawnIndex;
-                    UsedSpawnPoints.Add(spawnIndex);
-                }
-            }
-        }
-
-        public void RemoveSpawnedHero(HeroData heroData)
-        {
-            if (spawnedHeroes.ContainsKey(heroData))
-            {
-                int usedIndex = heroSpawnPoints[heroData];
-                UsedSpawnPoints.Remove(usedIndex);
-
-                Destroy(spawnedHeroes[heroData]);
-                spawnedHeroes.Remove(heroData);
-                heroSpawnPoints.Remove(heroData);
-            }
-        }
-
-        public int GetAvailableSpawnIndex()
-        {
-            for (int i = 0; i < _spawnPoints.Length; i++)
-            {
-                if (!UsedSpawnPoints.Contains(i))
-                {
-                    return i;
-                }
-            }
-            return -1;
-        }
 
         public void LoadDataHero()
         {

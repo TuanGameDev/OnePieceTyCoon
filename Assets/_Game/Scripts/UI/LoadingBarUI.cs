@@ -39,7 +39,6 @@ namespace _Game.Scripts.UI
             AudioManager.Instance.StopSFX(0);
             _currentProgress = 100f;
             UpdateUI(_currentProgress);
-            LevelManager.Instance.StartGame(LevelManager.Instance.CurrentLevelInVillage);
         }
 
         private void UpdateUI(float progress)

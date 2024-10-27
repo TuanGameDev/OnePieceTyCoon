@@ -16,8 +16,6 @@ namespace _Game.Scripts.Manager
 
         [SerializeField]
         private Transform[] _spawnPoints;
-
-        public TurnBasedManager TurnBasedManager;
         private void Start()
         {
             SpawnHeroes();
@@ -64,7 +62,6 @@ namespace _Game.Scripts.Manager
                         }
                     }
                     heroInstance.SetHeroData(tempHeroDataSO);
-                    TurnBasedManager.HeroControllers.Add(heroInstance);
                     spawnCount++;
                 }
             }

@@ -20,9 +20,6 @@ namespace _Game.Scripts.Manager
         [SerializeField]
         private EnemyDictionary _enemyDictionary;
 
-        [SerializeField]
-        private TurnBasedManager _turnbasedManager;
-
         private void Start()
         {
             SpawnEnemies();
@@ -48,7 +45,6 @@ namespace _Game.Scripts.Manager
                             EnemyController enemyInstance = Instantiate(_enemyPrefab, _spawnPoints[spawnIndex].position, Quaternion.identity);
                             enemyInstance.BaseRoot = Instantiate(outLook.Root, enemyInstance.ReverObject);
                             enemyInstance.BaseRoot.name = outLook.Root.name;
-                            _turnbasedManager.EnemyControllers.Add(enemyInstance);
                             spawnIndex++;
                         }
                         else
