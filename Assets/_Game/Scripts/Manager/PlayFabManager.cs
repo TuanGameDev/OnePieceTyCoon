@@ -11,29 +11,10 @@ namespace _Game.Scripts.Manager
 {
     public class PlayFabManager : MonoBehaviour
     {
-        [SerializeField]
-        private TMP_InputField _emailInputField;
-
-        [SerializeField]
-        private TMP_InputField _passwordInputField;
-
-        [SerializeField]
-        private TMP_InputField _forgotPasswordInputField;
-
-        [SerializeField]
-        private TextMeshProUGUI _messageText;
-
-        [SerializeField]
-        private Button _loginBtn;
-
-        [SerializeField]
-        private Button _registerBtn;
-
-        [SerializeField]
-        private Button _forgotPasswordBtn;
-
         [ReadOnly]
         public string PlayFabId;
+
+        public bool isLoggedIn;
 
         public static PlayFabManager Instance;
 
@@ -41,147 +22,56 @@ namespace _Game.Scripts.Manager
         {
             Instance = this;
         }
-
         private void Start()
         {
-            _loginBtn.onClick.AddListener(Login);
-            _registerBtn.onClick.AddListener(Register);
-            _forgotPasswordBtn.onClick.AddListener(ForgotPassword);
-
-            LoadAccountInfo();
+            Login();
         }
-
-        public void SetPlayFabId(string playFabId)
-        {
-            PlayFabId = playFabId;
-        }
-
-        private bool ValidateInputFields()
-        {
-            if (string.IsNullOrEmpty(_emailInputField.text) || string.IsNullOrEmpty(_passwordInputField.text))
-            {
-                _messageText.text = "Vui lòng nhập tài khoản và mật khẩu!";
-                return false;
-            }
-            return true;
-        }
-
-        public void Register()
-        {
-            if (!ValidateInputFields()) return;
-
-            var registerRequest = new RegisterPlayFabUserRequest
-            {
-                Email = _emailInputField.text,
-                Password = _passwordInputField.text,
-                RequireBothUsernameAndEmail = false
-            };
-
-            PlayFabClientAPI.RegisterPlayFabUser(registerRequest, OnRegisterSuccess, OnError);
-        }
-
-        private void OnRegisterSuccess(RegisterPlayFabUserResult result)
-        {
-            _messageText.text = "Đăng ký thành công!";
-            SaveAccountInfo();
-            StartCoroutine(HideTxt(new WaitForSeconds(3)));
-        }
-
         public void Login()
         {
-            if (!ValidateInputFields()) return;
-
-            var loginRequest = new LoginWithEmailAddressRequest
+            var request = new LoginWithCustomIDRequest
             {
-                Email = _emailInputField.text,
-                Password = _passwordInputField.text,
-                InfoRequestParameters = new GetPlayerCombinedInfoRequestParams
-                {
-                    GetUserAccountInfo = true
-                }
+                CustomId = SystemInfo.deviceUniqueIdentifier,
+                CreateAccount = true
             };
 
-            PlayFabClientAPI.LoginWithEmailAddress(loginRequest, OnLoginSuccess, OnError);
+            PlayFabClientAPI.LoginWithCustomID(request, OnLoginSuccess, OnLoginFailure);
         }
-
         private void OnLoginSuccess(LoginResult result)
         {
-            var accountInfo = result.InfoResultPayload.AccountInfo;
-            if (accountInfo != null && accountInfo.PrivateInfo != null)
-            {
-                string playerId = result.PlayFabId;
-                SetPlayFabId(playerId);
-                _messageText.text = "Đăng nhập thành công!";
-                SceneManager.LoadScene(1);
-                AudioManager.Instance.PlaySFX(0);
-                if (string.IsNullOrEmpty(accountInfo.PrivateInfo.Email))
-                {
-                    _messageText.text = "Email chưa được xác minh. Hãy kiểm tra email của bạn.";
-                }
-
-                SaveAccountInfo();
-                StartCoroutine(HideTxt(new WaitForSeconds(3)));
-            }
+            PlayFabId = result.PlayFabId;
+            isLoggedIn = true;
+            Debug.Log("Đăng nhập thành công với PlayFabId: " + PlayFabId);
         }
 
-        public void ForgotPassword()
+        private void OnLoginFailure(PlayFabError error)
         {
-            if (string.IsNullOrEmpty(_forgotPasswordInputField.text))
+            Debug.LogError("Đăng nhập thất bại: " + error.GenerateErrorReport());
+        }
+
+        [Button("Delete Account")]
+        public void DeleteAccount()
+        {
+            if (!isLoggedIn)
             {
-                _messageText.text = "Vui lòng nhập email để khôi phục mật khẩu!";
+                Debug.LogError("Bạn cần đăng nhập trước khi xóa tài khoản.");
                 return;
             }
 
-            var passwordRecoveryRequest = new SendAccountRecoveryEmailRequest
+            var request = new ExecuteCloudScriptRequest
             {
-                Email = _forgotPasswordInputField.text,
-                TitleId = PlayFabSettings.TitleId
+                FunctionName = "DeletePlayer",
+                GeneratePlayStreamEvent = true
             };
 
-            PlayFabClientAPI.SendAccountRecoveryEmail(passwordRecoveryRequest, OnPasswordRecoverySuccess, OnError);
+            PlayFabClientAPI.ExecuteCloudScript(request, OnDeleteSuccess, OnDeleteFailure);
         }
-
-        private void OnPasswordRecoverySuccess(SendAccountRecoveryEmailResult result)
+        private void OnDeleteSuccess(ExecuteCloudScriptResult result)
         {
-            _messageText.text = "Email khôi phục mật khẩu đã được gửi! Vui lòng kiểm tra hộp thư của bạn.";
-            StartCoroutine(HideTxt(new WaitForSeconds(3)));
+
         }
-
-        // Method to hide the text message after a delay
-        public IEnumerator HideTxt(WaitForSeconds delay)
+        private void OnDeleteFailure(PlayFabError error)
         {
-            yield return delay;
-            _messageText.text = "";
-        }
-
-        private void OnError(PlayFabError error)
-        {
-            if (error.Error == PlayFabErrorCode.EmailAddressNotAvailable)
-            {
-                _messageText.text = "Email đã tồn tại. Vui lòng sử dụng email khác.";
-            }
-            else
-            {
-                _messageText.text = "Tài khoản hoặc mật khẩu không chính xác.";
-            }
-
-            StartCoroutine(HideTxt(new WaitForSeconds(3)));
-        }
-
-        private void SaveAccountInfo()
-        {
-            PlayerPrefs.SetString("SavedEmail", _emailInputField.text);
-            PlayerPrefs.SetString("SavedPassword", _passwordInputField.text);
-            PlayerPrefs.Save();
-        }
-
-        private void LoadAccountInfo()
-        {
-            if (PlayerPrefs.HasKey("SavedEmail") && PlayerPrefs.HasKey("SavedPassword"))
-            {
-                _emailInputField.text = PlayerPrefs.GetString("SavedEmail");
-                _passwordInputField.text = PlayerPrefs.GetString("SavedPassword");
-            }
+            Debug.LogError("Xóa tài khoản thất bại: " + error.GenerateErrorReport());
         }
     }
 }

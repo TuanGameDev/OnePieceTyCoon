@@ -6,6 +6,8 @@ using _Game.Scripts.Manager;
 using _Game.Scripts.Scriptable_Object;
 using _Game.Scripts.Non_Mono;
 using _Game.Scripts.Enums;
+using Sirenix.OdinInspector;
+using _Game.Scripts.Helper;
 
 namespace _Game.Scripts.Manager
 {
@@ -15,32 +17,35 @@ namespace _Game.Scripts.Manager
         private HeroController _heroPrefab;
 
         [SerializeField]
-        private Transform[] _spawnPoints;
-        private void Start()
+        private CharOutLook CharOutLook;
+
+        [SerializeField]
+        private Transform DefaultPoint;
+
+
+        [SerializeField]
+        private ObjectPool<HeroController> _heroPool;
+        private void Awake()
         {
-            SpawnHeroes();
+            _heroPool = new ObjectPool<HeroController>(_heroPrefab, 6, transform);
         }
 
         private void SpawnHeroes()
         {
-            if (HeroManager.Instance.HeroesReady.Count == 0)
+            if (HeroManager.Instance.HeroesAvailable.Count == 0)
             {
                 Debug.Log("No heroes in the HeroesReady list to spawn.");
                 return;
             }
 
-            int spawnCount = 0;
-
-            for (int i = 0; i < HeroManager.Instance.HeroesReady.Count; i++)
+            foreach (var heroDataList in HeroManager.Instance.HeroesAvailable)
             {
-                HeroDataList heroDataList = HeroManager.Instance.HeroesReady[i];
-
                 foreach (HeroData heroData in heroDataList.heroes)
                 {
-                    if (spawnCount >= _spawnPoints.Length)
-                    {
-                        return; 
-                    }
+                    Vector3 spawnPosition = DefaultPoint.position;
+
+                    HeroController heroInstance = _heroPool.Get();
+                    heroInstance.transform.position = spawnPosition;
 
                     HeroDataSO tempHeroDataSO = ScriptableObject.CreateInstance<HeroDataSO>();
                     tempHeroDataSO.HeroID = heroData.HeroID;
@@ -50,10 +55,9 @@ namespace _Game.Scripts.Manager
                     tempHeroDataSO.Rank = heroData.Rank;
                     tempHeroDataSO.CharacterName = heroData.CharacterName;
 
-                    HeroController heroInstance = Instantiate(_heroPrefab, _spawnPoints[spawnCount].position, Quaternion.identity);
                     CharacterNameAndRank key = new CharacterNameAndRank(tempHeroDataSO.CharacterName, tempHeroDataSO.Rank);
 
-                    if (HeroManager.Instance.CharOutLook.CharOut.TryGetValue(key, out OutLook outLook))
+                    if (CharOutLook.CharOut.TryGetValue(key, out OutLook outLook))
                     {
                         if (outLook.Root != null)
                         {
@@ -62,7 +66,6 @@ namespace _Game.Scripts.Manager
                         }
                     }
                     heroInstance.SetHeroData(tempHeroDataSO);
-                    spawnCount++;
                 }
             }
         }

@@ -21,6 +21,11 @@ namespace _Game.Scripts.Manager
             }
             DontDestroyOnLoad(gameObject);
         }
+
+        private void Start()
+        {
+            PlaySFX(0);
+        }
         public void PlaySFX(int sxfNumber)
         {
             soundEffects[sxfNumber].Play();

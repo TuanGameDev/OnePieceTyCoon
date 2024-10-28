@@ -3,35 +3,20 @@ using PlayFab.ClientModels;
 using PlayFab;
 using Sirenix.OdinInspector;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 using _Game.Scripts.Non_Mono;
 using _Game.Scripts.Character.Hero;
+using _Game.Scripts.Helper;
 
 namespace _Game.Scripts.Manager
 {
     public class HeroManager : MonoBehaviour
     {
-        [SerializeField]
-        private HeroController _heroPrefab;
-
-        [SerializeField]
-        private Transform[] _spawnPoints;
 
         [SerializeField]
         public HeroDictionary _heroDictionary;
 
-        public CharOutLook CharOutLook;
-
-        public List<HeroDataList> HeroesReady = new List<HeroDataList>();
-
         public List<HeroDataList> HeroesAvailable = new List<HeroDataList>();
-
-        [SerializeField]
-        private Dictionary<HeroData, GameObject> spawnedHeroes = new Dictionary<HeroData, GameObject>();
-
-        [SerializeField]
-        private Dictionary<HeroData, int> heroSpawnPoints = new Dictionary<HeroData, int>();
 
         public static HeroManager Instance;
 
@@ -53,6 +38,7 @@ namespace _Game.Scripts.Manager
         {
             LoadDataHero();
         }
+
         [Button]
         public void AddHero()
         {
@@ -60,6 +46,7 @@ namespace _Game.Scripts.Manager
             {
                 HeroesAvailable.Add(new HeroDataList { heroes = new List<HeroData>() });
             }
+
             var availableHeroList = HeroesAvailable[0].heroes;
 
             foreach (var heroEntry in _heroDictionary)
@@ -82,7 +69,6 @@ namespace _Game.Scripts.Manager
 
             SaveDataHero();
         }
-
 
         public void LoadDataHero()
         {
@@ -143,7 +129,7 @@ namespace _Game.Scripts.Manager
 
             PlayFabClientAPI.UpdateUserData(new UpdateUserDataRequest
             {
-                Data = new Dictionary<string, string> { { "HeroData", heroDataJson } } 
+                Data = new Dictionary<string, string> { { "HeroData", heroDataJson } }
             },
             result =>
             {
@@ -153,16 +139,6 @@ namespace _Game.Scripts.Manager
             {
                 Debug.LogError("Lỗi khi lưu dữ liệu hero: " + error.ErrorMessage);
             });
-        }
-
-
-        public List<HeroData> GetAvailableHeroesReady()
-        {
-            if (HeroesReady.Count > 0)
-            {
-                return HeroesReady[0].heroes;
-            }
-            return new List<HeroData>();
         }
 
         public List<HeroData> GetAvailableHeroes()
