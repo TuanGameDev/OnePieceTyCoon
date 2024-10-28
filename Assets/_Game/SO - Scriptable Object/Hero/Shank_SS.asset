@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c63ed956015d7604284b2f0fd11a0f46, type: 3}
   m_Name: Shank_SS
   m_EditorClassIdentifier: 
-  HeroID: 0
+  HeroID: 3
   HeroName: Shank
   HeroAvatar: {fileID: 21300000, guid: 1ad89024aa959854fb105a00b6f35c4d, type: 3}
   HeroAvatarPath: 

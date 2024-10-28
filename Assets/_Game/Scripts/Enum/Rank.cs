@@ -6,6 +6,7 @@ namespace _Game.Scripts.Enums
         S,        
         A,        
         B,     
-        C        
+        C,
+        D
     }
 }

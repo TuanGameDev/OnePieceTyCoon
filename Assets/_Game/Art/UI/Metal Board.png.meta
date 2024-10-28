@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6b651a2f7842e654c99b2a3b9fd42acf
+guid: 717de51d2e03de84ea34d9042d3ce80e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: home_pirates_alliance_window_bg_0
+      name: Metal Board_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 4
-        width: 612
-        height: 757
+        x: 1
+        y: 2
+        width: 86
+        height: 114
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f2d58de726cb58c45a6cd22d7208ff76
-      internalID: 136019887
+      spriteID: bb20552b048bb7147a3f2027c81df1f4
+      internalID: 2119933960
       vertices: []
       indices: 
       edges: []
@@ -141,7 +141,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      home_pirates_alliance_window_bg_0: 136019887
+      Metal Board_0: 2119933960
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

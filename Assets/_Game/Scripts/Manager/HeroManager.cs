@@ -13,8 +13,7 @@ namespace _Game.Scripts.Manager
     public class HeroManager : MonoBehaviour
     {
 
-        [SerializeField]
-        public HeroDictionary _heroDictionary;
+        [SerializeField] private HeroDictionary _heroDictionary;
 
         public List<HeroDataList> HeroesAvailable = new List<HeroDataList>();
 
@@ -39,7 +38,7 @@ namespace _Game.Scripts.Manager
             LoadDataHero();
         }
 
-        [Button]
+        [Button("AddHero")]
         public void AddHero()
         {
             if (HeroesAvailable.Count == 0)
@@ -65,6 +64,31 @@ namespace _Game.Scripts.Manager
                 };
 
                 availableHeroList.Add(newHeroData);
+            }
+
+            SaveDataHero();
+        }
+
+        [Button("RemoveHero")]
+        public void RemoveHero()
+        {
+            if (HeroesAvailable.Count == 0)
+            {
+                HeroesAvailable.Add(new HeroDataList { heroes = new List<HeroData>() });
+            }
+
+            var availableHeroList = HeroesAvailable[0].heroes;
+
+            foreach (var heroEntry in _heroDictionary)
+            {
+                var heroDataSO = heroEntry.Value;
+
+                HeroData heroToRemove = availableHeroList.Find(hero => hero.HeroID == heroDataSO.HeroID);
+
+                if (heroToRemove != null)
+                {
+                    availableHeroList.Remove(heroToRemove);
+                }
             }
 
             SaveDataHero();

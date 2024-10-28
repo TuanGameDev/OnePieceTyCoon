@@ -30,12 +30,12 @@ namespace _Game.Scripts.Helper
                 T obj = _pool.Dequeue();
                 if (obj != null && !obj.Equals(null))
                 {
-                    obj.gameObject.SetActive(true);
+                    obj.gameObject.SetActive(false);
                     return obj;
                 }
             }
             T newObj = GameObject.Instantiate(_prefab, _parent);
-            newObj.gameObject.SetActive(true);
+            newObj.gameObject.SetActive(false);
             return newObj;
         }
 
