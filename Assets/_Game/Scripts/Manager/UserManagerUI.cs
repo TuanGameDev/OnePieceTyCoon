@@ -6,10 +6,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using _Game.Scripts.Helper;
+using System;
 
 namespace _Game.Scripts.Manager
 {
-    public class UserManagerUI : MonoBehaviour
+    public class UserManagerUI : Singleton<UserManagerUI>
     {
         public UserInfomation UserInfomation;
 
@@ -20,7 +22,7 @@ namespace _Game.Scripts.Manager
         private GameObject UserNamePopup;
 
         [SerializeField]
-        private Button _continueBtn;
+        private Button _selectedBtn;
 
         [SerializeField]
         private TextMeshProUGUI _userNameTxt;
@@ -33,11 +35,22 @@ namespace _Game.Scripts.Manager
 
         private void Start()
         {
-            _continueBtn.interactable = false;
+            _selectedBtn.interactable = false;
             _userNameInputField.onValueChanged.AddListener(ValidateUserName);
-            _continueBtn.onClick.AddListener(SaveUserDataToPlayFab);
+            _selectedBtn.onClick.AddListener(SaveUserDataToPlayFab);
+            HeroManager.Instance.OnAddHero += UpdateUserInfo;
 
             CheckIfUserNameExists();
+        }
+        private void OnDestroy()
+        {
+            HeroManager.Instance.OnAddHero -= UpdateUserInfo;
+        }
+        public void AddCombatPower(int amount)
+        {
+            UserInfomation.CombatPower += amount;
+            UpdateLeaderboards(UserInfomation.CombatPower);
+            SaveUserDataToPlayFab();
         }
 
         private void CheckIfUserNameExists()
@@ -69,8 +82,8 @@ namespace _Game.Scripts.Manager
         private void UpdateUserInfo()
         {
             _userNameTxt.text = UserInfomation.UserName;
-            _userLevelTxt.text ="Lv. " + UserInfomation.UserLevel.ToString("N0");
-            _userCombatPowerTxt.text = "Lực chiến: " + UserInfomation.CombatPower.ToString("N0");
+            _userLevelTxt.text ="Lv. " + UserInfomation.UserLevel.ToString();
+            _userCombatPowerTxt.text = "Power: " + UserInfomation.CombatPower.ToString("N0");
         }
         private void ShowUserNamePopup()
         {
@@ -86,16 +99,16 @@ namespace _Game.Scripts.Manager
         {
             if (userName.Length >= 5 && userName.Length <= 10)
             {
-                _continueBtn.interactable = true;
+                _selectedBtn.interactable = true;
             }
             else
             {
-                _continueBtn.interactable = false;
+                _selectedBtn.interactable = false;
             }
         }
-        private void SaveUserDataToPlayFab()
+        public void SaveUserDataToPlayFab()
         {
-            if (_continueBtn.interactable)
+            if (_selectedBtn.interactable)
             {
                 UserInfomation.UserName = _userNameInputField.text;
 
@@ -123,12 +136,6 @@ namespace _Game.Scripts.Manager
         private void OnDataSendError(PlayFabError error)
         {
             Debug.LogError("Error saving user data: " + error.GenerateErrorReport());
-        }
-
-        public void AddCombatPower(int amount)
-        {
-            UserInfomation.CombatPower += amount;
-            UpdateLeaderboards(UserInfomation.CombatPower);
         }
 
         private void UpdateLeaderboards(int combatPower)

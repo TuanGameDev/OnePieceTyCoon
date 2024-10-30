@@ -28,10 +28,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 885513093630994860}
+  - {fileID: 1427901701223378396}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2424790093189549980
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1169848054, guid: 45809a89e105d9b4f8303c1d12590348, type: 3}
+  m_Sprite: {fileID: -754972459, guid: 03c35e28e01ddbb4482b71bc6769d889, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -96,7 +96,7 @@ Animator:
   m_GameObject: {fileID: 2092473371651389940}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 87d5364768da076409420bae9d947c4e, type: 2}
+  m_Controller: {fileID: 9100000, guid: fece9728b39692e4ba07c3df7f78191e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -107,7 +107,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!1001 &3729621117626176313
+--- !u!1001 &3196239460038219593
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -117,7 +117,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4578964358762232469, guid: e856cbd9f0bdd364f83b33e7dca6068e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.187
       objectReference: {fileID: 0}
     - target: {fileID: 4578964358762232469, guid: e856cbd9f0bdd364f83b33e7dca6068e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -164,8 +164,8 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e856cbd9f0bdd364f83b33e7dca6068e, type: 3}
---- !u!4 &885513093630994860 stripped
+--- !u!4 &1427901701223378396 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4578964358762232469, guid: e856cbd9f0bdd364f83b33e7dca6068e, type: 3}
-  m_PrefabInstance: {fileID: 3729621117626176313}
+  m_PrefabInstance: {fileID: 3196239460038219593}
   m_PrefabAsset: {fileID: 0}

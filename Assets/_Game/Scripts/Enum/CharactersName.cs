@@ -7,7 +7,12 @@ namespace _Game.Scripts.Enums
         Zoro,
         Sanji,
         Nami,
+        Usopp,
         Chopper,
+        Robbin,
+        Brook,
+        Franky,
+        Jinbe,
         Shank,
     }
 }

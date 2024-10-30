@@ -12,13 +12,8 @@ namespace _Game.Scripts.Manager
         private EnemyController _enemyPrefab;
 
         [SerializeField]
-        private EnemyOutLook _enemyOutLook;
-
-        [SerializeField]
         private Transform[] _spawnPoints;
 
-        [SerializeField]
-        private EnemyDictionary _enemyDictionary;
 
         private void Start()
         {
@@ -27,33 +22,7 @@ namespace _Game.Scripts.Manager
 
         public void SpawnEnemies()
         {
-            int spawnIndex = 0;
-
-            foreach (var enemyData in _enemyDictionary)
-            {
-                EnemysName enemyName = enemyData.Key.EnemyName;
-                Rank enemyRank = enemyData.Key.Rank;
-
-                EnemyNameAndRank key = new EnemyNameAndRank(enemyName, enemyRank);
-
-                if (_enemyOutLook.EnemyOut.TryGetValue(key, out OutLook outLook))
-                {
-                    if (outLook.Root != null)
-                    {
-                        if (spawnIndex < _spawnPoints.Length)
-                        {
-                            EnemyController enemyInstance = Instantiate(_enemyPrefab, _spawnPoints[spawnIndex].position, Quaternion.identity);
-                            enemyInstance.BaseRoot = Instantiate(outLook.Root, enemyInstance.ReverObject);
-                            enemyInstance.BaseRoot.name = outLook.Root.name;
-                            spawnIndex++;
-                        }
-                        else
-                        {
-                            break;
-                        }
-                    }
-                }
-            }
+           
         }
     }
 }

@@ -15,15 +15,12 @@ MonoBehaviour:
   CharOut:
     keyData:
     - CharacterName: 1
-      Rank: 4
+      Rank: 5
     - CharacterName: 2
-      Rank: 4
+      Rank: 5
     - CharacterName: 3
-      Rank: 4
-    - CharacterName: 6
-      Rank: 0
+      Rank: 5
     valueData:
     - Root: {fileID: 2092473371651389940, guid: ce33751d9db8fd04ca856563c859d9ea, type: 3}
     - Root: {fileID: 2092473371651389940, guid: 5cd93ab39851c3f47ba33c7a139d74ea, type: 3}
     - Root: {fileID: 2092473371651389940, guid: 4c86a9ce36dc72447a973b4f92b837a7, type: 3}
-    - Root: {fileID: 2092473371651389940, guid: 8871748082f52ca4abd6eb5e76a2dd1e, type: 3}

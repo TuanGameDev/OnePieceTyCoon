@@ -9,12 +9,14 @@ namespace _Game.Scripts.Scriptable_Object
         public int HeroID;
         public string HeroName;
         public Sprite HeroAvatar;
+        public Sprite IconAvatar;
         public string HeroAvatarPath;
+        public string IconAvatarPath;
+        public int Power;
 
         [Header("Stat Hero")]
         public CharacterStat CharacterStat;
         public CharacterName CharacterName;
-        public EnemysName EnemysName;
         public Rank Rank;
     }
     [System.Serializable]
@@ -23,7 +25,12 @@ namespace _Game.Scripts.Scriptable_Object
         public int HeroID;
         public string HeroName;
         public Sprite HeroAvatar;
+        public Sprite IconAvatar;
         public string HeroAvatarPath;
+        public string IconAvatarPath;
+        public int Power;
+
+        [Header("Stat Hero")]
         public CharacterStat CharacterStat;
         public CharacterName CharacterName;
         public Rank Rank;
@@ -38,7 +45,10 @@ namespace _Game.Scripts.Scriptable_Object
               HeroID = heroDataSO.HeroID,
               HeroName=heroDataSO.HeroName,
               HeroAvatar = heroDataSO.HeroAvatar,
+              IconAvatar = heroDataSO.IconAvatar,
               HeroAvatarPath = heroDataSO.HeroAvatarPath,
+              IconAvatarPath = heroDataSO.IconAvatarPath,
+              Power = heroDataSO.Power,
               CharacterStat = heroDataSO.CharacterStat,
               CharacterName = heroDataSO.CharacterName,
               Rank = heroDataSO.Rank,

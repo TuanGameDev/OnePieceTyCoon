@@ -1,6 +1,6 @@
 namespace _Game.Scripts.Enums
 {
-    public enum EnemysName
+    public enum Elemental
     {
         None,
        Enemy_0,

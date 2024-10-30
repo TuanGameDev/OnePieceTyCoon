@@ -6,6 +6,7 @@
         public int HeroLevel;
         public int Hp;
         public int Def;
+        public float MoveSpeed;
         public int AttackDamage;
         public int CritDamage;
     }

@@ -7,6 +7,8 @@ using UnityEngine;
 using _Game.Scripts.Non_Mono;
 using _Game.Scripts.Character.Hero;
 using _Game.Scripts.Helper;
+using System;
+using UnityEngine.Events;
 
 namespace _Game.Scripts.Manager
 {
@@ -16,6 +18,8 @@ namespace _Game.Scripts.Manager
         [SerializeField] private HeroDictionary _heroDictionary;
 
         public List<HeroDataList> HeroesAvailable = new List<HeroDataList>();
+
+        public Action OnAddHero;
 
         public static HeroManager Instance;
 
@@ -60,10 +64,14 @@ namespace _Game.Scripts.Manager
                     CharacterStat = heroDataSO.CharacterStat,
                     Rank = heroDataSO.Rank,
                     CharacterName = heroDataSO.CharacterName,
-                    HeroAvatarPath = "Portrait/" + heroDataSO.HeroAvatar.name
+                    Power = heroDataSO.Power,
+                    IconAvatarPath = "Portrait/" + heroDataSO.IconAvatar.name,
+                    HeroAvatarPath = "Artworks/" + heroDataSO.HeroAvatar.name
                 };
 
                 availableHeroList.Add(newHeroData);
+                UserManagerUI.Instance.AddCombatPower(HeroesAvailable[0].heroes[0].Power);
+                OnAddHero?.Invoke();
             }
 
             SaveDataHero();
@@ -88,6 +96,7 @@ namespace _Game.Scripts.Manager
                 if (heroToRemove != null)
                 {
                     availableHeroList.Remove(heroToRemove);
+                    OnAddHero?.Invoke();
                 }
             }
 
@@ -116,12 +125,8 @@ namespace _Game.Scripts.Manager
 
                     foreach (var hero in heroDataList.heroes)
                     {
-                        Sprite heroSprite = Resources.Load<Sprite>(hero.HeroAvatarPath);
-
-                        if (heroSprite != null)
-                        {
-                            hero.HeroAvatar = heroSprite;
-                        }
+                        hero.IconAvatar = Resources.Load<Sprite>(hero.IconAvatarPath);
+                        hero.HeroAvatar = Resources.Load<Sprite>(hero.HeroAvatarPath);
                     }
 
                     HeroesAvailable.Clear();
@@ -134,6 +139,7 @@ namespace _Game.Scripts.Manager
                 Debug.LogError("Lỗi khi tải dữ liệu hero: " + error.ErrorMessage);
             });
         }
+
 
         public void SaveDataHero()
         {

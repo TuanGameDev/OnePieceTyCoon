@@ -10,11 +10,12 @@ namespace _Game.Scripts.Manager
     {
         [SerializeField] private HeroController _heroPrefab;
 
+        [SerializeField] private CharOutLook _charOutLook;
+
         [SerializeField] private Transform _defaultPoint;
 
-        [SerializeField] private Transform[] _spawnPatrolPoints;
-
-        [SerializeField] private CharOutLook _charOutLook;
+        [SerializeField]
+        private List<Transform> _spawnPatrolPosition = new List<Transform>();
 
         private Dictionary<int, HeroController> _spawnedHeroes = new Dictionary<int, HeroController>();
 
@@ -36,21 +37,26 @@ namespace _Game.Scripts.Manager
                 tempHeroDataSO.HeroID = heroData.HeroID;
                 tempHeroDataSO.HeroName = heroData.HeroName;
                 tempHeroDataSO.HeroAvatar = heroData.HeroAvatar;
+                tempHeroDataSO.IconAvatar = heroData.IconAvatar;
                 tempHeroDataSO.CharacterStat = heroData.CharacterStat;
                 tempHeroDataSO.Rank = heroData.Rank;
+                tempHeroDataSO.Power = heroData.Power;
                 tempHeroDataSO.CharacterName = heroData.CharacterName;
 
-                CharacterNameAndRank key = new CharacterNameAndRank(tempHeroDataSO.CharacterName, tempHeroDataSO.Rank);
+                heroInstance.SetPatrolPoints(_spawnPatrolPosition);
 
+                CharacterNameAndRank key = new CharacterNameAndRank(tempHeroDataSO.CharacterName, tempHeroDataSO.Rank);
                 if (_charOutLook.CharOut.TryGetValue(key, out OutLook outLook))
                 {
                     if (outLook.Root != null)
                     {
-                        heroInstance.BaseRoot = Instantiate(outLook.Root, heroInstance.ReverObject);
+                        heroInstance.BaseRoot = Instantiate(outLook.Root, heroInstance.RevertObject);
                         heroInstance.BaseRoot.name = outLook.Root.name;
+
+                        heroInstance.Animator.Update(1);
+                        heroInstance.Animator.Rebind();
                     }
                 }
-
                 heroInstance.SetHeroData(tempHeroDataSO);
                 _spawnedHeroes[heroData.HeroID] = heroInstance;
             }

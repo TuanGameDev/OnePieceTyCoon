@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 namespace _Game.Scripts.UI
 {
@@ -14,16 +15,21 @@ namespace _Game.Scripts.UI
 
         [SerializeField] private Transform _heroesContainer;
 
+        [SerializeField] private GameObject _infoHeroPopup;
+
+        [SerializeField] private Image _heroIconAvatar;
+
         [SerializeField] private TextMeshProUGUI _nameHeroTxt;
 
         [SerializeField] private TextMeshProUGUI _stateHeroTxt;
+
+        [SerializeField] private Button _mergeBtn;
 
         [SerializeField] private Button _statHeroBtn;
 
         [SerializeField] private Button _removeHeroBtn;
 
         private List<SlotHeroUI> _heroSlots = new List<SlotHeroUI>();
-
         private SlotHeroUI _selectedHero;
 
         private void Start()
@@ -31,6 +37,13 @@ namespace _Game.Scripts.UI
             Invoke(nameof(LoadAndDisplayHeroes), 1f);
             _statHeroBtn.onClick.AddListener(OnStatHeroButtonClicked);
             _removeHeroBtn.onClick.AddListener(() => RemoveHero(_selectedHero));
+            HeroManager.Instance.OnAddHero += LoadAndDisplayHeroes;
+            _infoHeroPopup.SetActive(false);
+        }
+
+        private void OnDestroy()
+        {
+            HeroManager.Instance.OnAddHero -= LoadAndDisplayHeroes;
         }
 
         public void SelectHero(SlotHeroUI selectedHero)
@@ -41,14 +54,22 @@ namespace _Game.Scripts.UI
             {
                 slot.SetSelected(slot == selectedHero);
             }
+            _infoHeroPopup.SetActive(_selectedHero != null);
 
-            UpdateStatHero(_selectedHero.HeroData.HeroName);
+            UpdateStatHero();
             UpdateStateText();
         }
 
-        public void UpdateStatHero(string heroName)
+        public void UpdateStatHero()
         {
-            _nameHeroTxt.text = heroName;
+            if (_selectedHero == null) return;
+
+            _nameHeroTxt.text = _selectedHero.HeroData.HeroName;
+            Sprite avatarSprite = Resources.Load<Sprite>(_selectedHero.HeroData.HeroAvatarPath);
+            if (avatarSprite != null)
+            {
+                _heroIconAvatar.sprite = avatarSprite;
+            }
         }
 
         private void OnStatHeroButtonClicked()
@@ -73,6 +94,12 @@ namespace _Game.Scripts.UI
             SpawnHeroManager.Instance.RemoveHero(heroID);
             _heroSlots.Remove(heroSlot);
             Destroy(heroSlot.gameObject);
+
+            if (_selectedHero == heroSlot)
+            {
+                _selectedHero = null;
+                _infoHeroPopup.SetActive(false);
+            }
         }
 
         private void ToggleHeroState(SlotHeroUI selectedHero)
@@ -94,13 +121,21 @@ namespace _Game.Scripts.UI
 
         private void UpdateStateText()
         {
-            _stateHeroTxt.text = _selectedHero != null && _selectedHero.IsInCombat ? "Withdrew" : "Combat";
+            if (_selectedHero != null && _selectedHero.IsInCombat)
+            {
+                _stateHeroTxt.text = "Withdrew";
+                _stateHeroTxt.color = Color.red;
+            }
+            else
+            {
+                _stateHeroTxt.text = "Combat";
+                _stateHeroTxt.color = Color.yellow;
+            }
         }
 
-        private void LoadAndDisplayHeroes()
+        public void LoadAndDisplayHeroes()
         {
             List<HeroData> availableHeroes = HeroManager.Instance.GetAvailableHeroes();
-
             if (availableHeroes.Count > 0)
             {
                 DisplayHeroes(availableHeroes);
@@ -118,7 +153,7 @@ namespace _Game.Scripts.UI
             foreach (var hero in heroes)
             {
                 var slotHero = Instantiate(_slotHeroPrefab, _heroesContainer);
-                slotHero.SetHeroUI(hero.HeroAvatarPath, hero, this);
+                slotHero.SetHeroUI(hero.IconAvatarPath, hero, this);
                 slotHero.IsInCombat = false;
                 _heroSlots.Add(slotHero);
             }
