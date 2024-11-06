@@ -7,7 +7,6 @@ namespace _Game.Scripts.Scriptable_Object
     public class HeroDataSO : ScriptableObject
     {
         public int HeroID;
-        public string HeroName;
         public Sprite HeroAvatar;
         public Sprite IconAvatar;
         public string HeroAvatarPath;
@@ -17,13 +16,13 @@ namespace _Game.Scripts.Scriptable_Object
         [Header("Stat Hero")]
         public CharacterStat CharacterStat;
         public CharacterName CharacterName;
-        public Rank Rank;
+        public Rarity Rarity;
+        public Elemental Elemental;
     }
     [System.Serializable]
     public class HeroData
     {
         public int HeroID;
-        public string HeroName;
         public Sprite HeroAvatar;
         public Sprite IconAvatar;
         public string HeroAvatarPath;
@@ -33,7 +32,9 @@ namespace _Game.Scripts.Scriptable_Object
         [Header("Stat Hero")]
         public CharacterStat CharacterStat;
         public CharacterName CharacterName;
-        public Rank Rank;
+        public Rarity Rarity;
+        public Elemental Elemental;
+
     }
 
     public class HeroDataConverter
@@ -43,7 +44,6 @@ namespace _Game.Scripts.Scriptable_Object
             HeroData heroData = new HeroData
             {
               HeroID = heroDataSO.HeroID,
-              HeroName=heroDataSO.HeroName,
               HeroAvatar = heroDataSO.HeroAvatar,
               IconAvatar = heroDataSO.IconAvatar,
               HeroAvatarPath = heroDataSO.HeroAvatarPath,
@@ -51,7 +51,8 @@ namespace _Game.Scripts.Scriptable_Object
               Power = heroDataSO.Power,
               CharacterStat = heroDataSO.CharacterStat,
               CharacterName = heroDataSO.CharacterName,
-              Rank = heroDataSO.Rank,
+              Rarity = heroDataSO.Rarity,
+              Elemental = heroDataSO.Elemental,
             };
             return heroData;
         }

@@ -6,13 +6,17 @@ namespace _Game.Scripts.UI
 {
     public class SlotHeroUI : MonoBehaviour
     {
-        [SerializeField]  private Image _avatarImage;
+        [SerializeField]  
+        private Image _avatarImage;
 
-        [SerializeField]  private Image _selectedImg;
+        [SerializeField] 
+        private Image _selectedImg;
 
-        [SerializeField] private Button _selectedBtn;
+        [SerializeField] 
+        private Button _selectedBtn;
 
-        [SerializeField] private HeroData _heroData;
+        [SerializeField] 
+        private HeroData _heroData;
 
         public bool IsInCombat;
 

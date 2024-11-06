@@ -6,28 +6,42 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using _Game.Scripts.Helper;
 
 namespace _Game.Scripts.UI
 {
-    public class HeroesUI : MonoBehaviour
+    public class HeroesUI : Singleton<HeroesUI>
     {
-        [SerializeField] private SlotHeroUI _slotHeroPrefab;
+        [SerializeField] 
+        private SlotHeroUI _slotHeroPrefab;
 
-        [SerializeField] private Transform _heroesContainer;
+        [SerializeField] 
+        private Transform _heroesContainer;
 
-        [SerializeField] private GameObject _infoHeroPopup;
+        [SerializeField] 
+        private Image _heroIconAvatar;
 
-        [SerializeField] private Image _heroIconAvatar;
+        [SerializeField] 
+        private TextMeshProUGUI _nameHeroTxt;
 
-        [SerializeField] private TextMeshProUGUI _nameHeroTxt;
+        [SerializeField] 
+        private TextMeshProUGUI _stateHeroTxt;
 
-        [SerializeField] private TextMeshProUGUI _stateHeroTxt;
+        [SerializeField] 
+        private Button _infoHeroBtn;
 
-        [SerializeField] private Button _mergeBtn;
+        [SerializeField] 
+        private Button _statHeroBtn;
 
-        [SerializeField] private Button _statHeroBtn;
+        [SerializeField] 
+        private Button _removeHeroBtn;
 
-        [SerializeField] private Button _removeHeroBtn;
+        [Header("Popup")]
+        [SerializeField]
+        private GameObject _statHeroPopup;
+
+        [SerializeField]
+        private GameObject _infoHeroPopup;
 
         private List<SlotHeroUI> _heroSlots = new List<SlotHeroUI>();
         private SlotHeroUI _selectedHero;
@@ -38,7 +52,7 @@ namespace _Game.Scripts.UI
             _statHeroBtn.onClick.AddListener(OnStatHeroButtonClicked);
             _removeHeroBtn.onClick.AddListener(() => RemoveHero(_selectedHero));
             HeroManager.Instance.OnAddHero += LoadAndDisplayHeroes;
-            _infoHeroPopup.SetActive(false);
+            _statHeroPopup.SetActive(false);
         }
 
         private void OnDestroy()
@@ -54,7 +68,7 @@ namespace _Game.Scripts.UI
             {
                 slot.SetSelected(slot == selectedHero);
             }
-            _infoHeroPopup.SetActive(_selectedHero != null);
+            _statHeroPopup.SetActive(_selectedHero != null);
 
             UpdateStatHero();
             UpdateStateText();
@@ -64,7 +78,7 @@ namespace _Game.Scripts.UI
         {
             if (_selectedHero == null) return;
 
-            _nameHeroTxt.text = _selectedHero.HeroData.HeroName;
+            _nameHeroTxt.text = _selectedHero.HeroData.CharacterName.ToString();
             Sprite avatarSprite = Resources.Load<Sprite>(_selectedHero.HeroData.HeroAvatarPath);
             if (avatarSprite != null)
             {
@@ -88,19 +102,28 @@ namespace _Game.Scripts.UI
             int heroID = heroSlot.HeroData.HeroID;
 
             var heroList = HeroManager.Instance.GetAvailableHeroes();
-            heroList.RemoveAll(hero => hero.HeroID == heroID);
-            HeroManager.Instance.SaveDataHero();
+            HeroData heroToRemove = heroList.Find(hero => hero.HeroID == heroID);
 
-            SpawnHeroManager.Instance.RemoveHero(heroID);
-            _heroSlots.Remove(heroSlot);
-            Destroy(heroSlot.gameObject);
-
-            if (_selectedHero == heroSlot)
+            if (heroToRemove != null)
             {
-                _selectedHero = null;
-                _infoHeroPopup.SetActive(false);
+                heroList.Remove(heroToRemove);
+
+                HeroManager.Instance.SaveDataHero();
+
+                UserManagerUI.Instance.RecalculateCombatPower();
+
+                _heroSlots.Remove(heroSlot);
+                Destroy(heroSlot.gameObject);
+
+                if (_selectedHero == heroSlot)
+                {
+                    _selectedHero = null;
+                    _statHeroPopup.SetActive(false);
+                }
             }
+            SpawnHeroManager.Instance.RemoveHero(heroID);
         }
+
 
         private void ToggleHeroState(SlotHeroUI selectedHero)
         {

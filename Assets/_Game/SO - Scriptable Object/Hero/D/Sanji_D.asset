@@ -27,4 +27,5 @@ MonoBehaviour:
     AttackDamage: 1
     CritDamage: 0
   CharacterName: 3
-  Rank: 5
+  Rarity: 5
+  Elemental: 4

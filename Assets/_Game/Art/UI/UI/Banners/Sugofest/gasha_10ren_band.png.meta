@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -108,7 +108,70 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: gasha_10ren_band_2
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 141
+        width: 38
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71cee6f06e42cd1449aa78b3723039c1
+      internalID: -741918850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gasha_10ren_band_3
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 141
+        width: 38
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e97bb7b71a3783c47a5b9c33823ae1a5
+      internalID: 454453636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gasha_10ren_band_5
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 73
+        width: 152
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9005c5dceb45698499c0c8c02a807d54
+      internalID: 364323964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +182,14 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      gasha_10ren_band_0: -1300089022
+      gasha_10ren_band_1: 209432851
+      gasha_10ren_band_2: -741918850
+      gasha_10ren_band_3: 454453636
+      gasha_10ren_band_4: 1160835144
+      gasha_10ren_band_5: 364323964
+      gasha_10ren_band_6: 2104118847
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

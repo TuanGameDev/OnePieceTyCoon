@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -108,7 +108,322 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: gacha_effect_chara_0
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 586
+        width: 342
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e0effc16c0231445927ebc0f42e9127
+      internalID: 391234201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gacha_effect_chara_1
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 812
+        width: 187
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afec0cdb4c063244b98f7a799aaaecae
+      internalID: -382539512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gacha_effect_chara_2
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 942
+        width: 112
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef8629a7a1fc5d644827dff9c69b31da
+      internalID: -2055705404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gacha_effect_chara_3
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 803
+        width: 276
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eb48c2dd5ceee24a86ecd98e8e10ffb
+      internalID: -1074470438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gacha_effect_chara_4
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 846
+        width: 112
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 950aeb6f9523eb647b8a658f2d4736cf
+      internalID: 1558203149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gacha_effect_chara_5
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 656
+        width: 114
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db1a6bd91c4ad0144923301cf2f30c8a
+      internalID: -848940461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gacha_effect_chara_6
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 721
+        width: 138
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 722f244174219cf42a5fe191875eea87
+      internalID: 1936323758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gacha_effect_chara_7
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 642
+        width: 64
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ca7e4dc89204944fbff4e1c21fb511d
+      internalID: -63815287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gacha_effect_chara_8
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 578
+        width: 276
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69b690ba9b85ea543a94ca70cd1e8150
+      internalID: 2102226212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gacha_effect_chara_9
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 654
+        width: 105
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa6a7b080e135834692e6b9401e2d637
+      internalID: -174506643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gacha_effect_chara_10
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 577
+        width: 326
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adb4ce32ea13bc845a1651bad84b6e69
+      internalID: 500276504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gacha_effect_chara_11
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 517
+        width: 57
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f213bc8faa1f3b148931253f3244f1e0
+      internalID: 614899306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gacha_effect_chara_12
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 517
+        width: 57
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c8470bd20883764296ae39ec8a979ee
+      internalID: 467917211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gacha_effect_chara_14
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 433
+        width: 540
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 773ad1877965e694895c59c56d648bf8
+      internalID: -1195672142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gacha_effect_chara_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 638
+        height: 414
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba07948de9d1bba4dbd9c55c9ad27235
+      internalID: -2045622935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +434,27 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      gacha_effect_chara_0: 391234201
+      gacha_effect_chara_1: -382539512
+      gacha_effect_chara_10: 500276504
+      gacha_effect_chara_11: 614899306
+      gacha_effect_chara_12: 467917211
+      gacha_effect_chara_13: -287806662
+      gacha_effect_chara_14: -1195672142
+      gacha_effect_chara_15: -556134353
+      gacha_effect_chara_16: 1472505723
+      gacha_effect_chara_17: 635052478
+      gacha_effect_chara_18: -1126652589
+      gacha_effect_chara_19: -2045622935
+      gacha_effect_chara_2: -2055705404
+      gacha_effect_chara_3: -1074470438
+      gacha_effect_chara_4: 1558203149
+      gacha_effect_chara_5: -848940461
+      gacha_effect_chara_6: 1936323758
+      gacha_effect_chara_7: -63815287
+      gacha_effect_chara_8: 2102226212
+      gacha_effect_chara_9: -174506643
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

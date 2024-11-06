@@ -2969,17 +2969,6 @@ MonoBehaviour:
     allCustomComponents:
       name: All
       components:
-      - displayName: TurnBasedManager
-        name: _Game.Scripts.Manager.TurnBasedManager, Assembly-CSharp, Version=0.0.0.0,
-          Culture=neutral, PublicKeyToken=null
-        content:
-          m_Text: TurnBasedManager
-          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
-          m_Tooltip: TurnBasedManager
-        shown: 0
-        isBuiltIn: 0
-        script: {fileID: 11500000, guid: 40c618bc5fceff44199f2240a51dd4d9, type: 3}
-        hash: -1
       - displayName: SpawnHeroManager
         name: _Game.Scripts.Manager.SpawnHeroManager, Assembly-CSharp, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
@@ -3012,6 +3001,116 @@ MonoBehaviour:
         shown: 0
         isBuiltIn: 0
         script: {fileID: 11500000, guid: 3fa99cca3162fff448071394a6b7aa38, type: 3}
+        hash: -1
+      - displayName: LoadingBarUI
+        name: _Game.Scripts.UI.LoadingBarUI, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+          PublicKeyToken=null
+        content:
+          m_Text: LoadingBarUI
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: LoadingBarUI
+        shown: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: 74fff5a9510e7fe42a88fe428690fad1, type: 3}
+        hash: -1
+      - displayName: AudioManager
+        name: _Game.Scripts.Manager.AudioManager, Assembly-CSharp, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: AudioManager
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: AudioManager
+        shown: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: efad17e91970ddc4a93fac7281443544, type: 3}
+        hash: -1
+      - displayName: PlayFabManager
+        name: _Game.Scripts.Manager.PlayFabManager, Assembly-CSharp, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: PlayFabManager
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: PlayFabManager
+        shown: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: 4928855c95d15b048be254cfd9c6fc6b, type: 3}
+        hash: -1
+      - displayName: RankingManager
+        name: _Game.Scripts.Manager.RankingManager, Assembly-CSharp, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: RankingManager
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: RankingManager
+        shown: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: 0eb82fbf2700f00458d36ef8b2eb39b5, type: 3}
+        hash: -1
+      - displayName: SpawnEnemyManager
+        name: _Game.Scripts.Manager.SpawnEnemyManager, Assembly-CSharp, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: SpawnEnemyManager
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: SpawnEnemyManager
+        shown: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: 2b45316953ea84743b3206c2147ae9a5, type: 3}
+        hash: -1
+      - displayName: GameManager
+        name: _Game.Scripts.Manager.GameManager, Assembly-CSharp, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: GameManager
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: GameManager
+        shown: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: 75c2b87b6fde2b2469dfc99d1f599bc5, type: 3}
+        hash: -1
+      - displayName: UserManagerUI
+        name: _Game.Scripts.Manager.UserManagerUI, Assembly-CSharp, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: UserManagerUI
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: UserManagerUI
+        shown: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: 105622747f2d28c4a943d5af18ce6e1b, type: 3}
+        hash: -1
+      - displayName: HeroesUI
+        name: _Game.Scripts.UI.HeroesUI, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+          PublicKeyToken=null
+        content:
+          m_Text: HeroesUI
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: HeroesUI
+        shown: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: f269da63856d1454db9323b42724c86f, type: 3}
+        hash: -1
+      - displayName: GachaUI
+        name: _Game.Scripts.UI.GachaUI, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+          PublicKeyToken=null
+        content:
+          m_Text: GachaUI
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: GachaUI
+        shown: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: cf7b88fdcbc27fc4a8a50a3384ce75b4, type: 3}
+        hash: -1
+      - displayName: PlayFabHttp
+        name: PlayFab.Internal.PlayFabHttp, PlayFab, Version=0.0.0.0, Culture=neutral,
+          PublicKeyToken=null
+        content:
+          m_Text: PlayFabHttp
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: PlayFabHttp
+        shown: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: 97a8a3caac8b73541aa8a9a1e330f479, type: 3}
         hash: -1
     excludedComponents:
       name: Excluded

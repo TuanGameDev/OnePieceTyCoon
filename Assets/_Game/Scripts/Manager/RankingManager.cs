@@ -4,17 +4,43 @@ using UnityEngine;
 using PlayFab;
 using PlayFab.ClientModels;
 using Sirenix.OdinInspector;
+using _Game.Scripts.Helper;
 
 namespace _Game.Scripts.Manager
 {
+
+    [System.Serializable]
+    public class UserInformation
+    {
+        public string UserName;
+        public int UserLevel = 1;
+        public string MasterPlayerID;
+        public int CombatPower = 0;
+        public int Beli = 0;
+        public int Diamond = 0;
+    }
+
     public class RankingManager : MonoBehaviour
     {
-        public List<User> Users = new List<User>();
+        public UserInformation UserInformation;
 
-        private void Start()
+        public List<UserInformation> Users = new List<UserInformation>();
+        public static RankingManager Instance;
+        private void Awake()
         {
-            FetchLeaderboard();
+            if (Instance == null)
+            {
+                Instance = this;
+            }
+            else if (Instance != this)
+            {
+                Destroy(gameObject);
+                return;
+            }
+            DontDestroyOnLoad(gameObject);
         }
+
+        [Button("FetchLeaderboard")]
         public void FetchLeaderboard()
         {
             var request = new GetLeaderboardRequest
@@ -32,11 +58,11 @@ namespace _Game.Scripts.Manager
 
             foreach (var item in result.Leaderboard)
             {
-                Users.Add(new User
+                Users.Add(new UserInformation
                 {
-                    Name = item.Position + 1,
+                    UserName = item.DisplayName,
                     MasterPlayerID = item.PlayFabId,
-                    CombatPower = item.StatValue
+                    CombatPower = item.StatValue,
                 });
             }
         }
@@ -46,12 +72,4 @@ namespace _Game.Scripts.Manager
             Debug.LogError("Error fetching leaderboard: " + error.GenerateErrorReport());
         }
     }
-}
-
-[System.Serializable]
-public class User
-{
-    public int Name;
-    public string MasterPlayerID;
-    public int CombatPower;
 }

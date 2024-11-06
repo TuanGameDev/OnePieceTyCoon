@@ -13,7 +13,8 @@ namespace _Game.Scripts.Manager
 {
     public class UserManagerUI : Singleton<UserManagerUI>
     {
-        public UserInfomation UserInfomation;
+        [SerializeField]
+        private RankingManager _rankingManager;
 
         [SerializeField]
         private TMP_InputField _userNameInputField;
@@ -33,58 +34,102 @@ namespace _Game.Scripts.Manager
         [SerializeField]
         private TextMeshProUGUI _userCombatPowerTxt;
 
+        private void Awake()
+        {
+            if (_rankingManager == null)
+            {
+                _rankingManager = FindObjectOfType<RankingManager>();
+                LoadDataUser();
+            }
+        }
+
         private void Start()
         {
             _selectedBtn.interactable = false;
             _userNameInputField.onValueChanged.AddListener(ValidateUserName);
-            _selectedBtn.onClick.AddListener(SaveUserDataToPlayFab);
-            HeroManager.Instance.OnAddHero += UpdateUserInfo;
 
-            CheckIfUserNameExists();
+            HeroManager.Instance.OnAddHero += RecalculateCombatPower;
+            HeroManager.Instance.OnRemoveHero += RecalculateCombatPower;
         }
+
         private void OnDestroy()
         {
-            HeroManager.Instance.OnAddHero -= UpdateUserInfo;
+            HeroManager.Instance.OnAddHero -= RecalculateCombatPower;
+            HeroManager.Instance.OnRemoveHero -= RecalculateCombatPower;
         }
-        public void AddCombatPower(int amount)
+
+        public void RecalculateCombatPower()
         {
-            UserInfomation.CombatPower += amount;
-            UpdateLeaderboards(UserInfomation.CombatPower);
+            int totalPower = 0;
+            foreach (var hero in HeroManager.Instance.GetAvailableHeroes())
+            {
+                totalPower += hero.Power;
+            }
+
+            _rankingManager.UserInformation.CombatPower = totalPower;
+            UpdateCombatPowerDisplay();
+            UpdateLeaderboards(_rankingManager.UserInformation.CombatPower);
             SaveUserDataToPlayFab();
         }
 
-        private void CheckIfUserNameExists()
+        private void UpdateCombatPowerDisplay()
         {
-            PlayFabClientAPI.GetUserData(new GetUserDataRequest
-            {
-                PlayFabId = PlayFabManager.Instance.PlayFabId
-            },
-            result =>
-            {
-                if (result.Data != null && result.Data.ContainsKey("UserInfomation"))
-                {
-                    UserInfomation = JsonUtility.FromJson<UserInfomation>(result.Data["UserInfomation"].Value);
+            _userCombatPowerTxt.text = "Power: " + _rankingManager.UserInformation.CombatPower.ToString("N0");
+        }
 
-                    HideUserNamePopup();
-                    UpdateUserInfo();
+        private void LoadDataUser()
+        {
+            PlayFabClientAPI.GetAccountInfo(new GetAccountInfoRequest(), accountInfoResult =>
+            {
+                if (accountInfoResult.AccountInfo != null && !string.IsNullOrEmpty(accountInfoResult.AccountInfo.TitleInfo.DisplayName))
+                {
+                    _rankingManager.UserInformation.UserName = accountInfoResult.AccountInfo.TitleInfo.DisplayName;
+
+                    PlayFabClientAPI.GetUserData(new GetUserDataRequest
+                    {
+                        PlayFabId = _rankingManager.UserInformation.MasterPlayerID
+                    },
+                    userDataResult =>
+                    {
+                        if (userDataResult.Data != null && userDataResult.Data.ContainsKey("UserInfomation"))
+                        {
+                            var userInformation = JsonUtility.FromJson<UserInformation>(userDataResult.Data["UserInfomation"].Value);
+
+                            _rankingManager.UserInformation.Beli = userInformation.Beli;
+                            _rankingManager.UserInformation.Diamond = userInformation.Diamond;
+
+                            HideUserNamePopup();
+                            UpdateUserInfo();
+                        }
+                        else
+                        {
+                            ShowUserNamePopup();
+                        }
+                    },
+                    error =>
+                    {
+                        Debug.LogError("Error fetching user data: " + error.GenerateErrorReport());
+                    });
                 }
                 else
                 {
                     ShowUserNamePopup();
                 }
             },
-            error =>
+            accountInfoError =>
             {
-                Debug.LogError("Error fetching user data: " + error.GenerateErrorReport());
+                Debug.LogError("Error fetching account info: " + accountInfoError.GenerateErrorReport());
             });
         }
 
+
         private void UpdateUserInfo()
         {
-            _userNameTxt.text = UserInfomation.UserName;
-            _userLevelTxt.text ="Lv. " + UserInfomation.UserLevel.ToString();
-            _userCombatPowerTxt.text = "Power: " + UserInfomation.CombatPower.ToString("N0");
+            _userNameTxt.text = _rankingManager.UserInformation.UserName;
+            _userLevelTxt.text = "Lv. " + _rankingManager.UserInformation.UserLevel.ToString();
+            _userCombatPowerTxt.text = "Power: " + _rankingManager.UserInformation.CombatPower.ToString("N0");
         }
+
         private void ShowUserNamePopup()
         {
             UserNamePopup.SetActive(true);
@@ -97,45 +142,70 @@ namespace _Game.Scripts.Manager
 
         private void ValidateUserName(string userName)
         {
-            if (userName.Length >= 5 && userName.Length <= 10)
-            {
-                _selectedBtn.interactable = true;
-            }
-            else
-            {
-                _selectedBtn.interactable = false;
-            }
+            _selectedBtn.interactable = userName.Length >= 5 && userName.Length <= 10;
         }
+
         public void SaveUserDataToPlayFab()
         {
-            if (_selectedBtn.interactable)
+            var request = new UpdateUserTitleDisplayNameRequest
             {
-                UserInfomation.UserName = _userNameInputField.text;
+                DisplayName = _userNameInputField.text
+            };
 
-                string playerDataJson = JsonUtility.ToJson(UserInfomation);
-
-                var request = new UpdateUserDataRequest
-                {
-                    Data = new Dictionary<string, string>
+            PlayFabClientAPI.UpdateUserTitleDisplayName(request, result =>
             {
-                { "UserInfomation", playerDataJson }
-            }
-                };
-
-                PlayFabClientAPI.UpdateUserData(request, OnDataSendSuccess, OnDataSendError);
+                _rankingManager.UserInformation.UserName = result.DisplayName;
                 UpdateUserInfo();
-            }
+                HideUserNamePopup();
+            },
+            error =>
+            {
+                //Debug.LogError("Error updating DisplayName: " + error.GenerateErrorReport());
+            });
+
+            string playerDataJson = JsonUtility.ToJson(_rankingManager.UserInformation);
+
+            var dataRequest = new UpdateUserDataRequest
+            {
+                Data = new Dictionary<string, string> { { "UserInfomation", playerDataJson } }
+            };
+
+            PlayFabClientAPI.UpdateUserData(dataRequest, OnDataSendSuccess, OnDataSendError);
+        }
+
+        public void SaveUserInformation()
+        {
+            string playerDataJson = JsonUtility.ToJson(_rankingManager.UserInformation);
+
+            var dataRequest = new UpdateUserDataRequest
+            {
+                Data = new Dictionary<string, string>
+        {
+            { "UserInfomation", playerDataJson } 
+        }
+            };
+
+            PlayFabClientAPI.UpdateUserData(dataRequest, OnSaveSuccess, OnSaveError);
+        }
+
+        private void OnSaveSuccess(UpdateUserDataResult result)
+        {
+            //Debug.Log("Beli and Diamond values saved successfully!");
+        }
+
+        private void OnSaveError(PlayFabError error)
+        {
+           // Debug.LogError("Error saving Beli and Diamond: " + error.GenerateErrorReport());
         }
 
         private void OnDataSendSuccess(UpdateUserDataResult result)
         {
-            Debug.Log("User data saved successfully!");
-            HideUserNamePopup();
+           // Debug.Log("User data saved successfully!");
         }
 
         private void OnDataSendError(PlayFabError error)
         {
-            Debug.LogError("Error saving user data: " + error.GenerateErrorReport());
+          //  Debug.LogError("Error saving user data: " + error.GenerateErrorReport());
         }
 
         private void UpdateLeaderboards(int combatPower)
@@ -162,15 +232,7 @@ namespace _Game.Scripts.Manager
 
         private void OnUpdateError(PlayFabError error)
         {
-            Debug.LogError("Error updating Combat Power: " + error.GenerateErrorReport());
+            Debug.LogError("Error updating leaderboard: " + error.GenerateErrorReport());
         }
-    }
-
-    [System.Serializable]
-    public class UserInfomation
-    {
-        public string UserName;
-        public int UserLevel = 1;
-        public int CombatPower = 0;
     }
 }

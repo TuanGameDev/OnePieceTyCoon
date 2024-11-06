@@ -14,12 +14,15 @@ namespace _Game.Scripts.Manager
 {
     public class HeroManager : MonoBehaviour
     {
+        public HeroDictionary HeroNormalDictionary;
 
-        [SerializeField] private HeroDictionary _heroDictionary;
+        public HeroDictionary HeroLegendDictionary;
 
         public List<HeroDataList> HeroesAvailable = new List<HeroDataList>();
 
         public Action OnAddHero;
+
+        public Action OnRemoveHero;
 
         public static HeroManager Instance;
 
@@ -52,17 +55,17 @@ namespace _Game.Scripts.Manager
 
             var availableHeroList = HeroesAvailable[0].heroes;
 
-            foreach (var heroEntry in _heroDictionary)
+            foreach (var heroEntry in HeroNormalDictionary)
             {
                 var heroDataSO = heroEntry.Value;
 
                 HeroData newHeroData = new HeroData
                 {
                     HeroID = heroDataSO.HeroID,
-                    HeroName = heroDataSO.HeroName,
                     HeroAvatar = heroDataSO.HeroAvatar,
                     CharacterStat = heroDataSO.CharacterStat,
-                    Rank = heroDataSO.Rank,
+                    Rarity = heroDataSO.Rarity,
+                    Elemental = heroDataSO.Elemental,
                     CharacterName = heroDataSO.CharacterName,
                     Power = heroDataSO.Power,
                     IconAvatarPath = "Portrait/" + heroDataSO.IconAvatar.name,
@@ -70,7 +73,6 @@ namespace _Game.Scripts.Manager
                 };
 
                 availableHeroList.Add(newHeroData);
-                UserManagerUI.Instance.AddCombatPower(HeroesAvailable[0].heroes[0].Power);
                 OnAddHero?.Invoke();
             }
 
@@ -87,7 +89,7 @@ namespace _Game.Scripts.Manager
 
             var availableHeroList = HeroesAvailable[0].heroes;
 
-            foreach (var heroEntry in _heroDictionary)
+            foreach (var heroEntry in HeroNormalDictionary)
             {
                 var heroDataSO = heroEntry.Value;
 
@@ -96,7 +98,7 @@ namespace _Game.Scripts.Manager
                 if (heroToRemove != null)
                 {
                     availableHeroList.Remove(heroToRemove);
-                    OnAddHero?.Invoke();
+                    OnRemoveHero?.Invoke();
                 }
             }
 
@@ -105,7 +107,7 @@ namespace _Game.Scripts.Manager
 
         public void LoadDataHero()
         {
-            if (string.IsNullOrEmpty(PlayFabManager.Instance.PlayFabId))
+            if (string.IsNullOrEmpty(RankingManager.Instance.UserInformation.MasterPlayerID))
             {
                 Debug.LogError("PlayFab ID chưa được thiết lập.");
                 return;
@@ -113,7 +115,7 @@ namespace _Game.Scripts.Manager
 
             PlayFabClientAPI.GetUserData(new GetUserDataRequest
             {
-                PlayFabId = PlayFabManager.Instance.PlayFabId,
+                PlayFabId = RankingManager.Instance.UserInformation.MasterPlayerID,
                 Keys = null
             },
             result =>
@@ -143,7 +145,7 @@ namespace _Game.Scripts.Manager
 
         public void SaveDataHero()
         {
-            if (string.IsNullOrEmpty(PlayFabManager.Instance.PlayFabId))
+            if (string.IsNullOrEmpty(RankingManager.Instance.UserInformation.MasterPlayerID))
             {
                 Debug.LogError("PlayFab ID chưa được thiết lập.");
                 return;

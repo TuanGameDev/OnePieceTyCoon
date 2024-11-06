@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -108,7 +108,385 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: selectable_gasha_btn_act_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 870
+        width: 149
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a03b031dfda60d744b98a9e4978f1ad0
+      internalID: -714505264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: selectable_gasha_btn_act_2
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 981
+        width: 123
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 114d17d3e4d34764d964f586b742ea66
+      internalID: 1985822873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: selectable_gasha_btn_act_6
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 881
+        width: 141
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b8950ad0971ce2448558ec313b1edd0
+      internalID: 121442445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: selectable_gasha_btn_act_8
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 741
+        width: 119
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5829873d18e5694f988e5bf49892ead
+      internalID: 1025445851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: selectable_gasha_btn_act_13
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 616
+        width: 111
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54d02b668ae4e21479f1b1f2c8222428
+      internalID: -1975417322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: selectable_gasha_btn_act_14
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 656
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ba45650f4eb60b42b8e5a318abc20ae
+      internalID: 65571434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: selectable_gasha_btn_act_15
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 708
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 274d12613b858084f944c2ee5050ac34
+      internalID: 1277818359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: selectable_gasha_btn_act_16
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 549
+        width: 77
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7ce416b6bb696344b0d262a16865daf
+      internalID: -830177620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: selectable_gasha_btn_act_17
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 608
+        width: 91
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 060f840257fcbe6478eb4273d2f1dcc8
+      internalID: 478515123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: selectable_gasha_btn_act_18
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 572
+        width: 180
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dc6a660ab6c9de41aa95077ecc59bb1
+      internalID: 136027172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: selectable_gasha_btn_act_19
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 519
+        width: 88
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3d90921a3536624fa5b28dc7d94a755
+      internalID: 2096522693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: selectable_gasha_btn_act_20
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 502
+        width: 82
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ddbd75505545c6428dbbc844b9ec409
+      internalID: -143363347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: selectable_gasha_btn_act_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 336
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acfdaf7aff6e5794e9ac8627a2ecf04b
+      internalID: 1026913393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: selectable_gasha_btn_act_26
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 402
+        width: 86
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e806caf37b42f004dbb2b97a61a9c5f5
+      internalID: 1287890406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: selectable_gasha_btn_act_27
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 432
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddc082d5cc49c774ba2ca64bb2296941
+      internalID: -1210192583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: selectable_gasha_btn_act_28
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 426
+        width: 105
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90f4da37e54335040964cb151755fa73
+      internalID: 1085100610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: selectable_gasha_btn_act_33
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 430
+        width: 99
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11a85bf3de7ba2b42b57311e7a4da930
+      internalID: -618005251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: selectable_gasha_btn_act_35
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 369
+        width: 93
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b7c30bb4de5fea48ae7594734cfb73c
+      internalID: 1693867515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +497,59 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      selectable_gasha_btn_act_0: -714505264
+      selectable_gasha_btn_act_1: 1408618485
+      selectable_gasha_btn_act_10: -1809282010
+      selectable_gasha_btn_act_11: 2061380293
+      selectable_gasha_btn_act_12: -1273457155
+      selectable_gasha_btn_act_13: -1975417322
+      selectable_gasha_btn_act_14: 65571434
+      selectable_gasha_btn_act_15: 1277818359
+      selectable_gasha_btn_act_16: -830177620
+      selectable_gasha_btn_act_17: 478515123
+      selectable_gasha_btn_act_18: 136027172
+      selectable_gasha_btn_act_19: 2096522693
+      selectable_gasha_btn_act_2: 1985822873
+      selectable_gasha_btn_act_20: -143363347
+      selectable_gasha_btn_act_21: 1669594404
+      selectable_gasha_btn_act_22: -7669495
+      selectable_gasha_btn_act_23: -829554086
+      selectable_gasha_btn_act_24: -682351933
+      selectable_gasha_btn_act_25: 1026913393
+      selectable_gasha_btn_act_26: 1287890406
+      selectable_gasha_btn_act_27: -1210192583
+      selectable_gasha_btn_act_28: 1085100610
+      selectable_gasha_btn_act_29: -731754431
+      selectable_gasha_btn_act_3: -559329388
+      selectable_gasha_btn_act_30: 1399413122
+      selectable_gasha_btn_act_31: -1502054648
+      selectable_gasha_btn_act_32: 1089404373
+      selectable_gasha_btn_act_33: -618005251
+      selectable_gasha_btn_act_34: 303964315
+      selectable_gasha_btn_act_35: 1693867515
+      selectable_gasha_btn_act_36: 1246637708
+      selectable_gasha_btn_act_37: -291244598
+      selectable_gasha_btn_act_38: -1384149411
+      selectable_gasha_btn_act_39: 2022313651
+      selectable_gasha_btn_act_4: -1327570979
+      selectable_gasha_btn_act_40: -1161914834
+      selectable_gasha_btn_act_41: -1278158854
+      selectable_gasha_btn_act_42: 38420886
+      selectable_gasha_btn_act_43: -750117856
+      selectable_gasha_btn_act_44: -38842030
+      selectable_gasha_btn_act_45: 1421670412
+      selectable_gasha_btn_act_46: 1613012663
+      selectable_gasha_btn_act_47: -918431060
+      selectable_gasha_btn_act_48: 164680868
+      selectable_gasha_btn_act_49: 1812512366
+      selectable_gasha_btn_act_5: 852823951
+      selectable_gasha_btn_act_50: 1634435206
+      selectable_gasha_btn_act_51: 636998730
+      selectable_gasha_btn_act_6: 121442445
+      selectable_gasha_btn_act_7: -747782514
+      selectable_gasha_btn_act_8: 1025445851
+      selectable_gasha_btn_act_9: -677640264
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

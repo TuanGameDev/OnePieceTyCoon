@@ -11,8 +11,6 @@ namespace _Game.Scripts.Manager
 {
     public class PlayFabManager : MonoBehaviour
     {
-        [ReadOnly]
-        public string PlayFabId;
 
         public bool isLoggedIn;
 
@@ -38,9 +36,9 @@ namespace _Game.Scripts.Manager
         }
         private void OnLoginSuccess(LoginResult result)
         {
-            PlayFabId = result.PlayFabId;
+            RankingManager.Instance.UserInformation.MasterPlayerID = result.PlayFabId;
             isLoggedIn = true;
-            Debug.Log("Đăng nhập thành công với PlayFabId: " + PlayFabId);
+            Debug.Log("Đăng nhập thành công với PlayFabId: " + RankingManager.Instance.UserInformation.MasterPlayerID);
         }
 
         private void OnLoginFailure(PlayFabError error)
