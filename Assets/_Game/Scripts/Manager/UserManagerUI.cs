@@ -34,6 +34,12 @@ namespace _Game.Scripts.Manager
         [SerializeField]
         private TextMeshProUGUI _userCombatPowerTxt;
 
+        [SerializeField]
+        private TextMeshProUGUI _userBeliTxt;
+
+        [SerializeField]
+        private TextMeshProUGUI _userDiamondTxt;
+
         private void Awake()
         {
             if (_rankingManager == null)
@@ -47,7 +53,6 @@ namespace _Game.Scripts.Manager
         {
             _selectedBtn.interactable = false;
             _userNameInputField.onValueChanged.AddListener(ValidateUserName);
-
             HeroManager.Instance.OnAddHero += RecalculateCombatPower;
             HeroManager.Instance.OnRemoveHero += RecalculateCombatPower;
         }
@@ -72,9 +77,11 @@ namespace _Game.Scripts.Manager
             SaveUserDataToPlayFab();
         }
 
-        private void UpdateCombatPowerDisplay()
+        public void UpdateCombatPowerDisplay()
         {
             _userCombatPowerTxt.text = "Power: " + _rankingManager.UserInformation.CombatPower.ToString("N0");
+            _userBeliTxt.text = _rankingManager.UserInformation.Beli.ToString("N0");
+            _userDiamondTxt.text = _rankingManager.UserInformation.Diamond.ToString("N0");
         }
 
         private void LoadDataUser()
@@ -95,6 +102,7 @@ namespace _Game.Scripts.Manager
                         {
                             var userInformation = JsonUtility.FromJson<UserInformation>(userDataResult.Data["UserInfomation"].Value);
 
+                            _rankingManager.UserInformation.CombatPower = userInformation.CombatPower;
                             _rankingManager.UserInformation.Beli = userInformation.Beli;
                             _rankingManager.UserInformation.Diamond = userInformation.Diamond;
 

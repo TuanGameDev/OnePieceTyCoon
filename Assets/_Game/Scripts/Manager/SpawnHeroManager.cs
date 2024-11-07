@@ -42,7 +42,6 @@ namespace _Game.Scripts.Manager
                 tempHeroDataSO.Elemental = heroData.Elemental;
                 tempHeroDataSO.Power = heroData.Power;
                 tempHeroDataSO.CharacterName = heroData.CharacterName;
-
                 heroInstance.SetPatrolPoints(_spawnPatrolPosition);
 
                 CharacterState key = new CharacterState(tempHeroDataSO.CharacterName, tempHeroDataSO.Rarity,tempHeroDataSO.Elemental);
@@ -52,9 +51,6 @@ namespace _Game.Scripts.Manager
                     {
                         heroInstance.BaseRoot = Instantiate(outLook.Root, heroInstance.RevertObject);
                         heroInstance.BaseRoot.name = outLook.Root.name;
-
-                        heroInstance.Animator.Update(1);
-                        heroInstance.Animator.Rebind();
                     }
                 }
                 heroInstance.SetHeroData(tempHeroDataSO);

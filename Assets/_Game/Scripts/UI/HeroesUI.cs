@@ -5,45 +5,39 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using System;
+using UnityEngine.EventSystems;
 using _Game.Scripts.Helper;
+using _Game.Scripts.Enums;
 
 namespace _Game.Scripts.UI
 {
-    public class HeroesUI : Singleton<HeroesUI>
+    public class HeroesUI : Singleton<HeroesUI>, IPointerDownHandler, IPointerUpHandler
     {
+        [SerializeField] 
+        private RarityAndColorDictionary _rarityAndColorDictionary;
+
         [SerializeField] 
         private SlotHeroUI _slotHeroPrefab;
 
         [SerializeField] 
         private Transform _heroesContainer;
 
-        [SerializeField] 
+        [SerializeField]
         private Image _heroIconAvatar;
 
         [SerializeField] 
-        private TextMeshProUGUI _nameHeroTxt;
+        private TextMeshProUGUI _nameHeroTxt, _rarityHeroTxt, _powerHeroTxt, _levelHeroTxt, _stateHeroTxt;
 
         [SerializeField] 
-        private TextMeshProUGUI _stateHeroTxt;
+        private Button _infoHeroBtn, _statHeroBtn, _removeHeroBtn;
 
         [SerializeField] 
-        private Button _infoHeroBtn;
-
-        [SerializeField] 
-        private Button _statHeroBtn;
-
-        [SerializeField] 
-        private Button _removeHeroBtn;
-
-        [Header("Popup")]
-        [SerializeField]
-        private GameObject _statHeroPopup;
-
-        [SerializeField]
-        private GameObject _infoHeroPopup;
+        private GameObject _statHeroPopup, _infoHeroStatPopup;
 
         private List<SlotHeroUI> _heroSlots = new List<SlotHeroUI>();
+
+        private Dictionary<string, bool> heroCombatStatus = new Dictionary<string, bool>();
+
         private SlotHeroUI _selectedHero;
 
         private void Start()
@@ -53,37 +47,61 @@ namespace _Game.Scripts.UI
             _removeHeroBtn.onClick.AddListener(() => RemoveHero(_selectedHero));
             HeroManager.Instance.OnAddHero += LoadAndDisplayHeroes;
             _statHeroPopup.SetActive(false);
+            LoadHeroCombatStatus();
         }
 
-        private void OnDestroy()
+        private void OnDestroy() => HeroManager.Instance.OnAddHero -= LoadAndDisplayHeroes;
+
+        private void SaveHeroCombatStatus()
         {
-            HeroManager.Instance.OnAddHero -= LoadAndDisplayHeroes;
+            foreach (var slotHero in _heroSlots)
+            {
+                string key = GetHeroCombatKey(slotHero.HeroData.HeroID, _heroSlots.IndexOf(slotHero));
+                heroCombatStatus[key] = slotHero.IsInCombat;
+            }
+        }
+
+        private void LoadHeroCombatStatus()
+        {
+            foreach (var slotHero in _heroSlots)
+            {
+                string key = GetHeroCombatKey(slotHero.HeroData.HeroID, _heroSlots.IndexOf(slotHero));
+                slotHero.IsInCombat = heroCombatStatus.ContainsKey(key) ? heroCombatStatus[key] : false;
+            }
+        }
+
+        private string GetHeroCombatKey(int heroID, int slotIndex) => $"{heroID}_{slotIndex}";
+
+        public void OnPointerDown(PointerEventData eventData)
+        {
+            if (eventData.pointerPress == _infoHeroBtn.gameObject) _infoHeroStatPopup.SetActive(true);
+        }
+
+        public void OnPointerUp(PointerEventData eventData)
+        {
+            if (eventData.pointerPress == _infoHeroBtn.gameObject) _infoHeroStatPopup.SetActive(false);
         }
 
         public void SelectHero(SlotHeroUI selectedHero)
         {
             _selectedHero = selectedHero;
-
-            foreach (var slot in _heroSlots)
-            {
-                slot.SetSelected(slot == selectedHero);
-            }
+            foreach (var slot in _heroSlots) slot.SetSelected(slot == selectedHero);
             _statHeroPopup.SetActive(_selectedHero != null);
-
             UpdateStatHero();
             UpdateStateText();
         }
 
-        public void UpdateStatHero()
+        private void UpdateStatHero()
         {
             if (_selectedHero == null) return;
 
             _nameHeroTxt.text = _selectedHero.HeroData.CharacterName.ToString();
-            Sprite avatarSprite = Resources.Load<Sprite>(_selectedHero.HeroData.HeroAvatarPath);
-            if (avatarSprite != null)
-            {
-                _heroIconAvatar.sprite = avatarSprite;
-            }
+            _rarityHeroTxt.text = _selectedHero.HeroData.Rarity.ToString();
+            _rarityHeroTxt.color = _rarityAndColorDictionary.TryGetValue(_selectedHero.HeroData.Rarity, out Color color) ? color : Color.white;
+            _powerHeroTxt.text = $"Power: {_selectedHero.HeroData.Power}";
+            _levelHeroTxt.text = $"Lv. {_selectedHero.HeroData.CharacterStat.HeroLevel}";
+
+            _heroIconAvatar.sprite = Resources.Load<Sprite>(_selectedHero.HeroData.HeroAvatarPath);
         }
 
         private void OnStatHeroButtonClicked()
@@ -100,45 +118,41 @@ namespace _Game.Scripts.UI
             if (heroSlot == null) return;
 
             int heroID = heroSlot.HeroData.HeroID;
+            HeroManager.Instance.GetAvailableHeroes().RemoveAll(hero => hero.HeroID == heroID);
+            HeroManager.Instance.SaveDataHero();
+            UserManagerUI.Instance.RecalculateCombatPower();
 
-            var heroList = HeroManager.Instance.GetAvailableHeroes();
-            HeroData heroToRemove = heroList.Find(hero => hero.HeroID == heroID);
+            _heroSlots.Remove(heroSlot);
+            Destroy(heroSlot.gameObject);
 
-            if (heroToRemove != null)
+            if (_selectedHero == heroSlot)
             {
-                heroList.Remove(heroToRemove);
-
-                HeroManager.Instance.SaveDataHero();
-
-                UserManagerUI.Instance.RecalculateCombatPower();
-
-                _heroSlots.Remove(heroSlot);
-                Destroy(heroSlot.gameObject);
-
-                if (_selectedHero == heroSlot)
-                {
-                    _selectedHero = null;
-                    _statHeroPopup.SetActive(false);
-                }
+                _selectedHero = null;
+                _statHeroPopup.SetActive(false);
             }
+
             SpawnHeroManager.Instance.RemoveHero(heroID);
         }
-
 
         private void ToggleHeroState(SlotHeroUI selectedHero)
         {
             int heroID = selectedHero.HeroData.HeroID;
+            int slotIndex = _heroSlots.IndexOf(selectedHero);
+            string key = GetHeroCombatKey(heroID, slotIndex);
+
             HeroController heroInstance = SpawnHeroManager.Instance.GetSpawnedHero(heroID);
 
             if (heroInstance != null)
             {
-                SpawnHeroManager.Instance.RemoveHero(heroID);
+                heroCombatStatus[key] = false;
                 selectedHero.IsInCombat = false;
+                SpawnHeroManager.Instance.RemoveHero(heroID);
             }
             else
             {
-                SpawnHeroManager.Instance.SpawnHero(selectedHero.HeroData);
+                heroCombatStatus[key] = true;
                 selectedHero.IsInCombat = true;
+                SpawnHeroManager.Instance.SpawnHero(selectedHero.HeroData);
             }
         }
 
@@ -159,27 +173,29 @@ namespace _Game.Scripts.UI
         public void LoadAndDisplayHeroes()
         {
             List<HeroData> availableHeroes = HeroManager.Instance.GetAvailableHeroes();
-            if (availableHeroes.Count > 0)
-            {
-                DisplayHeroes(availableHeroes);
-            }
+            if (availableHeroes.Count > 0) DisplayHeroes(availableHeroes);
         }
 
         public void DisplayHeroes(List<HeroData> heroes)
         {
-            foreach (Transform child in _heroesContainer)
-            {
-                Destroy(child.gameObject);
-            }
+            foreach (Transform child in _heroesContainer) Destroy(child.gameObject);
             _heroSlots.Clear();
 
             foreach (var hero in heroes)
             {
                 var slotHero = Instantiate(_slotHeroPrefab, _heroesContainer);
                 slotHero.SetHeroUI(hero.IconAvatarPath, hero, this);
-                slotHero.IsInCombat = false;
+
+                string key = GetHeroCombatKey(hero.HeroID, _heroSlots.Count);
+                slotHero.IsInCombat = heroCombatStatus.ContainsKey(key) ? heroCombatStatus[key] : false;
+
                 _heroSlots.Add(slotHero);
             }
         }
+
+        private void OnApplicationQuit() => SaveHeroCombatStatus();
     }
+
+    [System.Serializable]
+    public class RarityAndColorDictionary : UnitySerializedDictionary<Rarity, Color> { }
 }

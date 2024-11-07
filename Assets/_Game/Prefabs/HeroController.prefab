@@ -78,7 +78,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Animator: {fileID: 0}
   RevertObject: {fileID: 8379181056662908847}
-  _isPatrolling: 0
   _targetIndex: {fileID: 0}
   BaseRoot: {fileID: 0}
   AttackTarget: {fileID: 0}

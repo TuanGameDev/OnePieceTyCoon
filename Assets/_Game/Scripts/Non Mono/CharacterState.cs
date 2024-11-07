@@ -6,12 +6,17 @@ namespace _Game.Scripts.Non_Mono
     [System.Serializable]
     public class CharacterState
     {
-        public CharacterState(CharacterName characternname, Rarity rarity, Elemental elemental)
+        public CharacterName CharacterName;
+        public Rarity Rarity;
+        public Elemental Elemental;
+
+        public CharacterState(CharacterName characterName, Rarity rarity, Elemental elemental)
         {
-            CharacterName = characternname;
+            CharacterName = characterName;
             Rarity = rarity;
             Elemental = elemental;
         }
+
         public CharacterState(CharacterState data)
         {
             CharacterName = data.CharacterName;
@@ -19,8 +24,18 @@ namespace _Game.Scripts.Non_Mono
             Elemental = data.Elemental;
         }
 
-        public CharacterName CharacterName;
-        public Rarity Rarity;
-        public Elemental Elemental;
+        public override bool Equals(object obj)
+        {
+            if (obj is CharacterState other)
+            {
+                return CharacterName == other.CharacterName && Rarity == other.Rarity && Elemental == other.Elemental;
+            }
+            return false;
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(CharacterName, Rarity, Elemental);
+        }
     }
 }

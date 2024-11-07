@@ -33,25 +33,11 @@ namespace _Game.Scripts.UI
         [SerializeField]
         private GameObject _panelListHero;
 
-        [Header("Button UI")]
         [SerializeField]
-        private Button _gachaNormalBtn;
+        private Button _gachaNormalBtn, _gachaLegendBtn, _getHeroBtn;
 
         [SerializeField]
-        private Button _gachaLegendBtn;
-
-        [SerializeField]
-        private Button _getHeroBtn;
-
-        [Header("Popup UI")]
-        [SerializeField]
-        private GameObject _normalPopupUI;
-
-        [SerializeField]
-        private GameObject _legendPopupUI;
-
-        [SerializeField]
-        private GameObject _introVideoGacha;
+        private GameObject _normalPopupUI, _legendPopupUI, _introVideoGacha;
 
         [SerializeField]
         private VideoPlayer _videoPlayer;
@@ -119,6 +105,7 @@ namespace _Game.Scripts.UI
                 Destroy(child.gameObject);
             }
             HeroManager.Instance.SaveDataHero();
+            UserManagerUI.Instance.UpdateCombatPowerDisplay();
         }
 
         public void GachaX1(int amount)

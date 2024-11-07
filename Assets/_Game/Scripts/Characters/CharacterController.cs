@@ -44,10 +44,9 @@ namespace _Game.Scripts.Character
         public bool FaceRight = false;
 
         #endregion
-
         public void Start()
         {
-            Animator = FindObjectOfType<Animator>();
+            Animator = RevertObject.GetComponentInChildren<Animator>();
             CurrentStat = HeroDataSO.CharacterStat;
             CurrentHP = CurrentStat.Hp;
         }
@@ -140,19 +139,29 @@ namespace _Game.Scripts.Character
                 {
                     FlipLeft();
                 }
-                if(Animator != null)
+
+                if (Animator != null)
                 {
                     Animator.SetBool("Move", true);
                 }
+
                 while (Vector3.Distance(transform.position, _targetIndex.position) > 0.1f)
                 {
-                    transform.position = Vector3.MoveTowards(transform.position, _targetIndex.position,CurrentStat.MoveSpeed * Time.deltaTime);
+                    transform.position = Vector3.MoveTowards(transform.position, _targetIndex.position, CurrentStat.MoveSpeed * Time.deltaTime);
+
+                    if (Animator != null)
+                    {
+                        Animator.SetBool("Move", true);
+                    }
+
                     yield return null;
                 }
+
                 if (Animator != null)
                 {
-                    Animator.SetBool("Move", false);
+                    Animator.SetBool("Move", false); 
                 }
+
                 yield return new WaitForSeconds(2f);
             }
         }

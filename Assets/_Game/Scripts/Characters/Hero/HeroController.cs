@@ -19,6 +19,7 @@ namespace _Game.Scripts.Character.Hero
             HeroDataSO.CharacterStat = heroData.CharacterStat;
             HeroDataSO.CharacterName = heroData.CharacterName;
             HeroDataSO.Rarity = heroData.Rarity;
+            HeroDataSO.Elemental = heroData.Elemental;
         }
     }
 }
