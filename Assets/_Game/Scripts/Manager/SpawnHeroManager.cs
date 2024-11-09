@@ -3,6 +3,7 @@ using UnityEngine;
 using _Game.Scripts.Character.Hero;
 using _Game.Scripts.Scriptable_Object;
 using _Game.Scripts.Non_Mono;
+using _Game.Scripts.UI;
 
 namespace _Game.Scripts.Manager
 {
@@ -36,6 +37,8 @@ namespace _Game.Scripts.Manager
                 HeroDataSO tempHeroDataSO = ScriptableObject.CreateInstance<HeroDataSO>();
                 tempHeroDataSO.HeroID = heroData.HeroID;
                 tempHeroDataSO.HeroAvatar = heroData.HeroAvatar;
+                tempHeroDataSO.HeroAvatarPath = heroData.HeroAvatarPath;
+                tempHeroDataSO.IconAvatarPath = heroData.IconAvatarPath;
                 tempHeroDataSO.IconAvatar = heroData.IconAvatar;
                 tempHeroDataSO.CharacterStat = heroData.CharacterStat;
                 tempHeroDataSO.Rarity = heroData.Rarity;
@@ -55,6 +58,7 @@ namespace _Game.Scripts.Manager
                 }
                 heroInstance.SetHeroData(tempHeroDataSO);
                 _spawnedHeroes[heroData.HeroID] = heroInstance;
+                HeroControllerUI.Instance.HeroCtrlUISlot[heroData.HeroID] = heroInstance;
             }
         }
 
@@ -70,6 +74,7 @@ namespace _Game.Scripts.Manager
             {
                 Destroy(heroInstance.gameObject);
                 _spawnedHeroes.Remove(heroID);
+                HeroControllerUI.Instance.HeroCtrlUISlot.Remove(heroID);
             }
         }
     }

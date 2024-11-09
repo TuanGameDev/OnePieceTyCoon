@@ -58,7 +58,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TabMissionUI
+  m_Name: TabHeroCtrlUI
   serializedVersion: 5
   m_AnimatorParameters: []
   m_AnimatorLayers:
@@ -111,10 +111,10 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 1698694491608464212}
-    m_Position: {x: 260, y: 0, z: 0}
+    m_Position: {x: 260, y: 60, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -8419517887530157411}
-    m_Position: {x: 260, y: 60, z: 0}
+    m_Position: {x: 260, y: 0, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -6239332459075836697}
     m_Position: {x: 260, y: 120, z: 0}
@@ -127,4 +127,4 @@ AnimatorStateMachine:
   m_EntryPosition: {x: 50, y: 120, z: 0}
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
-  m_DefaultState: {fileID: -8419517887530157411}
+  m_DefaultState: {fileID: -6239332459075836697}

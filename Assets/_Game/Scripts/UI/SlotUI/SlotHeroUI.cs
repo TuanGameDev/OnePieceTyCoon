@@ -7,7 +7,7 @@ namespace _Game.Scripts.UI
     public class SlotHeroUI : MonoBehaviour
     {
         [SerializeField]  
-        private Image _avatarImage;
+        private Image _avatarHero;
 
         [SerializeField] 
         private Image _selectedImg;
@@ -29,7 +29,7 @@ namespace _Game.Scripts.UI
                 Sprite avatarSprite = Resources.Load<Sprite>(avatarPath);
                 if (avatarSprite != null)
                 {
-                    _avatarImage.sprite = avatarSprite;
+                    _avatarHero.sprite = avatarSprite;
                     _heroData = heroData;
                 }
             }

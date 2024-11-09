@@ -24,7 +24,8 @@ MonoBehaviour:
     Def: 0
     MoveSpeed: 3
     AttackDamage: 1
-    CritDamage: 0
+    CurrentExp: 0
+    MaxExp: 20
   CharacterName: 6
   Rarity: 2
   Elemental: 1

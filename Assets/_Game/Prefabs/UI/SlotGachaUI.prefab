@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2999019028875434676}
   - component: {fileID: 3781061288509985921}
   - component: {fileID: 8524200642979627665}
+  - component: {fileID: 122440158813570959}
   m_Layer: 5
   m_Name: SlotGachaUI
   m_TagString: Untagged
@@ -90,6 +91,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _avatarImage: {fileID: 5461790484497661480}
+--- !u!95 &122440158813570959
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1805413766503154721}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 163b4a44adaf8034fa39fcac72b4c706, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2785186495697383291
 GameObject:
   m_ObjectHideFlags: 0

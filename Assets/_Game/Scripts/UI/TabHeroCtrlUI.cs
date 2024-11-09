@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 namespace _Game.Scripts.UI
 {
-    public class TabMissionUI : MonoBehaviour
+    public class TabHeroCtrlUI : MonoBehaviour
     {
         [SerializeField]
         private Button _showTabUIBtn;

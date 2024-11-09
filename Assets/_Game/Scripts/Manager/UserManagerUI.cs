@@ -45,8 +45,9 @@ namespace _Game.Scripts.Manager
             if (_rankingManager == null)
             {
                 _rankingManager = FindObjectOfType<RankingManager>();
-                LoadDataUser();
             }
+            LoadDataUser();
+            Invoke(nameof(UpdateCombatPowerDisplay), 1f);
         }
 
         private void Start()

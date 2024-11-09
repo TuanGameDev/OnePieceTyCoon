@@ -136,22 +136,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2849929e7a5dd8949ae9985a8a753f53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _avatarImage: {fileID: 5461790484497661480}
+  _avatarHero: {fileID: 5461790484497661480}
   _selectedImg: {fileID: 8397152669826840275}
+  _selectedBtn: {fileID: 7033015788530071152}
   _heroData:
     HeroID: 0
-    HeroName: 
     HeroAvatar: {fileID: 0}
+    IconAvatar: {fileID: 0}
     HeroAvatarPath: 
+    IconAvatarPath: 
+    Power: 0
     CharacterStat:
       HeroLevel: 0
       Hp: 0
       Def: 0
+      MoveSpeed: 0
       AttackDamage: 0
       CritDamage: 0
     CharacterName: 0
-    Rank: 0
-  _selectedBtn: {fileID: 7033015788530071152}
+    Rarity: 0
+    Elemental: 0
+  IsInCombat: 0
 --- !u!95 &8528760995432689127
 Animator:
   serializedVersion: 5

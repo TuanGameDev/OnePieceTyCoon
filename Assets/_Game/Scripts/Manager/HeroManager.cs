@@ -15,14 +15,14 @@ namespace _Game.Scripts.Manager
     public class HeroManager : MonoBehaviour
     {
         public HeroDictionary HeroNormalDictionary;
-
         public HeroDictionary HeroLegendDictionary;
 
         public List<HeroDataList> HeroesAvailable = new List<HeroDataList>();
 
         public Action OnAddHero;
-
         public Action OnRemoveHero;
+
+        public int MaxHeroSlot;
 
         public static HeroManager Instance;
 
@@ -55,6 +55,13 @@ namespace _Game.Scripts.Manager
 
             var availableHeroList = HeroesAvailable[0].heroes;
 
+            // Kiểm tra nếu danh sách đã đầy
+            if (availableHeroList.Count >= MaxHeroSlot)
+            {
+                Debug.LogWarning("Hero đã đầy! Không thể thêm hero mới.");
+                return;
+            }
+
             foreach (var heroEntry in HeroNormalDictionary)
             {
                 var heroDataSO = heroEntry.Value;
@@ -74,6 +81,12 @@ namespace _Game.Scripts.Manager
 
                 availableHeroList.Add(newHeroData);
                 OnAddHero?.Invoke();
+
+                if (availableHeroList.Count >= MaxHeroSlot)
+                {
+                    Debug.LogWarning("Danh sách hero đã đạt giới hạn sau khi thêm hero mới.");
+                    break;
+                }
             }
 
             SaveDataHero();
@@ -141,7 +154,6 @@ namespace _Game.Scripts.Manager
                 Debug.LogError("Lỗi khi tải dữ liệu hero: " + error.ErrorMessage);
             });
         }
-
 
         public void SaveDataHero()
         {

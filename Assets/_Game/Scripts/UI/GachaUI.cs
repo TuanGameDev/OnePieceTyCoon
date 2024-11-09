@@ -1,12 +1,14 @@
 ﻿using _Game.Scripts.Enums;
+using _Game.Scripts.Helper;
 using _Game.Scripts.Manager;
-using _Game.Scripts.Non_Mono;
 using _Game.Scripts.Scriptable_Object;
+using _Game.Scripts.UI;
 using Sirenix.OdinInspector;
-using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityEngine.Video;
 
@@ -14,14 +16,16 @@ namespace _Game.Scripts.UI
 {
     enum StateGacha
     {
-        Normal,
+        Common,
         Legend
     }
-
-    public class GachaUI : MonoBehaviour
+    public class GachaUI : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     {
+        [SerializeField]
+        private StateGachaAndIcon _stateGachaAndIcon;
+
         [SerializeField, ReadOnly]
-        private StateGacha _stateGacha = StateGacha.Normal;
+        private StateGacha _stateGacha = StateGacha.Common;
 
         [Header("UI")]
         [SerializeField]
@@ -34,13 +38,19 @@ namespace _Game.Scripts.UI
         private GameObject _panelListHero;
 
         [SerializeField]
-        private Button _gachaNormalBtn, _gachaLegendBtn, _getHeroBtn;
+        private Button _gachaCommonBtn, _gachaLegendBtn, _getHeroBtn, _helpBtn;
 
         [SerializeField]
-        private GameObject _normalPopupUI, _legendPopupUI, _introVideoGacha;
+        private GameObject _commonPopupUI, _legendPopupUI, _introVideoGacha, _helpPopupUI;
+
+        [SerializeField]
+        private Image _iconX1, _iconX10;
 
         [SerializeField]
         private VideoPlayer _videoPlayer;
+
+        [SerializeField]
+        private TextMeshProUGUI _nameBoxTxt, _messageTxt, _beliTxt, _diamondTxt;
 
         [SerializeField]
         private List<HeroData> _gachaHeroes = new List<HeroData>();
@@ -55,9 +65,10 @@ namespace _Game.Scripts.UI
                 _rankingManager = FindObjectOfType<RankingManager>();
             }
 
-            _gachaNormalBtn.onClick.AddListener(() => SetGachaState(StateGacha.Normal));
+            _gachaCommonBtn.onClick.AddListener(() => SetGachaState(StateGacha.Common));
             _gachaLegendBtn.onClick.AddListener(() => SetGachaState(StateGacha.Legend));
             _getHeroBtn.onClick.AddListener(GetHero);
+            Invoke(nameof(UpdateBeliAndDiamond), 0.5f);
         }
 
         private void OnEnable()
@@ -70,23 +81,45 @@ namespace _Game.Scripts.UI
             _videoPlayer.loopPointReached -= OnVideoEnd;
         }
 
+        public void OnPointerDown(PointerEventData eventData)
+        {
+            if (eventData.pointerPress == _helpBtn.gameObject) _helpPopupUI.SetActive(true);
+        }
+
+        public void OnPointerUp(PointerEventData eventData)
+        {
+            if (eventData.pointerPress == _helpBtn.gameObject) _helpPopupUI.SetActive(false);
+        }
+
         private void SetGachaState(StateGacha state)
         {
             _stateGacha = state;
 
-            if (state == StateGacha.Normal)
+            if (state == StateGacha.Common)
             {
-                _normalPopupUI.SetActive(true);
+                _commonPopupUI.SetActive(true);
                 _legendPopupUI.SetActive(false);
-                _gachaNormalBtn.transform.localScale = new Vector3(1.2f, 1.2f, 1.2f);
+                _gachaCommonBtn.transform.localScale = new Vector3(1.2f, 1.2f, 1.2f);
                 _gachaLegendBtn.transform.localScale = Vector3.one;
             }
             else if (state == StateGacha.Legend)
             {
-                _normalPopupUI.SetActive(false);
+                _commonPopupUI.SetActive(false);
                 _legendPopupUI.SetActive(true);
-                _gachaNormalBtn.transform.localScale = Vector3.one;
+                _gachaCommonBtn.transform.localScale = Vector3.one;
                 _gachaLegendBtn.transform.localScale = new Vector3(1.2f, 1.2f, 1.2f);
+            }
+
+            UpdateGachaIcons();
+            _nameBoxTxt.text = "Box " + _stateGacha.ToString();
+        }
+
+        private void UpdateGachaIcons()
+        {
+            if (_stateGachaAndIcon.TryGetValue(_stateGacha, out Sprite icon))
+            {
+                _iconX1.sprite = icon;
+                _iconX10.sprite = icon;
             }
         }
 
@@ -105,15 +138,24 @@ namespace _Game.Scripts.UI
                 Destroy(child.gameObject);
             }
             HeroManager.Instance.SaveDataHero();
+            HeroesUI.Instance.UpdateHeroSlotText();
             UserManagerUI.Instance.UpdateCombatPowerDisplay();
         }
 
         public void GachaX1(int amount)
         {
-            if ((_stateGacha == StateGacha.Normal && _rankingManager.UserInformation.Beli >= amount) ||
+            if (HeroManager.Instance.GetAvailableHeroes().Count >= HeroManager.Instance.MaxHeroSlot)
+            {
+                _messageTxt.text = "Hero is complete. Unable to execute Gacha x1.";
+                _messageTxt.color = Color.red;
+                StartCoroutine(HideTxt(1f));
+                return;
+            }
+
+            if ((_stateGacha == StateGacha.Common && _rankingManager.UserInformation.Beli >= amount) ||
                 (_stateGacha == StateGacha.Legend && _rankingManager.UserInformation.Diamond >= amount))
             {
-                if (_stateGacha == StateGacha.Normal)
+                if (_stateGacha == StateGacha.Common)
                 {
                     _rankingManager.UserInformation.Beli -= amount;
                     AddHeroToGachaListNormal();
@@ -123,14 +165,17 @@ namespace _Game.Scripts.UI
                     _rankingManager.UserInformation.Diamond -= amount;
                     AddHeroToGachaListLegend();
                 }
-
+                UpdateBeliAndDiamond();
+                HeroesUI.Instance.UpdateHeroSlotText();
                 _introVideoGacha.SetActive(true);
                 _videoPlayer.Play();
                 UserManagerUI.Instance.SaveUserInformation();
             }
             else
             {
-                Debug.Log("Không đủ tiền để thực hiện Gacha X1.");
+                _messageTxt.text = "Not enough money to do Gacha x1.";
+                _messageTxt.color = Color.red;
+                StartCoroutine(HideTxt(1f));
                 return;
             }
         }
@@ -139,10 +184,18 @@ namespace _Game.Scripts.UI
         {
             int totalAmount = amount * 10;
 
-            if ((_stateGacha == StateGacha.Normal && _rankingManager.UserInformation.Beli >= totalAmount) ||
+            if (HeroManager.Instance.GetAvailableHeroes().Count + 10 > HeroManager.Instance.MaxHeroSlot)
+            {
+                _messageTxt.text = "Hero is complete. Unable to execute Gacha x10.";
+                _messageTxt.color = Color.red;
+                StartCoroutine(HideTxt(1f));
+                return;
+            }
+
+            if ((_stateGacha == StateGacha.Common && _rankingManager.UserInformation.Beli >= totalAmount) ||
                 (_stateGacha == StateGacha.Legend && _rankingManager.UserInformation.Diamond >= totalAmount))
             {
-                if (_stateGacha == StateGacha.Normal)
+                if (_stateGacha == StateGacha.Common)
                 {
                     _rankingManager.UserInformation.Beli -= totalAmount;
                     for (int i = 0; i < 10; i++)
@@ -158,17 +211,21 @@ namespace _Game.Scripts.UI
                         AddHeroToGachaListLegend();
                     }
                 }
-
+                UpdateBeliAndDiamond();
+                HeroesUI.Instance.UpdateHeroSlotText();
                 _introVideoGacha.SetActive(true);
                 _videoPlayer.Play();
                 UserManagerUI.Instance.SaveUserInformation();
             }
             else
             {
-                Debug.Log("Không đủ tiền để thực hiện Gacha X10.");
+                _messageTxt.text = "Not enough money to do Gacha x10.";
+                _messageTxt.color = Color.red;
+                StartCoroutine(HideTxt(1f));
                 return;
             }
         }
+
 
         private void OnVideoEnd(VideoPlayer vp)
         {
@@ -311,5 +368,22 @@ namespace _Game.Scripts.UI
 
         #endregion
 
+        private IEnumerator HideTxt(float delay)
+        {
+            yield return new WaitForSeconds(delay);
+            _messageTxt.text = "";
+        }
+
+        private void UpdateBeliAndDiamond()
+        {
+            _beliTxt.text = RankingManager.Instance.UserInformation.Beli.ToString("N0");
+            _diamondTxt.text = RankingManager.Instance.UserInformation.Diamond.ToString("N0");
+        }
+
     }
+}
+[System.Serializable]
+internal class StateGachaAndIcon : UnitySerializedDictionary<StateGacha, Sprite>
+{
+   
 }

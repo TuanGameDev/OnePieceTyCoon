@@ -23,10 +23,10 @@ namespace _Game.Scripts.UI
         private Transform _heroesContainer;
 
         [SerializeField]
-        private Image _heroIconAvatar;
+        private Image _heroIconAvatar,_iconLock;
 
         [SerializeField] 
-        private TextMeshProUGUI _nameHeroTxt, _rarityHeroTxt, _powerHeroTxt, _levelHeroTxt, _stateHeroTxt;
+        private TextMeshProUGUI _nameHeroTxt, _rarityHeroTxt, _powerHeroTxt, _levelHeroTxt, _stateHeroTxt, _heroSlotTxt;
 
         [SerializeField] 
         private Button _infoHeroBtn, _statHeroBtn, _removeHeroBtn;
@@ -42,7 +42,6 @@ namespace _Game.Scripts.UI
 
         private void Start()
         {
-            Invoke(nameof(LoadAndDisplayHeroes), 1f);
             _statHeroBtn.onClick.AddListener(OnStatHeroButtonClicked);
             _removeHeroBtn.onClick.AddListener(() => RemoveHero(_selectedHero));
             HeroManager.Instance.OnAddHero += LoadAndDisplayHeroes;
@@ -85,10 +84,32 @@ namespace _Game.Scripts.UI
         public void SelectHero(SlotHeroUI selectedHero)
         {
             _selectedHero = selectedHero;
-            foreach (var slot in _heroSlots) slot.SetSelected(slot == selectedHero);
+            foreach (var slot in _heroSlots)
+                slot.SetSelected(slot == selectedHero);
+
             _statHeroPopup.SetActive(_selectedHero != null);
             UpdateStatHero();
+
+            UpdateStatHeroButtonState(selectedHero);
+
             UpdateStateText();
+        }
+
+        private void UpdateStatHeroButtonState(SlotHeroUI selectedHero)
+        {
+            int heroID = selectedHero.HeroData.HeroID;
+            bool isAnyHeroInCombat = false;
+            _iconLock.gameObject.SetActive(false);
+            foreach (var slot in _heroSlots)
+            {
+                if (slot.HeroData.HeroID == heroID && slot.IsInCombat && slot != selectedHero)
+                {
+                    isAnyHeroInCombat = true;
+                    _iconLock.gameObject.SetActive(true);
+                    break;
+                }
+            }
+            _statHeroBtn.interactable = !isAnyHeroInCombat;
         }
 
         private void UpdateStatHero()
@@ -147,14 +168,33 @@ namespace _Game.Scripts.UI
                 heroCombatStatus[key] = false;
                 selectedHero.IsInCombat = false;
                 SpawnHeroManager.Instance.RemoveHero(heroID);
+                HeroControllerUI.Instance.UpdateDisplayHeroes();
             }
             else
             {
                 heroCombatStatus[key] = true;
                 selectedHero.IsInCombat = true;
                 SpawnHeroManager.Instance.SpawnHero(selectedHero.HeroData);
+                HeroControllerUI.Instance.UpdateDisplayHeroes();
             }
         }
+
+        public void UpdateHeroSlotText()
+        {
+            if (HeroManager.Instance == null)
+            {
+                Debug.LogError("HeroManager.Instance is null");
+                return;
+            }
+
+            int currentHeroCount = HeroManager.Instance.GetAvailableHeroes()?.Count ?? 0;
+            int maxHeroSlot = HeroManager.Instance.MaxHeroSlot;
+            if (_heroSlotTxt != null)
+            {
+                _heroSlotTxt.text = $"{currentHeroCount}/{maxHeroSlot}";
+            }
+        }
+
 
         private void UpdateStateText()
         {
