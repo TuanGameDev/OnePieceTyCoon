@@ -46,18 +46,43 @@ namespace _Game.Scripts.Manager
             {
                 _rankingManager = FindObjectOfType<RankingManager>();
             }
-            LoadDataUser();
-            Invoke(nameof(UpdateCombatPowerDisplay), 1f);
         }
 
         private void Start()
         {
             _selectedBtn.interactable = false;
             _userNameInputField.onValueChanged.AddListener(ValidateUserName);
+
+            _userNameInputField.onSelect.AddListener(delegate { OnInputFieldSelected(_userNameInputField); });
+            LoadDataUser();
+            Invoke(nameof(UpdateCombatPowerDisplay), 1f);
+
             HeroManager.Instance.OnAddHero += RecalculateCombatPower;
             HeroManager.Instance.OnRemoveHero += RecalculateCombatPower;
         }
+        private void OnInputFieldSelected(TMP_InputField inputField)
+        {
+            if (inputField != null)
+            {
+                inputField.ActivateInputField();
+                StartCoroutine(UpdateInputField(inputField));
+            }
+        }
 
+        private IEnumerator UpdateInputField(TMP_InputField inputField)
+        {
+            TouchScreenKeyboard keyboard = TouchScreenKeyboard.Open(inputField.text, TouchScreenKeyboardType.Default);
+
+            while (!keyboard.done)
+            {
+                if (keyboard.active)
+                {
+                    inputField.text = keyboard.text;
+                }
+                yield return null;
+            }
+            inputField.text = keyboard.text;
+        }
         private void OnDestroy()
         {
             HeroManager.Instance.OnAddHero -= RecalculateCombatPower;
@@ -78,9 +103,15 @@ namespace _Game.Scripts.Manager
             SaveUserDataToPlayFab();
         }
 
+        public void RewardCoin()
+        {
+            _rankingManager.UserInformation.Beli += 10000;
+            _rankingManager.UserInformation.Diamond += 100;
+        }
+
         public void UpdateCombatPowerDisplay()
         {
-            _userCombatPowerTxt.text = "Power: " + _rankingManager.UserInformation.CombatPower.ToString("N0");
+            _userCombatPowerTxt.text = _rankingManager.UserInformation.CombatPower.ToString("N0");
             _userBeliTxt.text = _rankingManager.UserInformation.Beli.ToString("N0");
             _userDiamondTxt.text = _rankingManager.UserInformation.Diamond.ToString("N0");
         }

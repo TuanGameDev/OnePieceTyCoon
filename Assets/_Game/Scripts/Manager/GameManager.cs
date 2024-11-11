@@ -6,7 +6,6 @@ namespace _Game.Scripts.Manager
 {
     public class GameManager : MonoBehaviour
     {
-        public int Gold;
-        public int Diamond;
+    
     }
 }

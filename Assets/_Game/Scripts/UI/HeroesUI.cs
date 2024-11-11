@@ -119,7 +119,7 @@ namespace _Game.Scripts.UI
             _nameHeroTxt.text = _selectedHero.HeroData.CharacterName.ToString();
             _rarityHeroTxt.text = _selectedHero.HeroData.Rarity.ToString();
             _rarityHeroTxt.color = _rarityAndColorDictionary.TryGetValue(_selectedHero.HeroData.Rarity, out Color color) ? color : Color.white;
-            _powerHeroTxt.text = $"Power: {_selectedHero.HeroData.Power}";
+            _powerHeroTxt.text = _selectedHero.HeroData.Power.ToString("N0");
             _levelHeroTxt.text = $"Lv. {_selectedHero.HeroData.CharacterStat.HeroLevel}";
 
             _heroIconAvatar.sprite = Resources.Load<Sprite>(_selectedHero.HeroData.HeroAvatarPath);
