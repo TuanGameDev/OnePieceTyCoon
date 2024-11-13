@@ -1,15 +1,42 @@
-﻿using _Game.Scripts.Scriptable_Object;
-using System.Collections;
-using System.Collections.Generic;
+﻿using _Game.Scripts.Buildings;
+using _Game.Scripts.Scriptable_Object;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 namespace _Game.Scripts.Character.Hero
 {
     public class HeroController : CharacterController
     {
-        public override void Attack()
+        public bool IsReviving;
+        public bool IsNeedHeal;
+
+        public override void TryAttack()
         {
-            base.Attack();
+            base.TryAttack();
+        }
+
+        public override void Die()
+        {
+            base.Die();
+
+            Animator.SetBool("Move", true);
+
+             MoveToRevivePoint();
+        }
+
+        private void MoveToRevivePoint()
+        {
+            Vector3 revivePoint = HouseRevive.Instance.ReviveHeroPoint.position;
+
+            while (Vector3.Distance(transform.position, revivePoint) > 0.1f)
+            {
+                MoveTowards(revivePoint);
+            }
+
+            Animator.SetBool("Move", false);
+
+            IsReviving = false;
+            HouseRevive.Instance.ReviveHero(this);
         }
 
         public void SetHeroData(HeroDataSO heroData)

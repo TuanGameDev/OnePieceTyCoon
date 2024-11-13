@@ -40,6 +40,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8652137139716784323}
+  - component: {fileID: -2401194878278694739}
+  - component: {fileID: 6297498763828140108}
   - component: {fileID: 3017598112379463855}
   m_Layer: 6
   m_Name: HeroController
@@ -64,6 +66,78 @@ Transform:
   - {fileID: 8379181056662908847}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &-2401194878278694739
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6813714406310080256}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!61 &6297498763828140108
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6813714406310080256}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.008185685}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.8785588}
+  m_EdgeRadius: 0
 --- !u!114 &3017598112379463855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78,12 +152,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Animator: {fileID: 0}
   RevertObject: {fileID: 8379181056662908847}
-  _targetIndex: {fileID: 0}
   BaseRoot: {fileID: 0}
   AttackTarget: {fileID: 0}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 128
+  attackCooldown: 1
   HeroDataSO: {fileID: 0}
   CurrentStat:
     HeroLevel: 0
@@ -91,8 +162,12 @@ MonoBehaviour:
     Def: 0
     MoveSpeed: 0
     AttackDamage: 0
-    CritDamage: 0
+    CurrentExp: 0
+    MaxExp: 0
   CurrentHP: 0
   IsAttack: 0
   IsDead: 0
   FaceRight: 0
+  Layer:
+    serializedVersion: 2
+    m_Bits: 128

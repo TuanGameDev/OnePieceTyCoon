@@ -3,6 +3,7 @@ using _Game.Scripts.Scriptable_Object;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
 namespace _Game.Scripts.UI
 {
@@ -21,6 +22,7 @@ namespace _Game.Scripts.UI
         private TextMeshProUGUI _levelHeroTxt;
 
         private HeroController _heroCtrl;
+        private Coroutine _healthBarCoroutine;
 
         private void Start()
         {
@@ -39,7 +41,12 @@ namespace _Game.Scripts.UI
             }
 
             _heroCtrl = heroDataSO;
-            UpdateUI();
+
+            if (_heroCtrl != null)
+            {
+                _heroCtrl.OnHealthChanged.AddListener(UpdateHealthBarSmooth);
+                UpdateUI();
+            }
         }
 
         private void UpdateUI()
@@ -47,13 +54,53 @@ namespace _Game.Scripts.UI
             if (_heroCtrl == null) return;
 
             _levelHeroTxt.text = $"Lv. " + _heroCtrl.HeroDataSO.CharacterStat.HeroLevel;
-            if (_healthBar != null)
+            UpdateHealthBarSmooth();
+            UpdateExpBar();
+        }
+
+        private void UpdateHealthBarSmooth()
+        {
+            if (_healthBarCoroutine != null)
             {
-                _healthBar.fillAmount = _heroCtrl.CurrentHP / _heroCtrl.HeroDataSO.CharacterStat.Hp;
+                StopCoroutine(_healthBarCoroutine);
             }
-            if (_expBar != null)
+
+            _healthBarCoroutine = StartCoroutine(SmoothHealthBarChange());
+        }
+
+        private IEnumerator SmoothHealthBarChange()
+        {
+            if (_healthBar == null || _heroCtrl == null) yield break;
+
+            float targetFillAmount = (float)_heroCtrl.CurrentHP / _heroCtrl.HeroDataSO.CharacterStat.Hp;
+            float currentFillAmount = _healthBar.fillAmount;
+
+            float duration = 0.1f;
+            float elapsedTime = 0f;
+
+            while (elapsedTime < duration)
             {
-                _expBar.fillAmount = _heroCtrl.HeroDataSO.CharacterStat.CurrentExp / _heroCtrl.HeroDataSO.CharacterStat.MaxExp;
+                elapsedTime += Time.deltaTime;
+                _healthBar.fillAmount = Mathf.Lerp(currentFillAmount, targetFillAmount, elapsedTime / duration);
+                yield return null;
+            }
+
+            _healthBar.fillAmount = targetFillAmount;
+        }
+
+        private void UpdateExpBar()
+        {
+            if (_expBar != null && _heroCtrl != null)
+            {
+                _expBar.fillAmount = (float)_heroCtrl.HeroDataSO.CharacterStat.CurrentExp / _heroCtrl.HeroDataSO.CharacterStat.MaxExp;
+            }
+        }
+
+        private void OnDestroy()
+        {
+            if (_heroCtrl != null)
+            {
+                _heroCtrl.OnHealthChanged.RemoveListener(UpdateHealthBarSmooth);
             }
         }
     }

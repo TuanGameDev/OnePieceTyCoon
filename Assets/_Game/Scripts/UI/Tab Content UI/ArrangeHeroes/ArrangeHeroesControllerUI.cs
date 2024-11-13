@@ -66,7 +66,6 @@ namespace _Game.Scripts.UI.Hero
             var filteredHeroes = HeroManager.Instance.HeroesAvailable
                 .SelectMany(heroList => heroList.heroes)
                 .Where(hero => hero.Elemental == elemental)
-                .OrderBy(hero => hero.Rarity)
                 .ToList();
 
             HeroesUI.Instance.DisplayHeroes(filteredHeroes);

@@ -9,12 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26b27a9f712e8f84baa4b083a22b8284, type: 3}
+  m_Script: {fileID: 11500000, guid: 879c9cb90e466f043abc9e99cf5a4cc4, type: 3}
   m_Name: EnemyOutLook
   m_EditorClassIdentifier: 
-  EnemyOut:
+  CharOut:
     keyData:
-    - EnemyName: 1
-      Rank: 4
+    - CharacterName: 0
+      Rarity: 5
+      Elemental: 1
     valueData:
     - Root: {fileID: 8587349390366295533, guid: fc7402ac5a4942d4bb3d754d81ffc650, type: 3}

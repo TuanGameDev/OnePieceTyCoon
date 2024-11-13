@@ -1,9 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using Sirenix.OdinInspector;
+﻿using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.Video;
 
 public class Test : MonoBehaviour
 {
-  
+   
 }

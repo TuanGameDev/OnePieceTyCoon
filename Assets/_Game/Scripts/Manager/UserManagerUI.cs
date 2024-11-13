@@ -8,8 +8,9 @@ using TMPro;
 using UnityEngine.UI;
 using _Game.Scripts.Helper;
 using System;
+using _Game.Scripts.Manager;
 
-namespace _Game.Scripts.Manager
+namespace _Game.Scripts.UI
 {
     public class UserManagerUI : Singleton<UserManagerUI>
     {
@@ -39,6 +40,12 @@ namespace _Game.Scripts.Manager
 
         [SerializeField]
         private TextMeshProUGUI _userDiamondTxt;
+
+        #region DisPlayUser
+
+        public Image AvatarUser;
+
+        #endregion
 
         private void Awake()
         {
@@ -105,7 +112,7 @@ namespace _Game.Scripts.Manager
 
         public void RewardCoin()
         {
-            _rankingManager.UserInformation.Beli += 10000;
+            _rankingManager.UserInformation.Beli += 100000000;
             _rankingManager.UserInformation.Diamond += 100;
         }
 

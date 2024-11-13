@@ -45,9 +45,10 @@ namespace _Game.Scripts.Manager
                 tempHeroDataSO.Elemental = heroData.Elemental;
                 tempHeroDataSO.Power = heroData.Power;
                 tempHeroDataSO.CharacterName = heroData.CharacterName;
+
                 heroInstance.SetPatrolPoints(_spawnPatrolPosition);
 
-                CharacterState key = new CharacterState(tempHeroDataSO.CharacterName, tempHeroDataSO.Rarity,tempHeroDataSO.Elemental);
+                CharacterState key = new CharacterState(tempHeroDataSO.CharacterName, tempHeroDataSO.Rarity, tempHeroDataSO.Elemental);
                 if (_charOutLook.CharOut.TryGetValue(key, out OutLook outLook))
                 {
                     if (outLook.Root != null)
@@ -56,11 +57,14 @@ namespace _Game.Scripts.Manager
                         heroInstance.BaseRoot.name = outLook.Root.name;
                     }
                 }
+
                 heroInstance.SetHeroData(tempHeroDataSO);
+
                 _spawnedHeroes[heroData.HeroID] = heroInstance;
                 HeroControllerUI.Instance.HeroCtrlUISlot[heroData.HeroID] = heroInstance;
             }
         }
+
 
         public HeroController GetSpawnedHero(int heroID)
         {

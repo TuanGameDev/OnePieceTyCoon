@@ -1,12 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using _Game.Scripts.Scriptable_Object;
 using _Game.Scripts.Interfaces;
-using _Game.Scripts.Characters;
-using Sirenix.OdinInspector;
-using Unity.VisualScripting;
 using Cysharp.Threading.Tasks;
+using _Game.Scripts.StatePatern;
+using _Game.Scripts.Characters;
+using System;
+using UnityEngine.Events;
 
 namespace _Game.Scripts.Character
 {
@@ -14,158 +14,110 @@ namespace _Game.Scripts.Character
     {
         [Header("State")]
         public Animator Animator;
-
         public Transform RevertObject;
-
-        [SerializeField, ReadOnly]
-        private Transform _targetIndex;
-
-        private List<Transform> _patrolPoints = new List<Transform>();
-
         public GameObject BaseRoot;
-
-        [Header("Attack")]
         public CharacterController AttackTarget;
 
+        [Header("Attack Cooldown")]
         [SerializeField]
-        public LayerMask layerMask;
+        private float attackCooldown;
+        private float lastAttackTime;
 
         [Header("Stats")]
         public HeroDataSO HeroDataSO;
-
         public CharacterStat CurrentStat;
-
         public int CurrentHP;
-
-        #region Bool
 
         public bool IsAttack = false;
         public bool IsDead = false;
         public bool FaceRight = false;
 
-        #endregion
-        public void Start()
+        public UnityEvent OnHealthChanged;
+
+        public ICharacterState CurrentState;
+        public LayerMask Layer;
+
+        private List<Transform> _patrolPoints = new List<Transform>();
+
+        private void Start()
         {
             Animator = RevertObject.GetComponentInChildren<Animator>();
             CurrentStat = HeroDataSO.CharacterStat;
             CurrentHP = CurrentStat.Hp;
+
+            SetState(new IdleState());
         }
 
-        #region AttackFusion
-
-        public void TryAttack()
+        private void Update()
         {
-            Collider2D[] targets = Physics2D.OverlapCircleAll(transform.position, 1f, layerMask);
+            CurrentState?.UpdateState(this);
+        }
 
-            if (targets.Length > 0)
-            {
-                AttackTarget = targets[0].GetComponent<CharacterController>();
+        public void SetState(ICharacterState newState)
+        {
+            CurrentState?.ExitState(this);
+            CurrentState = newState;
+            CurrentState.EnterState(this);
+        }
 
-                if (AttackTarget != null)
-                {
-                    IsAttack = true;
-                    Attack();
-                }
-            }
-            else
+        public virtual void TryAttack()
+        {
+            if (AttackTarget.IsDead)
             {
                 AttackTarget = null;
                 IsAttack = false;
+                return;
+            }
+
+            if (AttackTarget == null || AttackTarget.gameObject == null)
+            {
+                AttackTarget = null;
+                IsAttack = false;
+                SetState(new PatrolState());
+                return;
+            }
+
+            if (IsAttack && Time.time >= lastAttackTime + attackCooldown)
+            {
+                FlipTowardsTarget(AttackTarget);
+                SetState(new AttackState());
+                Attack();
             }
         }
 
-        public virtual void Attack()
+
+
+        private void Attack()
         {
             if (AttackTarget != null && IsAttack)
             {
                 if (AttackTarget is IDamagable damagable)
                 {
                     damagable.TakeDamage(CurrentStat.AttackDamage);
-                    Animator.SetTrigger("Attack");
                 }
+
+                lastAttackTime = Time.time;
             }
         }
 
-        public virtual void TakeDamage(int damage)
+        public void TakeDamage(int damage)
         {
-            int finalDamage;
-
-            if (CurrentStat.Def >= damage)
-            {
-                finalDamage = 1;
-            }
-            else
-            {
-                finalDamage = damage - CurrentStat.Def;
-            }
+            int finalDamage = Mathf.Max(1, damage - CurrentStat.Def);
             CurrentHP -= finalDamage;
 
-            if (CurrentHP <= 0)
+            OnHealthChanged?.Invoke();
+
+            if (CurrentHP <= 0 && !IsDead)
             {
                 Die();
             }
         }
 
-        #endregion
 
         public virtual void Die()
         {
-            IsDead = true;
-            Destroy(gameObject);
+            SetState(new DieState());
         }
-
-        #region Patrol
-
-        public void SetPatrolPoints(List<Transform> points)
-        {
-            _patrolPoints = points;
-            if (_patrolPoints.Count > 0)
-            {
-                StartCoroutine(PatrolRoutineAsync());
-            }
-        }
-
-        private IEnumerator PatrolRoutineAsync()
-        {
-            while (true)
-            {
-                _targetIndex = _patrolPoints[Random.Range(0, _patrolPoints.Count)];
-
-                if (_targetIndex.position.x > transform.position.x && !FaceRight)
-                {
-                    FlipRight();
-                }
-                else if (_targetIndex.position.x < transform.position.x && FaceRight)
-                {
-                    FlipLeft();
-                }
-
-                if (Animator != null)
-                {
-                    Animator.SetBool("Move", true);
-                }
-
-                while (Vector3.Distance(transform.position, _targetIndex.position) > 0.1f)
-                {
-                    transform.position = Vector3.MoveTowards(transform.position, _targetIndex.position, CurrentStat.MoveSpeed * Time.deltaTime);
-
-                    if (Animator != null)
-                    {
-                        Animator.SetBool("Move", true);
-                    }
-
-                    yield return null;
-                }
-
-                if (Animator != null)
-                {
-                    Animator.SetBool("Move", false); 
-                }
-
-                yield return new WaitForSeconds(2f);
-            }
-        }
-
         public void FlipRight()
         {
             if (!FaceRight)
@@ -187,6 +139,39 @@ namespace _Game.Scripts.Character
                 RevertObject.localScale = theScale;
             }
         }
-        #endregion
+        public void FlipTowardsTarget(CharacterController character)
+        {
+            if (character != null)
+            {
+                if (character.transform.position.x > transform.position.x && !FaceRight)
+                {
+                    FlipRight();
+                }
+                else if (character.transform.position.x < transform.position.x && FaceRight)
+                {
+                    FlipLeft();
+                }
+            }
+        }
+
+        public void SetPatrolPoints(List<Transform> points)
+        {
+            _patrolPoints = points;
+        }
+
+        public Transform GetRandomPatrolPoint()
+        {
+            return _patrolPoints.Count > 0 ? _patrolPoints[UnityEngine.Random.Range(0, _patrolPoints.Count)] : null;
+        }
+
+        public bool HasPatrolPoints()
+        {
+            return _patrolPoints.Count > 0;
+        }
+
+        public void MoveTowards(Vector3 targetPosition)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition, CurrentStat.MoveSpeed * Time.deltaTime);
+        }
     }
 }

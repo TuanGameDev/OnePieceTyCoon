@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5247834540431423448}
   - component: {fileID: 3146148642523767135}
+  - component: {fileID: 4725540231208805801}
   - component: {fileID: 741523555141894788}
-  - component: {fileID: 6209032748263257652}
   m_Layer: 7
   m_Name: EnemyController
   m_TagString: Enemy
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 2469430339194945515}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.9752171, y: 0.44215626, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -62,36 +62,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &741523555141894788
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2469430339194945515}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b9194133a5e4e3479a2b1925a2fa4c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Animator: {fileID: 0}
-  ReverObject: {fileID: 2829292177010639748}
-  BaseRoot: {fileID: 0}
-  HeroDataSO: {fileID: 11400000, guid: dcbe76092ed5e4642a327d84cd028a0c, type: 2}
-  CurrentStat:
-    HeroLevel: 0
-    Hp: 0
-    Def: 0
-    AttackDamage: 0
-    CritDamage: 0
-  AttackTarget: {fileID: 0}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 64
-  IsAttack: 0
-  IsDead: 0
-  FaceRight: 0
---- !u!61 &6209032748263257652
+--- !u!61 &4725540231208805801
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -123,7 +94,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.008185685}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -134,8 +105,41 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 1.8785588}
   m_EdgeRadius: 0
+--- !u!114 &741523555141894788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2469430339194945515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b9194133a5e4e3479a2b1925a2fa4c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Animator: {fileID: 0}
+  RevertObject: {fileID: 2829292177010639748}
+  BaseRoot: {fileID: 0}
+  AttackTarget: {fileID: 0}
+  attackCooldown: 1
+  HeroDataSO: {fileID: 0}
+  CurrentStat:
+    HeroLevel: 0
+    Hp: 0
+    Def: 0
+    MoveSpeed: 0
+    AttackDamage: 0
+    CurrentExp: 0
+    MaxExp: 0
+  CurrentHP: 0
+  IsAttack: 0
+  IsDead: 0
+  FaceRight: 0
+  Layer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &4841826736898355427
 GameObject:
   m_ObjectHideFlags: 0
@@ -162,7 +166,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5247834540431423448}
