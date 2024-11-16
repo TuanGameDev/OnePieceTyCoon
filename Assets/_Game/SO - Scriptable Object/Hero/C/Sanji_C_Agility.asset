@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c63ed956015d7604284b2f0fd11a0f46, type: 3}
-  m_Name: Usopp_D_Agility
+  m_Name: Sanji_C_Agility
   m_EditorClassIdentifier: 
-  HeroID: 4
-  HeroAvatar: {fileID: 21300000, guid: 59bbcce999370364eb6867b43ecc56c7, type: 3}
-  IconAvatar: {fileID: 21300000, guid: eac56bb942dccd640a8e81c41d72f909, type: 3}
+  HeroID: 3
+  HeroAvatar: {fileID: 21300000, guid: 79987dbba39e56140a7abf1be04a0a8e, type: 3}
+  IconAvatar: {fileID: 21300000, guid: baa7cf3d839ae9343b64780b1a80bede, type: 3}
   HeroAvatarPath: 
   IconAvatarPath: 
   Power: 100
@@ -26,6 +26,6 @@ MonoBehaviour:
     AttackDamage: 1
     CurrentExp: 0
     MaxExp: 20
-  CharacterName: 5
-  Rarity: 5
+  CharacterName: 3
+  Rarity: 4
   Elemental: 1

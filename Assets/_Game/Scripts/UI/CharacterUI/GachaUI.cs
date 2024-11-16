@@ -243,7 +243,7 @@ namespace _Game.Scripts.UI
             {
                 var hero = _gachaHeroes[i];
                 var slotHero = Instantiate(_slotGachaUI, _container);
-                slotHero.SetHeroUI(hero.IconAvatarPath);
+                slotHero.SetHeroUI(hero.IconAvatarPath, hero);
 
                 if (totalHeroes == 1 && i == 0)
                 {
@@ -310,7 +310,7 @@ namespace _Game.Scripts.UI
             }
             else
             {
-                var rarities = new List<Rarity> { Rarity.B, Rarity.C, Rarity.D };
+                var rarities = new List<Rarity> { Rarity.B, Rarity.C };
                 return rarities[UnityEngine.Random.Range(0, rarities.Count)];
             }
         }

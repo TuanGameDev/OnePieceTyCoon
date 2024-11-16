@@ -9,6 +9,7 @@ using _Game.Scripts.Character.Hero;
 using _Game.Scripts.Helper;
 using System;
 using UnityEngine.Events;
+using System.Linq;
 
 namespace _Game.Scripts.Manager
 {
@@ -193,6 +194,12 @@ namespace _Game.Scripts.Manager
             }
             return new List<HeroData>();
         }
+
+        public void RefreshAvailableHeroes()
+        {
+            HeroesAvailable = HeroesAvailable.Where(hero => hero != null).ToList();
+        }
+
     }
 
     [System.Serializable]

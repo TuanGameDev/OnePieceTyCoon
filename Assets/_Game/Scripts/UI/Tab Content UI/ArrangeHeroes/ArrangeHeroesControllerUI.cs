@@ -35,12 +35,17 @@ namespace _Game.Scripts.UI.Hero
 
         private void HandleButtonClick(Button button, Elemental elemental)
         {
+            if (button == null)
+            {
+                return;
+            }
+
             if (_currentSelectedButton == button)
             {
                 button.transform.localScale = _normalButtonScale;
                 ShowAllHeroes();
-
-                _currentSelectedButton = null;
+                HeroesUI.Instance.RemoveHeroBtn.interactable = true;
+              _currentSelectedButton = null;
             }
             else
             {
@@ -50,16 +55,19 @@ namespace _Game.Scripts.UI.Hero
                 {
                     _currentSelectedButton.transform.localScale = _normalButtonScale;
                 }
+
                 _currentSelectedButton = button;
+                HeroesUI.Instance.RemoveHeroBtn.interactable = false;
                 button.transform.localScale = _enlargedButtonScale;
             }
         }
 
-
         private void ShowAllHeroes()
         {
+            HeroManager.Instance.RefreshAvailableHeroes();
             HeroesUI.Instance.LoadAndDisplayHeroes();
         }
+
 
         private void ShowHeroesByElemental(Elemental elemental)
         {
@@ -68,11 +76,16 @@ namespace _Game.Scripts.UI.Hero
                 .Where(hero => hero.Elemental == elemental)
                 .ToList();
 
-            if (HeroesUI.Instance != null)
+            if (filteredHeroes == null || filteredHeroes.Count == 0)
+            {
+                HeroesUI.Instance.ClearAllHeroSlots();
+            }
+            else
             {
                 HeroesUI.Instance.DisplayHeroes(filteredHeroes);
             }
         }
+
 
     }
 

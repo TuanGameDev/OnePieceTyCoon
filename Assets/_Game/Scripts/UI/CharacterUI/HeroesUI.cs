@@ -30,7 +30,9 @@ namespace _Game.Scripts.UI
 
         [Space(20)]
         [SerializeField] 
-        private Button _infoHeroBtn, _statHeroBtn, _removeHeroBtn;
+        private Button _infoHeroBtn, _statHeroBtn;
+
+        public Button RemoveHeroBtn;
 
         [Space(20)]
         [SerializeField] 
@@ -47,8 +49,8 @@ namespace _Game.Scripts.UI
             if (_statHeroBtn != null)
                 _statHeroBtn.onClick.AddListener(OnStatHeroButtonClicked);
 
-            if (_removeHeroBtn != null)
-                _removeHeroBtn.onClick.AddListener(() => RemoveHero(_selectedHero));
+            if (RemoveHeroBtn != null)
+                RemoveHeroBtn.onClick.AddListener(() => RemoveHero(_selectedHero));
 
             if (HeroManager.Instance != null)
                 HeroManager.Instance.OnAddHero += LoadAndDisplayHeroes;
@@ -58,7 +60,6 @@ namespace _Game.Scripts.UI
 
             LoadHeroCombatStatus();
         }
-
 
         private void OnDestroy() => HeroManager.Instance.OnAddHero -= LoadAndDisplayHeroes;
 
@@ -153,13 +154,23 @@ namespace _Game.Scripts.UI
         {
             if (heroSlot == null) return;
 
+            int slotIndex = _heroSlots.IndexOf(heroSlot);
+            if (slotIndex < 0) return;
+
             int heroID = heroSlot.HeroData.HeroID;
-            HeroManager.Instance.GetAvailableHeroes().RemoveAll(hero => hero.HeroID == heroID);
-            HeroManager.Instance.SaveDataHero();
-            UserManagerUI.Instance.RecalculateCombatPower();
+            string key = GetHeroCombatKey(heroID, slotIndex);
 
             _heroSlots.Remove(heroSlot);
             Destroy(heroSlot.gameObject);
+
+            var availableHeroes = HeroManager.Instance.GetAvailableHeroes();
+            if (slotIndex >= 0 && slotIndex < availableHeroes.Count)
+            {
+                availableHeroes.RemoveAt(slotIndex);
+            }
+
+            HeroManager.Instance.SaveDataHero();
+            UserManagerUI.Instance.RecalculateCombatPower();
 
             if (_selectedHero == heroSlot)
             {
@@ -168,7 +179,10 @@ namespace _Game.Scripts.UI
             }
 
             SpawnHeroManager.Instance.RemoveHero(heroID);
+
+            LoadAndDisplayHeroes();
         }
+
 
         private void ToggleHeroState(SlotHeroUI selectedHero)
         {
@@ -221,7 +235,7 @@ namespace _Game.Scripts.UI
             else
             {
                 _stateHeroTxt.text = "Combat";
-                _stateHeroTxt.color = Color.yellow;
+                _stateHeroTxt.color = Color.black;
             }
         }
 
@@ -239,24 +253,72 @@ namespace _Game.Scripts.UI
         {
             if (heroes == null || heroes.Count == 0)
             {
-                Debug.LogWarning("No heroes to display.");
                 return;
             }
+
+            if (_heroesContainer == null)
+            {
+                return;
+            }
+
+            if (_slotHeroPrefab == null)
+            {
+                return;
+            }
+
             foreach (Transform child in _heroesContainer)
-                Destroy(child.gameObject);
+            {
+                if (child != null)
+                    Destroy(child.gameObject);
+            }
 
             _heroSlots.Clear();
 
             foreach (var hero in heroes)
             {
+                if (hero == null)
+                {
+                    continue;
+                }
+
                 var slotHero = Instantiate(_slotHeroPrefab, _heroesContainer);
-                slotHero.SetHeroUI(hero.IconAvatarPath, hero, this);
+                if (slotHero == null)
+                {
+                    Debug.LogError("Failed to instantiate _slotHeroPrefab.");
+                    continue;
+                }
+
+                slotHero.SetHeroUI(hero.IconAvatarPath ?? string.Empty, hero, this);
 
                 string key = GetHeroCombatKey(hero.HeroID, _heroSlots.Count);
-                slotHero.IsInCombat = heroCombatStatus.ContainsKey(key) ? heroCombatStatus[key] : false;
+                if (heroCombatStatus != null)
+                {
+                    slotHero.IsInCombat = heroCombatStatus.ContainsKey(key) ? heroCombatStatus[key] : false;
+                }
+                else
+                {
+                    Debug.LogWarning("heroCombatStatus dictionary is null.");
+                    slotHero.IsInCombat = false;
+                }
 
                 _heroSlots.Add(slotHero);
             }
+        }
+
+
+        public void ClearAllHeroSlots()
+        {
+            if (_heroesContainer == null || _heroSlots == null)
+            {
+                Debug.LogError("HeroesUI: _heroesContainer or _heroSlots is null.");
+                return;
+            }
+
+            foreach (Transform child in _heroesContainer)
+            {
+                Destroy(child.gameObject);
+            }
+            _heroSlots.Clear();
         }
 
         private void OnApplicationQuit() => SaveHeroCombatStatus();

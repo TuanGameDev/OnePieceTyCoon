@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c63ed956015d7604284b2f0fd11a0f46, type: 3}
-  m_Name: Chopper_D_Agility
+  m_Name: Usopp_C_Agility
   m_EditorClassIdentifier: 
-  HeroID: 6
-  HeroAvatar: {fileID: 21300000, guid: 672eaaa4115598e40abe24721b6bba21, type: 3}
-  IconAvatar: {fileID: 21300000, guid: 6b30c85bda698cf43aa6e625dd30049a, type: 3}
+  HeroID: 4
+  HeroAvatar: {fileID: 21300000, guid: 59bbcce999370364eb6867b43ecc56c7, type: 3}
+  IconAvatar: {fileID: 21300000, guid: eac56bb942dccd640a8e81c41d72f909, type: 3}
   HeroAvatarPath: 
   IconAvatarPath: 
   Power: 100
@@ -26,6 +26,6 @@ MonoBehaviour:
     AttackDamage: 1
     CurrentExp: 0
     MaxExp: 20
-  CharacterName: 6
-  Rarity: 5
+  CharacterName: 5
+  Rarity: 4
   Elemental: 1
