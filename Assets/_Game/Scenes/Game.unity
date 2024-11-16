@@ -421,6 +421,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8943604}
   m_CullTransparentMesh: 1
+--- !u!1 &82032759
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 82032760}
+  - component: {fileID: 82032762}
+  - component: {fileID: 82032761}
+  m_Layer: 5
+  m_Name: BG
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &82032760
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82032759}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 777571841}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &82032761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82032759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 9b18898988c2c94448c7645dc8d64443, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &82032762
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82032759}
+  m_CullTransparentMesh: 1
 --- !u!1 &88461196
 GameObject:
   m_ObjectHideFlags: 0
@@ -6716,6 +6791,42 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 773118894}
   m_CullTransparentMesh: 1
+--- !u!1 &777571840
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 777571841}
+  m_Layer: 5
+  m_Name: PvpUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &777571841
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777571840}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 82032760}
+  m_Father: {fileID: 1713235270}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &793844489
 GameObject:
   m_ObjectHideFlags: 0
@@ -15795,6 +15906,7 @@ RectTransform:
   - {fileID: 1607947559}
   - {fileID: 1256776554}
   - {fileID: 2006202275}
+  - {fileID: 777571841}
   m_Father: {fileID: 1058572097}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -54930,50 +55042,62 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a9a339abf0e89b4d99f4c2ec2122495, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HeroNormalDictionary:
+  HeroCommonDictionary:
     keyData:
     - CharacterName: 1
-      Rarity: 2
-      Elemental: 1
-    - CharacterName: 2
-      Rarity: 3
+      Rarity: 5
       Elemental: 2
-    - CharacterName: 4
-      Rarity: 4
-      Elemental: 3
+    - CharacterName: 2
+      Rarity: 5
+      Elemental: 1
     - CharacterName: 3
       Rarity: 5
-      Elemental: 4
+      Elemental: 1
+    - CharacterName: 4
+      Rarity: 5
+      Elemental: 3
+    - CharacterName: 5
+      Rarity: 5
+      Elemental: 1
+    - CharacterName: 6
+      Rarity: 5
+      Elemental: 1
+    - CharacterName: 7
+      Rarity: 4
+      Elemental: 1
+    - CharacterName: 8
+      Rarity: 3
+      Elemental: 3
+    - CharacterName: 9
+      Rarity: 4
+      Elemental: 1
+    - CharacterName: 12
+      Rarity: 2
+      Elemental: 1
     valueData:
     - {fileID: 11400000, guid: 099d7f5b7ef98014e839821b3f8a5af1, type: 2}
     - {fileID: 11400000, guid: ca7c00e32b72f1f42b7e44a65bba20fd, type: 2}
-    - {fileID: 11400000, guid: 2a5f3101a6a048f42b45f1bd25742d4e, type: 2}
     - {fileID: 11400000, guid: 6d5f5fae614e23d4583d8643c8a0a317, type: 2}
+    - {fileID: 11400000, guid: 2a5f3101a6a048f42b45f1bd25742d4e, type: 2}
+    - {fileID: 11400000, guid: 5cf4ce4b193427d4ab28455074c14d4e, type: 2}
+    - {fileID: 11400000, guid: 1036351a340379142af9c463bca56e1e, type: 2}
+    - {fileID: 11400000, guid: c8f5b19ca281e0e4493d76856a962427, type: 2}
+    - {fileID: 11400000, guid: d8037d157a3e4fb46a93dc17b75f4ea4, type: 2}
+    - {fileID: 11400000, guid: 1190299126137914ab4204b6ab4db726, type: 2}
+    - {fileID: 11400000, guid: b23d8c7ee4f7a4b48ae43180603e2f0f, type: 2}
   HeroLegendDictionary:
     keyData:
-    - CharacterName: 1
-      Rarity: 2
-      Elemental: 1
-    - CharacterName: 8
-      Rarity: 2
-      Elemental: 1
-    - CharacterName: 7
-      Rarity: 2
-      Elemental: 1
-    - CharacterName: 6
+    - CharacterName: 12
       Rarity: 2
       Elemental: 1
     - CharacterName: 10
       Rarity: 1
-      Elemental: 6
+      Elemental: 2
     - CharacterName: 11
       Rarity: 0
       Elemental: 5
     valueData:
-    - {fileID: 11400000, guid: 099d7f5b7ef98014e839821b3f8a5af1, type: 2}
-    - {fileID: 11400000, guid: d8037d157a3e4fb46a93dc17b75f4ea4, type: 2}
-    - {fileID: 11400000, guid: c8f5b19ca281e0e4493d76856a962427, type: 2}
-    - {fileID: 11400000, guid: 1036351a340379142af9c463bca56e1e, type: 2}
+    - {fileID: 11400000, guid: b23d8c7ee4f7a4b48ae43180603e2f0f, type: 2}
     - {fileID: 11400000, guid: dcc159d01227c6e479cb5c04bae25efc, type: 2}
     - {fileID: 11400000, guid: 3404c1a81a110894699b0420b5b79183, type: 2}
   HeroesAvailable:
@@ -62910,7 +63034,7 @@ MonoBehaviour:
   - {fileID: 294058656}
   - {fileID: 377798445}
   _spawnRate:
-    MaxEnemy: 10
+    MaxEnemy: 1
     SpawnRate: 5
   _currentEnemyInZone: 0
   _sizePool: 11

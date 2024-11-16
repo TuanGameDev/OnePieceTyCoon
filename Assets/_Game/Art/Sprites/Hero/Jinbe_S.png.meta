@@ -1,0 +1,504 @@
+fileFormatVersion: 2
+guid: 57ce10e0877f706459225b1a64d0483c
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 12
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Jinbe_S_0
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 807
+        width: 142
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3a7a5250de797e42b6d195a42a9c702
+      internalID: -279382913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jinbe_S_1
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 807
+        width: 142
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2a241cdcc7bd9e428b31cc685cfb0db
+      internalID: -498999361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jinbe_S_2
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 807
+        width: 142
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2730e75989572b4448034c8161a5d71b
+      internalID: -1442293568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jinbe_S_3
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 807
+        width: 150
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf96619f931d5d84194f6cad7cf723dc
+      internalID: 1316714023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jinbe_S_4
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 807
+        width: 159
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 490dd1516b4dd5a43a89dd366a73092a
+      internalID: 856100403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jinbe_S_5
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 583
+        width: 155
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3309ee4b55d9eb46bb42d34ee5e0757
+      internalID: 1761978829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jinbe_S_6
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 577
+        width: 156
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 814b54b0e250a8341a13b9a6029cddf1
+      internalID: -445914605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jinbe_S_41
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 236
+        width: 158
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c65b36d098e1a204dbd8568df9adf33b
+      internalID: 828502851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jinbe_S_42
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 236
+        width: 158
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1073ce27fa6c2e48860a79d12503268
+      internalID: 1003407693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jinbe_S_43
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 225
+        width: 172
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acbaee4d3977a634cb6425d5d68faebf
+      internalID: 1679994560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jinbe_S_52
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 193
+        width: 227
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdc5e02abab45474eb76e7a0f33ed052
+      internalID: 538546001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jinbe_S_58
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 8
+        width: 167
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dd7bcb6273e5ca4eb6a2a9d6622cbaf
+      internalID: 1695034965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jinbe_S_59
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 8
+        width: 166
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3e2d774dddd4124b8c8bb218c883680
+      internalID: 226631099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jinbe_S_60
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 1
+        width: 259
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32e5b2aac837c284b8750630e503bebb
+      internalID: 521222954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jinbe_S_61
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 1
+        width: 257
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c17db08684535544481bfe53b94a8f3b
+      internalID: 1878547339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Jinbe_S_0: -279382913
+      Jinbe_S_1: -498999361
+      Jinbe_S_10: -687684902
+      Jinbe_S_11: 87915777
+      Jinbe_S_12: -2029343481
+      Jinbe_S_13: 884213935
+      Jinbe_S_14: -489174598
+      Jinbe_S_15: -1086407297
+      Jinbe_S_16: -33683848
+      Jinbe_S_17: 165287948
+      Jinbe_S_18: 2022581308
+      Jinbe_S_19: 1568460241
+      Jinbe_S_2: -1442293568
+      Jinbe_S_20: 523288435
+      Jinbe_S_21: 45030587
+      Jinbe_S_22: 617774544
+      Jinbe_S_23: -966958473
+      Jinbe_S_24: 1348991913
+      Jinbe_S_25: 447325128
+      Jinbe_S_26: -19005099
+      Jinbe_S_27: -713893866
+      Jinbe_S_28: 1169678188
+      Jinbe_S_29: -1332019877
+      Jinbe_S_3: 1316714023
+      Jinbe_S_30: -1511657415
+      Jinbe_S_31: 28804535
+      Jinbe_S_32: -1872570086
+      Jinbe_S_33: -84439741
+      Jinbe_S_34: -455804514
+      Jinbe_S_35: 923847861
+      Jinbe_S_36: -614165615
+      Jinbe_S_37: -1360890774
+      Jinbe_S_38: -1457297477
+      Jinbe_S_39: 1749928475
+      Jinbe_S_4: 856100403
+      Jinbe_S_40: -1266613507
+      Jinbe_S_41: 828502851
+      Jinbe_S_42: 1003407693
+      Jinbe_S_43: 1679994560
+      Jinbe_S_44: 326706079
+      Jinbe_S_45: -1918193760
+      Jinbe_S_46: -860219214
+      Jinbe_S_47: -925979118
+      Jinbe_S_48: 1141869695
+      Jinbe_S_49: 916817895
+      Jinbe_S_5: 1761978829
+      Jinbe_S_50: 1877818657
+      Jinbe_S_51: -1834675584
+      Jinbe_S_52: 538546001
+      Jinbe_S_53: -12206632
+      Jinbe_S_54: 652822169
+      Jinbe_S_55: 999677768
+      Jinbe_S_56: -1920331510
+      Jinbe_S_57: -1991753542
+      Jinbe_S_58: 1695034965
+      Jinbe_S_59: 226631099
+      Jinbe_S_6: -445914605
+      Jinbe_S_60: 521222954
+      Jinbe_S_61: 1878547339
+      Jinbe_S_7: 756033395
+      Jinbe_S_8: 1774622756
+      Jinbe_S_9: -1757424272
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -11,10 +11,10 @@ namespace _Game.Scripts.Character.Eenmy
             ResetHeroState();
         }
 
-        public override void TryAttack()
+      /*  public override void TryAttack()
         {
             base.TryAttack();
-        }
+        }*/
 
         public override void Die()
         {

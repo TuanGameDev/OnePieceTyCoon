@@ -15,9 +15,9 @@ namespace _Game.Scripts.StatePatern
         {
             _targetPoint = character.GetRandomPatrolPoint();
 
-            if (character.Animator != null)
+            if (character.Animations != null)
             {
-                character.Animator.SetBool("Move", true);
+                character.Animations.PlayMove();
             }
 
             _isWaiting = false;
@@ -27,6 +27,7 @@ namespace _Game.Scripts.StatePatern
                 FlipTowardsTargetPoint(character, _targetPoint.position);
             }
         }
+
 
 
         public async void UpdateState(Character.CharacterController character)
@@ -51,9 +52,9 @@ namespace _Game.Scripts.StatePatern
 
             if (Vector3.Distance(character.transform.position, _targetPoint.position) < 0.1f)
             {
-                if (character.Animator != null)
+                if (character.Animations != null)
                 {
-                    character.Animator.SetBool("Move", false);
+                    character.Animations.PlayIdle();
                 }
 
                 _isWaiting = true;
@@ -61,9 +62,9 @@ namespace _Game.Scripts.StatePatern
 
                 _targetPoint = character.GetRandomPatrolPoint();
 
-                if (character.Animator != null)
+                if (character.Animations != null)
                 {
-                    character.Animator.SetBool("Move", true);
+                    character.Animations.PlayMove();
                 }
 
                 if (_targetPoint != null)
@@ -78,9 +79,9 @@ namespace _Game.Scripts.StatePatern
 
         public void ExitState(Character.CharacterController character)
         {
-            if (character.Animator != null)
+            if (character.Animations != null)
             {
-                character.Animator.SetBool("Move", false);
+                character.Animations.PlayIdle();
             }
         }
 
@@ -124,16 +125,19 @@ namespace _Game.Scripts.StatePatern
 
         private void FlipTowardsTargetPoint(Character.CharacterController character, Vector3 targetPosition)
         {
-            bool shouldFlipRight = targetPosition.x > character.transform.position.x;
-            bool shouldFlipLeft = targetPosition.x < character.transform.position.x;
+            if(character !=null)
+            {
+                bool shouldFlipRight = targetPosition.x > character.transform.position.x;
+                bool shouldFlipLeft = targetPosition.x < character.transform.position.x;
 
-            if (shouldFlipRight && !character.FaceRight)
-            {
-                character.FlipRight();
-            }
-            else if (shouldFlipLeft && character.FaceRight)
-            {
-                character.FlipLeft();
+                if (shouldFlipRight && !character.FaceRight)
+                {
+                    character.FlipRight();
+                }
+                else if (shouldFlipLeft && character.FaceRight)
+                {
+                    character.FlipLeft();
+                }
             }
         }
     }

@@ -30,6 +30,13 @@ namespace _Game.Scripts.UI
         private void Awake()
         {
             Invoke(nameof(LoadUserAvatar), 1f);
+            Invoke(nameof(InfomationUser), 1f);
+        }
+
+        private void InfomationUser()
+        {
+            _userNameTxt.text = "Name: " + RankingManager.Instance.UserInformation.UserName;
+            _userIDTxt.text = "ID: " + RankingManager.Instance.UserInformation.MasterPlayerID;
         }
         private void LoadUserAvatar()
         {
@@ -83,8 +90,6 @@ namespace _Game.Scripts.UI
             _avatarUser.enabled = true;
 
             RefreshAvatars();
-            _userNameTxt.text = "Name: " + RankingManager.Instance.UserInformation.UserName;
-            _userIDTxt.text = "ID: " + RankingManager.Instance.UserInformation.MasterPlayerID;
         }
 
         private void RefreshAvatars()

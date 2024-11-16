@@ -227,12 +227,21 @@ namespace _Game.Scripts.UI
 
         public void LoadAndDisplayHeroes()
         {
-            List<HeroData> availableHeroes = HeroManager.Instance.GetAvailableHeroes();
-            if (availableHeroes.Count > 0) DisplayHeroes(availableHeroes);
+            var availableHeroes = HeroManager.Instance?.GetAvailableHeroes();
+            if (availableHeroes != null && availableHeroes.Count > 0)
+            {
+                DisplayHeroes(availableHeroes);
+            }
         }
+
 
         public void DisplayHeroes(List<HeroData> heroes)
         {
+            if (heroes == null || heroes.Count == 0)
+            {
+                Debug.LogWarning("No heroes to display.");
+                return;
+            }
             foreach (Transform child in _heroesContainer)
                 Destroy(child.gameObject);
 

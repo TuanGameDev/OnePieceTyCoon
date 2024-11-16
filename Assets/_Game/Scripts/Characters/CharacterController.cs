@@ -2,7 +2,7 @@
 using UnityEngine;
 using _Game.Scripts.Scriptable_Object;
 using _Game.Scripts.Interfaces;
-using Cysharp.Threading.Tasks;
+using Sirenix.OdinInspector;
 using _Game.Scripts.StatePatern;
 using _Game.Scripts.Characters;
 using System;
@@ -14,14 +14,19 @@ namespace _Game.Scripts.Character
     {
         [Header("State")]
         public Animator Animator;
+
         public Transform RevertObject;
+
         public GameObject BaseRoot;
+
         public CharacterController AttackTarget;
+
+        public CharacterAnimations Animations;
 
         [Header("Attack Cooldown")]
         [SerializeField]
-        private float attackCooldown;
-        private float lastAttackTime;
+        private int _attackCooldown;
+        private float _lastAttackTime;
 
         [Header("Stats")]
         public HeroDataSO HeroDataSO;
@@ -38,17 +43,26 @@ namespace _Game.Scripts.Character
         public LayerMask Layer;
 
         private List<Transform> _patrolPoints = new List<Transform>();
-
-        private void Start()
+        protected virtual void Awake()
         {
-            Animator = RevertObject.GetComponentInChildren<Animator>();
-            CurrentStat = HeroDataSO.CharacterStat;
-            CurrentHP = CurrentStat.Hp;
-
-            SetState(new IdleState());
+          
         }
 
-        private void Update()
+        protected virtual void Start()
+        {
+            Animator = RevertObject.GetComponentInChildren<Animator>();
+            Animations = GetComponent<CharacterAnimations>();
+
+            if (Animations != null)
+            {
+                Animations.SetAnimator(Animator);
+            }
+            SetState(new IdleState());
+            CurrentStat = HeroDataSO.CharacterStat;
+            CurrentHP = CurrentStat.Hp;
+        }
+
+        protected virtual void Update()
         {
             CurrentState?.UpdateState(this);
         }
@@ -77,15 +91,13 @@ namespace _Game.Scripts.Character
                 return;
             }
 
-            if (IsAttack && Time.time >= lastAttackTime + attackCooldown)
+            if (IsAttack && Time.time >= _lastAttackTime + _attackCooldown)
             {
                 FlipTowardsTarget(AttackTarget);
-                SetState(new AttackState());
                 Attack();
+                Animator.SetTrigger("Attack");
             }
         }
-
-
 
         private void Attack()
         {
@@ -95,8 +107,7 @@ namespace _Game.Scripts.Character
                 {
                     damagable.TakeDamage(CurrentStat.AttackDamage);
                 }
-
-                lastAttackTime = Time.time;
+                _lastAttackTime = Time.time;
             }
         }
 

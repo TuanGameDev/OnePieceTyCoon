@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3146148642523767135}
   - component: {fileID: 4725540231208805801}
   - component: {fileID: 741523555141894788}
+  - component: {fileID: -581739906956768438}
   m_Layer: 7
   m_Name: EnemyController
   m_TagString: Enemy
@@ -123,7 +124,8 @@ MonoBehaviour:
   RevertObject: {fileID: 2829292177010639748}
   BaseRoot: {fileID: 0}
   AttackTarget: {fileID: 0}
-  attackCooldown: 1
+  Animations: {fileID: -581739906956768438}
+  _attackCooldown: 1
   HeroDataSO: {fileID: 0}
   CurrentStat:
     HeroLevel: 0
@@ -137,9 +139,24 @@ MonoBehaviour:
   IsAttack: 0
   IsDead: 0
   FaceRight: 0
+  OnHealthChanged:
+    m_PersistentCalls:
+      m_Calls: []
   Layer:
     serializedVersion: 2
     m_Bits: 64
+--- !u!114 &-581739906956768438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2469430339194945515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9599803644604c04583da480c6c519a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4841826736898355427
 GameObject:
   m_ObjectHideFlags: 0

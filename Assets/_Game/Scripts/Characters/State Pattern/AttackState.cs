@@ -7,7 +7,10 @@ namespace _Game.Scripts.StatePatern
     {
         public void EnterState(CharacterController character)
         {
-            character.Animator.SetTrigger("Attack");
+         /*   if (character.Animations != null)
+            {
+                character.Animator.SetTrigger("Attack");
+            }*/
         }
 
         public void UpdateState(CharacterController character)

@@ -14,5 +14,6 @@ namespace _Game.Scripts.Enums
         Franky,
         Jinbe,
         Shank,
+        Ace,
     }
 }

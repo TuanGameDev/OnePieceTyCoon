@@ -14,7 +14,7 @@ namespace _Game.Scripts.Manager
 {
     public class HeroManager : MonoBehaviour
     {
-        public HeroDictionary HeroNormalDictionary;
+        public HeroDictionary HeroCommonDictionary;
         public HeroDictionary HeroLegendDictionary;
 
         public List<HeroDataList> HeroesAvailable = new List<HeroDataList>();
@@ -62,7 +62,7 @@ namespace _Game.Scripts.Manager
                 return;
             }
 
-            foreach (var heroEntry in HeroNormalDictionary)
+            foreach (var heroEntry in HeroCommonDictionary)
             {
                 var heroDataSO = heroEntry.Value;
 
@@ -102,7 +102,7 @@ namespace _Game.Scripts.Manager
 
             var availableHeroList = HeroesAvailable[0].heroes;
 
-            foreach (var heroEntry in HeroNormalDictionary)
+            foreach (var heroEntry in HeroCommonDictionary)
             {
                 var heroDataSO = heroEntry.Value;
 

@@ -266,7 +266,7 @@ namespace _Game.Scripts.UI
             Rarity randomRarity = GetRandomRarityNormal();
 
             var heroesWithRarity = new List<HeroDataSO>();
-            foreach (var hero in HeroManager.Instance.HeroNormalDictionary.Values)
+            foreach (var hero in HeroManager.Instance.HeroCommonDictionary.Values)
             {
                 if (hero.Rarity == randomRarity)
                 {
@@ -301,9 +301,21 @@ namespace _Game.Scripts.UI
 
         public Rarity GetRandomRarityNormal()
         {
-            var rarities = new List<Rarity> { Rarity.A, Rarity.B, Rarity.C, Rarity.D };
-            return rarities[UnityEngine.Random.Range(0, rarities.Count)];
+            var randomValue = UnityEngine.Random.Range(0, 100);
+            Debug.Log("Tỉ lệ Gacha Common:" + randomValue);
+
+            if (randomValue < 15)
+            {
+                return Rarity.A;
+            }
+            else
+            {
+                var rarities = new List<Rarity> { Rarity.B, Rarity.C, Rarity.D };
+                return rarities[UnityEngine.Random.Range(0, rarities.Count)];
+            }
         }
+
+
 
         #endregion
 
@@ -350,7 +362,7 @@ namespace _Game.Scripts.UI
         public Rarity GetRandomRarityLegend()
         {
             int randomValue = UnityEngine.Random.Range(0, 100);
-            Debug.Log("Tỉ lệ Gacha:" + randomValue);
+            Debug.Log("Tỉ lệ Gacha Legend:" + randomValue);
 
             if (randomValue < 1)
             {

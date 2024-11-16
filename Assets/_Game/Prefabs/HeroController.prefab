@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: -2401194878278694739}
   - component: {fileID: 6297498763828140108}
   - component: {fileID: 3017598112379463855}
+  - component: {fileID: 468063442386684925}
   m_Layer: 6
   m_Name: HeroController
   m_TagString: Hero
@@ -154,7 +155,8 @@ MonoBehaviour:
   RevertObject: {fileID: 8379181056662908847}
   BaseRoot: {fileID: 0}
   AttackTarget: {fileID: 0}
-  attackCooldown: 1
+  Animations: {fileID: 468063442386684925}
+  _attackCooldown: 1
   HeroDataSO: {fileID: 0}
   CurrentStat:
     HeroLevel: 0
@@ -168,6 +170,23 @@ MonoBehaviour:
   IsAttack: 0
   IsDead: 0
   FaceRight: 0
+  OnHealthChanged:
+    m_PersistentCalls:
+      m_Calls: []
   Layer:
     serializedVersion: 2
     m_Bits: 128
+  IsReviving: 0
+  IsNeedHeal: 0
+--- !u!114 &468063442386684925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6813714406310080256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9599803644604c04583da480c6c519a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

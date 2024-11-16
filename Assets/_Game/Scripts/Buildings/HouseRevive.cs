@@ -82,7 +82,6 @@ namespace _Game.Scripts.Buildings
             hero.IsReviving = false;
             hero.IsNeedHeal = false;
             hero.SetState(new PatrolState());
-            hero.Animator.SetBool("Die", false);
         }
     }
 }

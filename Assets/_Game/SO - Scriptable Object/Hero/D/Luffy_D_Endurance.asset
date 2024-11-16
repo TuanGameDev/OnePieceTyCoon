@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c63ed956015d7604284b2f0fd11a0f46, type: 3}
+  m_Name: Luffy_D_Endurance
+  m_EditorClassIdentifier: 
+  HeroID: 0
+  HeroAvatar: {fileID: 21300000, guid: 7e7c4ce021042344d90f6429c6b0e6c8, type: 3}
+  IconAvatar: {fileID: 21300000, guid: 609ad0f5d43412040a11326647d06c45, type: 3}
+  HeroAvatarPath: 
+  IconAvatarPath: 
+  Power: 100
+  CharacterStat:
+    HeroLevel: 1
+    Hp: 10
+    Def: 0
+    MoveSpeed: 3
+    AttackDamage: 1
+    CurrentExp: 0
+    MaxExp: 20
+  CharacterName: 1
+  Rarity: 5
+  Elemental: 2

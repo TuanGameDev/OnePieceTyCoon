@@ -7,7 +7,7 @@ namespace _Game.Scripts.StatePatern
     {
         public void EnterState(Character.CharacterController character)
         {
-            character.Animator.SetBool("Die",true);
+            character.Animations.PlayDead();
             character.IsDead = true;
             character.AttackTarget = null;
             character.GetComponent<BoxCollider2D>().enabled = false;

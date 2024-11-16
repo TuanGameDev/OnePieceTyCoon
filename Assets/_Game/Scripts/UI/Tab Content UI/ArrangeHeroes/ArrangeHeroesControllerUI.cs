@@ -68,8 +68,12 @@ namespace _Game.Scripts.UI.Hero
                 .Where(hero => hero.Elemental == elemental)
                 .ToList();
 
-            HeroesUI.Instance.DisplayHeroes(filteredHeroes);
+            if (HeroesUI.Instance != null)
+            {
+                HeroesUI.Instance.DisplayHeroes(filteredHeroes);
+            }
         }
+
     }
 
     [System.Serializable]

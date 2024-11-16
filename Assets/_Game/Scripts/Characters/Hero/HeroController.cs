@@ -10,16 +10,14 @@ namespace _Game.Scripts.Character.Hero
         public bool IsReviving;
         public bool IsNeedHeal;
 
-        public override void TryAttack()
+     /*   public override void TryAttack()
         {
             base.TryAttack();
-        }
+        }*/
 
         public override void Die()
         {
             base.Die();
-
-            Animator.SetBool("Move", true);
 
              MoveToRevivePoint();
         }
@@ -32,9 +30,6 @@ namespace _Game.Scripts.Character.Hero
             {
                 MoveTowards(revivePoint);
             }
-
-            Animator.SetBool("Move", false);
-
             IsReviving = false;
             HouseRevive.Instance.ReviveHero(this);
         }
