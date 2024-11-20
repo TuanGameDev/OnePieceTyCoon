@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using _Game.Scripts.Helper;
 using _Game.Scripts.Character.Eenmy;
+using _Game.Scripts.StatePatern;
 
 namespace _Game.Scripts.Manager
 {
@@ -102,7 +103,6 @@ namespace _Game.Scripts.Manager
 
                 enemyInstance.SetPatrolPoints(_spawnPatrolPosition);
                 enemyInstance.SetHeroData(enemyData);
-
                 _currentEnemyInZone++;
             }
         }

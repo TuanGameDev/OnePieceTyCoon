@@ -15,7 +15,7 @@ MonoBehaviour:
   CharOut:
     keyData:
     - CharacterName: 0
-      Rarity: 5
-      Elemental: 1
+      Rarity: 4
+      Elemental: 0
     valueData:
     - Root: {fileID: 8587349390366295533, guid: fc7402ac5a4942d4bb3d754d81ffc650, type: 3}

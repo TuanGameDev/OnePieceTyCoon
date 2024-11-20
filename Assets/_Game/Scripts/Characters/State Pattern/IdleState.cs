@@ -6,7 +6,7 @@ namespace _Game.Scripts.Character
     {
         public void EnterState(CharacterController character)
         {
-          /*  if (character.Animator != null)
+           /* if (character.Animator != null)
             {
                 character.Animator.Play("Idle");
             }*/

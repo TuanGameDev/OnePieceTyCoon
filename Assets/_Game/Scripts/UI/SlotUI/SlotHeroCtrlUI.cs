@@ -16,9 +16,6 @@ namespace _Game.Scripts.UI
         private Image _healthBar;
 
         [SerializeField]
-        private Image _expBar;
-
-        [SerializeField]
         private TextMeshProUGUI _levelHeroTxt;
 
         private HeroController _heroCtrl;
@@ -44,7 +41,8 @@ namespace _Game.Scripts.UI
 
             if (_heroCtrl != null)
             {
-                _heroCtrl.OnHealthChanged.AddListener(UpdateHealthBarSmooth);
+                _heroCtrl.OnHealthChanged += UpdateHealthBarSmooth;
+                _heroCtrl.OnHealthChanged += UpdateUI;
                 UpdateUI();
             }
         }
@@ -55,7 +53,6 @@ namespace _Game.Scripts.UI
 
             _levelHeroTxt.text = $"Lv. " + _heroCtrl.HeroDataSO.CharacterStat.HeroLevel;
             UpdateHealthBarSmooth();
-            UpdateExpBar();
         }
 
         private void UpdateHealthBarSmooth()
@@ -88,20 +85,15 @@ namespace _Game.Scripts.UI
             _healthBar.fillAmount = targetFillAmount;
         }
 
-        private void UpdateExpBar()
-        {
-            if (_expBar != null && _heroCtrl != null)
-            {
-                _expBar.fillAmount = (float)_heroCtrl.HeroDataSO.CharacterStat.CurrentExp / _heroCtrl.HeroDataSO.CharacterStat.MaxExp;
-            }
-        }
-
         private void OnDestroy()
         {
             if (_heroCtrl != null)
             {
-                _heroCtrl.OnHealthChanged.RemoveListener(UpdateHealthBarSmooth);
+                _heroCtrl.OnHealthChanged -= UpdateHealthBarSmooth;
+                _heroCtrl.OnHealthChanged -= UpdateUI;
             }
         }
+
     }
 }
+

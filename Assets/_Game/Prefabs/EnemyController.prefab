@@ -134,17 +134,17 @@ MonoBehaviour:
     MoveSpeed: 0
     AttackDamage: 0
     CurrentExp: 0
-    MaxExp: 0
+    ExpToLevelUp: 0
   CurrentHP: 0
   IsAttack: 0
   IsDead: 0
   FaceRight: 0
-  OnHealthChanged:
-    m_PersistentCalls:
-      m_Calls: []
   Layer:
     serializedVersion: 2
     m_Bits: 64
+  ExpReward: 5
+  _itemPrefab: {fileID: 5388782085467762294, guid: b1476fcf893cea148a5e45bcd594b7a1, type: 3}
+  _droppable: {fileID: 11400000, guid: 19d38ab0f4f9ee24081acc0d56c85f7c, type: 2}
 --- !u!114 &-581739906956768438
 MonoBehaviour:
   m_ObjectHideFlags: 0

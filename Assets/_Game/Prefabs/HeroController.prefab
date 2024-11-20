@@ -165,17 +165,16 @@ MonoBehaviour:
     MoveSpeed: 0
     AttackDamage: 0
     CurrentExp: 0
-    MaxExp: 0
+    ExpToLevelUp: 0
   CurrentHP: 0
+  ExpReward: 0
   IsAttack: 0
   IsDead: 0
   FaceRight: 0
-  OnHealthChanged:
-    m_PersistentCalls:
-      m_Calls: []
   Layer:
     serializedVersion: 2
     m_Bits: 128
+  IsInCombat: 0
   IsReviving: 0
   IsNeedHeal: 0
 --- !u!114 &468063442386684925

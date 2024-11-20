@@ -62,7 +62,7 @@ namespace _Game.Scripts.UI
 
             _userNameInputField.onSelect.AddListener(delegate { OnInputFieldSelected(_userNameInputField); });
             LoadDataUser();
-            Invoke(nameof(UpdateCombatPowerDisplay), 1f);
+            Invoke(nameof(UpdateDisplayUser), 1f);
 
             HeroManager.Instance.OnAddHero += RecalculateCombatPower;
             HeroManager.Instance.OnRemoveHero += RecalculateCombatPower;
@@ -105,7 +105,7 @@ namespace _Game.Scripts.UI
             }
 
             _rankingManager.UserInformation.CombatPower = totalPower;
-            UpdateCombatPowerDisplay();
+            UpdateDisplayUser();
             UpdateLeaderboards(_rankingManager.UserInformation.CombatPower);
             SaveUserDataToPlayFab();
         }
@@ -116,7 +116,7 @@ namespace _Game.Scripts.UI
             _rankingManager.UserInformation.Diamond += 100000000;
         }
 
-        public void UpdateCombatPowerDisplay()
+        public void UpdateDisplayUser()
         {
             _userCombatPowerTxt.text = _rankingManager.UserInformation.CombatPower.ToString("N0");
             _userBeliTxt.text = _rankingManager.UserInformation.Beli.ToString("N0");
@@ -279,7 +279,7 @@ namespace _Game.Scripts.UI
 
         private void OnUpdateError(PlayFabError error)
         {
-            Debug.LogError("Error updating leaderboard: " + error.GenerateErrorReport());
+           // Debug.LogError("Error updating leaderboard: " + error.GenerateErrorReport());
         }
     }
 }

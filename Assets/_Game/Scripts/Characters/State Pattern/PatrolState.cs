@@ -1,9 +1,10 @@
-﻿using _Game.Scripts.Character;
+﻿using Cysharp.Threading.Tasks;
+using UnityEngine.TextCore.Text;
 using UnityEngine;
-using Cysharp.Threading.Tasks;
-
-namespace _Game.Scripts.StatePatern
+using _Game.Scripts.StatePatern;
+namespace _Game.Scripts.Character
 {
+
     public class PatrolState : ICharacterState
     {
         private Transform _targetPoint;
@@ -28,8 +29,6 @@ namespace _Game.Scripts.StatePatern
             }
         }
 
-
-
         public async void UpdateState(Character.CharacterController character)
         {
             if (_isWaiting)
@@ -48,6 +47,7 @@ namespace _Game.Scripts.StatePatern
                 character.SetState(new IdleState());
                 return;
             }
+
             character.MoveTowards(_targetPoint.position);
 
             if (Vector3.Distance(character.transform.position, _targetPoint.position) < 0.1f)
@@ -75,7 +75,6 @@ namespace _Game.Scripts.StatePatern
                 _isWaiting = false;
             }
         }
-
 
         public void ExitState(Character.CharacterController character)
         {
@@ -125,7 +124,7 @@ namespace _Game.Scripts.StatePatern
 
         private void FlipTowardsTargetPoint(Character.CharacterController character, Vector3 targetPosition)
         {
-            if(character !=null)
+            if (character != null)
             {
                 bool shouldFlipRight = targetPosition.x > character.transform.position.x;
                 bool shouldFlipLeft = targetPosition.x < character.transform.position.x;

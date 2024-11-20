@@ -1279,7 +1279,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _loadingTxt: {fileID: 1406032641}
   _barImg: {fileID: 1163653977}
-  _speedLoading: 50
+  _speedLoading: 40
   LoginBool: 0
 --- !u!224 &8206883791356901726
 RectTransform:

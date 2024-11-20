@@ -1,3 +1,4 @@
+using _Game.Scripts.Character;
 using _Game.Scripts.Character.Hero;
 using _Game.Scripts.Helper;
 using _Game.Scripts.StatePatern;
@@ -81,7 +82,8 @@ namespace _Game.Scripts.Buildings
 
             hero.IsReviving = false;
             hero.IsNeedHeal = false;
-            hero.SetState(new PatrolState());
+            hero.SetState(new IdleState());
+            hero.OnHealthChanged?.Invoke();
         }
     }
 }

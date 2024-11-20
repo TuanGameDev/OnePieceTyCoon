@@ -1,25 +1,39 @@
 ﻿using _Game.Scripts.Buildings;
+using _Game.Scripts.Manager;
 using _Game.Scripts.Scriptable_Object;
 using Cysharp.Threading.Tasks;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace _Game.Scripts.Character.Hero
 {
     public class HeroController : CharacterController
     {
+        public bool IsInCombat;
         public bool IsReviving;
         public bool IsNeedHeal;
-
-     /*   public override void TryAttack()
-        {
-            base.TryAttack();
-        }*/
 
         public override void Die()
         {
             base.Die();
 
              MoveToRevivePoint();
+        }
+
+        public void GainExp(int amount)
+        {
+            if (amount <= 0)
+            {
+                return;
+            }
+
+            HeroDataSO.CharacterStat.CurrentExp += amount;
+
+            if (HeroDataSO.CharacterStat.CurrentExp >= HeroDataSO.CharacterStat.ExpToLevelUp)
+            {
+                HeroDataSO.CharacterStat.CurrentExp = HeroDataSO.CharacterStat.ExpToLevelUp;
+            }
+            HeroManager.Instance.SaveDataHero();
         }
 
         private void MoveToRevivePoint()
@@ -29,6 +43,7 @@ namespace _Game.Scripts.Character.Hero
             while (Vector3.Distance(transform.position, revivePoint) > 0.1f)
             {
                 MoveTowards(revivePoint);
+                AttackTarget = null;
             }
             IsReviving = false;
             HouseRevive.Instance.ReviveHero(this);

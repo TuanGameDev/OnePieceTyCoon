@@ -1,5 +1,8 @@
 ﻿using _Game.Scripts.Characters;
 using _Game.Scripts.Enums;
+using _Game.Scripts.Non_Mono;
+using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 namespace _Game.Scripts.Scriptable_Object
 {
@@ -18,6 +21,7 @@ namespace _Game.Scripts.Scriptable_Object
         public CharacterName CharacterName;
         public Rarity Rarity;
         public Elemental Elemental;
+        public List<LevelStats> LevelStats;
     }
     [System.Serializable]
     public class HeroData
@@ -34,28 +38,6 @@ namespace _Game.Scripts.Scriptable_Object
         public CharacterName CharacterName;
         public Rarity Rarity;
         public Elemental Elemental;
-
+        public List<LevelStats> LevelStats;
     }
-
-    public class HeroDataConverter
-    {
-        public static HeroData ConvertHeroDataSOToHeroData(HeroDataSO heroDataSO)
-        {
-            HeroData heroData = new HeroData
-            {
-              HeroID = heroDataSO.HeroID,
-              HeroAvatar = heroDataSO.HeroAvatar,
-              IconAvatar = heroDataSO.IconAvatar,
-              HeroAvatarPath = heroDataSO.HeroAvatarPath,
-              IconAvatarPath = heroDataSO.IconAvatarPath,
-              Power = heroDataSO.Power,
-              CharacterStat = heroDataSO.CharacterStat,
-              CharacterName = heroDataSO.CharacterName,
-              Rarity = heroDataSO.Rarity,
-              Elemental = heroDataSO.Elemental,
-            };
-            return heroData;
-        }
-    }
-
 }

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f70fd78bf36126d4e84db2ef7231dc00, type: 3}
+  m_Name: DroppableSO
+  m_EditorClassIdentifier: 
+  PosibleDropItems:
+    keyData:
+    - {fileID: 11400000, guid: 375e0b31f4cb5d34088371731c9e0404, type: 2}
+    - {fileID: 11400000, guid: c32f02b83faf23e429cb13c998d41740, type: 2}
+    valueData:
+    - amountMin: 50
+      amountMax: 100
+    - amountMin: 5
+      amountMax: 10

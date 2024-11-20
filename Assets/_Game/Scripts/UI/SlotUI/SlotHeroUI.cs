@@ -27,12 +27,9 @@ namespace _Game.Scripts.UI
         [SerializeField] 
         private Button _selectedBtn;
 
-        [SerializeField] 
-        private HeroData _heroData;
+        public HeroData HeroData;
 
         public bool IsInCombat;
-
-        public HeroData HeroData => _heroData;
 
         public void SetHeroUI(string avatarPath, HeroData heroData, HeroesUI heroesUI)
         {
@@ -45,18 +42,18 @@ namespace _Game.Scripts.UI
                 }
             }
 
-            _heroData = heroData;
+            HeroData = heroData;
 
-            if (_elementalImgDictionary != null && _heroData != null)
+            if (_elementalImgDictionary != null && HeroData != null)
             {
-                if (_elementalImgDictionary.TryGetValue(_heroData.Elemental, out Sprite elementalSprite))
+                if (_elementalImgDictionary.TryGetValue(HeroData.Elemental, out Sprite elementalSprite))
                 {
                     _elementalHero.sprite = elementalSprite;
                     _elementalHero.gameObject.SetActive(true);
                 }
             }
 
-            UpdateStarImages(_heroData.Rarity);
+            UpdateStarImages(HeroData.Rarity);
 
             _selectedImg.gameObject.SetActive(false);
 

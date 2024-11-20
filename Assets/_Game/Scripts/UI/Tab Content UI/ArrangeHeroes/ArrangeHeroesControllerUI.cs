@@ -86,7 +86,6 @@ namespace _Game.Scripts.UI.Hero
             }
         }
 
-
     }
 
     [System.Serializable]

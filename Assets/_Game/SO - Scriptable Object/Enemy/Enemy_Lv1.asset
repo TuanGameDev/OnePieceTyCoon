@@ -20,12 +20,13 @@ MonoBehaviour:
   Power: 100
   CharacterStat:
     HeroLevel: 1
-    Hp: 10
+    Hp: 20
     Def: 0
     MoveSpeed: 3
-    AttackDamage: 1
+    AttackDamage: 2
     CurrentExp: 0
-    MaxExp: 0
+    ExpToLevelUp: 0
   CharacterName: 0
-  Rarity: 5
-  Elemental: 1
+  Rarity: 4
+  Elemental: 0
+  LevelStats: []

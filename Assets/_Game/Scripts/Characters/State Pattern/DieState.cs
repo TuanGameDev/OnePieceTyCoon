@@ -9,7 +9,7 @@ namespace _Game.Scripts.StatePatern
         {
             character.Animations.PlayDead();
             character.IsDead = true;
-            character.AttackTarget = null;
+            //character.AttackTarget = null;
             character.GetComponent<BoxCollider2D>().enabled = false;
 
         }

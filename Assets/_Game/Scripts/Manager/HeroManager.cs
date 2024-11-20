@@ -10,6 +10,7 @@ using _Game.Scripts.Helper;
 using System;
 using UnityEngine.Events;
 using System.Linq;
+using _Game.Scripts.Characters;
 
 namespace _Game.Scripts.Manager
 {
@@ -45,10 +46,15 @@ namespace _Game.Scripts.Manager
         {
             LoadDataHero();
         }
-
-        [Button("AddHero")]
-        public void AddHero()
+        [Button("Add Hero")]
+        public void AddHero(HeroData hero)
         {
+            if (hero == null)
+            {
+                Debug.LogWarning("Hero bị null, không thể thêm.");
+                return;
+            }
+
             if (HeroesAvailable.Count == 0)
             {
                 HeroesAvailable.Add(new HeroDataList { heroes = new List<HeroData>() });
@@ -56,42 +62,67 @@ namespace _Game.Scripts.Manager
 
             var availableHeroList = HeroesAvailable[0].heroes;
 
-            // Kiểm tra nếu danh sách đã đầy
             if (availableHeroList.Count >= MaxHeroSlot)
             {
                 Debug.LogWarning("Hero đã đầy! Không thể thêm hero mới.");
                 return;
             }
+            HeroData newHero = CloneHero(hero);
 
-            foreach (var heroEntry in HeroCommonDictionary)
-            {
-                var heroDataSO = heroEntry.Value;
-
-                HeroData newHeroData = new HeroData
-                {
-                    HeroID = heroDataSO.HeroID,
-                    HeroAvatar = heroDataSO.HeroAvatar,
-                    CharacterStat = heroDataSO.CharacterStat,
-                    Rarity = heroDataSO.Rarity,
-                    Elemental = heroDataSO.Elemental,
-                    CharacterName = heroDataSO.CharacterName,
-                    Power = heroDataSO.Power,
-                    IconAvatarPath = "Portrait/" + heroDataSO.IconAvatar.name,
-                    HeroAvatarPath = "Artworks/" + heroDataSO.HeroAvatar.name
-                };
-
-                availableHeroList.Add(newHeroData);
-                OnAddHero?.Invoke();
-
-                if (availableHeroList.Count >= MaxHeroSlot)
-                {
-                    Debug.LogWarning("Danh sách hero đã đạt giới hạn sau khi thêm hero mới.");
-                    break;
-                }
-            }
-
+            availableHeroList.Add(newHero);
+            Debug.Log($"Hero {newHero.CharacterName} đã được thêm.");
+            OnAddHero?.Invoke();
             SaveDataHero();
         }
+        private HeroData CloneHero(HeroData original)
+        {
+            HeroData clone = new HeroData
+            {
+                HeroID = original.HeroID,
+                HeroAvatar = original.HeroAvatar,
+                IconAvatar = original.IconAvatar,
+                HeroAvatarPath = original.HeroAvatarPath,
+                IconAvatarPath = original.IconAvatarPath,
+                Power = original.Power,
+                CharacterStat = CloneCharacterStat(original.CharacterStat),
+                CharacterName = original.CharacterName,
+                Rarity = original.Rarity,
+                Elemental = original.Elemental,
+                LevelStats = new List<LevelStats>(original.LevelStats.Count)
+            };
+
+            foreach (var levelStat in original.LevelStats)
+            {
+                clone.LevelStats.Add(CloneLevelStat(levelStat));
+            }
+
+            return clone;
+        }
+        private CharacterStat CloneCharacterStat(CharacterStat original)
+        {
+            if (original == null) return null;
+
+            return new CharacterStat
+            {
+                HeroLevel = original.HeroLevel,
+                Hp = original.Hp,
+                Def = original.Def,
+                MoveSpeed = original.MoveSpeed,
+                AttackDamage = original.AttackDamage,
+                CurrentExp = original.CurrentExp,
+                ExpToLevelUp = original.ExpToLevelUp
+            };
+        }
+        private LevelStats CloneLevelStat(LevelStats original)
+        {
+            if (original == null) return null;
+
+            return new LevelStats
+            {
+                StatLevel = CloneCharacterStat(original.StatLevel)
+            };
+        }
+
 
         [Button("RemoveHero")]
         public void RemoveHero()
@@ -178,7 +209,7 @@ namespace _Game.Scripts.Manager
             },
             result =>
             {
-                Debug.Log("Dữ liệu hero đã được lưu thành công lên PlayFab!");
+                //Debug.Log("Dữ liệu hero đã được lưu thành công lên PlayFab!");
             },
             error =>
             {

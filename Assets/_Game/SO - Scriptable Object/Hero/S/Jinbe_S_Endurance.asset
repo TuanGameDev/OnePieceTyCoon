@@ -20,12 +20,93 @@ MonoBehaviour:
   Power: 500
   CharacterStat:
     HeroLevel: 1
-    Hp: 18
+    Hp: 20
     Def: 0
     MoveSpeed: 3
-    AttackDamage: 2
+    AttackDamage: 5
     CurrentExp: 0
-    MaxExp: 20
+    ExpToLevelUp: 10
   CharacterName: 10
   Rarity: 1
   Elemental: 2
+  LevelStats:
+  - StatLevel:
+      HeroLevel: 1
+      Hp: 20
+      Def: 0
+      MoveSpeed: 3
+      AttackDamage: 5
+      CurrentExp: 0
+      ExpToLevelUp: 10
+  - StatLevel:
+      HeroLevel: 2
+      Hp: 22
+      Def: 0
+      MoveSpeed: 3
+      AttackDamage: 5
+      CurrentExp: 0
+      ExpToLevelUp: 15
+  - StatLevel:
+      HeroLevel: 3
+      Hp: 24
+      Def: 0
+      MoveSpeed: 3
+      AttackDamage: 5
+      CurrentExp: 0
+      ExpToLevelUp: 20
+  - StatLevel:
+      HeroLevel: 4
+      Hp: 26
+      Def: 0
+      MoveSpeed: 3
+      AttackDamage: 5
+      CurrentExp: 0
+      ExpToLevelUp: 25
+  - StatLevel:
+      HeroLevel: 5
+      Hp: 28
+      Def: 0
+      MoveSpeed: 3
+      AttackDamage: 5
+      CurrentExp: 0
+      ExpToLevelUp: 30
+  - StatLevel:
+      HeroLevel: 6
+      Hp: 30
+      Def: 0
+      MoveSpeed: 3
+      AttackDamage: 5
+      CurrentExp: 0
+      ExpToLevelUp: 35
+  - StatLevel:
+      HeroLevel: 7
+      Hp: 32
+      Def: 0
+      MoveSpeed: 3
+      AttackDamage: 5
+      CurrentExp: 0
+      ExpToLevelUp: 40
+  - StatLevel:
+      HeroLevel: 8
+      Hp: 34
+      Def: 0
+      MoveSpeed: 3
+      AttackDamage: 5
+      CurrentExp: 0
+      ExpToLevelUp: 45
+  - StatLevel:
+      HeroLevel: 9
+      Hp: 36
+      Def: 0
+      MoveSpeed: 3
+      AttackDamage: 5
+      CurrentExp: 0
+      ExpToLevelUp: 50
+  - StatLevel:
+      HeroLevel: 10
+      Hp: 42
+      Def: 0
+      MoveSpeed: 3
+      AttackDamage: 10
+      CurrentExp: 0
+      ExpToLevelUp: 50

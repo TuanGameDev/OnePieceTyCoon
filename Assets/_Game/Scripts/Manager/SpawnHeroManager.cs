@@ -45,7 +45,8 @@ namespace _Game.Scripts.Manager
                 tempHeroDataSO.Elemental = heroData.Elemental;
                 tempHeroDataSO.Power = heroData.Power;
                 tempHeroDataSO.CharacterName = heroData.CharacterName;
-
+                tempHeroDataSO.LevelStats = heroData.LevelStats;
+                heroInstance.IsInCombat = true;
                 heroInstance.SetPatrolPoints(_spawnPatrolPosition);
 
                 CharacterState key = new CharacterState(tempHeroDataSO.CharacterName, tempHeroDataSO.Rarity, tempHeroDataSO.Elemental);

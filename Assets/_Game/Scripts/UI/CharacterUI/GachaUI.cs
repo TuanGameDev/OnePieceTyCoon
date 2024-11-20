@@ -1,6 +1,8 @@
-﻿using _Game.Scripts.Enums;
+﻿using _Game.Scripts.Characters;
+using _Game.Scripts.Enums;
 using _Game.Scripts.Helper;
 using _Game.Scripts.Manager;
+using _Game.Scripts.Non_Mono;
 using _Game.Scripts.Scriptable_Object;
 using _Game.Scripts.UI;
 using Sirenix.OdinInspector;
@@ -68,11 +70,11 @@ namespace _Game.Scripts.UI
             _gachaCommonBtn.onClick.AddListener(() => SetGachaState(StateGacha.Common));
             _gachaLegendBtn.onClick.AddListener(() => SetGachaState(StateGacha.Legend));
             _getHeroBtn.onClick.AddListener(GetHero);
-            Invoke(nameof(UpdateBeliAndDiamond), 1f);
         }
 
         private void OnEnable()
         {
+            UpdateBeliAndDiamond();
             _videoPlayer.loopPointReached += OnVideoEnd;
         }
 
@@ -125,22 +127,28 @@ namespace _Game.Scripts.UI
 
         private void GetHero()
         {
+            if (_gachaHeroes.Count == 0)
+            {
+                Debug.LogWarning("Không có hero nào để thêm.");
+                return;
+            }
             foreach (var hero in _gachaHeroes)
             {
-                HeroManager.Instance.HeroesAvailable[0].heroes.Add(hero);
+                HeroManager.Instance.AddHero(hero);
             }
 
             _gachaHeroes.Clear();
 
             _panelListHero.SetActive(false);
+
             foreach (Transform child in _container)
             {
                 Destroy(child.gameObject);
             }
-            HeroManager.Instance.SaveDataHero();
             HeroesUI.Instance.UpdateHeroSlotText();
-            UserManagerUI.Instance.UpdateCombatPowerDisplay();
+            UserManagerUI.Instance.UpdateDisplayUser();
         }
+
 
         public void GachaX1(int amount)
         {
@@ -278,17 +286,29 @@ namespace _Game.Scripts.UI
             {
                 HeroDataSO selectedHeroDataSO = heroesWithRarity[UnityEngine.Random.Range(0, heroesWithRarity.Count)];
 
+                CharacterStat characterStatClone = selectedHeroDataSO.CharacterStat.Clone();
+
+                List<LevelStats> levelStatsClone = new List<LevelStats>();
+                foreach (var levelStat in selectedHeroDataSO.LevelStats)
+                {
+                    levelStatsClone.Add(new LevelStats
+                    {
+                        StatLevel = levelStat.StatLevel.Clone()
+                    });
+                }
+
                 HeroData newHeroData = new HeroData
                 {
                     HeroID = selectedHeroDataSO.HeroID,
                     HeroAvatar = selectedHeroDataSO.HeroAvatar,
-                    CharacterStat = selectedHeroDataSO.CharacterStat,
+                    CharacterStat = characterStatClone,
                     Rarity = randomRarity,
                     Elemental = selectedHeroDataSO.Elemental,
                     CharacterName = selectedHeroDataSO.CharacterName,
                     Power = selectedHeroDataSO.Power,
-                    IconAvatarPath = "Portrait/" + selectedHeroDataSO.IconAvatar.name,
-                    HeroAvatarPath = "Artworks/" + selectedHeroDataSO.HeroAvatar.name
+                    IconAvatarPath = $"Portrait/{selectedHeroDataSO.IconAvatar.name}",
+                    HeroAvatarPath = $"Artworks/{selectedHeroDataSO.HeroAvatar.name}",
+                    LevelStats = levelStatsClone
                 };
 
                 _gachaHeroes.Add(newHeroData);
@@ -298,6 +318,7 @@ namespace _Game.Scripts.UI
                 Debug.LogWarning("Không tìm thấy hero nào với rarity được chọn trong HeroNormalDictionary.");
             }
         }
+
 
         public Rarity GetRandomRarityNormal()
         {
@@ -338,17 +359,30 @@ namespace _Game.Scripts.UI
             {
                 HeroDataSO selectedHeroDataSO = heroesWithRarity[UnityEngine.Random.Range(0, heroesWithRarity.Count)];
 
+                CharacterStat characterStatClone = selectedHeroDataSO.CharacterStat.Clone();
+
+                List<LevelStats> levelStatsClone = new List<LevelStats>();
+                foreach (var levelStat in selectedHeroDataSO.LevelStats)
+                {
+                    levelStatsClone.Add(new LevelStats
+                    {
+                        StatLevel = levelStat.StatLevel.Clone()
+                    });
+                }
+
+
                 HeroData newHeroData = new HeroData
                 {
                     HeroID = selectedHeroDataSO.HeroID,
                     HeroAvatar = selectedHeroDataSO.HeroAvatar,
-                    CharacterStat = selectedHeroDataSO.CharacterStat,
+                    CharacterStat = characterStatClone,
                     Rarity = randomRarity,
                     Elemental = selectedHeroDataSO.Elemental,
                     CharacterName = selectedHeroDataSO.CharacterName,
                     Power = selectedHeroDataSO.Power,
-                    IconAvatarPath = "Portrait/" + selectedHeroDataSO.IconAvatar.name,
-                    HeroAvatarPath = "Artworks/" + selectedHeroDataSO.HeroAvatar.name
+                    IconAvatarPath = $"Portrait/{selectedHeroDataSO.IconAvatar.name}",
+                    HeroAvatarPath = $"Artworks/{selectedHeroDataSO.HeroAvatar.name}",
+                    LevelStats = levelStatsClone
                 };
 
                 _gachaHeroes.Add(newHeroData);

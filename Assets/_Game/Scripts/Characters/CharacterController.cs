@@ -2,7 +2,6 @@
 using UnityEngine;
 using _Game.Scripts.Scriptable_Object;
 using _Game.Scripts.Interfaces;
-using Sirenix.OdinInspector;
 using _Game.Scripts.StatePatern;
 using _Game.Scripts.Characters;
 using System;
@@ -28,17 +27,23 @@ namespace _Game.Scripts.Character
         private int _attackCooldown;
         private float _lastAttackTime;
 
+        [Space(10)]
         [Header("Stats")]
         public HeroDataSO HeroDataSO;
         public CharacterStat CurrentStat;
+
+        [Space(10)]
         public int CurrentHP;
 
+        [Space(10)]
         public bool IsAttack = false;
         public bool IsDead = false;
         public bool FaceRight = false;
 
-        public UnityEvent OnHealthChanged;
+        public Action OnHealthChanged = delegate { };
+        public Action OnDie;
 
+        [Space(10)]
         public ICharacterState CurrentState;
         public LayerMask Layer;
 
@@ -128,7 +133,9 @@ namespace _Game.Scripts.Character
         public virtual void Die()
         {
             SetState(new DieState());
+            OnDie?.Invoke();
         }
+
         public void FlipRight()
         {
             if (!FaceRight)
