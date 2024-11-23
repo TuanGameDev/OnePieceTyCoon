@@ -49,9 +49,6 @@ namespace _Game.Scripts.UI
         private Image _iconX1, _iconX10;
 
         [SerializeField]
-        private VideoPlayer _videoPlayer;
-
-        [SerializeField]
         private TextMeshProUGUI _nameBoxTxt, _messageTxt, _beliTxt, _diamondTxt;
 
         [SerializeField]
@@ -59,6 +56,9 @@ namespace _Game.Scripts.UI
 
         [SerializeField]
         private RankingManager _rankingManager;
+
+        [SerializeField]
+        private VideoPlayerFromStreamingAssets _videoPlayerFSA;
 
         private void Awake()
         {
@@ -75,12 +75,12 @@ namespace _Game.Scripts.UI
         private void OnEnable()
         {
             UpdateBeliAndDiamond();
-            _videoPlayer.loopPointReached += OnVideoEnd;
+            _videoPlayerFSA.videoPlayer.loopPointReached += OnVideoEnd;
         }
 
         private void OnDisable()
         {
-            _videoPlayer.loopPointReached -= OnVideoEnd;
+            _videoPlayerFSA.videoPlayer.loopPointReached -= OnVideoEnd;
         }
 
         public void OnPointerDown(PointerEventData eventData)
@@ -176,11 +176,12 @@ namespace _Game.Scripts.UI
                 UpdateBeliAndDiamond();
                 HeroesUI.Instance.UpdateHeroSlotText();
                 _introVideoGacha.SetActive(true);
-                _videoPlayer.Play();
+                //_videoPlayerFSA.videoPlayer.Play();
                 UserManagerUI.Instance.SaveUserInformation();
             }
             else
             {
+                _messageTxt.gameObject.SetActive(true);
                 _messageTxt.text = "Not enough money to do Gacha x1.";
                 _messageTxt.color = Color.red;
                 StartCoroutine(HideTxt(1f));
@@ -222,11 +223,12 @@ namespace _Game.Scripts.UI
                 UpdateBeliAndDiamond();
                 HeroesUI.Instance.UpdateHeroSlotText();
                 _introVideoGacha.SetActive(true);
-                _videoPlayer.Play();
+                //_videoPlayerFSA.videoPlayer.Play();
                 UserManagerUI.Instance.SaveUserInformation();
             }
             else
             {
+                _messageTxt.gameObject.SetActive(true);
                 _messageTxt.text = "Not enough money to do Gacha x10.";
                 _messageTxt.color = Color.red;
                 StartCoroutine(HideTxt(1f));
@@ -417,7 +419,7 @@ namespace _Game.Scripts.UI
         private IEnumerator HideTxt(float delay)
         {
             yield return new WaitForSeconds(delay);
-            _messageTxt.text = "";
+            _messageTxt.gameObject.SetActive(false);
         }
 
         private void UpdateBeliAndDiamond()

@@ -41,9 +41,10 @@ namespace _Game.Scripts.Manager
             _enemyPool = new ObjectPool<EnemyController>(_enemyBasePrefab, _sizePool, transform);
         }
 
-        private void Start()
+        private async void Start()
         {
-            _spawnTask = SpawnEnemies();
+            await UniTask.Delay(3000);
+            await SpawnEnemies();
         }
 
         private async UniTask SpawnEnemies()

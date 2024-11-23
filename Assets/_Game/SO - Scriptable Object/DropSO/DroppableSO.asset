@@ -17,7 +17,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 375e0b31f4cb5d34088371731c9e0404, type: 2}
     - {fileID: 11400000, guid: c32f02b83faf23e429cb13c998d41740, type: 2}
     valueData:
-    - amountMin: 50
-      amountMax: 100
-    - amountMin: 5
-      amountMax: 10
+    - amountMin: 10
+      amountMax: 50
+    - amountMin: 1
+      amountMax: 5

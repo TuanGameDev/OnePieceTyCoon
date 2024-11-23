@@ -26,6 +26,7 @@ namespace _Game.Scripts.Manager
 
         public List<UserInformation> Users = new List<UserInformation>();
         public static RankingManager Instance;
+
         private void Awake()
         {
             if (Instance == null)

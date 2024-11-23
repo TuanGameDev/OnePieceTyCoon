@@ -16,6 +16,14 @@ MonoBehaviour:
     keyData:
     - CharacterName: 0
       Rarity: 4
-      Elemental: 0
+      Elemental: 1
+    - CharacterName: 0
+      Rarity: 4
+      Elemental: 2
+    - CharacterName: 0
+      Rarity: 4
+      Elemental: 3
     valueData:
     - Root: {fileID: 8587349390366295533, guid: fc7402ac5a4942d4bb3d754d81ffc650, type: 3}
+    - Root: {fileID: 8587349390366295533, guid: dcb3954d36110624ca19384b2f3db17e, type: 3}
+    - Root: {fileID: 8587349390366295533, guid: 566336ee2fe289543a968d21e6714711, type: 3}

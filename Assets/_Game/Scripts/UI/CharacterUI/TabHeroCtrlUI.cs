@@ -1,3 +1,4 @@
+using Sirenix.OdinInspector;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,7 +19,7 @@ namespace _Game.Scripts.UI
         {
             _showTabUIBtn.onClick.AddListener(ToggleTab);
         }
-
+        [Button("ToggleTab")]
         private void ToggleTab()
         {
             if (_isTabOpen)
