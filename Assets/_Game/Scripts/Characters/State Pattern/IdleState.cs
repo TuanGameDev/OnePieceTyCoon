@@ -1,15 +1,16 @@
-using _Game.Scripts.StatePatern;
+﻿using _Game.Scripts.StatePatern;
+using Cysharp.Threading.Tasks;
 
 namespace _Game.Scripts.Character
 {
     public class IdleState : ICharacterState
     {
-        public void EnterState(CharacterController character)
+        public  void EnterState(CharacterController character)
         {
-           /* if (character.Animator != null)
+            if (character.Animator != null)
             {
-                character.Animator.Play("Idle");
-            }*/
+                character.Animations.PlayIdle();
+            }
         }
 
         public void UpdateState(CharacterController character)

@@ -5,7 +5,6 @@ using _Game.Scripts.Interfaces;
 using _Game.Scripts.StatePatern;
 using _Game.Scripts.Characters;
 using System;
-using UnityEngine.Events;
 
 namespace _Game.Scripts.Character
 {
@@ -62,7 +61,7 @@ namespace _Game.Scripts.Character
             {
                 Animations.SetAnimator(Animator);
             }
-            SetState(new IdleState());
+            SetState(new WaitingState());
             CurrentStat = HeroDataSO.CharacterStat;
             CurrentHP = CurrentStat.Hp;
         }
@@ -128,7 +127,6 @@ namespace _Game.Scripts.Character
                 Die();
             }
         }
-
 
         public virtual void Die()
         {

@@ -1,8 +1,6 @@
 ﻿using _Game.Scripts.Buildings;
 using _Game.Scripts.Manager;
 using _Game.Scripts.Scriptable_Object;
-using Cysharp.Threading.Tasks;
-using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace _Game.Scripts.Character.Hero

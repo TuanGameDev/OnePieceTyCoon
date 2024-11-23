@@ -93,7 +93,6 @@ namespace _Game.Scripts.UI
                 _heroCtrl.OnHealthChanged -= UpdateUI;
             }
         }
-
     }
 }
 

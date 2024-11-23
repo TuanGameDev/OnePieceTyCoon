@@ -1,0 +1,787 @@
+fileFormatVersion: 2
+guid: d20be246d7045994baa25c237da780d5
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: motion_11104_kaido_evolved_0003_0
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 818
+        width: 298
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28e04caf77650cc40a513491dd5668e5
+      internalID: 425523528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_11104_kaido_evolved_0003_1
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 977
+        width: 67
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9938952fa59b9c4b9caac23c7839533
+      internalID: -787250640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_11104_kaido_evolved_0003_2
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 819
+        width: 298
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 112cae338aa3dff429970b3a2ca6b0c3
+      internalID: 1220930373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_11104_kaido_evolved_0003_3
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 990
+        width: 50
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bbfa8b1b72764a4cbdb2e86903266fc
+      internalID: -708402890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_11104_kaido_evolved_0003_4
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 770
+        width: 334
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa13322fbef3af149bf1b3885961b80b
+      internalID: -62329592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_11104_kaido_evolved_0003_5
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 968
+        width: 124
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00c3e41dcd81259459d1e3a2e160e001
+      internalID: -630221573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_11104_kaido_evolved_0003_6
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 984
+        width: 74
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4158527cc997e2d49a01c1fdf1758c73
+      internalID: 71855426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_11104_kaido_evolved_0003_7
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 961
+        width: 80
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef1cce45883d4024585d1882372fd6ec
+      internalID: 164245764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_11104_kaido_evolved_0003_8
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 967
+        width: 57
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 094bc9708a2fa7c499372192fa3e4371
+      internalID: -615574494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_11104_kaido_evolved_0003_9
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 807
+        width: 35
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a44cc5ebf61cb241bcb0d33f28ce5e1
+      internalID: 770468367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_11104_kaido_evolved_0003_10
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 810
+        width: 50
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d713cda4ccfb39d4eadc021908e8d596
+      internalID: -151466189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_11104_kaido_evolved_0003_11
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 727
+        width: 106
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce1992041dc6fc54c8ac08c1e9975146
+      internalID: -588453473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_11104_kaido_evolved_0003_12
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 774
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05233c3fe729fbd4c8e6785c269b6515
+      internalID: 491835696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_11104_kaido_evolved_0003_13
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 512
+        width: 282
+        height: 285
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 616159fce26dd4443a53c2a6efa3ae12
+      internalID: -390579511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_11104_kaido_evolved_0003_14
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 621
+        width: 107
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98cd1da5515d28549bc95b4604b18b1f
+      internalID: -1535232955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_11104_kaido_evolved_0003_15
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 649
+        width: 138
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbacf72eaab35ce4bbb38c88210686c2
+      internalID: -1397857597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_11104_kaido_evolved_0003_16
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 715
+        width: 175
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea3c058098360c643bef6dc6e85f39c7
+      internalID: -143921426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_11104_kaido_evolved_0003_17
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 517
+        width: 118
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a61c100d14a56149b3bb9cc1993f9e5
+      internalID: 1984770701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_11104_kaido_evolved_0003_18
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 558
+        width: 56
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9aa8b0db90754847b67a2a2f1ce4544
+      internalID: 2099412940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_11104_kaido_evolved_0003_19
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 532
+        width: 150
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c29f9bf500cc1c14ebb8ad92e5dc7733
+      internalID: -901117868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_11104_kaido_evolved_0003_20
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 490
+        width: 239
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f7a406180df72c4fac8fbeba5254c59
+      internalID: -402864431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_11104_kaido_evolved_0003_21
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 514
+        width: 102
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7ec1da48ee68c1459fe0741a76f8703
+      internalID: -2093149407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_11104_kaido_evolved_0003_22
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 274
+        width: 239
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98ebe0a809e0e934cb0d3d78c6b9d6c4
+      internalID: 922977557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_11104_kaido_evolved_0003_23
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 274
+        width: 241
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e97043ec35402548b64fd1de069bc3c
+      internalID: 688208930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_11104_kaido_evolved_0003_24
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 274
+        width: 236
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ea2c476d56934140a34cadec8d319d8
+      internalID: -200955206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_11104_kaido_evolved_0003_25
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 274
+        width: 241
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: def7f38c07a730c41b12bc076b475e63
+      internalID: -720555982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_11104_kaido_evolved_0003_26
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 3
+        width: 246
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87870b833e023e54285656863993f973
+      internalID: -223347062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_11104_kaido_evolved_0003_27
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 14
+        width: 251
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f80ccba453163b34890db1005ce837da
+      internalID: -815061141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_11104_kaido_evolved_0003_28
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 13
+        width: 238
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f50d8b8e4662cd2449752df9e1b8d171
+      internalID: -1203851827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_11104_kaido_evolved_0003_29
+      rect:
+        serializedVersion: 2
+        x: 763
+        y: 14
+        width: 249
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb755dbcd4e9b17418b08ca569b7810d
+      internalID: 342769280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      motion_11104_kaido_evolved_0003_0: 425523528
+      motion_11104_kaido_evolved_0003_1: -787250640
+      motion_11104_kaido_evolved_0003_10: -151466189
+      motion_11104_kaido_evolved_0003_11: -588453473
+      motion_11104_kaido_evolved_0003_12: 491835696
+      motion_11104_kaido_evolved_0003_13: -390579511
+      motion_11104_kaido_evolved_0003_14: -1535232955
+      motion_11104_kaido_evolved_0003_15: -1397857597
+      motion_11104_kaido_evolved_0003_16: -143921426
+      motion_11104_kaido_evolved_0003_17: 1984770701
+      motion_11104_kaido_evolved_0003_18: 2099412940
+      motion_11104_kaido_evolved_0003_19: -901117868
+      motion_11104_kaido_evolved_0003_2: 1220930373
+      motion_11104_kaido_evolved_0003_20: -402864431
+      motion_11104_kaido_evolved_0003_21: -2093149407
+      motion_11104_kaido_evolved_0003_22: 922977557
+      motion_11104_kaido_evolved_0003_23: 688208930
+      motion_11104_kaido_evolved_0003_24: -200955206
+      motion_11104_kaido_evolved_0003_25: -720555982
+      motion_11104_kaido_evolved_0003_26: -223347062
+      motion_11104_kaido_evolved_0003_27: -815061141
+      motion_11104_kaido_evolved_0003_28: -1203851827
+      motion_11104_kaido_evolved_0003_29: 342769280
+      motion_11104_kaido_evolved_0003_3: -708402890
+      motion_11104_kaido_evolved_0003_4: -62329592
+      motion_11104_kaido_evolved_0003_5: -630221573
+      motion_11104_kaido_evolved_0003_6: 71855426
+      motion_11104_kaido_evolved_0003_7: 164245764
+      motion_11104_kaido_evolved_0003_8: -615574494
+      motion_11104_kaido_evolved_0003_9: 770468367
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
