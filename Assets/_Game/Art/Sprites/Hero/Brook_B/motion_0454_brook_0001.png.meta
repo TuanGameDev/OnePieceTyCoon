@@ -1,0 +1,367 @@
+fileFormatVersion: 2
+guid: 55f49df77cc308e45b5d5ec4b3bd6590
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: motion_0454_brook_0001_1
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 775
+        width: 111
+        height: 233
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7438f3d8b3c781a4f910e5b6459f8e87
+      internalID: 1802388967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_0454_brook_0001_2
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 774
+        width: 117
+        height: 248
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a056c90bd852ab84fafee3dc67411105
+      internalID: 1151868042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_0454_brook_0001_7
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 498
+        width: 198
+        height: 231
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da5ebb558e2be9946af2496b4f44672e
+      internalID: -695821061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_0454_brook_0001_17
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 295
+        width: 188
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f682d05d4d7f404ab955e9dee79e311
+      internalID: -318045565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_0454_brook_0001_19
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 295
+        width: 189
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ca01a7d2d8457e4bb53796a93729287
+      internalID: -1441479960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_0454_brook_0001_26
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 17
+        width: 128
+        height: 233
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 309ad24d27be4624fb82522e1b87c1ac
+      internalID: 279086503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_0454_brook_0001_27
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 17
+        width: 147
+        height: 205
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 401416aaa4e2edf4ba0eef185201d58c
+      internalID: -1051780660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_0454_brook_0001_28
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 17
+        width: 302
+        height: 201
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e054885e978e524184f4ed7065db9c9
+      internalID: -944472889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_0454_brook_0001_29
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 17
+        width: 305
+        height: 201
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cda9e76f83318174e8557ed765811adc
+      internalID: -667456428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_0454_brook_0001_0
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 775
+        width: 117
+        height: 242
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72f7960b5e21009489c76eb0fe0bb172
+      internalID: -63545760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      motion_0454_brook_0001_0: -63545760
+      motion_0454_brook_0001_1: 1802388967
+      motion_0454_brook_0001_10: -897543029
+      motion_0454_brook_0001_11: 1933779825
+      motion_0454_brook_0001_12: 1876672227
+      motion_0454_brook_0001_13: -147872349
+      motion_0454_brook_0001_14: -1261403627
+      motion_0454_brook_0001_15: -853756886
+      motion_0454_brook_0001_16: 767775162
+      motion_0454_brook_0001_17: -318045565
+      motion_0454_brook_0001_18: 1164217848
+      motion_0454_brook_0001_19: -1441479960
+      motion_0454_brook_0001_2: 1151868042
+      motion_0454_brook_0001_20: -1868343271
+      motion_0454_brook_0001_21: 1924903187
+      motion_0454_brook_0001_22: -464703972
+      motion_0454_brook_0001_23: -1940662052
+      motion_0454_brook_0001_24: -1855841312
+      motion_0454_brook_0001_25: 1749868936
+      motion_0454_brook_0001_26: 279086503
+      motion_0454_brook_0001_27: -1051780660
+      motion_0454_brook_0001_28: -944472889
+      motion_0454_brook_0001_29: -667456428
+      motion_0454_brook_0001_3: 1974971819
+      motion_0454_brook_0001_4: 1516720530
+      motion_0454_brook_0001_5: 1572335321
+      motion_0454_brook_0001_6: -758948463
+      motion_0454_brook_0001_7: -695821061
+      motion_0454_brook_0001_8: -920110717
+      motion_0454_brook_0001_9: -1081319302
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

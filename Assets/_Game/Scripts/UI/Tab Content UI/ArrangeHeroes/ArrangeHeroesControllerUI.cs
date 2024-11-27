@@ -64,6 +64,7 @@ namespace _Game.Scripts.UI.Hero
 
         private void ShowAllHeroes()
         {
+            HeroesUI.Instance.ClearAllHeroSlots();
             HeroManager.Instance.RefreshAvailableHeroes();
             HeroesUI.Instance.LoadAndDisplayHeroes();
         }

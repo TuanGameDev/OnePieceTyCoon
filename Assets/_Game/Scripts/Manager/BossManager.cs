@@ -1,7 +1,9 @@
+﻿using _Game.Scripts.Character;
 using _Game.Scripts.Character.Hero;
 using _Game.Scripts.Helper;
 using _Game.Scripts.Non_Mono;
 using _Game.Scripts.Scriptable_Object;
+using Sirenix.OdinInspector;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,9 +11,10 @@ namespace _Game.Scripts.Manager
 {
     public class BossManager : Singleton<BossManager>
     {
-        public BossInfo Boss;
+        [Title("Boss Information List")]
+        public List<BossInfo> BossInfos;
 
-        [SerializeField]
+        [SerializeField, Title("Dependencies")]
         private CharOutLook _charOutLook;
 
         [SerializeField]
@@ -20,53 +23,79 @@ namespace _Game.Scripts.Manager
         [SerializeField]
         private Transform _spawnPoint;
 
+        [SerializeField]
+        private List<Transform> _spawnPatrolPosition;
+
         public BossController CurrentBossCtrl;
+
+        public int PreviousScore;
 
         public void SpawnBoss(int bossIndex)
         {
-            if (bossIndex < 0 || bossIndex >= Boss.Keys.Count)
+            if (BossInfos == null || BossInfos.Count == 0)
             {
                 return;
             }
 
-            string bossKey = GetBossKeyAtIndex(bossIndex);
-            if (string.IsNullOrEmpty(bossKey) || !Boss.TryGetValue(bossKey, out HeroDataSO heroData))
+            if (bossIndex < 0 || bossIndex >= BossInfos.Count)
             {
                 return;
             }
 
+            var selectedBoss = BossInfos[bossIndex];
             Vector3 spawnPosition = _spawnPoint.position;
+
             CurrentBossCtrl = Instantiate(_bossCtrlPrefab, spawnPosition, Quaternion.identity);
 
-            CurrentBossCtrl.SetHeroData(heroData);
+            CurrentBossCtrl.SetHeroData(selectedBoss.HeroData);
 
-            CharacterState key = new CharacterState(heroData.CharacterName, heroData.Rarity, heroData.Elemental);
-            if (_charOutLook.CharOut.TryGetValue(key, out OutLook outLook))
+            CurrentBossCtrl.OnDamaggeChanged += CheckBossHpChange;
+            PreviousScore = 0;
+            CharacterState key = new CharacterState(selectedBoss.HeroData.CharacterName, selectedBoss.HeroData.Rarity, selectedBoss.HeroData.Elemental);
+            if (_charOutLook != null && _charOutLook.CharOut.TryGetValue(key, out OutLook outLook))
             {
                 if (outLook.Root != null)
                 {
                     GameObject rootInstance = Instantiate(outLook.Root, CurrentBossCtrl.RevertObject);
                     rootInstance.name = outLook.Root.name;
+
                     CurrentBossCtrl.BaseRoot = rootInstance;
+
+                    CurrentBossCtrl.SetPatrolPoints(_spawnPatrolPosition);
+
+                    CurrentBossCtrl.SetState(new WaitingState());
+
+                    CurrentBossCtrl.Animator = CurrentBossCtrl.RevertObject.GetComponentInChildren<Animator>();
+                    if (CurrentBossCtrl.Animator != null)
+                    {
+                        CurrentBossCtrl.Animator.Rebind();
+                        CurrentBossCtrl.Animator.Update(0);
+                    }
                 }
             }
         }
-        private string GetBossKeyAtIndex(int index)
-        {
-            int currentIndex = 0;
-            foreach (var key in Boss.Keys)
-            {
-                if (currentIndex == index)
-                    return key;
-                currentIndex++;
-            }
 
-            return null;
+        private void CheckBossHpChange(int damage)
+        {
+            PreviousScore += damage;
+        }
+
+        private void OnDestroy()
+        {
+            if (CurrentBossCtrl != null)
+            {
+                CurrentBossCtrl.OnDamaggeChanged -= CheckBossHpChange;
+            }
         }
 
         [System.Serializable]
-        public class BossInfo : UnitySerializedDictionary<string, HeroDataSO>
+        public class BossInfo
         {
+            [Tooltip("Name of the boss")]
+            public string NameBoss;
+
+            [Tooltip("Hero data for this boss")]
+            public HeroDataSO HeroData;
         }
     }
 }

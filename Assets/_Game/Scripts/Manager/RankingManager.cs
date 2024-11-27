@@ -5,6 +5,7 @@ using PlayFab;
 using PlayFab.ClientModels;
 using Sirenix.OdinInspector;
 using _Game.Scripts.Helper;
+using TMPro;
 
 namespace _Game.Scripts.Manager
 {
@@ -71,6 +72,12 @@ namespace _Game.Scripts.Manager
         private void OnLeaderboardFetchError(PlayFabError error)
         {
             Debug.LogError("Error fetching leaderboard: " + error.GenerateErrorReport());
+        }
+
+        public void UpdateBeliAndDiamond(TextMeshProUGUI beliTxt, TextMeshProUGUI diamondTxt)
+        {
+            beliTxt.text = UserInformation.Beli.ToString("N0");
+            diamondTxt.text = UserInformation.Diamond.ToString("N0");
         }
     }
 }

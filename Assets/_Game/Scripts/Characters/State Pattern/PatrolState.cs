@@ -1,5 +1,4 @@
 ﻿using Cysharp.Threading.Tasks;
-using UnityEngine.TextCore.Text;
 using UnityEngine;
 using _Game.Scripts.StatePatern;
 namespace _Game.Scripts.Character

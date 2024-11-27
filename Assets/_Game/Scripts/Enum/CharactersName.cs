@@ -9,7 +9,7 @@ namespace _Game.Scripts.Enums
         Nami,
         Usopp,
         Chopper,
-        Robbin,
+        Robin,
         Brook,
         Franky,
         Jinbe,

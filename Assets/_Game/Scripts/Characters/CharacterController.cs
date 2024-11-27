@@ -39,7 +39,8 @@ namespace _Game.Scripts.Character
         public bool IsDead = false;
         public bool FaceRight = false;
 
-        public Action OnHealthChanged = delegate { };
+        public Action OnHealthChanged;
+        public Action<int> OnDamaggeChanged;
         public Action OnDie;
 
         [Space(10)]
@@ -61,7 +62,7 @@ namespace _Game.Scripts.Character
             {
                 Animations.SetAnimator(Animator);
             }
-            SetState(new WaitingState());
+            //SetState(new WaitingState());
             CurrentStat = HeroDataSO.CharacterStat;
             CurrentHP = CurrentStat.Hp;
         }
@@ -121,12 +122,13 @@ namespace _Game.Scripts.Character
             CurrentHP -= finalDamage;
 
             OnHealthChanged?.Invoke();
-
+            OnDamaggeChanged?.Invoke(finalDamage);
             if (CurrentHP <= 0 && !IsDead)
             {
                 Die();
             }
         }
+
 
         public virtual void Die()
         {

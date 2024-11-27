@@ -1,0 +1,351 @@
+fileFormatVersion: 2
+guid: d7ae45067e7731c408461f00f1099e11
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Franky_Idle_0
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 818
+        width: 159
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fdd1ee8d0914f7479580586b3771c5f
+      internalID: 1303879413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Franky_Idle_1
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 818
+        width: 159
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 441d4473c26761b4fa32a0d2915c9557
+      internalID: 694708594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Franky_Idle_2
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 818
+        width: 159
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31ae6678b78656a47ad5edc35586c1cd
+      internalID: 689066794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Franky_Idle_3
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 818
+        width: 159
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 479ae19e89ad8914cbba89a71957fef5
+      internalID: 1890874529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Franky_Idle_4
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 818
+        width: 161
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 296bae33b8b5290408286cfe8e3726fa
+      internalID: -1607688735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Franky_Idle_5
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 609
+        width: 171
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 029a3b4ca16981e4ca0a758e5b4da255
+      internalID: 595328243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Franky_Idle_48
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 274
+        width: 127
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38e466c5fd366064598f2fd316e22a26
+      internalID: -567852984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Franky_Idle_49
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 274
+        width: 127
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc5770b5fd48c8141854036ce509b38e
+      internalID: 710915011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Franky_Idle_0: 1303879413
+      Franky_Idle_1: 694708594
+      Franky_Idle_10: 1892210617
+      Franky_Idle_11: -424619763
+      Franky_Idle_12: -594448622
+      Franky_Idle_13: 538349507
+      Franky_Idle_14: 1990482581
+      Franky_Idle_15: -1956417782
+      Franky_Idle_16: 879537917
+      Franky_Idle_17: -1451071049
+      Franky_Idle_18: -1185521263
+      Franky_Idle_19: -1757780867
+      Franky_Idle_2: 689066794
+      Franky_Idle_20: 2019842735
+      Franky_Idle_21: -1955626136
+      Franky_Idle_22: -604424240
+      Franky_Idle_23: -1832489650
+      Franky_Idle_24: -1861639742
+      Franky_Idle_25: -1212707133
+      Franky_Idle_26: -1279160128
+      Franky_Idle_27: 2110744604
+      Franky_Idle_28: 136262138
+      Franky_Idle_29: -1902212752
+      Franky_Idle_3: 1890874529
+      Franky_Idle_30: 1009403925
+      Franky_Idle_31: 2089236800
+      Franky_Idle_32: 372700872
+      Franky_Idle_33: -1141484309
+      Franky_Idle_34: 2045987417
+      Franky_Idle_35: 1169027273
+      Franky_Idle_36: -1622283494
+      Franky_Idle_37: -357628864
+      Franky_Idle_38: 1446328436
+      Franky_Idle_39: -307849351
+      Franky_Idle_4: -1607688735
+      Franky_Idle_40: -649825567
+      Franky_Idle_41: 1869960969
+      Franky_Idle_42: 1197977455
+      Franky_Idle_43: 747013251
+      Franky_Idle_44: 244950874
+      Franky_Idle_45: 1166927462
+      Franky_Idle_46: 921762012
+      Franky_Idle_47: -1351904517
+      Franky_Idle_48: -567852984
+      Franky_Idle_49: 710915011
+      Franky_Idle_5: 595328243
+      Franky_Idle_50: -1382436551
+      Franky_Idle_51: -1878708894
+      Franky_Idle_52: -1116080493
+      Franky_Idle_53: -226565478
+      Franky_Idle_54: -637153654
+      Franky_Idle_55: -1952594242
+      Franky_Idle_6: 808683942
+      Franky_Idle_7: -2122353060
+      Franky_Idle_8: -1251634150
+      Franky_Idle_9: 1668939558
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

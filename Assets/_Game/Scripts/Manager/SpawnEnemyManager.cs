@@ -82,6 +82,13 @@ namespace _Game.Scripts.Manager
                 {
                     enemyInstance.BaseRoot = Instantiate(outLook.Root, enemyInstance.RevertObject);
                     enemyInstance.BaseRoot.name = outLook.Root.name;
+                    enemyInstance.Animator = enemyInstance.RevertObject.GetComponentInChildren<Animator>();
+
+                    if (enemyInstance.Animator != null)
+                    {
+                        enemyInstance.Animator.Rebind();
+                        enemyInstance.Animator.Update(0);
+                    }
                 }
                 else
                 {

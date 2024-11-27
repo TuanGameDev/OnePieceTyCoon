@@ -316,8 +316,8 @@ MonoBehaviour:
     - {fileID: -1654876334, guid: 77428f4a1b6dd4349838c2dac29b8872, type: 3}
     - {fileID: 1412608520, guid: 77428f4a1b6dd4349838c2dac29b8872, type: 3}
     - {fileID: -1450051553, guid: 77428f4a1b6dd4349838c2dac29b8872, type: 3}
-    - {fileID: 1886836283, guid: 77428f4a1b6dd4349838c2dac29b8872, type: 3}
     - {fileID: 624217190, guid: 77428f4a1b6dd4349838c2dac29b8872, type: 3}
+    - {fileID: 1886836283, guid: 77428f4a1b6dd4349838c2dac29b8872, type: 3}
   _starImg:
   - {fileID: 22873311510300823}
   - {fileID: 2611124463389980168}
@@ -328,7 +328,7 @@ MonoBehaviour:
   _elementalHero: {fileID: 2453217139756200029}
   _selectedImg: {fileID: 8397152669826840275}
   _selectedBtn: {fileID: 7033015788530071152}
-  _heroData:
+  HeroData:
     HeroID: 0
     HeroAvatar: {fileID: 0}
     IconAvatar: {fileID: 0}
@@ -342,10 +342,11 @@ MonoBehaviour:
       MoveSpeed: 0
       AttackDamage: 0
       CurrentExp: 0
-      MaxExp: 0
+      ExpToLevelUp: 0
     CharacterName: 0
     Rarity: 0
     Elemental: 0
+    LevelStats: []
   IsInCombat: 0
 --- !u!1 &2785186495697383291
 GameObject:

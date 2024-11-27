@@ -23,7 +23,7 @@ MonoBehaviour:
     Hp: 1000000000
     Def: 0
     MoveSpeed: 0
-    AttackDamage: 100
+    AttackDamage: 1
     CurrentExp: 0
     ExpToLevelUp: 0
   CharacterName: 0

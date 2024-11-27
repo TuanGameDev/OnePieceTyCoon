@@ -76,7 +76,6 @@ namespace _Game.Scripts.UI
                 });
         }
 
-
         public void DisPlayUserAvatar()
         {
             bool hasHeroes = HeroManager.Instance.HeroesAvailable.Count > 0 && HeroManager.Instance.HeroesAvailable[0].heroes.Count > 0;

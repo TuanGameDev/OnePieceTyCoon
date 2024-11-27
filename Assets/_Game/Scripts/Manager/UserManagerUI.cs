@@ -112,8 +112,8 @@ namespace _Game.Scripts.UI
 
         public void RewardCoin()
         {
-            _rankingManager.UserInformation.Beli += 100000000;
-            _rankingManager.UserInformation.Diamond += 100000000;
+            _rankingManager.UserInformation.Beli += 100000;
+            _rankingManager.UserInformation.Diamond += 100000;
         }
 
         public void UpdateDisplayUser()

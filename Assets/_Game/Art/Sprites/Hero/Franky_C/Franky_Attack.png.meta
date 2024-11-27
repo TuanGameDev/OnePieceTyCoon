@@ -1,0 +1,249 @@
+fileFormatVersion: 2
+guid: 2f0bffc253d17a34aa6b07acb33060af
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Franky_Attack_34
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 19
+        width: 207
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9608e250b3bedb48b8b7c8ce05da4bb
+      internalID: 644668426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Franky_Attack_35
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 19
+        width: 167
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7d6a78927d06d542b685d61ae395289
+      internalID: 1589726681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Franky_Attack_36
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 19
+        width: 250
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6079daa146380a49975a2bd2a97f056
+      internalID: 1370199458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Franky_Attack_37
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 33
+        width: 171
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acd113f6a8a32604d9871fbc6758efa8
+      internalID: 587350983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Franky_Attack_0: -455689031
+      Franky_Attack_1: -1321133546
+      Franky_Attack_10: 1538697324
+      Franky_Attack_11: 1224132022
+      Franky_Attack_12: -1962642096
+      Franky_Attack_13: -626607147
+      Franky_Attack_14: 3947561
+      Franky_Attack_15: -1666290158
+      Franky_Attack_16: -10100694
+      Franky_Attack_17: -135589110
+      Franky_Attack_18: 2075833796
+      Franky_Attack_19: -788281802
+      Franky_Attack_2: 553495212
+      Franky_Attack_20: 1349727750
+      Franky_Attack_21: -629014225
+      Franky_Attack_22: -103862084
+      Franky_Attack_23: 750509787
+      Franky_Attack_24: -609328999
+      Franky_Attack_25: 1944453768
+      Franky_Attack_26: 553204479
+      Franky_Attack_27: -2099002069
+      Franky_Attack_28: 1639236140
+      Franky_Attack_29: -450595783
+      Franky_Attack_3: 848322162
+      Franky_Attack_30: -744020203
+      Franky_Attack_31: 1595223699
+      Franky_Attack_32: 392905296
+      Franky_Attack_33: -1562749532
+      Franky_Attack_34: 644668426
+      Franky_Attack_35: 1589726681
+      Franky_Attack_36: 1370199458
+      Franky_Attack_37: 587350983
+      Franky_Attack_4: -881786102
+      Franky_Attack_5: -1620276498
+      Franky_Attack_6: -1689289186
+      Franky_Attack_7: 840789204
+      Franky_Attack_8: 1670365829
+      Franky_Attack_9: 1218296158
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

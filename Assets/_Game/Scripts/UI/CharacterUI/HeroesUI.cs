@@ -67,14 +67,11 @@ namespace _Game.Scripts.UI
             LoadHeroCombatStatus();
         }
 
-        private void LoadHeroCombatStatus()
+        private void OnEnable()
         {
-            foreach (var slotHero in _heroSlots)
-            {
-                string key = GetHeroCombatKey(slotHero.HeroData.HeroID, _heroSlots.IndexOf(slotHero));
-                slotHero.IsInCombat = heroCombatStatus.ContainsKey(key) ? heroCombatStatus[key] : false;
-            }
+            LoadAndDisplayHeroes();
         }
+
         private string GetHeroCombatKey(int heroID, int slotIndex) => $"{heroID}_{slotIndex}";
 
         private void OnDestroy() => HeroManager.Instance.OnAddHero -= LoadAndDisplayHeroes;
@@ -123,16 +120,20 @@ namespace _Game.Scripts.UI
         public void SelectHero(SlotHeroUI selectedHero)
         {
             _selectedHero = selectedHero;
+
             foreach (var slot in _heroSlots)
                 slot.SetSelected(slot == selectedHero);
 
             _statHeroPopup.SetActive(_selectedHero != null);
             UpdateStatHero();
 
-            UpdateStatHeroButtonState(selectedHero);
+            UpdateStatHeroButtonState(selectedHero); // Cập nhật nút theo slot đã chọn
 
             UpdateStateText();
+
+            UpdateCombatStatusButton(); // Cập nhật trạng thái nút _statHeroBtn dựa trên số lượng hero trong combat
         }
+
 
         private void UpdateStatHeroButtonState(SlotHeroUI selectedHero)
         {
@@ -261,6 +262,7 @@ namespace _Game.Scripts.UI
             SpawnHeroManager.Instance.RemoveHero(heroID);
 
             LoadAndDisplayHeroes();
+            UpdateHeroSlotText();
         }
 
         public void UpdateHeroSlotText()
@@ -302,7 +304,6 @@ namespace _Game.Scripts.UI
             var heroInCombatTracker = new HashSet<int>();
 
             ClearAllHeroSlots();
-            _heroSlots.Clear();
 
             foreach (var hero in availableHeroes)
             {
@@ -341,9 +342,9 @@ namespace _Game.Scripts.UI
                 }
 
                 _heroSlots.Add(slotHero);
+                UpdateHeroSlotText();
             }
         }
-
 
         public void DisplayHeroes(List<HeroData> heroes)
         {
@@ -362,7 +363,6 @@ namespace _Game.Scripts.UI
             }
 
             ClearAllHeroSlots();
-            _heroSlots.Clear();
 
             foreach (var hero in heroes)
             {
@@ -417,13 +417,46 @@ namespace _Game.Scripts.UI
             {
                 return;
             }
-
+            _heroSlots.Clear();
             foreach (Transform child in _heroesContainer)
             {
                 Destroy(child.gameObject);
             }
-            _heroSlots.Clear();
         }
+
+        private void LoadHeroCombatStatus()
+        {
+            foreach (var slotHero in _heroSlots)
+            {
+                string key = GetHeroCombatKey(slotHero.HeroData.HeroID, _heroSlots.IndexOf(slotHero));
+                slotHero.IsInCombat = heroCombatStatus.ContainsKey(key) ? heroCombatStatus[key] : false;
+            }
+        }
+
+        private void UpdateCombatStatusButton()
+        {
+            int combatHeroCount = 0;
+
+            foreach (var slotHero in _heroSlots)
+            {
+                if (slotHero.IsInCombat)
+                    combatHeroCount++;
+            }
+
+            if (_statHeroBtn != null)
+            {
+                if (_selectedHero != null && _selectedHero.IsInCombat)
+                {
+                    _statHeroBtn.interactable = true;
+                }
+                else
+                {
+                    _statHeroBtn.interactable = combatHeroCount < 6;
+                }
+            }
+        }
+
+
         public void OnPointerDown(PointerEventData eventData)
         {
             if (eventData.pointerPress == _infoHeroBtn.gameObject) _infoHeroStatPopup.SetActive(true);

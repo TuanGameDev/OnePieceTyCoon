@@ -4,6 +4,7 @@ using _Game.Scripts.Character.Hero;
 using _Game.Scripts.Scriptable_Object;
 using _Game.Scripts.Non_Mono;
 using _Game.Scripts.UI;
+using _Game.Scripts.Character;
 
 namespace _Game.Scripts.Manager
 {
@@ -48,7 +49,7 @@ namespace _Game.Scripts.Manager
                 tempHeroDataSO.LevelStats = heroData.LevelStats;
                 heroInstance.IsInCombat = true;
                 heroInstance.SetPatrolPoints(_spawnPatrolPosition);
-
+                heroInstance.SetState(new WaitingState());
                 CharacterState key = new CharacterState(tempHeroDataSO.CharacterName, tempHeroDataSO.Rarity, tempHeroDataSO.Elemental);
                 if (_charOutLook.CharOut.TryGetValue(key, out OutLook outLook))
                 {

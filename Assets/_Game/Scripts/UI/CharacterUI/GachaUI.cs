@@ -74,7 +74,7 @@ namespace _Game.Scripts.UI
 
         private void OnEnable()
         {
-            UpdateBeliAndDiamond();
+            RankingManager.Instance.UpdateBeliAndDiamond(_beliTxt, _diamondTxt);
             _videoPlayerFSA.videoPlayer.loopPointReached += OnVideoEnd;
         }
 
@@ -173,7 +173,7 @@ namespace _Game.Scripts.UI
                     _rankingManager.UserInformation.Diamond -= amount;
                     AddHeroToGachaListLegend();
                 }
-                UpdateBeliAndDiamond();
+                RankingManager.Instance.UpdateBeliAndDiamond(_beliTxt, _diamondTxt);
                 HeroesUI.Instance.UpdateHeroSlotText();
                 _introVideoGacha.SetActive(true);
                 //_videoPlayerFSA.videoPlayer.Play();
@@ -220,7 +220,7 @@ namespace _Game.Scripts.UI
                         AddHeroToGachaListLegend();
                     }
                 }
-                UpdateBeliAndDiamond();
+                RankingManager.Instance.UpdateBeliAndDiamond(_beliTxt,_diamondTxt);
                 HeroesUI.Instance.UpdateHeroSlotText();
                 _introVideoGacha.SetActive(true);
                 //_videoPlayerFSA.videoPlayer.Play();
@@ -421,13 +421,6 @@ namespace _Game.Scripts.UI
             yield return new WaitForSeconds(delay);
             _messageTxt.gameObject.SetActive(false);
         }
-
-        private void UpdateBeliAndDiamond()
-        {
-            _beliTxt.text = RankingManager.Instance.UserInformation.Beli.ToString("N0");
-            _diamondTxt.text = RankingManager.Instance.UserInformation.Diamond.ToString("N0");
-        }
-
     }
 }
 [System.Serializable]

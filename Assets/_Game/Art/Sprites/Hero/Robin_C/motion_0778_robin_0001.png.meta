@@ -1,0 +1,518 @@
+fileFormatVersion: 2
+guid: b4e946586fe3cd74cbcfc52b0f52bba3
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: motion_0778_robin_0001_0
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 816
+        width: 61
+        height: 191
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b00156456cbfd8840b9533a42bc9bdfd
+      internalID: 720571251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_0778_robin_0001_1
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 816
+        width: 62
+        height: 191
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7548fd1949988447a05e63d55d08cf3
+      internalID: -1155101573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_0778_robin_0001_2
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 816
+        width: 61
+        height: 191
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b182c68fa0549344a65227fb36fcf72
+      internalID: -992658630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_0778_robin_0001_3
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 816
+        width: 62
+        height: 191
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2568a15a4a90205469f4e9ea4a302290
+      internalID: -845739900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_0778_robin_0001_4
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 816
+        width: 61
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d0be2dc0fb471b4c8160bf33d9807ad
+      internalID: -1958640668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_0778_robin_0001_5
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 816
+        width: 62
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 034e356b1ce95b14191f1d69b7c7dd76
+      internalID: -476624761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_0778_robin_0001_6
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 816
+        width: 62
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dee281c9054a2c043890a42f18fb1fee
+      internalID: 250057423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_0778_robin_0001_7
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 816
+        width: 60
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e5fb3b4103e31f478846d5a08474dc5
+      internalID: -1963748510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_0778_robin_0001_8
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 816
+        width: 61
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccc1a14d977c220488ac3bc865d5c85c
+      internalID: -841655805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_0778_robin_0001_11
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 579
+        width: 128
+        height: 154
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a69f7aae1451eab45a9261cce08c3f69
+      internalID: -1095473804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_0778_robin_0001_13
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 591
+        width: 80
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 702298615153b80499e2b382bb6766e8
+      internalID: -735024616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_0778_robin_0001_14
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 591
+        width: 80
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0f51b7916bffda42b812dee185cff18
+      internalID: -1821978642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_0778_robin_0001_25
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 18
+        width: 71
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74fb3232ac5ae6e4dae7c0fef36e975e
+      internalID: 347846863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_0778_robin_0001_26
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 18
+        width: 73
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad3ab89518c17a141bd9c9c40f5c9937
+      internalID: -200338306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_0778_robin_0001_27
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 18
+        width: 64
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d20668b7d26df049a36ecf530d3c3e8
+      internalID: 1109803556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_0778_robin_0001_28
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 18
+        width: 64
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11f41caf274dcc94d90e586897372d3c
+      internalID: -1134080225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_0778_robin_0001_9
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 19
+        width: 65
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5349e98d877790f4c8801d7e1afadacd
+      internalID: 34032114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      motion_0778_robin_0001_0: 720571251
+      motion_0778_robin_0001_1: -1155101573
+      motion_0778_robin_0001_10: -1973841945
+      motion_0778_robin_0001_11: -1095473804
+      motion_0778_robin_0001_12: 269605104
+      motion_0778_robin_0001_13: -735024616
+      motion_0778_robin_0001_14: -1821978642
+      motion_0778_robin_0001_15: -1795081874
+      motion_0778_robin_0001_16: -702698183
+      motion_0778_robin_0001_17: -1592831529
+      motion_0778_robin_0001_18: -1030716250
+      motion_0778_robin_0001_19: 1345999343
+      motion_0778_robin_0001_2: -992658630
+      motion_0778_robin_0001_20: -1337867121
+      motion_0778_robin_0001_21: 1572740689
+      motion_0778_robin_0001_22: -1859696124
+      motion_0778_robin_0001_23: 917958915
+      motion_0778_robin_0001_24: 255516166
+      motion_0778_robin_0001_25: 347846863
+      motion_0778_robin_0001_26: -200338306
+      motion_0778_robin_0001_27: 1109803556
+      motion_0778_robin_0001_28: -1134080225
+      motion_0778_robin_0001_29: 1373805804
+      motion_0778_robin_0001_3: -845739900
+      motion_0778_robin_0001_30: 1159366267
+      motion_0778_robin_0001_31: -1869650871
+      motion_0778_robin_0001_32: 286826476
+      motion_0778_robin_0001_33: -1794997620
+      motion_0778_robin_0001_4: -1958640668
+      motion_0778_robin_0001_5: -476624761
+      motion_0778_robin_0001_6: 250057423
+      motion_0778_robin_0001_7: -1963748510
+      motion_0778_robin_0001_8: -841655805
+      motion_0778_robin_0001_9: 34032114
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
