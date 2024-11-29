@@ -67,7 +67,7 @@ MonoBehaviour:
       Hp: 26
       Def: 0
       MoveSpeed: 3
-      AttackDamage: 7
+      AttackDamage: 10
       CurrentExp: 0
       ExpToLevelUp: 30
   - StatLevel:
@@ -107,6 +107,6 @@ MonoBehaviour:
       Hp: 40
       Def: 0
       MoveSpeed: 3
-      AttackDamage: 10
+      AttackDamage: 15
       CurrentExp: 0
       ExpToLevelUp: 50

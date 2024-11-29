@@ -23,7 +23,7 @@ MonoBehaviour:
     Hp: 20
     Def: 0
     MoveSpeed: 3
-    AttackDamage: 5
+    AttackDamage: 15
     CurrentExp: 0
     ExpToLevelUp: 10
   CharacterName: 10
@@ -35,7 +35,7 @@ MonoBehaviour:
       Hp: 20
       Def: 0
       MoveSpeed: 3
-      AttackDamage: 5
+      AttackDamage: 15
       CurrentExp: 0
       ExpToLevelUp: 10
   - StatLevel:
@@ -43,7 +43,7 @@ MonoBehaviour:
       Hp: 22
       Def: 0
       MoveSpeed: 3
-      AttackDamage: 5
+      AttackDamage: 15
       CurrentExp: 0
       ExpToLevelUp: 15
   - StatLevel:
@@ -51,7 +51,7 @@ MonoBehaviour:
       Hp: 24
       Def: 0
       MoveSpeed: 3
-      AttackDamage: 5
+      AttackDamage: 15
       CurrentExp: 0
       ExpToLevelUp: 20
   - StatLevel:
@@ -59,7 +59,7 @@ MonoBehaviour:
       Hp: 26
       Def: 0
       MoveSpeed: 3
-      AttackDamage: 5
+      AttackDamage: 15
       CurrentExp: 0
       ExpToLevelUp: 25
   - StatLevel:
@@ -67,7 +67,7 @@ MonoBehaviour:
       Hp: 28
       Def: 0
       MoveSpeed: 3
-      AttackDamage: 5
+      AttackDamage: 17
       CurrentExp: 0
       ExpToLevelUp: 30
   - StatLevel:
@@ -75,7 +75,7 @@ MonoBehaviour:
       Hp: 30
       Def: 0
       MoveSpeed: 3
-      AttackDamage: 5
+      AttackDamage: 17
       CurrentExp: 0
       ExpToLevelUp: 35
   - StatLevel:
@@ -83,7 +83,7 @@ MonoBehaviour:
       Hp: 32
       Def: 0
       MoveSpeed: 3
-      AttackDamage: 5
+      AttackDamage: 17
       CurrentExp: 0
       ExpToLevelUp: 40
   - StatLevel:
@@ -91,7 +91,7 @@ MonoBehaviour:
       Hp: 34
       Def: 0
       MoveSpeed: 3
-      AttackDamage: 5
+      AttackDamage: 17
       CurrentExp: 0
       ExpToLevelUp: 45
   - StatLevel:
@@ -99,7 +99,7 @@ MonoBehaviour:
       Hp: 36
       Def: 0
       MoveSpeed: 3
-      AttackDamage: 5
+      AttackDamage: 17
       CurrentExp: 0
       ExpToLevelUp: 50
   - StatLevel:
@@ -107,6 +107,6 @@ MonoBehaviour:
       Hp: 42
       Def: 0
       MoveSpeed: 3
-      AttackDamage: 10
+      AttackDamage: 20
       CurrentExp: 0
       ExpToLevelUp: 50

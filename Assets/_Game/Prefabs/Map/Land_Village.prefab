@@ -3265,9 +3265,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemyBasePrefab: {fileID: 741523555141894788, guid: b2e3244d90db5a94fb5ab53fd353b4ed, type: 3}
-  _charOutLook: {fileID: 11400000, guid: 2a3b40e164e0383418d116042b37f4ec, type: 2}
+  _charOutLook: {fileID: 11400000, guid: a6c4666906e93b945b6fabb534cf26b9, type: 2}
   _enemyDataList:
-  - {fileID: 11400000, guid: dcbe76092ed5e4642a327d84cd028a0c, type: 2}
+  - {fileID: 11400000, guid: fb2c319f13674634380f6ae6f78a0653, type: 2}
   _spawnPatrolPosition:
   - {fileID: 5171953358075420836}
   - {fileID: 8209755176372230668}

@@ -70,6 +70,7 @@ namespace _Game.Scripts.Manager
                     {
                         CurrentBossCtrl.Animator.Rebind();
                         CurrentBossCtrl.Animator.Update(0);
+
                     }
                 }
             }

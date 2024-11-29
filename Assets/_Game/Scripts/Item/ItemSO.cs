@@ -14,7 +14,23 @@ namespace _Game.Scripts.Scriptable_Objects.Database
         [TextArea]
         public string Description;
 
-        [InfoBox("The bigger drop rate, the less it can be dropped")]
         public int ItemDropRate;
+
+        public int Quantity;
+
+    }
+    [System.Serializable]
+    public class ItemData
+    {
+        public Sprite ItemIcon;
+        public int ItemID;
+        public string ItemName;
+
+        [TextArea]
+        public string Description;
+
+        public int ItemDropRate;
+
+        public int Quantity;
     }
 }

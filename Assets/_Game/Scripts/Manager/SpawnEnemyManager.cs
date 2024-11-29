@@ -6,6 +6,7 @@ using Cysharp.Threading.Tasks;
 using _Game.Scripts.Helper;
 using _Game.Scripts.Character.Eenmy;
 using _Game.Scripts.StatePatern;
+using _Game.Scripts.Character;
 
 namespace _Game.Scripts.Manager
 {
@@ -88,6 +89,8 @@ namespace _Game.Scripts.Manager
                     {
                         enemyInstance.Animator.Rebind();
                         enemyInstance.Animator.Update(0);
+                        enemyInstance.SetState(new WaitingState());
+
                     }
                 }
                 else

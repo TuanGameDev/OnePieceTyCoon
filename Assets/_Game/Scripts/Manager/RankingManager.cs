@@ -74,7 +74,17 @@ namespace _Game.Scripts.Manager
             Debug.LogError("Error fetching leaderboard: " + error.GenerateErrorReport());
         }
 
-        public void UpdateBeliAndDiamond(TextMeshProUGUI beliTxt, TextMeshProUGUI diamondTxt)
+        public void AddBeli(int amount)
+        {
+            UserInformation.Beli += amount;
+        }
+
+        public void AddDiamond(int amount)
+        {
+            UserInformation.Diamond += amount;
+        }
+
+        public void UpdateBeliAndDiamondText(TextMeshProUGUI beliTxt, TextMeshProUGUI diamondTxt)
         {
             beliTxt.text = UserInformation.Beli.ToString("N0");
             diamondTxt.text = UserInformation.Diamond.ToString("N0");

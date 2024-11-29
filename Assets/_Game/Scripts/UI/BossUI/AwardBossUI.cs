@@ -28,7 +28,7 @@ namespace _Game.Scripts.UI
             RankingManager.Instance.UserInformation.Beli += 1000;
             RankingManager.Instance.UserInformation.Beli += 100;
 
-            RankingManager.Instance.UpdateBeliAndDiamond(_beliTxt, _diamondTxt);
+            RankingManager.Instance.UpdateBeliAndDiamondText(_beliTxt, _diamondTxt);
 
             UserManagerUI.Instance.SaveUserInformation();
             _totalScoreTxt.text = "Total Score: " + BossManager.Instance.PreviousScore.ToString("N0");

@@ -63,7 +63,7 @@ namespace _Game.Scripts.UI
 
         [SerializeField]
         private int _currentFightAmount;
-        [SerializeField] private int _maxFightAmount = 4;
+        [SerializeField] private int _maxFightAmount = 1;
         [SerializeField] private float _fightRecoveryTime = 24 * 60 * 60;
         [SerializeField] private List<double> _lastFightTimes = new List<double>();
 
@@ -81,7 +81,9 @@ namespace _Game.Scripts.UI
         private void Start()
         {
             _fightBtn.onClick.AddListener(() => FightBoss().Forget());
+            UpdateCountdownTimer().Forget();
         }
+
         private void Update()
         {
             _damageScoreTxt.text = "Damage Score: " + BossManager.Instance.PreviousScore.ToString("N0");
@@ -121,7 +123,8 @@ namespace _Game.Scripts.UI
             await UniTask.Delay(1500);
 
             BossManager.Instance.SpawnBoss(0);
-
+            AudioManager.Instance.PlaySFX(1);
+            AudioManager.Instance.StopSFX(0);
             var bossCtrl = BossManager.Instance.CurrentBossCtrl;
             if (bossCtrl != null && bossCtrl.Animator.HasState(0, Animator.StringToHash("IntroKaido")))
             {
@@ -144,6 +147,8 @@ namespace _Game.Scripts.UI
 
             _timeBossTxt.gameObject.SetActive(false);
             _awardBossPopup.gameObject.SetActive(true);
+            AudioManager.Instance.PlaySFX(0);
+            AudioManager.Instance.StopSFX(1);
             if (BossManager.Instance.CurrentBossCtrl != null)
             {
                 Destroy(BossManager.Instance.CurrentBossCtrl.gameObject);
@@ -254,24 +259,59 @@ namespace _Game.Scripts.UI
             _hpBarImg.fillAmount = targetFillAmount;
         }
 
+        private async UniTaskVoid UpdateCountdownTimer()
+        {
+            while (true)
+            {
+                UpdateFightAmount();
+                await UniTask.Delay(1000);
+            }
+        }
+
         private void UpdateFightAmount()
         {
             double currentTime = GetUnixTimestamp();
+            double shortestTimeLeft = _fightRecoveryTime;
 
             for (int i = 0; i < _lastFightTimes.Count; i++)
             {
-                if (_lastFightTimes[i] > 0 && currentTime - _lastFightTimes[i] >= _fightRecoveryTime)
+                if (_lastFightTimes[i] > 0)
                 {
-                    _lastFightTimes[i] = 0;
+                    double timeLeft = _fightRecoveryTime - (currentTime - _lastFightTimes[i]);
+                    if (timeLeft <= 0)
+                    {
+                        _lastFightTimes[i] = 0;
+                    }
+                    else
+                    {
+                        shortestTimeLeft = Mathf.Min((float)shortestTimeLeft, (float)timeLeft);
+                    }
                 }
             }
 
             _currentFightAmount = _maxFightAmount - _lastFightTimes.Count(time => time > 0);
-
             _currentFightTxt.text = $"{_currentFightAmount}/{_maxFightAmount}";
+
+            if (_currentFightAmount < _maxFightAmount)
+            {
+                _currentFightTxt.text = FormatTime(shortestTimeLeft);
+            }
+            else
+            {
+                _currentFightTxt.text = $"{_currentFightAmount}/{_maxFightAmount}";
+            }
 
             _fightBtn.interactable = _currentFightAmount > 0;
         }
+
+        private string FormatTime(double timeInSeconds)
+        {
+            int hours = (int)(timeInSeconds / 3600);
+            int minutes = (int)((timeInSeconds % 3600) / 60);
+            int seconds = (int)(timeInSeconds % 60);
+            return $"{hours:D2}:{minutes:D2}:{seconds:D2}";
+        }
+
 
         private double GetUnixTimestamp()
         {

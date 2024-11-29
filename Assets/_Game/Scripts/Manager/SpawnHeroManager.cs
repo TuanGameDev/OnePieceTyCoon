@@ -57,6 +57,12 @@ namespace _Game.Scripts.Manager
                     {
                         heroInstance.BaseRoot = Instantiate(outLook.Root, heroInstance.RevertObject);
                         heroInstance.BaseRoot.name = outLook.Root.name;
+
+                        if (heroInstance.Animator != null)
+                        {
+                            heroInstance.Animator.Rebind();
+                            heroInstance.Animator.Update(0);
+                        }
                     }
                 }
 

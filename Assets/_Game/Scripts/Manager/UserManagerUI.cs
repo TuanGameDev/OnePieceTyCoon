@@ -67,6 +67,16 @@ namespace _Game.Scripts.UI
             HeroManager.Instance.OnAddHero += RecalculateCombatPower;
             HeroManager.Instance.OnRemoveHero += RecalculateCombatPower;
         }
+
+        public void CreatAccount()
+        {
+            _rankingManager.UserInformation.Beli += 100000;
+            _rankingManager.UserInformation.Diamond += 100000;
+            HeroManager.Instance.SaveDataHero();
+            UpdateDisplayUser();
+            SaveUserDataToPlayFab();
+        }
+
         private void OnInputFieldSelected(TMP_InputField inputField)
         {
             if (inputField != null)
@@ -108,12 +118,6 @@ namespace _Game.Scripts.UI
             UpdateDisplayUser();
             UpdateLeaderboards(_rankingManager.UserInformation.CombatPower);
             SaveUserDataToPlayFab();
-        }
-
-        public void RewardCoin()
-        {
-            _rankingManager.UserInformation.Beli += 100000;
-            _rankingManager.UserInformation.Diamond += 100000;
         }
 
         public void UpdateDisplayUser()

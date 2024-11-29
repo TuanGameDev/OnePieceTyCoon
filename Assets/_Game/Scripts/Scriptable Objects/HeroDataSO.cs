@@ -1,8 +1,8 @@
 ﻿using _Game.Scripts.Characters;
 using _Game.Scripts.Enums;
 using _Game.Scripts.Non_Mono;
+using Sirenix.OdinInspector;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 namespace _Game.Scripts.Scriptable_Object
 {
@@ -39,5 +39,21 @@ namespace _Game.Scripts.Scriptable_Object
         public Rarity Rarity;
         public Elemental Elemental;
         public List<LevelStats> LevelStats;
+
+        [Button("Clear")]
+        public void Clear()
+        {
+            HeroID = 0;
+            Power = 0;
+            HeroAvatar = null;
+            IconAvatar = null;
+            HeroAvatarPath = null;
+            IconAvatarPath = null;
+            CharacterStat = null;
+            CharacterName.None.ToString();
+            Rarity.C.ToString();
+            Elemental.None.ToString();
+            LevelStats = null;
+        }
     }
 }

@@ -40,7 +40,7 @@ namespace _Game.Scripts.UI
         private GameObject _panelListHero;
 
         [SerializeField]
-        private Button _gachaCommonBtn, _gachaLegendBtn, _getHeroBtn, _helpBtn;
+        private Button _gachaCommonBtn, _gachaLegendBtn, _getHeroBtn, _helpBtn,_x1Btn,_x10Btn;
 
         [SerializeField]
         private GameObject _commonPopupUI, _legendPopupUI, _introVideoGacha, _helpPopupUI;
@@ -74,7 +74,7 @@ namespace _Game.Scripts.UI
 
         private void OnEnable()
         {
-            RankingManager.Instance.UpdateBeliAndDiamond(_beliTxt, _diamondTxt);
+            RankingManager.Instance.UpdateBeliAndDiamondText(_beliTxt, _diamondTxt);
             _videoPlayerFSA.videoPlayer.loopPointReached += OnVideoEnd;
         }
 
@@ -140,7 +140,8 @@ namespace _Game.Scripts.UI
             _gachaHeroes.Clear();
 
             _panelListHero.SetActive(false);
-
+            _x1Btn.interactable = true;
+            _x10Btn.interactable = true;
             foreach (Transform child in _container)
             {
                 Destroy(child.gameObject);
@@ -173,7 +174,7 @@ namespace _Game.Scripts.UI
                     _rankingManager.UserInformation.Diamond -= amount;
                     AddHeroToGachaListLegend();
                 }
-                RankingManager.Instance.UpdateBeliAndDiamond(_beliTxt, _diamondTxt);
+                RankingManager.Instance.UpdateBeliAndDiamondText(_beliTxt, _diamondTxt);
                 HeroesUI.Instance.UpdateHeroSlotText();
                 _introVideoGacha.SetActive(true);
                 //_videoPlayerFSA.videoPlayer.Play();
@@ -220,7 +221,7 @@ namespace _Game.Scripts.UI
                         AddHeroToGachaListLegend();
                     }
                 }
-                RankingManager.Instance.UpdateBeliAndDiamond(_beliTxt,_diamondTxt);
+                RankingManager.Instance.UpdateBeliAndDiamondText(_beliTxt,_diamondTxt);
                 HeroesUI.Instance.UpdateHeroSlotText();
                 _introVideoGacha.SetActive(true);
                 //_videoPlayerFSA.videoPlayer.Play();
@@ -243,6 +244,8 @@ namespace _Game.Scripts.UI
             _panelListHero.SetActive(true);
             _getHeroBtn.gameObject.SetActive(false);
             StartCoroutine(InstantiateHeroesWithDelay());
+            _x1Btn.interactable = false;
+            _x10Btn.interactable = false;
         }
 
         private IEnumerator InstantiateHeroesWithDelay()
@@ -321,11 +324,10 @@ namespace _Game.Scripts.UI
             }
         }
 
-
         public Rarity GetRandomRarityNormal()
         {
             var randomValue = UnityEngine.Random.Range(0, 100);
-            Debug.Log("Tỉ lệ Gacha Common:" + randomValue);
+            Debug.Log($"Tỉ lệ Gacha Common:{randomValue}%");
 
             if (randomValue < 15)
             {
@@ -337,8 +339,6 @@ namespace _Game.Scripts.UI
                 return rarities[UnityEngine.Random.Range(0, rarities.Count)];
             }
         }
-
-
 
         #endregion
 
@@ -398,7 +398,7 @@ namespace _Game.Scripts.UI
         public Rarity GetRandomRarityLegend()
         {
             int randomValue = UnityEngine.Random.Range(0, 100);
-            Debug.Log("Tỉ lệ Gacha Legend:" + randomValue);
+            Debug.Log($"Tỉ lệ Gacha Legend:{randomValue}%");
 
             if (randomValue < 1)
             {
