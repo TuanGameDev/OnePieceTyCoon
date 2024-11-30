@@ -50,6 +50,9 @@ MonoBehaviour:
     - CharacterName: 8
       Rarity: 3
       Elemental: 3
+    - CharacterName: 2
+      Rarity: 0
+      Elemental: 3
     valueData:
     - Root: {fileID: 2092473371651389940, guid: ce33751d9db8fd04ca856563c859d9ea, type: 3}
     - Root: {fileID: 2092473371651389940, guid: 5cd93ab39851c3f47ba33c7a139d74ea, type: 3}
@@ -63,3 +66,4 @@ MonoBehaviour:
     - Root: {fileID: 2092473371651389940, guid: a36d3fef31c3d09409d2b7a6138e9607, type: 3}
     - Root: {fileID: 2092473371651389940, guid: 80f7f2c6b771cbe48afcf248e3fc5185, type: 3}
     - Root: {fileID: 4394592502127372645, guid: d1bceb6c1d88db54cbb8f7b07b3072bd, type: 3}
+    - Root: {fileID: 2092473371651389940, guid: ca50abcdc904f7a46b952a86cbf326c3, type: 3}

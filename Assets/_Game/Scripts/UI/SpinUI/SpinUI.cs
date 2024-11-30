@@ -1,5 +1,6 @@
 ﻿using _Game.Scripts.Enums;
 using _Game.Scripts.Manager;
+using _Game.Scripts.Non_Mono;
 using _Game.Scripts.Scriptable_Object;
 using _Game.Scripts.Scriptable_Objects.Database;
 using System.Collections;
@@ -41,6 +42,28 @@ namespace _Game.Scripts.UI
 
         private bool isSpinning = false;
 
+        #region InfoHero
+
+        [SerializeField]
+        private ElementalImgDictionary _elementalImgDictionary;
+
+        [SerializeField]
+        private Image _avatarHero;
+
+        [SerializeField]
+        private Image _elementalHero;
+
+        [SerializeField]
+        private TextMeshProUGUI _nameHeroTxt;
+
+        [SerializeField]
+        private TextMeshProUGUI _rarityHeroTxt;
+
+        [SerializeField]
+        private GameObject _panelItemPopup;
+
+        #endregion
+
         private void Start()
         {
             _spinBtn.onClick.AddListener(StartSpin);
@@ -51,7 +74,14 @@ namespace _Game.Scripts.UI
         {
             int totalAmount = 1000;
 
-            if (RankingManager.Instance.UserInformation.Diamond >= totalAmount)
+            if (RankingManager.Instance.UserInformation.Diamond < totalAmount)
+            {
+                _messageTxt.gameObject.SetActive(true);
+                _messageTxt.color = Color.red;
+                _messageTxt.text = "You don't have enough diamonds to spin!";
+                StartCoroutine(HideTxt(1f));
+            }
+            else
             {
                 if (!isSpinning)
                 {
@@ -61,8 +91,8 @@ namespace _Game.Scripts.UI
             }
             UserManagerUI.Instance.SaveUserInformation();
             UserManagerUI.Instance.UpdateDisplayUser();
-
         }
+
         private void GetSpin()
         {
             if (_heroesData.Count == 0 && _itemData.Count == 0)
@@ -85,10 +115,17 @@ namespace _Game.Scripts.UI
                     RankingManager.Instance.AddDiamond(item.Quantity);
                 }
             }
+
             _getSpinBtn.gameObject.SetActive(false);
             _spinBtn.gameObject.SetActive(true);
             _heroesData.Clear();
             _itemData.Clear();
+
+            _messageTxt.gameObject.SetActive(true);
+            _messageTxt.color = Color.green;
+            _messageTxt.text = "Get success!";
+            StartCoroutine(HideTxt(1f));
+
             UserManagerUI.Instance.SaveUserInformation();
             UserManagerUI.Instance.UpdateDisplayUser();
         }
@@ -180,9 +217,31 @@ namespace _Game.Scripts.UI
             _messageTxt.color = Color.green;
             _messageTxt.text = "Congratulations on receiving your item!";
             StartCoroutine(HideTxt(1f));
+
+            if (selectedItem.SlotItemSpinUI != null && selectedItem.SlotItemSpinUI.StatItemType == StatItem.Hero)
+            {
+                _panelItemPopup.gameObject.SetActive(true);
+                UpdateUIHero();
+            }
         }
 
+        private void UpdateUIHero()
+        {
+            if(_heroesData != null)
+            {
+                _avatarHero.sprite = _heroesData[0].HeroAvatar;
+                _nameHeroTxt.text = _heroesData[0].CharacterName.ToString();
+                _rarityHeroTxt.text = _heroesData[0].Rarity.ToString();
 
+                if (_elementalImgDictionary != null && _heroesData != null)
+                {
+                    if (_elementalImgDictionary.TryGetValue(_heroesData[0].Elemental, out Sprite elementalSprite))
+                    {
+                        _elementalHero.sprite = elementalSprite;
+                    }
+                }
+            }
+        }
 
         private void ProcessSelectedItem(InfoItem selectedItem)
         {
