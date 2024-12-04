@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Franky_C_Agility
   m_EditorClassIdentifier: 
   HeroID: 8
+  HeroName: franky
   HeroAvatar: {fileID: 21300000, guid: c918c54ec614a90428a92a3501271a6a, type: 3}
   IconAvatar: {fileID: 21300000, guid: 495f3e4d16c11e745a07f7bae4a4184b, type: 3}
   HeroAvatarPath: 
@@ -26,7 +27,7 @@ MonoBehaviour:
     AttackDamage: 1
     CurrentExp: 0
     ExpToLevelUp: 10
-  CharacterName: 9
+  HeroType: 1
   Rarity: 4
   Elemental: 1
   LevelStats:

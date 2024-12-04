@@ -6,11 +6,11 @@ namespace _Game.Scripts.Non_Mono
     [System.Serializable]
     public class CharacterState
     {
-        public CharacterName CharacterName;
+        public string CharacterName;
         public Rarity Rarity;
         public Elemental Elemental;
 
-        public CharacterState(CharacterName characterName, Rarity rarity, Elemental elemental)
+        public CharacterState(string characterName, Rarity rarity, Elemental elemental)
         {
             CharacterName = characterName;
             Rarity = rarity;

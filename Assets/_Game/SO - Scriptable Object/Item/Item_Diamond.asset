@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 111274e5d304c164182672601cae2f91, type: 3}
   m_Name: Item_Diamond
   m_EditorClassIdentifier: 
-  ItemIcon: {fileID: 75043598, guid: 56cc69967f382ba428be1599340477c7, type: 3}
+  ItemIcon: {fileID: 21300000, guid: 2075c3df25ef07c4e89fce30109dde65, type: 3}
   ItemID: 1
   ItemName: Diamond
   Description: 
   ItemDropRate: 95
+  Quantity: 0

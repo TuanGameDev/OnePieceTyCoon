@@ -63,7 +63,7 @@ namespace _Game.Scripts.Manager
         private void SpawnEnemy()
         {
             var enemyData = _enemyDataList[Random.Range(0, _enemyDataList.Count)];
-            CharacterState key = new CharacterState(enemyData.CharacterName, enemyData.Rarity, enemyData.Elemental);
+            CharacterState key = new CharacterState(enemyData.HeroName, enemyData.Rarity, enemyData.Elemental);
 
             if (_charOutLook.CharOut.TryGetValue(key, out OutLook outLook))
             {

@@ -18,16 +18,22 @@ namespace _Game.Scripts.UI
 {
     enum StateGacha
     {
-        Common,
-        Legend
+        Beli,
+        Diamond
     }
     public class GachaUI : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     {
         [SerializeField]
+        private BoxHeroDictionary _boxBeliDictionary;
+
+        [SerializeField]
+        private BoxHeroDictionary _boxDiamondDictionary;
+
+        [SerializeField]
         private StateGachaAndIcon _stateGachaAndIcon;
 
         [SerializeField, ReadOnly]
-        private StateGacha _stateGacha = StateGacha.Common;
+        private StateGacha _stateGacha = StateGacha.Beli;
 
         [Header("UI")]
         [SerializeField]
@@ -67,8 +73,8 @@ namespace _Game.Scripts.UI
                 _rankingManager = FindObjectOfType<RankingManager>();
             }
 
-            _gachaCommonBtn.onClick.AddListener(() => SetGachaState(StateGacha.Common));
-            _gachaLegendBtn.onClick.AddListener(() => SetGachaState(StateGacha.Legend));
+            _gachaCommonBtn.onClick.AddListener(() => SetGachaState(StateGacha.Beli));
+            _gachaLegendBtn.onClick.AddListener(() => SetGachaState(StateGacha.Diamond));
             _getHeroBtn.onClick.AddListener(GetHero);
         }
 
@@ -97,14 +103,14 @@ namespace _Game.Scripts.UI
         {
             _stateGacha = state;
 
-            if (state == StateGacha.Common)
+            if (state == StateGacha.Beli)
             {
                 _commonPopupUI.SetActive(true);
                 _legendPopupUI.SetActive(false);
                 _gachaCommonBtn.transform.localScale = new Vector3(1.2f, 1.2f, 1.2f);
                 _gachaLegendBtn.transform.localScale = Vector3.one;
             }
-            else if (state == StateGacha.Legend)
+            else if (state == StateGacha.Diamond)
             {
                 _commonPopupUI.SetActive(false);
                 _legendPopupUI.SetActive(true);
@@ -161,15 +167,15 @@ namespace _Game.Scripts.UI
                 return;
             }
 
-            if ((_stateGacha == StateGacha.Common && _rankingManager.UserInformation.Beli >= amount) ||
-                (_stateGacha == StateGacha.Legend && _rankingManager.UserInformation.Diamond >= amount))
+            if ((_stateGacha == StateGacha.Beli && _rankingManager.UserInformation.Beli >= amount) ||
+                (_stateGacha == StateGacha.Diamond && _rankingManager.UserInformation.Diamond >= amount))
             {
-                if (_stateGacha == StateGacha.Common)
+                if (_stateGacha == StateGacha.Beli)
                 {
                     _rankingManager.UserInformation.Beli -= amount;
                     AddHeroToGachaListNormal();
                 }
-                else if (_stateGacha == StateGacha.Legend)
+                else if (_stateGacha == StateGacha.Diamond)
                 {
                     _rankingManager.UserInformation.Diamond -= amount;
                     AddHeroToGachaListLegend();
@@ -202,10 +208,10 @@ namespace _Game.Scripts.UI
                 return;
             }
 
-            if ((_stateGacha == StateGacha.Common && _rankingManager.UserInformation.Beli >= totalAmount) ||
-                (_stateGacha == StateGacha.Legend && _rankingManager.UserInformation.Diamond >= totalAmount))
+            if ((_stateGacha == StateGacha.Beli && _rankingManager.UserInformation.Beli >= totalAmount) ||
+                (_stateGacha == StateGacha.Diamond && _rankingManager.UserInformation.Diamond >= totalAmount))
             {
-                if (_stateGacha == StateGacha.Common)
+                if (_stateGacha == StateGacha.Beli)
                 {
                     _rankingManager.UserInformation.Beli -= totalAmount;
                     for (int i = 0; i < 10; i++)
@@ -213,7 +219,7 @@ namespace _Game.Scripts.UI
                         AddHeroToGachaListNormal();
                     }
                 }
-                else if (_stateGacha == StateGacha.Legend)
+                else if (_stateGacha == StateGacha.Diamond)
                 {
                     _rankingManager.UserInformation.Diamond -= totalAmount;
                     for (int i = 0; i < 10; i++)
@@ -279,7 +285,7 @@ namespace _Game.Scripts.UI
             Rarity randomRarity = GetRandomRarityNormal();
 
             var heroesWithRarity = new List<HeroDataSO>();
-            foreach (var hero in HeroManager.Instance.HeroCommonDictionary.Values)
+            foreach (var hero in _boxBeliDictionary.Values)
             {
                 if (hero.Rarity == randomRarity)
                 {
@@ -305,11 +311,12 @@ namespace _Game.Scripts.UI
                 HeroData newHeroData = new HeroData
                 {
                     HeroID = selectedHeroDataSO.HeroID,
+                    HeroName = selectedHeroDataSO.HeroName,
                     HeroAvatar = selectedHeroDataSO.HeroAvatar,
                     CharacterStat = characterStatClone,
+                    HeroType = selectedHeroDataSO.HeroType,
                     Rarity = randomRarity,
                     Elemental = selectedHeroDataSO.Elemental,
-                    CharacterName = selectedHeroDataSO.CharacterName,
                     Power = selectedHeroDataSO.Power,
                     IconAvatarPath = $"Portrait/{selectedHeroDataSO.IconAvatar.name}",
                     HeroAvatarPath = $"Artworks/{selectedHeroDataSO.HeroAvatar.name}",
@@ -349,7 +356,7 @@ namespace _Game.Scripts.UI
             Rarity randomRarity = GetRandomRarityLegend();
 
             var heroesWithRarity = new List<HeroDataSO>();
-            foreach (var hero in HeroManager.Instance.HeroLegendDictionary.Values)
+            foreach (var hero in _boxDiamondDictionary.Values)
             {
                 if (hero.Rarity == randomRarity)
                 {
@@ -376,11 +383,12 @@ namespace _Game.Scripts.UI
                 HeroData newHeroData = new HeroData
                 {
                     HeroID = selectedHeroDataSO.HeroID,
+                    HeroName = selectedHeroDataSO.HeroName,
                     HeroAvatar = selectedHeroDataSO.HeroAvatar,
                     CharacterStat = characterStatClone,
+                    HeroType = selectedHeroDataSO.HeroType,
                     Rarity = randomRarity,
                     Elemental = selectedHeroDataSO.Elemental,
-                    CharacterName = selectedHeroDataSO.CharacterName,
                     Power = selectedHeroDataSO.Power,
                     IconAvatarPath = $"Portrait/{selectedHeroDataSO.IconAvatar.name}",
                     HeroAvatarPath = $"Artworks/{selectedHeroDataSO.HeroAvatar.name}",

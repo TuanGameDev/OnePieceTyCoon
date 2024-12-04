@@ -16,9 +16,6 @@ namespace _Game.Scripts.Manager
 {
     public class HeroManager : MonoBehaviour
     {
-        public HeroDictionary HeroCommonDictionary;
-        public HeroDictionary HeroLegendDictionary;
-
         public List<HeroDataList> HeroesAvailable = new List<HeroDataList>();
 
         public Action OnAddHero;
@@ -46,7 +43,7 @@ namespace _Game.Scripts.Manager
         {
             LoadDataHero();
         }
-        [Button("Add Hero")]
+
         public void AddHero(HeroData hero)
         {
             if (hero == null)
@@ -70,7 +67,7 @@ namespace _Game.Scripts.Manager
             HeroData newHero = CloneHero(hero);
 
             availableHeroList.Add(newHero);
-            Debug.Log($"Hero {newHero.CharacterName} đã được thêm.");
+            Debug.Log($"Hero {newHero.HeroName} đã được thêm.");
             OnAddHero?.Invoke();
             SaveDataHero();
         }
@@ -79,13 +76,14 @@ namespace _Game.Scripts.Manager
             HeroData clone = new HeroData
             {
                 HeroID = original.HeroID,
+                HeroName = original.HeroName,
                 HeroAvatar = original.HeroAvatar,
                 IconAvatar = original.IconAvatar,
                 HeroAvatarPath = original.HeroAvatarPath,
                 IconAvatarPath = original.IconAvatarPath,
                 Power = original.Power,
                 CharacterStat = CloneCharacterStat(original.CharacterStat),
-                CharacterName = original.CharacterName,
+                HeroType = original.HeroType,
                 Rarity = original.Rarity,
                 Elemental = original.Elemental,
                 LevelStats = new List<LevelStats>(original.LevelStats.Count)
@@ -121,33 +119,6 @@ namespace _Game.Scripts.Manager
             {
                 StatLevel = CloneCharacterStat(original.StatLevel)
             };
-        }
-
-
-        [Button("RemoveHero")]
-        public void RemoveHero()
-        {
-            if (HeroesAvailable.Count == 0)
-            {
-                HeroesAvailable.Add(new HeroDataList { heroes = new List<HeroData>() });
-            }
-
-            var availableHeroList = HeroesAvailable[0].heroes;
-
-            foreach (var heroEntry in HeroCommonDictionary)
-            {
-                var heroDataSO = heroEntry.Value;
-
-                HeroData heroToRemove = availableHeroList.Find(hero => hero.HeroID == heroDataSO.HeroID);
-
-                if (heroToRemove != null)
-                {
-                    availableHeroList.Remove(heroToRemove);
-                    OnRemoveHero?.Invoke();
-                }
-            }
-
-            SaveDataHero();
         }
 
         public void LoadDataHero()

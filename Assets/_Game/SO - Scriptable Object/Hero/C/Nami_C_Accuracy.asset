@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Nami_C_Accuracy
   m_EditorClassIdentifier: 
   HeroID: 2
+  HeroName: nami
   HeroAvatar: {fileID: 21300000, guid: c12345c55e831af45966f970a79a9edb, type: 3}
   IconAvatar: {fileID: 21300000, guid: e3cfe5b55f48dbe47a8c056f520e2d7f, type: 3}
   HeroAvatarPath: 
@@ -26,7 +27,7 @@ MonoBehaviour:
     AttackDamage: 1
     CurrentExp: 0
     ExpToLevelUp: 10
-  CharacterName: 4
+  HeroType: 2
   Rarity: 4
   Elemental: 3
   LevelStats:

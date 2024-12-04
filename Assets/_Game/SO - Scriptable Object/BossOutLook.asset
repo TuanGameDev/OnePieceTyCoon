@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CharOut:
     keyData:
-    - CharacterName: 0
+    - CharacterName: kaido
       Rarity: 1
       Elemental: 2
     valueData:

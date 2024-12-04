@@ -10,6 +10,7 @@
         public int AttackDamage;
         public int CurrentExp;
         public int ExpToLevelUp;
+
         public CharacterStat Clone()
         {
             return new CharacterStat
@@ -22,6 +23,17 @@
                 CurrentExp = this.CurrentExp,
                 ExpToLevelUp = this.ExpToLevelUp
             };
+        }
+
+        public void AddStats(CharacterStat other)
+        {
+            if (other == null) return;
+
+            this.Hp += other.Hp;
+            this.Def += other.Def;
+            this.MoveSpeed += other.MoveSpeed;
+            this.AttackDamage += other.AttackDamage;
+            this.ExpToLevelUp += other.ExpToLevelUp;
         }
     }
 }

@@ -10,6 +10,7 @@ namespace _Game.Scripts.Scriptable_Object
     public class HeroDataSO : ScriptableObject
     {
         public int HeroID;
+        public string HeroName;
         public Sprite HeroAvatar;
         public Sprite IconAvatar;
         public string HeroAvatarPath;
@@ -18,15 +19,17 @@ namespace _Game.Scripts.Scriptable_Object
 
         [Header("Stat Hero")]
         public CharacterStat CharacterStat;
-        public CharacterName CharacterName;
+        public HeroType HeroType;
         public Rarity Rarity;
         public Elemental Elemental;
         public List<LevelStats> LevelStats;
+        public List<Equipment> Equipment;
     }
     [System.Serializable]
     public class HeroData
     {
         public int HeroID;
+        public string HeroName;
         public Sprite HeroAvatar;
         public Sprite IconAvatar;
         public string HeroAvatarPath;
@@ -35,25 +38,28 @@ namespace _Game.Scripts.Scriptable_Object
 
         [Header("Stat Hero")]
         public CharacterStat CharacterStat;
-        public CharacterName CharacterName;
+        public HeroType HeroType;
         public Rarity Rarity;
         public Elemental Elemental;
         public List<LevelStats> LevelStats;
+        public List<Equipment> Equipment;
 
         [Button("Clear")]
         public void Clear()
         {
             HeroID = 0;
+            HeroName = null;
             Power = 0;
             HeroAvatar = null;
             IconAvatar = null;
             HeroAvatarPath = null;
             IconAvatarPath = null;
             CharacterStat = null;
-            CharacterName.None.ToString();
             Rarity.C.ToString();
             Elemental.None.ToString();
             LevelStats = null;
-        }
+            Equipment = null;
+
     }
+}
 }

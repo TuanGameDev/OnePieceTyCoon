@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Zoro_C_Agility
   m_EditorClassIdentifier: 
   HeroID: 1
+  HeroName: zoro
   HeroAvatar: {fileID: 21300000, guid: 76e906ebccd36714e9159cdf23df3d02, type: 3}
   IconAvatar: {fileID: 21300000, guid: e9df162fdf1abb6438b78ddc86c710ca, type: 3}
   HeroAvatarPath: 
@@ -26,7 +27,7 @@ MonoBehaviour:
     AttackDamage: 1
     CurrentExp: 0
     ExpToLevelUp: 10
-  CharacterName: 2
+  HeroType: 1
   Rarity: 4
   Elemental: 1
   LevelStats:

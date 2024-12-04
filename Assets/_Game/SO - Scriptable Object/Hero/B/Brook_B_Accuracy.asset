@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Brook_B_Accuracy
   m_EditorClassIdentifier: 
   HeroID: 7
+  HeroName: brook
   HeroAvatar: {fileID: 21300000, guid: 78c44f0712c1d984a9d7a6c0ac0195da, type: 3}
   IconAvatar: {fileID: 21300000, guid: db9bf13ed2f5b94438ce0842dcf09956, type: 3}
   HeroAvatarPath: 
@@ -26,7 +27,7 @@ MonoBehaviour:
     AttackDamage: 3
     CurrentExp: 0
     ExpToLevelUp: 10
-  CharacterName: 8
+  HeroType: 1
   Rarity: 3
   Elemental: 3
   LevelStats:

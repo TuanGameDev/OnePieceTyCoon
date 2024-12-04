@@ -230,7 +230,7 @@ namespace _Game.Scripts.UI
             if(_heroesData != null)
             {
                 _avatarHero.sprite = _heroesData[0].HeroAvatar;
-                _nameHeroTxt.text = _heroesData[0].CharacterName.ToString();
+                _nameHeroTxt.text = _heroesData[0].HeroName.ToString();
                 _rarityHeroTxt.text = _heroesData[0].Rarity.ToString();
 
                 if (_elementalImgDictionary != null && _heroesData != null)
@@ -258,7 +258,7 @@ namespace _Game.Scripts.UI
                     if (slotItem.HeroData != null)
                     {
                         _heroesData.Add(slotItem.HeroData);
-                        Debug.Log($"HeroData added: {slotItem.HeroData.CharacterName}");
+                        Debug.Log($"HeroData added: {slotItem.HeroData.HeroName}");
                     }
                     break;
 

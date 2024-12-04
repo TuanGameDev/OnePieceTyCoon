@@ -10,13 +10,13 @@ namespace _Game.Scripts.Character.Hero
         public void SetHeroData(HeroDataSO heroData)
         {
             HeroDataSO = heroData;
+            HeroDataSO.HeroName = heroData.HeroName;
             HeroDataSO.HeroID = heroData.HeroID;
             HeroDataSO.HeroAvatar = heroData.HeroAvatar;
             HeroDataSO.HeroAvatarPath = heroData.HeroAvatarPath;
             HeroDataSO.IconAvatar = heroData.IconAvatar;
             HeroDataSO.IconAvatarPath = heroData.IconAvatarPath;
             HeroDataSO.CharacterStat = heroData.CharacterStat;
-            HeroDataSO.CharacterName = heroData.CharacterName;
             HeroDataSO.Rarity = heroData.Rarity;
             HeroDataSO.Elemental = heroData.Elemental;
         }

@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: Zoro_SS_Accuracy
   m_EditorClassIdentifier: 
   HeroID: 12
-  HeroAvatar: {fileID: 21300000, guid: a19fb532a6482fb429d62de1306be848, type: 3}
+  HeroName: zoro wano
+  HeroAvatar: {fileID: 21300000, guid: ead3e8495ac48e9408464fc0acb1820e, type: 3}
   IconAvatar: {fileID: 21300000, guid: 889e0253ea924804bae28af4e7ae56b5, type: 3}
-  HeroAvatarPath: ArtWorks/character_13212_t1_large
+  HeroAvatarPath: ArtWorks/character_1501_c1
   IconAvatarPath: Portrait/character_13212_t1
   Power: 1000
   CharacterStat:
@@ -26,7 +27,7 @@ MonoBehaviour:
     AttackDamage: 20
     CurrentExp: 0
     ExpToLevelUp: 10
-  CharacterName: 2
+  HeroType: 1
   Rarity: 0
   Elemental: 3
   LevelStats:

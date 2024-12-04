@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Shank_SS_Intelligence
   m_EditorClassIdentifier: 
   HeroID: 10
+  HeroName: shank
   HeroAvatar: {fileID: 21300000, guid: a1446a324a4631540af9eb5f0a085bf3, type: 3}
   IconAvatar: {fileID: 21300000, guid: 1ad89024aa959854fb105a00b6f35c4d, type: 3}
   HeroAvatarPath: 
@@ -26,7 +27,7 @@ MonoBehaviour:
     AttackDamage: 20
     CurrentExp: 0
     ExpToLevelUp: 10
-  CharacterName: 11
+  HeroType: 1
   Rarity: 0
   Elemental: 5
   LevelStats:

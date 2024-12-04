@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Enemy_Pirate_0
   m_EditorClassIdentifier: 
   HeroID: 0
+  HeroName: ENM_Pirates
   HeroAvatar: {fileID: 1711093913, guid: a2fc87d30e2777146b135cc025375147, type: 3}
   IconAvatar: {fileID: 0}
   HeroAvatarPath: 
@@ -20,13 +21,14 @@ MonoBehaviour:
   Power: 100
   CharacterStat:
     HeroLevel: 1
-    Hp: 20
+    Hp: 1
     Def: 0
     MoveSpeed: 3
     AttackDamage: 2
     CurrentExp: 0
     ExpToLevelUp: 0
-  CharacterName: 0
-  Rarity: 4
+  HeroType: 0
+  Rarity: 0
   Elemental: 1
   LevelStats: []
+  EquipmentLevel: []

@@ -8,13 +8,17 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using _Game.Scripts.Helper;
 using _Game.Scripts.Enums;
+using System.Linq;
 
 namespace _Game.Scripts.UI
 {
-    public class HeroesUI : Singleton<HeroesUI>, IPointerDownHandler, IPointerUpHandler
+    public class HeroesUI : Singleton<HeroesUI>
     {
         [SerializeField] 
         private RarityAndColorDictionary _rarityAndColorDictionary;
+
+        [SerializeField]
+        private SlotEquipmentUI[] _slotEquipmentUI;
 
         [SerializeField] 
         private SlotHeroUI _slotHeroPrefab;
@@ -31,7 +35,6 @@ namespace _Game.Scripts.UI
         [SerializeField]
         private TextMeshProUGUI _nameHeroTxt, _rarityHeroTxt, _powerHeroTxt, _levelHeroTxt, _stateHeroTxt, _heroSlotTxt, _heroHpTxt, _heroDefTxt, _heroAttackTxt, _heroMoveTxt, _heroEXPTxt;
 
-        [Space(20)]
         [SerializeField] 
         private Button _infoHeroBtn, _statHeroBtn,_upGradeBtn;
 
@@ -91,31 +94,31 @@ namespace _Game.Scripts.UI
             if (_selectedHero.HeroData.CharacterStat.CurrentExp >= _selectedHero.HeroData.CharacterStat.ExpToLevelUp)
             {
                 _selectedHero.HeroData.CharacterStat.HeroLevel++;
-
+                _selectedHero.HeroData.CharacterStat.CurrentExp = 0;
                 foreach (var levelStat in _selectedHero.HeroData.LevelStats)
                 {
                     if (levelStat.StatLevel.HeroLevel == _selectedHero.HeroData.CharacterStat.HeroLevel)
                     {
-                        _selectedHero.HeroData.CharacterStat = levelStat.StatLevel.Clone();
+                        _selectedHero.HeroData.CharacterStat.AddStats(levelStat.StatLevel.Clone());
 
                         var spawnedHero = SpawnHeroManager.Instance.GetSpawnedHero(_selectedHero.HeroData.HeroID);
                         if (spawnedHero != null)
                         {
-                            spawnedHero.HeroDataSO.CharacterStat = levelStat.StatLevel.Clone();
                             spawnedHero.CurrentStat = spawnedHero.HeroDataSO.CharacterStat;
                             _selectedHero.HeroData.CharacterStat = spawnedHero.CurrentStat;
                         }
                         break;
                     }
                 }
+
                 _expPopup.SetActive(true);
                 _upGradePopup.SetActive(false);
                 _infoHeroStatPopup.SetActive(true);
                 HeroManager.Instance.SaveDataHero();
                 UpdateStatHero();
+                UpdateEquipmentIcons();
             }
         }
-
 
         public void SelectHero(SlotHeroUI selectedHero)
         {
@@ -125,13 +128,13 @@ namespace _Game.Scripts.UI
                 slot.SetSelected(slot == selectedHero);
 
             _statHeroPopup.SetActive(_selectedHero != null);
+
             UpdateStatHero();
+            UpdateEquipmentIcons();
 
-            UpdateStatHeroButtonState(selectedHero); // Cập nhật nút theo slot đã chọn
-
+            UpdateStatHeroButtonState(selectedHero);
             UpdateStateText();
-
-            UpdateCombatStatusButton(); // Cập nhật trạng thái nút _statHeroBtn dựa trên số lượng hero trong combat
+            UpdateCombatStatusButton();
         }
 
 
@@ -173,7 +176,7 @@ namespace _Game.Scripts.UI
                 _expBar.fillAmount = (float)_selectedHero.HeroData.CharacterStat.CurrentExp / _selectedHero.HeroData.CharacterStat.ExpToLevelUp;
             }
 
-            _nameHeroTxt.text = _selectedHero.HeroData.CharacterName.ToString();
+            _nameHeroTxt.text = _selectedHero.HeroData.HeroName.ToString();
             _heroHpTxt.text = _selectedHero.HeroData.CharacterStat.Hp.ToString("N0");
             _heroDefTxt.text = _selectedHero.HeroData.CharacterStat.Def.ToString("N0");
             _heroAttackTxt.text = _selectedHero.HeroData.CharacterStat.AttackDamage.ToString("N0");
@@ -196,6 +199,60 @@ namespace _Game.Scripts.UI
             }
         }
 
+        private void UpdateEquipmentIcons()
+        {
+            if (_selectedHero == null || _slotEquipmentUI == null) return;
+
+            foreach (var slot in _slotEquipmentUI)
+            {
+                var equipmentType = slot.EquipmentType;
+
+                var equipmentLevel = _selectedHero.HeroData.Equipment
+                    .Find(e => e.EquipmentType == equipmentType);
+
+                if (equipmentLevel == null) continue;
+
+                var matchingLevelStat = equipmentLevel.LevelStat
+                    .Where(stat => stat.Level <= _selectedHero.HeroData.CharacterStat.HeroLevel)
+                    .OrderByDescending(stat => stat.Level)
+                    .FirstOrDefault();
+
+                bool showLevelUpBtn = _selectedHero.HeroData.CharacterStat.HeroLevel > equipmentLevel.LevelEquipment;
+
+                if (matchingLevelStat != null)
+                {
+                    slot.SetIcon(_selectedHero.HeroData,matchingLevelStat.IconItem, OnLevelUpButtonClicked, equipmentLevel.LevelEquipment, matchingLevelStat.Rarity.ToString());
+                }
+                else
+                {
+                    slot.SetIcon(null,null, null, equipmentLevel.LevelEquipment, matchingLevelStat.Rarity.ToString());
+                }
+
+                slot.SetLevelUpButtonVisible(showLevelUpBtn);
+            }
+        }
+
+
+        private void OnLevelUpButtonClicked(SlotEquipmentUI slot)
+        {
+            if (slot == null || _selectedHero == null) return;
+
+            var equipmentLevel = _selectedHero.HeroData.Equipment
+                .Find(e => e.EquipmentType == slot.EquipmentType);
+
+            if (equipmentLevel == null) return;
+
+            if (_selectedHero.HeroData.CharacterStat.HeroLevel > equipmentLevel.LevelEquipment)
+            {
+                equipmentLevel.LevelEquipment++;
+
+                _selectedHero.HeroData.CharacterStat.AddStats(slot.BonusStatEquip);
+
+                UpdateEquipmentIcons();
+                UpdateStatHero();
+                HeroManager.Instance.SaveDataHero();
+            }
+        }
 
         private void OnStatHeroButtonClicked()
         {
@@ -205,7 +262,6 @@ namespace _Game.Scripts.UI
                 UpdateStateText();
             }
         }
-
 
         private void ToggleHeroState(SlotHeroUI selectedHero)
         {
@@ -454,17 +510,6 @@ namespace _Game.Scripts.UI
                     _statHeroBtn.interactable = combatHeroCount < 6;
                 }
             }
-        }
-
-
-        public void OnPointerDown(PointerEventData eventData)
-        {
-            if (eventData.pointerPress == _infoHeroBtn.gameObject) _infoHeroStatPopup.SetActive(true);
-        }
-
-        public void OnPointerUp(PointerEventData eventData)
-        {
-            if (eventData.pointerPress == _infoHeroBtn.gameObject) _infoHeroStatPopup.SetActive(false);
         }
     }
 

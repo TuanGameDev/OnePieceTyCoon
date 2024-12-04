@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Usopp_C_Agility
   m_EditorClassIdentifier: 
   HeroID: 4
+  HeroName: usopp
   HeroAvatar: {fileID: 21300000, guid: 59bbcce999370364eb6867b43ecc56c7, type: 3}
   IconAvatar: {fileID: 21300000, guid: eac56bb942dccd640a8e81c41d72f909, type: 3}
   HeroAvatarPath: 
@@ -26,7 +27,7 @@ MonoBehaviour:
     AttackDamage: 1
     CurrentExp: 0
     ExpToLevelUp: 10
-  CharacterName: 5
+  HeroType: 2
   Rarity: 4
   Elemental: 1
   LevelStats:

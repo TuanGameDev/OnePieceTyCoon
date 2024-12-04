@@ -56,7 +56,7 @@ namespace _Game.Scripts.UI
                         if (HeroData != null)
                         {
                             _avatarItem.sprite = HeroData.IconAvatar;
-                            _nameItemTxt.text = HeroData.CharacterName.ToString();
+                            _nameItemTxt.text = HeroData.HeroName.ToString();
                             _amountItemTxt.text = $"{HeroData.Rarity}";
                         }
                         break;

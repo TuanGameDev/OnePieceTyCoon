@@ -1,0 +1,665 @@
+fileFormatVersion: 2
+guid: d95769ae01d8ed64ba04c698a5eab89a
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: motion_10596_sabo_0001_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 811
+        width: 141
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 801de5f3693ab6c4d9ed4f689285b644
+      internalID: -534784106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_10596_sabo_0001_1
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 811
+        width: 141
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a866b1c1c758e34db7182bb47e71152
+      internalID: 428897233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_10596_sabo_0001_2
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 811
+        width: 141
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcab611dee42d0249ac666851c13ef22
+      internalID: 1588170763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_10596_sabo_0001_3
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 806
+        width: 133
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28740cb768ac8f74b897ae526e359958
+      internalID: -1742885411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_10596_sabo_0001_4
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 806
+        width: 167
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07f50db178fc1d149a1f945b5a6b867c
+      internalID: -72432161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_10596_sabo_0001_5
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 808
+        width: 166
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cbf942595d035a49af2f57be850f457
+      internalID: 2134847327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_10596_sabo_0001_6
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 591
+        width: 177
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f79a777847e38d441afe49a458287d2e
+      internalID: -685897673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_10596_sabo_0001_7
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 591
+        width: 169
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 846114c9f57b54c47bc5b35840d9df21
+      internalID: -1549176440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_10596_sabo_0001_8
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 591
+        width: 169
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ef37deedb7da72458aeff756a3a47e6
+      internalID: -1256557335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_10596_sabo_0001_9
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 591
+        width: 169
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b10bdc5bf57b0ef46bc9aa7149e09639
+      internalID: 1814781226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_10596_sabo_0001_10
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 585
+        width: 184
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bbd6c829a5e37246b92984e2958df5b
+      internalID: 703925633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_10596_sabo_0001_12
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 365
+        width: 142
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ec5a65dcce52134c8ebf71a0582b89a
+      internalID: 1239939557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_10596_sabo_0001_13
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 398
+        width: 171
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d2acea4fae02324d8a0cd374f377f2c
+      internalID: -801253947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_10596_sabo_0001_14
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 398
+        width: 171
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3da977e633fae334a94330eba870ebcf
+      internalID: -1621575076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_10596_sabo_0001_15
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 413
+        width: 172
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad67458b696c397459e352301d0f752c
+      internalID: 1665173500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_10596_sabo_0001_16
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 452
+        width: 189
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23c8649b7d933c34a9f253014f4f589d
+      internalID: 1803176755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_10596_sabo_0001_24
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 196
+        width: 147
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9389ca2335268e418593aad40742ac3
+      internalID: 38239534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_10596_sabo_0001_25
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 195
+        width: 156
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 159e4b4b7b5d41f49b69e653c02718d8
+      internalID: 276660307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_10596_sabo_0001_27
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 8
+        width: 106
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3cdd58d36be05d40b390da08e6a84bf
+      internalID: 396517316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_10596_sabo_0001_28
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 16
+        width: 128
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50e838d206cf2a5458442b0e073f7983
+      internalID: 1063627640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_10596_sabo_0001_29
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 14
+        width: 130
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d9cbb4ba80089541b19bea0c71b65ec
+      internalID: 1621568379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_10596_sabo_0001_30
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 14
+        width: 131
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d2584e03c9e64845b94f251486a0520
+      internalID: 1209527314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_10596_sabo_0001_31
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 14
+        width: 180
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bf5c15961c16d5418f735aed7ce2a66
+      internalID: 30337871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion_10596_sabo_0001_32
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 13
+        width: 157
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a8986ac87cc57049a10375d9f3ae3d8
+      internalID: -1978714396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      motion_10596_sabo_0001_0: -534784106
+      motion_10596_sabo_0001_1: 428897233
+      motion_10596_sabo_0001_10: 703925633
+      motion_10596_sabo_0001_11: 1443014758
+      motion_10596_sabo_0001_12: 1239939557
+      motion_10596_sabo_0001_13: -801253947
+      motion_10596_sabo_0001_14: -1621575076
+      motion_10596_sabo_0001_15: 1665173500
+      motion_10596_sabo_0001_16: 1803176755
+      motion_10596_sabo_0001_17: -1913620763
+      motion_10596_sabo_0001_18: 925418730
+      motion_10596_sabo_0001_19: 1900470929
+      motion_10596_sabo_0001_2: 1588170763
+      motion_10596_sabo_0001_20: -1218807704
+      motion_10596_sabo_0001_21: 1288470862
+      motion_10596_sabo_0001_22: -1731203243
+      motion_10596_sabo_0001_23: -703913033
+      motion_10596_sabo_0001_24: 38239534
+      motion_10596_sabo_0001_25: 276660307
+      motion_10596_sabo_0001_26: -56244672
+      motion_10596_sabo_0001_27: 396517316
+      motion_10596_sabo_0001_28: 1063627640
+      motion_10596_sabo_0001_29: 1621568379
+      motion_10596_sabo_0001_3: -1742885411
+      motion_10596_sabo_0001_30: 1209527314
+      motion_10596_sabo_0001_31: 30337871
+      motion_10596_sabo_0001_32: -1978714396
+      motion_10596_sabo_0001_33: 1237630631
+      motion_10596_sabo_0001_4: -72432161
+      motion_10596_sabo_0001_5: 2134847327
+      motion_10596_sabo_0001_6: -685897673
+      motion_10596_sabo_0001_7: -1549176440
+      motion_10596_sabo_0001_8: -1256557335
+      motion_10596_sabo_0001_9: 1814781226
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

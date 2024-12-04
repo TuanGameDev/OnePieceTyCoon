@@ -32,26 +32,31 @@ namespace _Game.Scripts.Manager
 
         public void SpawnBoss(int bossIndex)
         {
+            Debug.Log("SpawnBoss called with index: " + bossIndex);
+
             if (BossInfos == null || BossInfos.Count == 0)
             {
+                Debug.LogError("BossInfos is null or empty!");
                 return;
             }
 
             if (bossIndex < 0 || bossIndex >= BossInfos.Count)
             {
+                Debug.LogError("Boss index is out of range!");
                 return;
             }
 
-            var selectedBoss = BossInfos[bossIndex];
             Vector3 spawnPosition = _spawnPoint.position;
-
             CurrentBossCtrl = Instantiate(_bossCtrlPrefab, spawnPosition, Quaternion.identity);
+            Debug.Log("Boss instantiated successfully.");
 
-            CurrentBossCtrl.SetHeroData(selectedBoss.HeroData);
+            // Rest of the logic
+
+            CurrentBossCtrl.SetHeroData(BossInfos[0].HeroData);
 
             CurrentBossCtrl.OnDamaggeChanged += CheckBossHpChange;
             PreviousScore = 0;
-            CharacterState key = new CharacterState(selectedBoss.HeroData.CharacterName, selectedBoss.HeroData.Rarity, selectedBoss.HeroData.Elemental);
+            CharacterState key = new CharacterState(BossInfos[0].HeroData.HeroName, BossInfos[0].HeroData.Rarity, BossInfos[0].HeroData.Elemental);
             if (_charOutLook != null && _charOutLook.CharOut.TryGetValue(key, out OutLook outLook))
             {
                 if (outLook.Root != null)
@@ -86,15 +91,14 @@ namespace _Game.Scripts.Manager
             if (CurrentBossCtrl != null)
             {
                 CurrentBossCtrl.OnDamaggeChanged -= CheckBossHpChange;
+                Destroy(CurrentBossCtrl.gameObject);
+                CurrentBossCtrl = null;
             }
         }
 
         [System.Serializable]
         public class BossInfo
         {
-            [Tooltip("Name of the boss")]
-            public string NameBoss;
-
             [Tooltip("Hero data for this boss")]
             public HeroDataSO HeroData;
         }

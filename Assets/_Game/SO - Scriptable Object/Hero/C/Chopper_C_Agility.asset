@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Chopper_C_Agility
   m_EditorClassIdentifier: 
   HeroID: 6
+  HeroName: chopper
   HeroAvatar: {fileID: 21300000, guid: 672eaaa4115598e40abe24721b6bba21, type: 3}
   IconAvatar: {fileID: 21300000, guid: 6b30c85bda698cf43aa6e625dd30049a, type: 3}
   HeroAvatarPath: 
@@ -26,7 +27,7 @@ MonoBehaviour:
     AttackDamage: 1
     CurrentExp: 0
     ExpToLevelUp: 10
-  CharacterName: 6
+  HeroType: 1
   Rarity: 4
   Elemental: 1
   LevelStats:

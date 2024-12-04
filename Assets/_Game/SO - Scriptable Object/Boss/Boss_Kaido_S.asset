@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Boss_Kaido_S
   m_EditorClassIdentifier: 
   HeroID: 0
+  HeroName: kaido
   HeroAvatar: {fileID: -1871551177, guid: 99dbeea381d2a234ba9667aabde9d329, type: 3}
   IconAvatar: {fileID: 21300000, guid: 26dad825291c470498b7c1f04f5ce719, type: 3}
   HeroAvatarPath: 
@@ -23,10 +24,10 @@ MonoBehaviour:
     Hp: 1000000000
     Def: 0
     MoveSpeed: 0
-    AttackDamage: 1
+    AttackDamage: 2
     CurrentExp: 0
     ExpToLevelUp: 0
-  CharacterName: 0
+  HeroType: 1
   Rarity: 1
   Elemental: 2
   LevelStats: []

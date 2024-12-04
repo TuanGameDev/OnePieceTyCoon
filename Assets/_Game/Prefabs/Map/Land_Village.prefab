@@ -3001,6 +3001,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2918066840962668390}
   - component: {fileID: 5007772865428817211}
+  - component: {fileID: 5859964318654149944}
+  - component: {fileID: 3282394563123590763}
   m_Layer: 0
   m_Name: Land_Village
   m_TagString: Untagged
@@ -3041,6 +3043,54 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
+--- !u!114 &5859964318654149944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4185587815166912464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b45316953ea84743b3206c2147ae9a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enemyBasePrefab: {fileID: 741523555141894788, guid: b2e3244d90db5a94fb5ab53fd353b4ed, type: 3}
+  _charOutLook: {fileID: 11400000, guid: a6c4666906e93b945b6fabb534cf26b9, type: 2}
+  _enemyDataList:
+  - {fileID: 11400000, guid: fb2c319f13674634380f6ae6f78a0653, type: 2}
+  _spawnPatrolPosition:
+  - {fileID: 5171953358075420836}
+  - {fileID: 8209755176372230668}
+  - {fileID: 100265113062038412}
+  - {fileID: 8033859220315739965}
+  - {fileID: 7012616292148207924}
+  _spawnRate:
+    MaxEnemy: 5
+    SpawnRate: 5
+  _currentEnemyInZone: 0
+  _sizePool: 11
+--- !u!114 &3282394563123590763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4185587815166912464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7d6400464b1b5442a05c108be3ebb3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _heroPrefab: {fileID: 3017598112379463855, guid: 2bba203ffb9d7ae49bc23e36668623b2, type: 3}
+  _charOutLook: {fileID: 11400000, guid: 7f7610872eda7e644a2f17e142bfa8f3, type: 2}
+  _defaultPoint: {fileID: 6599068859951783511}
+  _spawnPatrolPosition:
+  - {fileID: 5171953358075420836}
+  - {fileID: 8209755176372230668}
+  - {fileID: 100265113062038412}
+  - {fileID: 8033859220315739965}
+  - {fileID: 7012616292148207924}
 --- !u!1 &4577198769870528706
 GameObject:
   m_ObjectHideFlags: 0
@@ -3114,8 +3164,6 @@ GameObject:
   - component: {fileID: 5593731785415141822}
   - component: {fileID: 8131384097235212628}
   - component: {fileID: 7887592178063489410}
-  - component: {fileID: 81860163765557163}
-  - component: {fileID: 4752400636332415270}
   m_Layer: 0
   m_Name: SpawnManager
   m_TagString: Untagged
@@ -3231,54 +3279,6 @@ TilemapRenderer:
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
---- !u!114 &81860163765557163
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6297217788571602331}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7d6400464b1b5442a05c108be3ebb3c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _heroPrefab: {fileID: 3017598112379463855, guid: 2bba203ffb9d7ae49bc23e36668623b2, type: 3}
-  _charOutLook: {fileID: 11400000, guid: 7f7610872eda7e644a2f17e142bfa8f3, type: 2}
-  _defaultPoint: {fileID: 6599068859951783511}
-  _spawnPatrolPosition:
-  - {fileID: 5171953358075420836}
-  - {fileID: 8209755176372230668}
-  - {fileID: 100265113062038412}
-  - {fileID: 8033859220315739965}
-  - {fileID: 7012616292148207924}
---- !u!114 &4752400636332415270
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6297217788571602331}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b45316953ea84743b3206c2147ae9a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _enemyBasePrefab: {fileID: 741523555141894788, guid: b2e3244d90db5a94fb5ab53fd353b4ed, type: 3}
-  _charOutLook: {fileID: 11400000, guid: a6c4666906e93b945b6fabb534cf26b9, type: 2}
-  _enemyDataList:
-  - {fileID: 11400000, guid: fb2c319f13674634380f6ae6f78a0653, type: 2}
-  _spawnPatrolPosition:
-  - {fileID: 5171953358075420836}
-  - {fileID: 8209755176372230668}
-  - {fileID: 100265113062038412}
-  - {fileID: 8033859220315739965}
-  - {fileID: 7012616292148207924}
-  _spawnRate:
-    MaxEnemy: 5
-    SpawnRate: 5
-  _currentEnemyInZone: 0
-  _sizePool: 6
 --- !u!1 &6354968931534288736
 GameObject:
   m_ObjectHideFlags: 0

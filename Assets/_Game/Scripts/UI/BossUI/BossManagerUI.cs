@@ -152,7 +152,6 @@ namespace _Game.Scripts.UI
             if (BossManager.Instance.CurrentBossCtrl != null)
             {
                 Destroy(BossManager.Instance.CurrentBossCtrl.gameObject);
-                BossManager.Instance.CurrentBossCtrl = null;
                 _fightBtn.interactable = true;
                 RankingBossUI.Instance.AddScoreBoss(BossManager.Instance.PreviousScore);
             }
@@ -208,7 +207,7 @@ namespace _Game.Scripts.UI
             _rarityBossTxt.gameObject.SetActive(true);
 
             _avatarBoss.sprite = currentBossData.HeroAvatar;
-            _nameBossTxt.text = BossManager.Instance.BossInfos.Find(info => info.HeroData == currentBossData)?.NameBoss ?? "Unknown Boss";
+            _nameBossTxt.text = BossManager.Instance.CurrentBossCtrl.HeroDataSO.HeroName;
             _rarityBossTxt.text = currentBossData.Rarity.ToString();
             _rarityBossTxt.color = _rarityAndColorDictionary.TryGetValue(currentBossData.Rarity, out Color color) ? color : Color.white;
 

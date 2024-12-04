@@ -37,6 +37,7 @@ namespace _Game.Scripts.Manager
 
                 HeroDataSO tempHeroDataSO = ScriptableObject.CreateInstance<HeroDataSO>();
                 tempHeroDataSO.HeroID = heroData.HeroID;
+                tempHeroDataSO.HeroName = heroData.HeroName;
                 tempHeroDataSO.HeroAvatar = heroData.HeroAvatar;
                 tempHeroDataSO.HeroAvatarPath = heroData.HeroAvatarPath;
                 tempHeroDataSO.IconAvatarPath = heroData.IconAvatarPath;
@@ -45,12 +46,11 @@ namespace _Game.Scripts.Manager
                 tempHeroDataSO.Rarity = heroData.Rarity;
                 tempHeroDataSO.Elemental = heroData.Elemental;
                 tempHeroDataSO.Power = heroData.Power;
-                tempHeroDataSO.CharacterName = heroData.CharacterName;
                 tempHeroDataSO.LevelStats = heroData.LevelStats;
                 heroInstance.IsInCombat = true;
                 heroInstance.SetPatrolPoints(_spawnPatrolPosition);
                 heroInstance.SetState(new WaitingState());
-                CharacterState key = new CharacterState(tempHeroDataSO.CharacterName, tempHeroDataSO.Rarity, tempHeroDataSO.Elemental);
+                CharacterState key = new CharacterState(tempHeroDataSO.HeroName, tempHeroDataSO.Rarity, tempHeroDataSO.Elemental);
                 if (_charOutLook.CharOut.TryGetValue(key, out OutLook outLook))
                 {
                     if (outLook.Root != null)

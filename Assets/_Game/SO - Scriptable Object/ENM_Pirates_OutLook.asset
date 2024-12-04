@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CharOut:
     keyData:
-    - CharacterName: 0
-      Rarity: 4
+    - CharacterName: ENM_Pirates
+      Rarity: 0
       Elemental: 1
     valueData:
     - Root: {fileID: 8587349390366295533, guid: 5b5c89a07c1984d45a8f53efcc199f80, type: 3}

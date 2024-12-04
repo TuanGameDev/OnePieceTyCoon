@@ -14,56 +14,60 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CharOut:
     keyData:
-    - CharacterName: 1
+    - CharacterName: luffy kid
       Rarity: 4
       Elemental: 2
-    - CharacterName: 2
+    - CharacterName: zoro
       Rarity: 4
       Elemental: 1
-    - CharacterName: 3
+    - CharacterName: sanji
       Rarity: 4
       Elemental: 1
-    - CharacterName: 10
-      Rarity: 1
-      Elemental: 2
-    - CharacterName: 11
-      Rarity: 0
-      Elemental: 5
-    - CharacterName: 12
-      Rarity: 2
-      Elemental: 1
-    - CharacterName: 6
-      Rarity: 4
-      Elemental: 1
-    - CharacterName: 9
-      Rarity: 4
-      Elemental: 1
-    - CharacterName: 4
+    - CharacterName: nami
       Rarity: 4
       Elemental: 3
-    - CharacterName: 5
-      Rarity: 4
-      Elemental: 1
-    - CharacterName: 7
+    - CharacterName: robin
       Rarity: 4
       Elemental: 3
-    - CharacterName: 8
+    - CharacterName: chopper
+      Rarity: 4
+      Elemental: 1
+    - CharacterName: franky
+      Rarity: 4
+      Elemental: 1
+    - CharacterName: usopp
+      Rarity: 4
+      Elemental: 1
+    - CharacterName: brook
       Rarity: 3
       Elemental: 3
-    - CharacterName: 2
+    - CharacterName: ace
+      Rarity: 2
+      Elemental: 1
+    - CharacterName: jinbe wano
+      Rarity: 0
+      Elemental: 2
+    - CharacterName: shank
+      Rarity: 0
+      Elemental: 5
+    - CharacterName: zoro wano
       Rarity: 0
       Elemental: 3
+    - CharacterName: sabo
+      Rarity: 1
+      Elemental: 2
     valueData:
     - Root: {fileID: 2092473371651389940, guid: ce33751d9db8fd04ca856563c859d9ea, type: 3}
     - Root: {fileID: 2092473371651389940, guid: 5cd93ab39851c3f47ba33c7a139d74ea, type: 3}
     - Root: {fileID: 2092473371651389940, guid: 4c86a9ce36dc72447a973b4f92b837a7, type: 3}
-    - Root: {fileID: 7781193419801296423, guid: b82bda1bbc2f6d3468166b6ef07b5200, type: 3}
-    - Root: {fileID: 2092473371651389940, guid: 8871748082f52ca4abd6eb5e76a2dd1e, type: 3}
-    - Root: {fileID: 4394592502127372645, guid: c281e2d27077f76428731b3657a58b1b, type: 3}
+    - Root: {fileID: 2092473371651389940, guid: 7c934b5647a9c3e44907309a44903f5c, type: 3}
+    - Root: {fileID: 2092473371651389940, guid: 80f7f2c6b771cbe48afcf248e3fc5185, type: 3}
     - Root: {fileID: 4394592502127372645, guid: baddd3134aaf5b248a2ec52d17c3db07, type: 3}
     - Root: {fileID: 4394592502127372645, guid: d97593b8d22c338499a571ae53c774a1, type: 3}
-    - Root: {fileID: 2092473371651389940, guid: 7c934b5647a9c3e44907309a44903f5c, type: 3}
     - Root: {fileID: 2092473371651389940, guid: a36d3fef31c3d09409d2b7a6138e9607, type: 3}
-    - Root: {fileID: 2092473371651389940, guid: 80f7f2c6b771cbe48afcf248e3fc5185, type: 3}
     - Root: {fileID: 4394592502127372645, guid: d1bceb6c1d88db54cbb8f7b07b3072bd, type: 3}
+    - Root: {fileID: 4394592502127372645, guid: c281e2d27077f76428731b3657a58b1b, type: 3}
+    - Root: {fileID: 7781193419801296423, guid: b82bda1bbc2f6d3468166b6ef07b5200, type: 3}
+    - Root: {fileID: 2092473371651389940, guid: 8871748082f52ca4abd6eb5e76a2dd1e, type: 3}
     - Root: {fileID: 2092473371651389940, guid: ca50abcdc904f7a46b952a86cbf326c3, type: 3}
+    - Root: {fileID: 2092473371651389940, guid: 3b01ff2ee6150c84286b71ad9123d31d, type: 3}
