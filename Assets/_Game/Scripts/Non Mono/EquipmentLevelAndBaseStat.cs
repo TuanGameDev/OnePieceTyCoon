@@ -20,5 +20,6 @@ namespace _Game.Scripts.Non_Mono
         public int Level;
         public Rarity Rarity;
         public Sprite IconItem;
+        public string IconEquipmentPath;
     }
 }

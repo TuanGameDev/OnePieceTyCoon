@@ -15,7 +15,7 @@ MonoBehaviour:
   DevAccountEmail: hoangtuan18203@gmail.com
   DevAccountToken: ji48tsw1bjjg1trpskh87pb19iizpuqnbitgwmyh7izen3r9bqex4uub3kb19j38yz8gym6j5ih4uwfdh1gj39rrzx3zia17mjztf5tuf8mw1wzwdhqzenh6s3k4aehyn56oj1gqnhwtkxjbswf573wybtw6dr69f5ar6sdg5jr85zhhu441zmpwk47oncy5win8c3y5
   AadAuthorization: 
-  SelectedStudio: 
+  SelectedStudio: Game2D
   SdkPath: Assets/PlayFabSDK
   EdExPath: 
   LocalCloudScriptPath: 

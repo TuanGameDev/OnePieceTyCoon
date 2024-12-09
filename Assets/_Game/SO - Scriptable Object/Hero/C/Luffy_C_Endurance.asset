@@ -116,85 +116,119 @@ MonoBehaviour:
     EquipmentType: 1
     LevelStat:
     - Level: 1
+      Rarity: 4
       IconItem: {fileID: 21300000, guid: cfa1acb1b6681ae4a9af31b8237e0656, type: 3}
-    - Level: 2
-      IconItem: {fileID: 21300000, guid: 6ba3e900fc75da24294580dbb4790b99, type: 3}
     - Level: 3
-      IconItem: {fileID: 21300000, guid: 048076ee639937c46a4ee40ed38acc25, type: 3}
-    - Level: 4
-      IconItem: {fileID: 21300000, guid: 01a42a36fb77d644d950ed351eca16da, type: 3}
+      Rarity: 4
+      IconItem: {fileID: 21300000, guid: 6ba3e900fc75da24294580dbb4790b99, type: 3}
     - Level: 5
+      Rarity: 3
+      IconItem: {fileID: 21300000, guid: 048076ee639937c46a4ee40ed38acc25, type: 3}
+    - Level: 7
+      Rarity: 2
+      IconItem: {fileID: 21300000, guid: 01a42a36fb77d644d950ed351eca16da, type: 3}
+    - Level: 9
+      Rarity: 1
       IconItem: {fileID: 21300000, guid: a95b4bf167f8db44b821a99c1587fda8, type: 3}
-    - Level: 6
+    - Level: 11
+      Rarity: 0
       IconItem: {fileID: 21300000, guid: 5fee3ec94e0bf6340b5c6b5811eafd3e, type: 3}
   - LevelEquipment: 1
     EquipmentType: 2
     LevelStat:
     - Level: 1
+      Rarity: 4
       IconItem: {fileID: 21300000, guid: ced5fc051bdb8e24690a3a5a2bbc5277, type: 3}
-    - Level: 2
-      IconItem: {fileID: 21300000, guid: b2a66ea2731abd24882077e9c4afac7c, type: 3}
     - Level: 3
-      IconItem: {fileID: 21300000, guid: 8d099fc8f9d6eca49a98a46763fef59c, type: 3}
-    - Level: 4
-      IconItem: {fileID: 21300000, guid: d4126a621cd67ff4aa00dc3400bab916, type: 3}
+      Rarity: 4
+      IconItem: {fileID: 21300000, guid: b2a66ea2731abd24882077e9c4afac7c, type: 3}
     - Level: 5
+      Rarity: 3
+      IconItem: {fileID: 21300000, guid: 8d099fc8f9d6eca49a98a46763fef59c, type: 3}
+    - Level: 7
+      Rarity: 2
+      IconItem: {fileID: 21300000, guid: d4126a621cd67ff4aa00dc3400bab916, type: 3}
+    - Level: 9
+      Rarity: 1
       IconItem: {fileID: 21300000, guid: fd6a21baf859e77489511c374509eb08, type: 3}
-    - Level: 6
+    - Level: 11
+      Rarity: 0
       IconItem: {fileID: 21300000, guid: fd93766f93b178143912e0cc6734c4b2, type: 3}
   - LevelEquipment: 1
     EquipmentType: 3
     LevelStat:
     - Level: 1
+      Rarity: 4
       IconItem: {fileID: 21300000, guid: ed94201ee22a0a448b892f895372fff7, type: 3}
-    - Level: 2
-      IconItem: {fileID: 21300000, guid: 96766811610bf3a46af19e622c88a693, type: 3}
     - Level: 3
-      IconItem: {fileID: 21300000, guid: b4b7c76d9e5b507448eb5dd5101f06da, type: 3}
-    - Level: 4
-      IconItem: {fileID: 21300000, guid: 3a42ba01fcc242e4e8ac9571ba49456a, type: 3}
+      Rarity: 4
+      IconItem: {fileID: 21300000, guid: 96766811610bf3a46af19e622c88a693, type: 3}
     - Level: 5
+      Rarity: 3
+      IconItem: {fileID: 21300000, guid: b4b7c76d9e5b507448eb5dd5101f06da, type: 3}
+    - Level: 7
+      Rarity: 2
+      IconItem: {fileID: 21300000, guid: 3a42ba01fcc242e4e8ac9571ba49456a, type: 3}
+    - Level: 9
+      Rarity: 1
       IconItem: {fileID: 21300000, guid: a6b2300e7ac2bdc4cba763026d46d723, type: 3}
-    - Level: 6
+    - Level: 11
+      Rarity: 0
       IconItem: {fileID: 21300000, guid: 256cd9ba0f46e2149bb44699e0e84512, type: 3}
   - LevelEquipment: 1
     EquipmentType: 4
     LevelStat:
     - Level: 1
+      Rarity: 4
       IconItem: {fileID: 21300000, guid: d0edf21322feeb541910e9792205f240, type: 3}
-    - Level: 2
-      IconItem: {fileID: 21300000, guid: 4f45654fda4e91144b1672d46c83ea42, type: 3}
     - Level: 3
-      IconItem: {fileID: 21300000, guid: e2bf83590ff9cd74f8335b060c3200ec, type: 3}
-    - Level: 4
-      IconItem: {fileID: 21300000, guid: ca939abe1d81cca46b121f291bdeab77, type: 3}
+      Rarity: 4
+      IconItem: {fileID: 21300000, guid: 4f45654fda4e91144b1672d46c83ea42, type: 3}
     - Level: 5
+      Rarity: 3
+      IconItem: {fileID: 21300000, guid: e2bf83590ff9cd74f8335b060c3200ec, type: 3}
+    - Level: 7
+      Rarity: 2
+      IconItem: {fileID: 21300000, guid: ca939abe1d81cca46b121f291bdeab77, type: 3}
+    - Level: 9
+      Rarity: 1
       IconItem: {fileID: 21300000, guid: f9ac5224c013b8b459aef551d4545cea, type: 3}
-    - Level: 6
+    - Level: 11
+      Rarity: 0
       IconItem: {fileID: 21300000, guid: bf4b6eb6d050f3b489e501c4c7231d78, type: 3}
   - LevelEquipment: 1
     EquipmentType: 5
     LevelStat:
     - Level: 1
+      Rarity: 4
       IconItem: {fileID: 21300000, guid: d9b93708bc9ca3d42aee025ea696636c, type: 3}
-    - Level: 2
-      IconItem: {fileID: 21300000, guid: d8ae9b9b21bb96b4a82956c4f66f68ff, type: 3}
     - Level: 3
-      IconItem: {fileID: 21300000, guid: 780e942423b8a2146bd6cc0c73c91223, type: 3}
-    - Level: 4
-      IconItem: {fileID: 21300000, guid: 31fa70f2da7a66e419b9518135266ba5, type: 3}
+      Rarity: 3
+      IconItem: {fileID: 21300000, guid: d8ae9b9b21bb96b4a82956c4f66f68ff, type: 3}
     - Level: 5
+      Rarity: 2
+      IconItem: {fileID: 21300000, guid: 780e942423b8a2146bd6cc0c73c91223, type: 3}
+    - Level: 7
+      Rarity: 1
+      IconItem: {fileID: 21300000, guid: 31fa70f2da7a66e419b9518135266ba5, type: 3}
+    - Level: 9
+      Rarity: 0
       IconItem: {fileID: 21300000, guid: db9d217e2c8a1914095961c0598a1793, type: 3}
   - LevelEquipment: 1
     EquipmentType: 6
     LevelStat:
     - Level: 1
+      Rarity: 4
       IconItem: {fileID: 21300000, guid: 577e6c2344c5e354ba7af01221f76570, type: 3}
-    - Level: 2
-      IconItem: {fileID: 21300000, guid: c961db20c190cc84b8f2c5e554e882d4, type: 3}
     - Level: 3
-      IconItem: {fileID: 21300000, guid: d0b1dae9b94a9ab478b2096e98fda28d, type: 3}
-    - Level: 4
-      IconItem: {fileID: 21300000, guid: 5c00a53dd81d027489a5abf54f08dfa3, type: 3}
+      Rarity: 3
+      IconItem: {fileID: 21300000, guid: c961db20c190cc84b8f2c5e554e882d4, type: 3}
     - Level: 5
+      Rarity: 2
+      IconItem: {fileID: 21300000, guid: d0b1dae9b94a9ab478b2096e98fda28d, type: 3}
+    - Level: 7
+      Rarity: 1
+      IconItem: {fileID: 21300000, guid: 5c00a53dd81d027489a5abf54f08dfa3, type: 3}
+    - Level: 9
+      Rarity: 0
       IconItem: {fileID: 21300000, guid: d7d7bf11a1db7904ea588a99f772c2d6, type: 3}

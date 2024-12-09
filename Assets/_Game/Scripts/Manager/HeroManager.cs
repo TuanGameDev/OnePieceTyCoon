@@ -143,9 +143,18 @@ namespace _Game.Scripts.Manager
 
                     foreach (var hero in heroDataList.heroes)
                     {
+                        if (hero.Equipment != null && hero.Equipment.Count > 0)
+                        {
+                            if (hero.Equipment[0].LevelStat != null && hero.Equipment[0].LevelStat.Count > 0)
+                            {
+                                hero.Equipment[0].LevelStat[0].IconItem = Resources.Load<Sprite>(hero.Equipment[0].LevelStat[0].IconEquipmentPath);
+                            }
+                        }
+
                         hero.IconAvatar = Resources.Load<Sprite>(hero.IconAvatarPath);
                         hero.HeroAvatar = Resources.Load<Sprite>(hero.HeroAvatarPath);
                     }
+
 
                     HeroesAvailable.Clear();
                     HeroesAvailable.Add(heroDataList);

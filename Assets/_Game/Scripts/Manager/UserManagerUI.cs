@@ -122,9 +122,19 @@ namespace _Game.Scripts.UI
 
         public void UpdateDisplayUser()
         {
-            _userCombatPowerTxt.text = _rankingManager.UserInformation.CombatPower.ToString("N0");
-            _userBeliTxt.text = _rankingManager.UserInformation.Beli.ToString("N0");
-            _userDiamondTxt.text = _rankingManager.UserInformation.Diamond.ToString("N0");
+            _userCombatPowerTxt.text = FormatNumber(_rankingManager.UserInformation.CombatPower);
+            _userBeliTxt.text = FormatNumber(_rankingManager.UserInformation.Beli);
+            _userDiamondTxt.text = FormatNumber(_rankingManager.UserInformation.Diamond);
+        }
+
+        private string FormatNumber(long number)
+        {
+            if (number >= 1_000_000)
+                return (number / 1_000_000f).ToString("0.#") + "m";
+            else if (number >= 1_000)
+                return (number / 1_000).ToString("0.#") + "k";
+            else
+                return number.ToString("N0");
         }
 
         private void LoadDataUser()

@@ -86,8 +86,18 @@ namespace _Game.Scripts.Manager
 
         public void UpdateBeliAndDiamondText(TextMeshProUGUI beliTxt, TextMeshProUGUI diamondTxt)
         {
-            beliTxt.text = UserInformation.Beli.ToString("N0");
-            diamondTxt.text = UserInformation.Diamond.ToString("N0");
+            beliTxt.text = FormatNumber(UserInformation.Beli);
+            diamondTxt.text = FormatNumber(UserInformation.Diamond);
+        }
+
+        private string FormatNumber(long number)
+        {
+            if (number >= 1_000_000)
+                return (number / 1_000_000f).ToString("0.#") + "m";
+            else if (number >= 1_000)
+                return (number / 1_000).ToString("0.#") + "k";
+            else
+                return number.ToString("N0");
         }
     }
 }
